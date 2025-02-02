@@ -1,0 +1,262 @@
+#menu::before {
+  content: "";
+  position: fixed; /* Fixe le fond même au scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://starwalk.space/gallery/images/space-tourism/1920x1080.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(15px); /* Ajoute l'effet de flou */
+  z-index: -1; /* Place le flou derrière le contenu */
+}
+
+
+
+#loginmenu::before {
+  content: "";
+  position: fixed; /* Fixe le fond même au scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80a93a42-a0ad-4fd9-82b5-7677f7167fc7/d38sshc-d9766323-dd47-4c1b-b2f2-85910cf8aba3.jpg/v1/fill/w_1280,h_533,q_75,strp/saturn_4k_by_duophonix_d38sshc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTMzIiwicGF0aCI6IlwvZlwvODBhOTNhNDItYTBhZC00ZmQ5LTgyYjUtNzY3N2Y3MTY3ZmM3XC9kMzhzc2hjLWQ5NzY2MzIzLWRkNDctNGMxYi1iMmYyLTg1OTEwY2Y4YWJhMy5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.LzlEBHmAbtE7QXl7md21n-BhzpntM4DxVFA738YSUv8");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(15px); /* Ajoute l'effet de flou */
+  z-index: -1; /* Place le flou derrière le contenu */
+}
+
+
+
+
+
+.bandeau {
+  position: sticky;
+ top:0.5%;
+  background: linear-gradient(#911a1a, rgb(219, 143, 91));
+  display: flex;
+  margin-left: 54%;
+  border: solid brown;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px black;
+}
+
+
+
+/* h1 {
+  color: darkslategray;
+    font-size:100px;
+    font-weight: bold;
+    text-shadow: 5px 5px 2px black;
+}
+*/
+
+h1 {
+
+  font-size: 150px;
+  display: inline-block;
+  background: linear-gradient(45deg,darkslategray,white,grey,darkslategray,grey);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: degrade 7s infinite linear;
+}
+
+@keyframes degrade {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.fusée {
+  position: absolute;
+  top: 250px;
+  left: 1px; /* Commence hors de l'écran à gauche */
+  width: 65px; /* Largeur de la fusée */
+  height: auto;
+  animation: deplacement 5s linear infinite; /* Animation de déplacement */
+}
+
+@keyframes deplacement {
+  15% {
+    left: 1px; /* Position de départ à gauche */
+  }
+  100% {
+    left: 40%; /* Position de fin à droite */
+    top : -5%;
+  }
+}
+
+.bandeau a:hover {
+    color:darkslategray;
+  text-decoration: underline;
+  font-size: 40px; /* Légère augmentation de la taille au survol */
+  text-shadow: 2px 2px 5px white; /* Ombre au survol */
+}
+
+.bandeau .spaceship{
+  width: 30px;
+}
+
+.bandeau .destination{
+  width: 30px;
+}
+
+.bandeau .us{
+  width: 30px;
+
+}
+
+
+
+li{
+
+  display : inline;
+padding-left : 10px;
+}
+
+
+.bandeau a {
+color : black;
+font-weight: bold;
+text-decoration: none;
+font-size : 35px;
+}
+
+
+
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-button img {
+
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+/* partie LOGIN */
+
+
+form{
+  margin-left: 35%;
+  background-size: auto;
+  font-size: 50px;
+  width: 500px;
+}
+
+fieldset {
+  justify-content: center;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  background-image: linear-gradient(#911a1a , rgb(219, 143, 91));
+  border: solid brown;
+  border-width: 5px;
+  border-radius : 10px;
+}
+
+
+legend{
+  font-size: 40px;
+  border: solid brown 5px;
+  border-radius : 50px;
+ background : linear-gradient(#911a1a, rgb(219, 143, 91));
+  font-weight: bold;
+}
+
+label{
+  font-weight: bold;
+
+}
+
+fieldset input{
+  width: 90%;
+  border : solid darksalmon;
+  border-radius: 50px;
+  font-weight : bold;
+  font-size : 20px;
+}
+
+#login{
+  width: 95%;
+  background-color : darksalmon;
+
+}
+
+#login:hover{
+  font-size: 25px;
+  text-shadow: 2px 2px 5px black;
+
+}
+
+
+.cyconnection{
+  font-size:400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color : darkslategray;
+  text-shadow: 5px 5px 2px black;
+  font-style : oblique;
+  font-weight: bold;
+}
+
+.mid li{
+  display : flex;
+  padding-bottom: 500px;
+}
+
+.mid ol{
+  font-size: 30px;
+  text-align : left;
+  margin: 10px;
+  padding : 10px;
+  padding-top : 50px;
+  line-height: 50px;
+}
+
+.mid h2{
+  font-size : 50px;
+  font-weight : bold;
+  font-style: italic;
+
+}
+
+.mid p{
+  font-size: 30px;
+  padding-top: 20px;
+  font-weight: bold;
+  line-height: 500px;
+}
+
+
+
+.cta {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: white;
+  background: linear-gradient(90deg, darkslategray, brown);
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cta:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px dodgerblue;
+}
