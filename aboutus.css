@@ -2,10 +2,6 @@
     background-color: #000000;
 }
 
-.bar{
-    height: 100vh;
-    width: 100%;
-}
 
 .image-with-blurred-bottom {
     width: 100%;
@@ -23,9 +19,16 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); 
-    backdrop-filter: blur(10px); 
+    height: 10%;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(8px); 
+    mask: linear-gradient(
+        to top,
+        black 0%,
+        black 50%, 
+        transparent 100% 
+    );
+    pointer-events: none;
 }
 
 #aboutustext{
@@ -40,6 +43,8 @@
 #aboutustext{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
 }
 
 .aboutusleft{
@@ -49,6 +54,20 @@
     margin-left: 10%;
     
 }
+.aboutusparagraphleft{
+    border-right: solid white;
+    
+}
+
+.bar {
+    background-image: url('bar.jpeg');
+    width: 55%;
+    height: 35vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
 
 .aboutusright{
     color: white;
@@ -56,12 +75,6 @@
     margin-left: 55%;
     margin-right: 10%;
 }
-
-.aboutusparagraphleft{
-    border-right: dashed white;
-    
-}
-
 .aboutusparagraphright{
-    border-left: dashed white;
+    border-left: solid white;
 }
