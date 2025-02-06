@@ -8,7 +8,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  font-family: "Poppins", "sans-serrif";
+  font-family: "Poppins", "sans-serif";
 }
 
 
@@ -68,7 +68,7 @@
   position: absolute;
   background-color: #0B1A26;
   min-width: 240px; /* Largeur qu'on peut changer si on veut */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   z-index: 1;
   top: 100%; /* liste sous le bouton Galaxy */
@@ -99,7 +99,7 @@
   color: white;
   padding: 20px 40px;
   border-radius: 40px; /* Bord arrondi */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Effet d'ombre */
+  box-shadow: 4px 10px rgba(0, 0, 0, 0.3); /* Effet d'ombre */
 }
 
 .hero h1 {
@@ -113,13 +113,16 @@
 }
 
 .btn {
-  background-color: #ff9800;
+  background-color: orange;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 10px;
 }
 
+.btn:hover{
+  background-color: orangered;
+}
 /* Section Services */
 .services h2{
   color : white;
@@ -130,6 +133,7 @@
 .services {
   text-align: center;
   padding: 50px 20px;
+  font-size : 30px;
 }
 
 .service-cards {
@@ -142,10 +146,7 @@
 /* Mise en page des services */
 .service-container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  padding: 50px 20px;
 }
 
 /* Bloc gauche : Liste des services */
@@ -153,50 +154,111 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
+  padding-left : 40px;
 }
 
 /* Bloc droit : Vidéos / Modèles 3D */
-.service-media {
+.all-services {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
-.service-media video {
-  width: 100%;
+.all-services video:nth-child(1) {
+  width: 50%;
   max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  align-self: flex-start;
+  padding-left : 300px;
+}
+
+
+.all-services video:nth-child(2) {
+  width: 50%;
+  max-width: 500px;
+  align-self: flex-start;
+  padding-left : 300px;
+  padding-bottom : 800px;
+}
+
+.all-services video:nth-child(3) {
+  width: 50%;
+  max-width: 500px;
+  align-self: flex-start;
+  padding-left : 300px;
 }
 
 
 
 
 
+.service-list,
+.all-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribue bien les éléments */
+}
 
-
-
-
-
-
-
-
-
-
-
-.card {
+.card{
   background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  width: 250px;
+  width: 350px;
+  margin-left : 150px;
 }
+
+
 
 .card i {
   font-size: 40px;
   color: #ff9800;
+}
+
+/*spaceship emplacement */
+
+.banner{
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.banner .slider{
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform : perspective(500px); /* je me met un cercle de 500 px en z de rayon 250px */
+  animation : autoRun 35s linear infinite; /* pour faire tourner un manege cest le slider qui sen occupe pas les chaises*/
+}
+
+@keyframes autoRun {
+
+  from{
+    transform : perspective(500px) rotateY(0deg);
+  }to{
+     transform : perspective(500px) rotateY(360deg);
+   }
+
+}
+
+
+.banner .slider .item{
+  position: absolute;
+  inset : 0 0 0 0;
+  transform:
+    rotateY( calc( (var(--position) - 1)*(360/var(--quantity)) *1deg ) )
+    translateZ(250px);
+}
+
+.banner .slider .item img{
+  width: 70%;
+  height: 90%;
+  object-fit: contain;
+
 }
 
 /* Pourquoi nous choisir */
