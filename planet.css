@@ -100,7 +100,8 @@ body::before {
 }
 
 
-.bx{
+
+.fa-2{
   position: absolute;
   bottom: -2rem; /* Descend l'icon sous l'image */
   left: 50%;
@@ -114,7 +115,7 @@ body::before {
 }
 
 
-.bx:hover{
+.fa-2:hover{
 
   background-color: grey;
 }
