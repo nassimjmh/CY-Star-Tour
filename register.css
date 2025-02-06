@@ -44,6 +44,7 @@ body{
   font-size: 36px;
   text-align: center;
   color : white;
+  padding-right : 110px;
 
 }
 .wrapper .input-box{
@@ -116,6 +117,8 @@ body{
   margin: 20px 0 15px;
 
 }
+
+
 .login-link p a{
   color: #fff;
   text-decoration: none;
