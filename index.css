@@ -1,19 +1,19 @@
 #menu .bandeau {
-  background-color: #0B1A26; 
+  background-color: #0B1A26;
   color: white;
   padding: 15px 0;
-  position: sticky; 
+  position: sticky;
   position : fixed;
   top: 0;
   left: 0;
-  width: 100%; 
-  z-index: 1000; 
+  width: 100%;
+  z-index: 1000;
   font-family: "Poppins", "sans-serrif";
 }
 
 
 #backgroundmenu::before {
- content: "";
+  content: "";
   position: fixed; /* Fixe le fond même au scroll */
   top: 0;
   left: 0;
@@ -24,13 +24,13 @@
   background-position: center;
   background-size: cover;
   z-index:-1;
-  }
+}
 
 
 #menu .bandeau ol {
   list-style: none;
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   padding: 0;
   margin: 0;
 }
@@ -46,9 +46,8 @@
 
 
 #menu .bandeau a{
-font-style :none;
-color : white;
-text-decoration : none;
+  color : white;
+  text-decoration : none;
 
 }
 #menu .bandeau li:hover {
@@ -56,7 +55,7 @@ text-decoration : none;
 }
 
 .bolder {
-font-weight : bolder;
+  font-weight : bolder;
 }
 
 .deroul {
@@ -80,3 +79,158 @@ font-weight : bolder;
   display: block;
 }
 
+
+
+/* Accueil */
+
+.important-word{
+  color : darkorange;
+
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content {
+  display: inline-block; /* Ajuste la taille au contenu */
+  background-color: #0B1A26;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 40px; /* Bord arrondi */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Effet d'ombre */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* Section Services */
+.services h2{
+  color : white;
+  font-weight : bold;
+  font-size: 3rem;
+}
+
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+/* Mise en page des services */
+.service-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 20px;
+}
+
+/* Bloc gauche : Liste des services */
+.service-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Bloc droit : Vidéos / Modèles 3D */
+.service-media {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-media video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  width: 250px;
+}
+
+.card i {
+  font-size: 40px;
+  color: #ff9800;
+}
+
+/* Pourquoi nous choisir */
+.why-choose-us {
+  text-align: center;
+  padding: 50px 20px;
+  color : white;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-choose-us li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.why-choose-us i {
+  color: #ff9800;
+  margin-right: 10px;
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
