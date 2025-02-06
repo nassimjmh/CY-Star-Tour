@@ -1,0 +1,66 @@
+
+
+body:before {
+  content: "";
+  position: fixed; /* Fixe le fond même au scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://wallpapercat.com/w/full/4/e/9/65859-3840x2160-desktop-4k-space-station-background-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index:-1;
+}
+
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.banner .slider{
+  position: absolute;
+  width: 200px;
+  height: 250px;
+ top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform : perspective(500px); /* je me met un cercle de 1000 px en z de rayon 550px */
+  animation : autoRun 35s linear infinite; /* pour faire tourner un manege cest le slider qui sen occupe pas les chaises*/
+}
+
+@keyframes autoRun {
+
+  from{
+    transform : perspective(500px) rotateY(0deg);
+  }to{
+  transform : perspective(500px) rotateY(360deg);
+     }
+
+}
+
+
+
+.banner .slider .item{
+  position: absolute;
+  inset : 0 0 0 0;
+   transform:
+     rotateY( calc( (var(--position) - 1)*(360/var(--quantity)) *1deg ) )
+   translateZ(250px);
+}
+
+.banner .slider .item img{
+width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+
+
+
