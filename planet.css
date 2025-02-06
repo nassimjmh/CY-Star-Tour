@@ -100,7 +100,6 @@ body::before {
 }
 
 
-
 .fa-2{
   position: absolute;
   bottom: -2rem; /* Descend l'icon sous l'image */
@@ -119,3 +118,22 @@ body::before {
 
   background-color: grey;
 }
+
+
+.backtoindex a {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: white;
+  padding: 10px 15px;
+  font-size: 2rem;
+}
+
+  .backtoindex  a:hover{
+
+    color:grey;
+
+  }
+
+
+
