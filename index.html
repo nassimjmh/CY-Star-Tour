@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><title>CY STARTOUR</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><title>CY STARTOUR</title>
   <meta name=”keywords” content=”beginning html,learning″ />
   <meta name=”description” content=”A beginning web page for Web programming class” />
+  <meta charset="UTF-8">
 </head>
 
 
-<body id="menu"> 
+<body id="menu">
 
 <div class="bandeau bolder">
-    <ol>
+  <ol>
     <li> About us <i class='bx bx-info-circle'></i></li>
-  <li>
+
+
+    <li>
       <div class="deroul">
         <span>Galaxy Tour</span>
         <div>
@@ -26,14 +29,83 @@
         </div>
       </div>
     </li>
-    <li> Our Destinations  <i class='bx bx-map-pin'></i></li>
+
+    <li><a href="planet.html" class="planetlink"> Our Destinations  <i class='bx bx-map-pin'></i> </a></li>
+
     <li><a href="login.html" class="loginlink">Login <i class='bx bx-user'></i> </a></li>
-    </ol>
+
+  </ol>
 </div>
 
 
 <div id="backgroundmenu">
 </div>
+
+
+
+<!-- Section Accueil -->
+<section class="hero">
+ <div class="hero-content" >
+  <h1>Bienvenue chez CY STARTOUR</h1>
+  <p>Votre agence de voyages <b class="important-word">interstellaires</b> de confiance ! Partez à la découverte de <b class="important-word">mondes inconnus</b>  et laissez-vous émerveiller par l’immensité du cosmos.<p>
+
+   <p> L’espace regorge de <b class="important-word">secrets fascinants</b>, des <b class="important-word">nébuleuses colorées</b> aux <b class="important-word">trous noirs mystérieux</b>, en passant par les <b class="important-word">exoplanètes habitables</b> qui attendent d’être explorées. Grâce aux avancées technologiques, voyager au-delà de notre système solaire n'est plus un rêve, mais une <b class="important-word">réalité</b>.</p>
+ <p> <a href="planet.html" class="btn">Explorer les Destinations</a><p>
+</div>
+
+</section>
+
+<!-- Section Services -->
+<section class="services">
+  <h2>Nos Services</h2>
+  <div class="service-container">
+    <!-- Bloc Gauche : Titres & Descriptions -->
+    <div class="service-list">
+      <div class="card">
+        <i class='bx bx-rocket'></i>
+        <h3>Voyages Stellaires</h3>
+        <p>Des séjours organisés vers Mars, Titan et d'autres exoplanètes habitables.</p>
+      </div>
+      <div class="card">
+        <i class='bx bx-planet'></i>
+        <h3>Expériences en Gravité Zéro</h3>
+        <p>Vivez l'apesanteur lors de vols exclusifs en orbite.</p>
+      </div>
+      <div class="card">
+        <i class='bx bx-building-house'></i>
+        <h3>Hôtels Spatiaux</h3>
+        <p>Réservez votre séjour dans nos stations de luxe en orbite terrestre.</p>
+      </div>
+    </div>
+
+    <!-- Bloc Droite : Vidéos ou Modèles 3D -->
+    <div class="service-media">
+      <video src="voyage-stellaire.mp4" controls></video>
+      <video src="gravite-zero.mp4" controls></video>
+      <video src="hotel-spatial.mp4" controls></video>
+    </div>
+  </div>
+</section>
+
+<!-- Pourquoi nous choisir -->
+<section class="why-choose-us">
+  <h2>Pourquoi nous choisir ?</h2>
+  <ul>
+    <li><i class='bx bx-check-circle'></i> Sécurité garantie avec les dernières technologies</li>
+    <li><i class='bx bx-check-circle'></i> Guides experts en exploration spatiale</li>
+    <li><i class='bx bx-check-circle'></i> Des voyages accessibles et flexibles</li>
+  </ul>
+</section>
+
+<!-- Pied de page -->
+<footer>
+  <p>© 2025 CY STARTOUR - All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-twitter'></i></a>
+    <a href="#"><i class='bx bxl-instagram'></i></a>
+  </div>
+</footer>
 
 
 </body>
