@@ -1,20 +1,19 @@
 #menu .bandeau {
   background-color: #0B1A26;
   color: white;
-  padding: 15px 0;
-  position: sticky;
-  position : fixed;
+  padding: 5px 5px; /* Ajustement pour une meilleure apparence */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  font-family: "Poppins", "sans-serif";
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3); /* Ajout d'une ombre pour un effet plus pro */
 }
-
 
 #backgroundmenu::before {
   content: "";
-  position: fixed; /* Fixe le fond même au scroll */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,39 +22,49 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index:-1;
+  z-index: -1;
 }
-
 
 #menu .bandeau ol {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   padding: 0;
   margin: 0;
 }
 
-#menu .bandeau li {
+#menu .site-name {
+  position: absolute;  /* Position absolue pour le placer précisément */
+  top: 0px;           /* Décalage du haut */
+  left: 15px;          /* Décalage de gauche */
+  font-size: 35px;     /* Taille du texte */
+  font-weight: bold;   /* Texte en gras */
+  font-family: 'Poppins', sans-serif;  /* Police moderne */
+  color: white;        /* Couleur du texte */
+ z-index : 1000;
+ align-items: stretch;
+}
+#menu .bandeau li{ 
   display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 22px;
+  align-items: stretch;
+  font-size: 25px; /* Ajustement de la taille pour plus de professionnalisme */
   cursor: pointer;
-  color : white;
+  color: white;
+padding: 20px;
 }
 
 
-#menu .bandeau a{
-  color : white;
-  text-decoration : none;
-
+#menu .bandeau a {
+  color: white;
+  text-decoration: none;
 }
-#menu .bandeau li:hover {
-  text-decoration: underline;
+
+#menu .bandeau li:nth-child(2):hover {
+  color: #ff9800; /* Changement de couleur au survol pour un effet plus pro */
 }
 
 .bolder {
-  font-weight : bolder;
+  font-weight: bolder;
 }
 
 .deroul {
@@ -67,18 +76,28 @@
   display: none;
   position: absolute;
   background-color: #0B1A26;
-  min-width: 240px; /* Largeur qu'on peut changer si on veut */
+  min-width: 240px;
   box-shadow: 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  border-radius: 10px; /* Ajustement pour un look plus moderne */
   z-index: 1;
-  top: 100%; /* liste sous le bouton Galaxy */
+  top: 100%;
   left: 0;
+  padding: 10px 0; /* Ajout de padding pour un meilleur espacement */
 }
 
 .deroul:hover div {
   display: block;
 }
 
+.deroul div p {
+  padding: 10px 20px; /* Ajout de padding pour un meilleur espacement */
+  margin: 0;
+  transition: background-color 0.3s ease; /* Ajout d'une transition pour un effet plus doux */
+}
+
+.deroul div p:hover {
+  background-color: #1c2a35; /* Changement de couleur de fond au survol */
+}
 
 
 /* Accueil */
@@ -133,7 +152,7 @@
 .services {
   text-align: center;
   padding: 50px 20px;
-  font-size : 30px;
+  font-size : 20px;
 }
 
 .service-cards {
@@ -227,8 +246,8 @@
 
 .banner .slider{
   position: absolute;
-  width: 150px;
-  height: 200px;
+  width: 200px;
+  height: 150px;
   left: 50%;
   transform-style: preserve-3d;
   transform : perspective(500px); /* je me met un cercle de 500 px en z de rayon 250px */
@@ -255,7 +274,7 @@
 }
 
 .banner .slider .item img{
-  width: 70%;
+  width: 90%;
   height: 90%;
   object-fit: contain;
 
