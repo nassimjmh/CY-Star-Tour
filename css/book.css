@@ -86,7 +86,6 @@
     position: absolute; /* Positionne le h1 par rapport au conteneur parent */
     top: -10px;
     left: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     margin: 0; /* Supprime les marges par défaut */
 
 }
@@ -110,6 +109,14 @@
     transform: translateY(3px); /* Légère élévation au survol */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
 }
+.price{
+    position: absolute;
+    left: 1160px;
+    top: 10px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
 /*###################################*/
 /*###################################*/
 /*###################################*/
