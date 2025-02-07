@@ -1,70 +1,89 @@
-#menu .bandeau {
-  background-color: #0B1A26;
-  color: white;
-  padding: 5px 5px; /* Ajustement pour une meilleure apparence */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+min-height: 100vh;
+
+}
+.bandeau{
+
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  padding : 10px 20px;
+  border-radius: 5px;
+  background : rgb(3, 34, 76);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1000;
-  font-family: "Poppins", sans-serif;
-  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3); /* Ajout d'une ombre pour un effet plus pro */
+
 }
+
+.logo{
+  width: 250px;
+  color : white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius : 40px;
+  border : transparent;
+}
+
+.navbar a {
+  position : relative;
+  font-size: 30px;
+  color : white;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 35px;
+
+
+}
+
+.navbar a::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition : .3s;
+
+}
+
+
+.navbar a:hover:before{
+width: 100%;
+
+}
+
 
 #backgroundmenu::before {
   content: "";
-  position: fixed;
+  position: fixed; /* Fixe le fond même au scroll */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://wallpapercat.com/w/full/4/e/9/65859-3840x2160-desktop-4k-space-station-background-image.jpg");
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/images6/Galaxy-Wallpaper-4k-Wallpaper-Blue-Color.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: -1;
-}
-
-#menu .bandeau ol {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0;
-  margin: 0;
-}
-
-#menu .site-name {
-  position: absolute;  /* Position absolue pour le placer précisément */
-  top: 0px;           /* Décalage du haut */
-  left: 15px;          /* Décalage de gauche */
-  font-size: 35px;     /* Taille du texte */
-  font-weight: bold;   /* Texte en gras */
-  font-family: 'Poppins', sans-serif;  /* Police moderne */
-  color: white;        /* Couleur du texte */
- z-index : 1000;
- align-items: stretch;
-}
-#menu .bandeau li{ 
-  display: flex;
-  align-items: stretch;
-  font-size: 25px; /* Ajustement de la taille pour plus de professionnalisme */
-  cursor: pointer;
-  color: white;
-padding: 20px;
+  z-index:-1;
 }
 
 
-#menu .bandeau a {
-  color: white;
-  text-decoration: none;
-}
-
-#menu .bandeau li:nth-child(2):hover {
-  color: #ff9800; /* Changement de couleur au survol pour un effet plus pro */
-}
 
 .bolder {
-  font-weight: bolder;
+  font-weight : bolder;
 }
 
 .deroul {
@@ -75,32 +94,62 @@ padding: 20px;
 .deroul div {
   display: none;
   position: absolute;
-  background-color: #0B1A26;
-  min-width: 240px;
+  background : rgb(3, 34, 76);
+  min-width: 320px; /* Largeur qu'on peut changer si on veut */
   box-shadow: 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 10px; /* Ajustement pour un look plus moderne */
+  border-radius: 15px;
   z-index: 1;
-  top: 100%;
+  top: 100%; /* liste sous le bouton Galaxy */
   left: 0;
-  padding: 10px 0; /* Ajout de padding pour un meilleur espacement */
 }
 
 .deroul:hover div {
   display: block;
 }
 
-.deroul div p {
-  padding: 10px 20px; /* Ajout de padding pour un meilleur espacement */
-  margin: 0;
-  transition: background-color 0.3s ease; /* Ajout d'une transition pour un effet plus doux */
-}
-
-.deroul div p:hover {
-  background-color: #1c2a35; /* Changement de couleur de fond au survol */
-}
 
 
 /* Accueil */
+.video{
+  position: absolute;
+  right:0;
+  bottom:0;
+  z-index: -1;
+}
+
+.introduction{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-top : 450px;
+  padding-bottom : 285px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction h1{
+position: relative;
+  font-size : 150px;
+  color : white;
+  font-weight : bold;
+
+}
+
+.introduction a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+border : 2px solid white;
+  padding : 14px 70px;
+  border-radius: 50px;
+  margin-top :30px;
+}
+
+
+
+
 
 .important-word{
   color : darkorange;
@@ -109,16 +158,13 @@ padding: 20px;
 
 .hero {
   text-align: center;
-  padding: 100px 20px;
 }
 
 .hero-content {
   display: inline-block; /* Ajuste la taille au contenu */
-  background-color: #0B1A26;
+  background-color: rgb(3, 34, 76);
   color: white;
   padding: 20px 40px;
-  border-radius: 40px; /* Bord arrondi */
-  box-shadow: 4px 10px rgba(0, 0, 0, 0.3); /* Effet d'ombre */
 }
 
 .hero h1 {
@@ -150,15 +196,15 @@ padding: 20px;
 }
 
 .services {
+ background-color: black;
   text-align: center;
-  padding: 50px 20px;
-  font-size : 20px;
+  font-size : 30px;
+  margin-top : 400px;
 }
 
 .service-cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
 
@@ -173,8 +219,6 @@ padding: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  padding-left : 40px;
 }
 
 /* Bloc droit : Vidéos / Modèles 3D */
@@ -188,7 +232,7 @@ padding: 20px;
   width: 50%;
   max-width: 500px;
   align-self: flex-start;
-  padding-left : 300px;
+
 }
 
 
@@ -196,18 +240,15 @@ padding: 20px;
   width: 50%;
   max-width: 500px;
   align-self: flex-start;
-  padding-left : 300px;
-  padding-bottom : 800px;
+
 }
 
 .all-services video:nth-child(3) {
   width: 50%;
   max-width: 500px;
   align-self: flex-start;
-  padding-left : 300px;
+
 }
-
-
 
 
 
@@ -224,7 +265,6 @@ padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   width: 350px;
-  margin-left : 150px;
 }
 
 
@@ -246,8 +286,9 @@ padding: 20px;
 
 .banner .slider{
   position: absolute;
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  height: 200px;
+  margin-top : 50px;
   left: 50%;
   transform-style: preserve-3d;
   transform : perspective(500px); /* je me met un cercle de 500 px en z de rayon 250px */
@@ -274,7 +315,7 @@ padding: 20px;
 }
 
 .banner .slider .item img{
-  width: 90%;
+  width: 70%;
   height: 90%;
   object-fit: contain;
 
