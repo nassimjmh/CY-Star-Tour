@@ -1,146 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" href="../css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CY STARTOUR</title>
+  <meta name="keywords" content="beginning html,learning">
+  <meta name="description" content="A beginning web page for Web programming class">
+
+  <!-- Styles & Icônes -->
+  <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><title>CY STARTOUR</title>
-  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
-
 
 <body id="menu">
 
-<div class="bandeau bolder">
-  <ol>
-    <li><a href="aboutus.html">About us <i class='bx bx-info-circle'></i></a></li>
-
-
-    <li>
-      <div class="deroul">
-        <span>Galaxy Tour</span>
-        <div>
-          <p>- Space Destinations </p>
-          <p>- Space Price !</p>
-          <p>- Travelers Reviews</p>
+  
+  
+  <!-- Bandeau de Navigation -->
+  <div class="bandeau">
+    <h1 class="site-name">CY STARTOUR </h1>
+    <ol>
+      <li>
+        <div class="deroul">
+          <span>Galaxy Tour</span>
+          <div>
+            <p>- Space Destinations</p>
+            <p>- Space Price!</p>
+            <p>- Travelers Reviews</p>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
 
-    <li><a href="planet.html" class="planetlink"> Our Destinations  <i class='bx bx-map-pin'></i> </a></li>
+      <li><a href="planet.html" class="planetlink">Our Destinations <i class='bx bx-map-pin'></i></a></li>
 
-    <li><a href="login.html" class="loginlink">Login <i class='bx bx-user'></i> </a></li>
+      <li class="search-container">
+        <i class='bx bx-search search-icon'></i>
+        <input type="text" class="search-input" placeholder="Search...">
+      </li>
 
-  </ol>
-</div>
-
-
-<div id="backgroundmenu">
-</div>
-
-
-
-<!-- Section Accueil -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Welcome to CY STARTOUR</h1>
-    <p>Your trusted <b class="important-word">interstellar</b> travel agency! Embark on a journey to discover <b class="important-word">unknown worlds</b> and be amazed by the vastness of the cosmos.</p>
-    <p>The universe is filled with <b class="important-word">fascinating secrets</b>, from <b class="important-word">colorful nebulae</b> to <b class="important-word">mysterious black holes</b>, as well as <b class="important-word">habitable exoplanets</b> waiting to be explored. Thanks to technological advancements, traveling beyond our solar system is no longer a dream, but a <b class="important-word">reality</b>.</p>
-    <p><a href="planet.html" class="btn">Explore Destinations</a></p>
+      <li class="profile">
+        <a href="profile.html"><i class='bx bx-user-circle'></i></a>
+      </li>
+    </ol>
   </div>
 
+  <div id="backgroundmenu"></div>
 
-</section>
-
-<!-- Section Services -->
-<section class="services">
-  <h2>Our Services</h2>
-  <div class="service-container">
-    <!-- Bloc Gauche : Titres & Descriptions -->
-    <div class="service-list">
-      <div class="card">
-        <i class='bx bx-rocket'></i>
-        <h3>Stellar Journeys</h3>
-        <p>Organized trips to Mars, Titan, and other habitable exoplanets.</p>
-      </div>
-      <div class="card">
-        <i class='bx bx-planet'></i>
-        <h3>Zero-Gravity Experiences</h3>
-        <p>Experience weightlessness on exclusive orbital flights.</p>
-      </div>
-      <div class="card">
-        <i class='bx bx-building-house'></i>
-        <h3>Space Hotels</h3>
-        <p>Book your stay in our luxury orbital stations.</p>
-      </div>
-
+  <!-- Section Accueil -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to CY STARTOUR</h1>
+      <p>Your trusted <b class="important-word">interstellar</b> travel agency! Embark on a journey to discover <b class="important-word">unknown worlds</b> and be amazed by the vastness of the cosmos.</p>
+      <p><a href="planet.html" class="btn">Explore Destinations</a></p>
     </div>
+  </section>
 
+  <!-- Section Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+      <div class="service-list">
+        <div class="card">
+          <i class='bx bx-rocket'></i>
+          <h3>Stellar Journeys</h3>
+          <p>Organized trips to Mars, Titan, and other habitable exoplanets.</p>
+        </div>
+        <div class="card">
+          <i class='bx bx-planet'></i>
+          <h3>Zero-Gravity Experiences</h3>
+          <p>Experience weightlessness on exclusive orbital flights.</p>
+        </div>
+        <div class="card">
+          <i class='bx bx-building-house'></i>
+          <h3>Space Hotels</h3>
+          <p>Book your stay in our luxury orbital stations.</p>
+        </div>
+      </div>
 
-    <!-- Bloc Droite : Vidéos ou Modèles 3D -->
-    <div class="all-services">
-      <div class="banner">
-       <div class="slider" style="--quantity:7">
-
-         <div class="item" style="--position:1"><img src="580b585b2edbce24c47b2d2a.png" alt="spaceship'"></img></div>
+      <div class="all-services">
+        <div class="banner">
+          <div class="slider" style="--quantity:7">
+            <div class="item" style="--position:1"><img src="580b585b2edbce24c47b2d2a.png" alt="spaceship'"></img></div>
          <div class="item" style="--position:2"><img src="580b585b2edbce24c47b2d2f.png" alt="spaceship2"></img></div>
           <div class="item" style="--position:3"><img src="https://www.pngkey.com/png/full/32-324067_free-spaceship-png-sci-fi-spaceship-antennas.png" alt="spaceship3"></img></div>
          <div class="item" style="--position:4"><img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_a5c4e0956fd81026e77a51c297ee60dc.webp" alt="spaceship4"></img></div>
          <div class="item" style="--position:5"><img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_6037a48a86cf4a546694501210a81c7f.webp" alt="spaceship5"></img></div>
          <div class="item" style="--position:6"><img src="https://static.vecteezy.com/system/resources/previews/045/800/410/non_2x/spaceship-isolated-on-transparent-background-free-png.png" alt="spaceship6"></img></div>
           <div class="item" style="--position:7"><img src="https://www.nicepng.com/png/full/12-128122_spaceship-png-images-spaceship-png.png" alt="spaceship7"></img></div>
-       </div>
+          </div>
+        </div>
+
+        <video src="Amazing Space 8K HDR Ultra HD Video.mp4" controls></video>
+        <video src="hotel-spatial.mp4" controls></video>
       </div>
-
-
-      <video src="Amazing Space 8K HDR Ultra HD Video.mp4" controls></video>
-      <video src="hotel-spatial.mp4" controls></video>
-
     </div>
+  </section>
 
+  <!-- Pourquoi nous choisir -->
+  <section class="why-choose-us">
+    <h2>Pourquoi nous choisir ?</h2>
+    <ul>
+      <li><i class='bx bx-check-circle'></i> Sécurité garantie avec les dernières technologies</li>
+      <li><i class='bx bx-check-circle'></i> Guides experts en exploration spatiale</li>
+      <li><i class='bx bx-check-circle'></i> Des voyages accessibles et flexibles</li>
+    </ul>
+  </section>
 
-
-
-
-
-
-
-
-
-
-
-  </div>
-</section>
-
-
-
-
-
-
-<!-- Pourquoi nous choisir -->
-<section class="why-choose-us">
-  <h2>Pourquoi nous choisir ?</h2>
-  <ul>
-    <li><i class='bx bx-check-circle'></i> Sécurité garantie avec les dernières technologies</li>
-    <li><i class='bx bx-check-circle'></i> Guides experts en exploration spatiale</li>
-    <li><i class='bx bx-check-circle'></i> Des voyages accessibles et flexibles</li>
-  </ul>
-</section>
-
-<!-- Pied de page -->
-<footer>
-  <p>© 2025 CY STARTOUR - All rights reserved.</p>
-  <div class="social-icons">
-    <a href="#"><i class='bx bxl-facebook'></i></a>
-    <a href="#"><i class='bx bxl-twitter'></i></a>
-    <a href="#"><i class='bx bxl-instagram'></i></a>
-  </div>
-</footer>
-
+  <!-- Pied de page -->
+  <footer>
+    <p>© 2025 CY STARTOUR - All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class='bx bxl-facebook'></i></a>
+      <a href="#"><i class='bx bxl-twitter'></i></a>
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+    </div>
+  </footer>
 
 </body>
-
-
 
 </html>
