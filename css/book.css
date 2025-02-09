@@ -1,18 +1,8 @@
-@font-face {
-    font-family: 'test';
-    src: url(Montblanc-Regular.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-.noclick{
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+
+
 
 #Book{
-    font-family: 'test', sans-serif;
+    font-family: 'Montblanc', sans-serif;
     color: black;
     margin: 0;
     padding: 0;
@@ -191,7 +181,7 @@
     top: 40%; /* Centre verticalement */
     left: 70%; /* Centre horizontalement */ 
 }
-a{
+#book a{
     text-decoration: none;
 }
 .valid:hover {
@@ -222,39 +212,5 @@ summary { /*Le texte dedans*/
     padding: 5px 0;
 }
 /**/
-.slider {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    overflow: hidden;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-}
 
-.slides {
-    display: flex;
-    width: 400%; /* 100% par image (4 images) */
-    animation: slide 16s infinite; /* 16s = 4s par image */
-}
 
-.slide {
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.slide img {
-    width: 100%;
-    display: block;
-}
-
-@keyframes slide{
-    0% { transform: translateX(0%); }
-    20% { transform: translateX(0%); } /* Affichage de l'image 1 */
-    25% { transform: translateX(-100%); } /* Transition vers l'image 2 */
-    45% { transform: translateX(-100%); } /* Affichage de l'image 2 */
-    50% { transform: translateX(-200%); } /* Transition vers l'image 3 */
-    70% { transform: translateX(-200%); } /* Affichage de l'image 3 */
-    75% { transform: translateX(-300%); } /* Transition vers l'image 4 */
-    95% { transform: translateX(-300%); } /* Affichage de l'image 4 */
-    100% { transform: translateX(0%); } /* Retour à l'image 1 */
-}
