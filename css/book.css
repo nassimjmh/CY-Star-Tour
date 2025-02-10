@@ -1,8 +1,13 @@
 
-
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 #Book{
-    font-family: 'Montblanc', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: black;
     margin: 0;
     padding: 0;
@@ -16,105 +21,92 @@
 .booking{
     position: relative;
     margin: auto; 
-    width: 1300px;
-    height: 300px;
+    width: 160vh;
+    height: 45vh;
     background-color: white;
-    border: 2px solid #333;
-    border-radius: 10px;
-    box-shadow: 0 6px 7px black; 
-    margin-bottom: 30px;
+    border-top-left-radius: 2.5vh;
+    border-bottom-left-radius: 2.5vh;
+    border-bottom-right-radius: 2vh;
+    border-top-right-radius: 2vh;
+    margin-bottom: 5vh;
+}
+
+.booking:hover{
+    box-shadow: 0px 0px 9px rgba(255, 255, 255, 0.678);
 }
 
 .middle {
     background-color: #000000;
-    padding: 2%;
+    padding: 2vh;
     position: relative;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;     /* Centre verticalement */               /* Supprime les marges par défaut */
+    justify-content: center; 
+    align-items: center; 
 }
 
 
 .booking img{
     position: absolute;
-    margin-top: 60px;
-    margin-left: 80px;
-    border-radius: 10px;
-    width: 400px; /* L'image prend toute la largeur du conteneur */
-    height: auto; /* L'image prend toute la hauteur du conteneur */
+    top: 0;
+    left: 0;
+    width: 40%; /* L'image prend toute la largeur du conteneur */
+    height: 100%; /* L'image prend toute la hauteur du conteneur */
+    object-fit: cover;
+    border-top-left-radius: 2vh;
+    border-bottom-left-radius: 2vh;
+}
+.name{
+    position: absolute; 
+    top: 1.5vh;
+    left: 68vh;
+    font-size: 3vh;
+    font-weight: bolder;
+}
+.galaxy{
+    position: absolute; 
+    top: 9vh;
+    left: 70vh;
+    font-size: 2vh;
+}
+.info{
+    position: absolute; 
+    top: 13vh;
+    left: 72vh;
+    font-size: 2vh;
+}
+.division{
+    position: absolute; 
+    top: 19vh;
+    left: 68vh;
+    font-size: 2vh;
+    letter-spacing: -1px;
 }
 
-.vertical{
-    width: 1px; /* Épaisseur de la ligne */
-    box-shadow: 0 0px 7px black;
-    height: 298px; /* Hauteur de la ligne */
-    background-color: white; /* Couleur de la ligne */
-    position: absolute; /* Permet de positionner la barre librement */
-    top: -8px; /* Position depuis le haut */
-    left:500px; /* Position depuis la gauche */
-}
-.vertical2{
-    width: 1px; /* Épaisseur de la ligne */
-    box-shadow: 0 0px 7px black;
-    height: 298px; /* Hauteur de la ligne */
-    background-color: rgb(255, 255, 255); /* Couleur de la ligne */
-    position: absolute; /* Permet de positionner la barre librement */
-    top: -8px; /* Position depuis le haut */
-    left:1120px; /* Position depuis la gauche */
-}
 .description {
     position: absolute;
-    margin-top: 5px;
-    top: 0px;
-    left: 520px;
-    width: 580px;
-    height: 290px;
-    overflow: auto;
-    overflow-wrap: break-word;
+    font-size: 2vh;
+    top: 23vh;
+    left: 69vh;
+    width: 88vh;
+    height: 22vh;
+    line-height: 1.5;
 }
-
-.name{
-    position: absolute; /* Positionne le h1 par rapport au conteneur parent */
-    top: -10px;
-    left: 30px;
-    margin: 0; /* Supprime les marges par défaut */
-
-}
-.buy{
-    position: absolute; /* Positionne le h1 par rapport au conteneur parent */
-    background: radial-gradient(circle, #2b4563 ,  #0f1A26);
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.452);
-    top: 230px; /* Centre verticalement */
-    left: 1165px; /* Centre horizontalement */ 
-}
-.buy:hover {
-    background: radial-gradient(circle,  #0f1A26,  #2b4563);
-    color: #98FB98;
-    transform: translateY(3px); /* Légère élévation au survol */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée au survol */
-}
-.price{
-    position: absolute;
-    left: 1160px;
-    top: 10px;
+.prix{
+    position: absolute; 
+    top: 8vh;
+    left: 140vh;
+    font-size: 4vh;
     font-weight: bolder;
-    font-size: 25px;
 }
+
+
 
 /*###################################*/
 /*###################################*/
 /*###################################*/
-.research {
+#Book .rsearch {
     position: relative;
     justify-content: center;
     align-items: center;
-
     background-image: url('https://wallpaper.forfun.com/fetch/c7/c792185c2222f9c7909ec2514ef9d6d1.jpeg');
     width: 100%;
     height: 100vh; /* Prend toute la hauteur de la fenêtre */
@@ -124,7 +116,7 @@
     overflow: hidden;
 
 }
-.title{
+#Book .title{
     position: absolute;
     white-space: nowrap;
     top: 30%;
@@ -138,37 +130,37 @@
     margin: 0;
 }
 
-.start {
+#Book .start {
     width: 11%; /*Changer la taille du module*/
     position: absolute;
     top: 40%;
     left: 20%;
 }
-.end {
+#Book .end {
     width: 11%; /*Changer la taille du module*/
     position: absolute;
     top: 40%;
     left: 32%;
 }
-.when {
+#Book .when {
     width: 11%; /*Changer la taille du module*/
     position: absolute;
     top: 40%;
     left: 45%;
 }
 
-.number {
+#Book .number {
     width: 11%; /*Changer la taille du module*/
     position: absolute;
     top: 40%;
     left: 57%;
 }
-.date{
+#Book .date{
     padding: 10px;
     font-size: 16px;
     border-radius: 4px;
 }
-.valid{
+#Book .valid{
     position: absolute; 
     padding: 12px 60px;
     border-radius: 5px;
@@ -184,29 +176,29 @@
 #book a{
     text-decoration: none;
 }
-.valid:hover {
+#Book .valid:hover {
     background: #98FB98;
 }
-details { /*La boxe*/
+#Book details { /*La boxe*/
     border-radius: 5px;
     background-color: #ffffff;
     color: #0f1A26;
     cursor: pointer;
 }
 
-summary { /*Le texte dedans*/
+#Book summary { /*Le texte dedans*/
     padding: 10px;
     outline: none;
 }
 
-.dropdown-content{ /*Le carré*/
+#Book .dropdown-content{ /*Le carré*/
     background-color: #0f1A26;
     padding: 10px;
     max-height: 150px;
     overflow-y: auto;
 }
 
-.dropdown-content label { /*Le texte*/
+#Book .dropdown-content label { /*Le texte*/
     color: rgb(255, 255, 255);
     display: block;
     padding: 5px 0;
