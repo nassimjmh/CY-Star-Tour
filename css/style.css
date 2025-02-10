@@ -86,17 +86,20 @@ footer {
 }
 
 .footer-bottom {
-    background-color: #ffffff;
+    background-color: #0B1A26;
     padding: 10px 0;
     font-size: 0.9em;
 }
 
 .footer-bottom p {
-    margin: 0;
-    color: #0B1A26;
+    margin-top: 10vh;
+    color: #ffffff;
 }
 
+
 /*----------------------------*/
+
+
 header {
     font-family: 'Inter', sans-serif;
     position: fixed;
