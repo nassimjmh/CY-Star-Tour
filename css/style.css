@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*##################################*/
 .noclick{ 
     -webkit-user-select: none;
@@ -19,7 +26,7 @@ footer {
     padding: 20px 0;
     text-align: center;
     width: 100%;
-    font-family: 'Montblanc', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .footer-container {
@@ -91,7 +98,7 @@ footer {
 
 /*----------------------------*/
 header {
-    font-family: 'Montblanc', sans-serif;
+    font-family: 'Inter', sans-serif;
     position: fixed;
     top: 0;
     left: 0;
