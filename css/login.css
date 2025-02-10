@@ -1,11 +1,16 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../font/Inter.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", "sans-serif";
+  font-family: 'Inter', sans-serif;
 }
-
-
 
 #loginmenu::before {
   content: "";
@@ -146,9 +151,4 @@ body{
 footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  color: white;
-  font-size: 14px;
 }
