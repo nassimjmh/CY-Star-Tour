@@ -12,6 +12,10 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*##################################*/
 .noclick{ 
     -webkit-user-select: none;
@@ -226,3 +230,42 @@ nav ul li:hover .submenu {
     display: block;
 }
 
+/* CLICK ARROW-------------- */
+
+.arrows {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 48px;
+}
+.arrows path {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 3;
+    opacity: 0;
+    animation: fade-in-out 1.5s infinite ease-in-out;
+}
+.arrows .a1 {
+    animation-delay: 0s;
+}
+.arrows .a2 {
+    animation-delay: 0.4s;
+}
+.arrows .a3 {
+    animation-delay: 0.8s;
+}
+
+.clickarrow:active{
+    animation: ease-in;
+}
+
+@keyframes fade-in-out {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
