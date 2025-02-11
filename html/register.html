@@ -50,9 +50,14 @@
   <form action="">
     <h1>Register</h1>
     <div class="input-box">
-      <input type="text" placeholder="Username" required>
+      <input type="text" placeholder="First Name" required>
       <i class='bx bxs-user'></i>
     </div>
+    <div class="input-box">
+      <input type="text" placeholder="Last name" required>
+      <i class='bx bxs-user'></i>
+    </div>
+
     <div class="input-box">
       <input type="email" placeholder="Email" required>
       <i class='bx bx-envelope'></i>
@@ -62,6 +67,39 @@
       <input type="password" placeholder="Password" required>
       <i class='bx bxs-lock-alt' ></i>
     </div>
+    <div class="input-box">
+      <details>
+        <summary>Your Race?</summary>
+        <div class="racelist">
+            <label>
+                <input type="radio" name="race"> Human
+            </label>
+            <label>
+                <input type="radio" name="race"> IA 
+            </label>
+            <label>
+                <input type="radio" name="race"> Alien
+            </label>
+            <label>
+                <input type="radio" name="race"> Cybertonic
+            </label>
+            <label>
+                <input type="radio" name="race"> Coruscant
+            </label>
+        </div>
+    </details>
+  </div>
+
+  <div class="input-box">
+    <details>
+        <summary>Birth Date :</summary>
+        <div class="Birthday">
+            <form>
+                <input type="date" class="date" name="datePicker" min="4900-01-01">
+            </form>
+        </div>
+    </details>
+</div>
     <button type="submit" class="btn">Register</button>
     <div class="login-link">
       <p>Already have an account? <a href="login.html">Login</a></p>
@@ -69,42 +107,6 @@
     </div>
   </form>
 </div>
-
-
-<footer>
-  <div class="footer-container">
-      <div class="footer-section about">
-          <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo-footer" >
-      </div>
-      <div class="footer-section links">
-          <h3>Useful Links</h3>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="html/aboutus.html">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-          </ul>
-      </div>
-      <div class="footer-section contact">
-          <h3>Contact</h3>
-          <p>Email: contact@startour.com</p>
-          <p>Phone: +0 831 576 989</p>
-          <p>Address: 49.035, 2.0698 Earth</p>
-      </div>
-      <div class="footer-section social">
-          <h3>Follow Us</h3>
-          <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">LinkedIn</a></li>
-          </ul>
-      </div>
-  </div>
-  <div class="footer-bottom">
-      <p>&copy; 4090 CY StarTour. All rights reserved.</p>
-  </div>
-</footer>
 
 
 </body>
