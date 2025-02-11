@@ -27,6 +27,8 @@ footer {
     text-align: center;
     width: 100%;
     font-family: 'Inter', sans-serif;
+    border-top: 4px solid black;
+
 }
 
 .footer-container {
