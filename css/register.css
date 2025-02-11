@@ -1,8 +1,17 @@
+
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../font/Inter.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", "sans-serif";
+  font-family: "Inter", "sans-serif";
 }
 
 
@@ -18,7 +27,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter:blur(5px);
 }
 
 
@@ -44,7 +52,6 @@ body{
   font-size: 36px;
   text-align: center;
   color : white;
-  padding-right : 110px;
 
 }
 .wrapper .input-box{
@@ -76,6 +83,11 @@ body{
   top: 30%;
   transform: translate(-50%);
   font-size: 20px;
+}
+
+.racelist{
+border-radius : 20px;
+backdrop-filter: blur(10px);
 
 }
 .wrapper .remember-forgot{
