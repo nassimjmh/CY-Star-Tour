@@ -1,7 +1,13 @@
-#aboutus{
-    background-color: #000000;
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+#aboutus{
+    background-color: #0B1A26;
+}
 
 .image-earth {
     width: 100%;
@@ -19,13 +25,30 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-family: 'Montblanc', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
 }
 
 
 #aboutustext{
-    background-color: #000000;
+    background-color: #0B1A26;
 }
+
+table{
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 5em;
+}
+
+table td img{
+    height: auto;
+    width: 88%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 .simplecentered{
     text-align: center;
@@ -34,39 +57,23 @@
 
 #aboutustext{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: large;
-    font-weight: bold;
 }
 
 .aboutusleft{
     color: white;
     text-align: left;
-    width: 38%;
-    margin-left: 10%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     
 }
-.aboutusparagraphleft{
-    border-right: solid white;
-    
-}
-
-.bar {
-    background-image: url('bar.jpeg');
-    width: 55%;
-    height: 35vh;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
- }
-
 
 .aboutusright{
     color: white;
     text-align: right;
-    margin-left: 55%;
-    margin-right: 10%;
+    margin-left: 130;
+    margin-right: 130px;
 }
-.aboutusparagraphright{
-    border-left: solid white;
-}
+
