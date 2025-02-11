@@ -92,6 +92,13 @@ backdrop-filter: blur(10px);
 text-align : right;
 }
 
+.selecteur:hover{
+  text-decoration: underline;
+
+}
+
+
+
 
 .wrapper .remember-forgot{
   display: flex;
