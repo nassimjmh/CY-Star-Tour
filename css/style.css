@@ -141,10 +141,21 @@ nav ul li a {
     padding: 5px 10px;
 }
 
-nav ul li a:hover {
-    background-color: #ffffff;
-    color: #0f1a26;
-    border-radius: 5px;
+
+.underline::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition : .3s;
+}
+
+.underline:hover:before{
+   width: 100%;
+   z-index : 1000;
 }
 
 nav ul li.logo img {
