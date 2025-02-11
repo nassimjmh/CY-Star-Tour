@@ -85,11 +85,14 @@ body{
   font-size: 20px;
 }
 
-.racelist{
+.racelist label{
+display : inline-block;
 border-radius : 20px;
 backdrop-filter: blur(10px);
-
+text-align : right;
 }
+
+
 .wrapper .remember-forgot{
   display: flex;
   justify-content: space-between;
