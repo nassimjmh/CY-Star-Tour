@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background : url("https://wallpaperaccess.com/full/17520.jpg")no-repeat center;
+  color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main{
+  flex: 1; /* Prend tout l'espace disponible entre le header et le footer */
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  align-items: center;
+  padding: 2vh; /* Facultatif : espace autour */
+  margin-top : 10vh;
+  box-sizing: border-box;
+}
+
+
+.sidebar {
+  width: 500px;
+  background : steelblue;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  gap : 40px;
+  font-size : 30px;
+  border-radius: 20px;
+}
+
+.sidebar .name{
+  color : white;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.sidebar a {
+  color: black;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+
+.sidebar .status {
+  margin-top: 15px;
+  color: #ffcc00;
+}
+
+
+.info {
+  background-color: midnightblue;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+
+}
+
+
+.info .header {
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.info .line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #eee;
+}
+
+
+.info .line:last-child {
+  border-bottom: none;
+}
+
+
+
+
+.label {
+  font-weight: bold;
+  color: #ffcc00;
+  font-size: 20px;
+
+}
+
+.value {
+font-weight: bold;
+  font-size: 20px;
+}
+
+.recent-trips {
+  background-color: midnightblue;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+}
+
+
+.recent-trips h2 {
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 10px;
+  color: black;
+  margin-top: 0;
+}
+
+
+.recent-trips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-trips li {
+  padding: 10px 0;
+  border-bottom: 2px solid #eee;
+}
+
+
+.recent-trips li:last-child {
+  border-bottom: none;
+}
