@@ -43,41 +43,117 @@
         </header>
 
 
-
-        <!--FOOTER-->
-        <footer>
-            <div class="footer-container">
-                <div class="footer-section about">
-                    <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo-footer" >
-                </div>
-                <div class="footer-section links">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="html/aboutus.html">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section contact">
-                    <h3>Contact</h3>
-                    <p>Email: contact@startour.com</p>
-                    <p>Phone: +0 831 576 989</p>
-                    <p>Address: 49.035, 2.0698 Earth</p>
-                </div>
-                <div class="footer-section social">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
+        <div class="admin-container">
+            <div class="container-admin">
+                <section>
+                    <h2>Manage Users</h2>
+                    <div class="filters">
+                        <input type="text" placeholder="Search users...">
+                        <select>
+                            <option value="">Filter by Status</option>
+                            <option value="active">Active</option>
+                            <option value="banned">Banned</option>
+                            <option value="vip">VIP</option>
+                        </select>
+                        <select>
+                            <option value="">Filter by Race</option>
+                            <option value="human">Human</option>
+                            <option value="ia">IA</option>
+                            <option value="alien">Alien</option>
+                            <option value="coruscant">Coruscant</option>
+                        </select>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Race</th>
+                                <th>Date of Birth</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>Human</td>
+                                <td>1990-01-01</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button onclick="toggleVIP(1)">Toggle VIP</button>
+                                        <button onclick="banUser(1)">Ban User</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane</td>
+                                <td>Doe</td>
+                                <td>jane@example.com</td>
+                                <td>Human</td>
+                                <td>1992-02-02</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button onclick="toggleVIP(2)">Toggle VIP</button>
+                                        <button onclick="banUser(2)">Ban User</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>AI</td>
+                                <td>Bot</td>
+                                <td>ai@example.com</td>
+                                <td>IA</td>
+                                <td>2020-03-03</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button onclick="toggleVIP(3)">Toggle VIP</button>
+                                        <button onclick="banUser(3)">Ban User</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Zor</td>
+                                <td>El</td>
+                                <td>zor@example.com</td>
+                                <td>Alien</td>
+                                <td>1985-04-04</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button onclick="toggleVIP(4)">Toggle VIP</button>
+                                        <button onclick="banUser(4)">Ban User</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Cor</td>
+                                <td>Uscant</td>
+                                <td>cor@example.com</td>
+                                <td>Coruscant</td>
+                                <td>1975-05-05</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button onclick="toggleVIP(5)">Toggle VIP</button>
+                                        <button onclick="banUser(5)">Ban User</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <button>Previous</button>
+                        <button>Next</button>
+                    </div>
+                </section>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 4090 CY StarTour. All rights reserved.</p>
-            </div>
-        </footer>
+        </div>
     </body>
 </html>
