@@ -27,11 +27,11 @@ html {
 footer {
     background-color: #0B1A26;
     color: #fff;
-    padding: 20px 0;
+    padding: 2vh 0;
     text-align: center;
     width: 100%;
     font-family: 'Inter', sans-serif;
-    border-top: 4px solid black;
+    border-top: 0.4vh solid black;
 
 }
 
@@ -39,15 +39,15 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 120vh;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2vh;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 200px;
-    margin: 10px;
+    min-width: 20vh;
+    margin: 1vh;
 }
 
 .footer-section img{
@@ -57,12 +57,12 @@ footer {
 }
 
 .footer-section h3 {
-    margin-bottom: 15px;
-    font-size: 1.2em;
+    margin-bottom: 1.5vh;
+    font-size: 2.5vh;
 }
 
 .footer-section ul {
-    margin: 10px 0;
+    margin: 1vh 0;
     line-height: 1.6;
 }
 
@@ -72,12 +72,12 @@ footer {
 }
 
 .footer-section p{
-    font-size: 0.9em;
+    font-size: 1.5vh;
 }
 
 .footer-section ul li {
-    margin: 6px 0;
-    font-size: 0.9em;
+    margin: 0.6vh 0;
+    font-size: 1.5vh;
 }
 
 .footer-section ul li a {
@@ -93,8 +93,8 @@ footer {
 
 .footer-bottom {
     background-color: #0B1A26;
-    padding: 10px 0;
-    font-size: 0.9em;
+    padding: 1vh 0;
+    font-size: 1.5vh;
 }
 
 .footer-bottom p {
@@ -112,15 +112,15 @@ header {
     top: 0;
     left: 0;
     background-color: #0f1a26;
-    border-bottom: 4px solid black;
+    border-bottom: 0.5vh solid black;
     color: white;
-    padding: 20px 0;
+    padding: 2vh 0vh;
     z-index: 7000;
     width: 100%;
 }
 
 nav {
-    margin-left: 80px;
+    margin-left: 8vh;
     display: flex;
     justify-content: center;
 }
@@ -135,14 +135,14 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 2vh;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 0.5vh 1vh;
 }
 
 
@@ -152,7 +152,7 @@ nav ul li a {
     top: 100%;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 0.1vh;
     background: white;
     transition : .3s;
 }
@@ -169,12 +169,12 @@ nav ul li.logo img {
 nav ul li:not(:first-child) {
     position: relative;
     font-size: 2vh;
-    top: -5px;
+    top: -0.5vh;
 }
 
 nav ul li:last-child.connect {
     position: relative;
-    top: 3px;
+    top: 0.3vh;
     font-size: 4vh;
     margin-left: auto;
 }
@@ -187,7 +187,7 @@ nav ul li.research {
 
 nav .research {
     position: relative;
-    top: 7px;
+    top: 0.7vh;
     font-size: 3vh;
     margin-left: auto;
 }
@@ -202,20 +202,20 @@ nav .submenu {
     list-style: none;
     padding: 0;
     margin: 0;
-    min-width: 140px;
+    min-width: 14vh;
 }
 
 nav .submenu li:first-child {
-    padding-top: 30px;
+    padding-top: 3vh;
 }
 
 nav .submenu li {
-    padding: 10px;
+    padding: 1vh;
 }
 
 nav .submenu li a {
     color: white;
-    padding: 10px;
+    padding: 1vh;
     display: block;
     font-size: 2vh;
 }
