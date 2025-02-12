@@ -1,0 +1,91 @@
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#Map{
+    font-family: 'Inter', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Assure que le body prend toute la hauteur de la fenêtre */
+
+}
+
+/*###################################*/
+/*###################################*/
+/*###################################*/
+
+#Map .rsearch {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://diapogram.com/upload/2019/04/18/20190418004741-b4a333f7.jpg');
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-size: cover; /* Couvre tout l'élément sans déformation */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    overflow: hidden;
+
+}
+#Map .title{
+    position: absolute;
+    white-space: nowrap;
+    top: 15%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 5vh;
+    color: white;
+    font-size: auto;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    margin: 0;
+}
+.planet{
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+}
+.planet:hover{
+    background-color: rgba(255, 255, 255, 0.411);
+}
+.atlantis{
+    top: 20vh;
+    left: 15vh;
+}
+.pandora{
+    top: 40vh;
+    left: 30vh;
+}
+.naboo{
+    top: 30vh;
+    left: 50vh;
+}
+.cybertron{
+    top: 50vh;
+    left: 70vh;
+}
+.scarif{
+    top: 20vh;
+    left: 80vh;
+}
+.earth{
+    top: 37vh;
+    left: 95vh;
+}
+.asuras{
+    top: 65vh;
+    left: 95vh;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+/**/
+
+
