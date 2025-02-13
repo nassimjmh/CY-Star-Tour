@@ -51,8 +51,20 @@
     height: 10vh;
     border-radius: 50%;
 }
+p:not(.name){
+    visibility: hidden;
+}  
+.planet:hover p{
+    visibility:visible;
+    position: absolute;
+    top: -7vh;
+    left: 6vh;
+    font-size: 3vh;
+    color: white;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
 .planet:hover{
-    background-color: rgba(255, 255, 255, 0.411);
+    box-shadow: 0px 0px 10px rgb(109, 108, 108);;
 }
 .atlantis{
     top: 20vh;
@@ -64,23 +76,43 @@
 }
 .naboo{
     top: 30vh;
-    left: 50vh;
+    left: 54vh;
 }
 .cybertron{
-    top: 50vh;
+    top: 47vh;
     left: 70vh;
 }
 .scarif{
-    top: 20vh;
+    top: 17vh;
     left: 80vh;
 }
 .earth{
     top: 37vh;
     left: 95vh;
 }
-.asuras{
+.mistral{
     top: 65vh;
     left: 95vh;
+}
+.kamino{
+    top: 10vh;
+    left: 110vh;
+}
+.grok{
+    top: 60vh;
+    left: 50vh;
+}
+.asuras{
+    top: 50vh;
+    left: 120vh;
+}
+.openai{
+    top: 30vh;
+    left: 120vh;
+}
+.mars{
+    top: 50vh;
+    left: 10vh;
 }
 img{
     height: 100%;
