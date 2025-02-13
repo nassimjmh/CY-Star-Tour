@@ -5,13 +5,18 @@
     font-style: normal;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 #aboutus{
     background-color: #0B1A26;
 }
 
 .image-earth {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/The_Earth_in_4k.webm/3840px--The_Earth_in_4k.webm.jpg'); 
     background-size: cover;
     background-position: center;
