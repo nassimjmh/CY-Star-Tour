@@ -48,6 +48,7 @@ footer {
     flex: 1;
     min-width: 20vh;
     margin: 1vh;
+    position: relative;
 }
 
 .footer-section img{
@@ -100,6 +101,26 @@ footer {
 .footer-bottom p {
     margin-top: 10vh;
     color: #ffffff;
+}
+
+.payment-logos {
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: nowrap;
+    gap: 7px;
+    white-space: nowrap;
+    position: absolute;
+    top: 15vh; 
+    right: 5vh; 
+}
+
+.payment-logos li {
+    padding: 5px; 
+}
+
+.payment-logos img {
+    width: 40px; 
+    height: auto;
 }
 
 
