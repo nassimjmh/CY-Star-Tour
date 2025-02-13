@@ -1,7 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  background : url("https://wallpaperaccess.com/full/17520.jpg")no-repeat center;
-  color: black;
+  background: url("https://manybackgrounds.com/images/hd4/earth-thick-clouds-4k-space-9cz439cbas77vab6.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,44 +11,78 @@ body {
   height: 100vh;
 }
 
-main{
-  flex: 1; /* Prend tout l'espace disponible entre le header et le footer */
+main {
+  flex: 1;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   width: 100%;
-  align-items: center;
-  padding: 2vh; /* Facultatif : espace autour */
-  margin-top : 10vh;
+  align-items: stretch;
+  padding: 2vh;
+  margin-top: 10vh;
   box-sizing: border-box;
+  height: 100%;
 }
 
-
 .sidebar {
-  width: 500px;
-  background : steelblue;
-  padding: 20px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-weight: bold;
-  gap : 40px;
-  font-size : 30px;
+  gap : 50px;
+  font-size: 30px;
   border-radius: 20px;
+  color: white;
+  box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
+  background-color: lightslategrey;
+  margin-right : 20px;
 }
 
-.sidebar .name{
-  color : white;
-  margin-bottom: 20px;
+
+.sidebar-head{
+  position: relative;
+  display: inline-block;
+
+}
+.sidebar-head .bx-edit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  color: darkslategrey;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.sidebar-head .bx-edit:hover {
+  font-size: 20px;
+  color: black;
+}
+
+
+.bx-edit {
+  color: darkslategrey;
+}
+
+.bx-edit:hover{
+  font-size: 25px;
+  color : black;
+
 }
 
 .profile-pic {
   width: 150px;
   height: 150px;
+  display: flex;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 5px solid #5CF2F2;
 }
+
 .sidebar a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -54,71 +90,80 @@ main{
   text-decoration: underline;
 }
 
-
 .sidebar .status {
-  margin-top: 15px;
-  color: #ffcc00;
+  color: gold;
 }
 
+.sidebar .status:hover {
+   cursor : pointer;
+  text-decoration: underline;
+}
 
 .info {
-  background-color: midnightblue;
   padding: 20px;
   border-radius: 5px;
-  width: 500px;
-
+  width: 1000px;
+  color: black;
+  background-color: white;
+  box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
 }
+
+.info-profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espace entre les sections */
+}
+
 
 
 .info .header {
-  border-bottom: 3px solid #ccc;
-  margin-bottom: 10px;
+  border-bottom: 3px solid #3D9DF2;
+  margin-bottom: 20px;
 }
+
+
 
 .info .line {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px 0;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #123159;
 }
-
 
 .info .line:last-child {
   border-bottom: none;
 }
 
-
-
-
 .label {
   font-weight: bold;
-  color: #ffcc00;
+  color: #3D9DF2;
   font-size: 20px;
-
 }
 
 .value {
-font-weight: bold;
+  font-weight: bold;
   font-size: 20px;
 }
 
 .recent-trips {
-  background-color: midnightblue;
+  background-color: white;
   padding: 20px;
   border-radius: 5px;
-  width: 80%;
-  max-width: 600px;
+  width: 1000px;
+  color: #3D9DF2;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
 }
 
 
 .recent-trips h2 {
-  border-bottom: 3px solid #ccc;
+  border-bottom: 3px solid #3D9DF2;
   padding-bottom: 10px;
   color: black;
   margin-top: 0;
 }
-
 
 .recent-trips ul {
   list-style: none;
@@ -128,10 +173,59 @@ font-weight: bold;
 
 .recent-trips li {
   padding: 10px 0;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #123159;
 }
-
 
 .recent-trips li:last-child {
   border-bottom: none;
 }
+
+
+.destinations-info {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #3D9DF2;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.destinations-info h2 {
+  color : black;
+  margin-bottom: 10px;
+}
+
+.destinations-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.destinations-info li {
+  padding: 10px 0;
+  border-bottom: 2px solid #123159;
+}
+
+
+
+
+.see-more-btn {
+  margin-top: 20px;
+  margin-left : 100px;
+  display: inline-block;
+  background-color: #007bff; /* Couleur bleue (modifiable) */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3; /* Couleur bleue foncée au survol */
+  font-size: 14px ;
+}
+
+
