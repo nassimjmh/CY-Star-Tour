@@ -65,7 +65,12 @@ main {
 
 .bx-edit {
   color: darkslategrey;
+  font-size: 30px;
+
 }
+
+
+
 
 .bx-edit:hover{
   font-size: 25px;
@@ -214,18 +219,21 @@ main {
   margin-top: 20px;
   margin-left : 100px;
   display: inline-block;
-  background-color: #007bff; /* Couleur bleue (modifiable) */
+  background-color: darkslategrey;
   color: #fff;
   padding: 10px 20px;
   font-size: 16px;
   text-decoration: none;
   border-radius: 5px;
   text-align: center;
+  transition: 0.7s;
 }
 
 .see-more-btn:hover {
-  background-color: #0056b3; /* Couleur bleue foncée au survol */
-  font-size: 14px ;
+ background-color:#0b1a26;
+  font-size: 15px;
+  transition: 0.7s;
+
 }
 
 
