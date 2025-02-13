@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../font/Inter.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: url("https://manybackgrounds.com/images/hd4/earth-thick-clouds-4k-space-9cz439cbas77vab6.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
@@ -141,13 +148,11 @@ main {
 }
 
 .label {
-  font-weight: bold;
   color: #3D9DF2;
   font-size: 20px;
 }
 
 .value {
-  font-weight: bold;
   font-size: 20px;
 }
 
@@ -157,7 +162,6 @@ main {
   border-radius: 5px;
   width: 1000px;
   color: #3D9DF2;
-  font-weight: bold;
   font-size: 20px;
   box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
 }
@@ -191,7 +195,6 @@ main {
   padding: 20px;
   background-color: #ffffff;
   color: #3D9DF2;
-  font-weight: bold;
   border-radius: 10px;
   box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
 }
