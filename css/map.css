@@ -114,7 +114,7 @@ p:not(.name){
     top: 50vh;
     left: 10vh;
 }
-img{
+.rsearch img{
     height: 100%;
     width: 100%;
 }
