@@ -14,7 +14,7 @@
     height: 100%; /* Assure que le body prend toute la hauteur de la fenêtre */
 
 }
-a:visited {
+#Book a:visited {
     color: black; /* Remplacez par la couleur de votre choix */
 }
 /*###################################*/
