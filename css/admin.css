@@ -135,3 +135,50 @@
         gap: 10px;
     }
 }
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.bento-box {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.bento-box h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.bento-box p {
+    font-size: 1em;
+    color: #666;
+}
+
+.revenue, .sales {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.revenue h3, .sales h3 {
+    font-size: 2em;
+    color: #007BFF;
+}
