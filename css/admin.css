@@ -9,14 +9,15 @@
     margin: 0;
     padding: 0;
     height: auto;
+    background-color: #ffffff;
 }
 
 .admin-container {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
     margin-top: 7.5vh;
+    margin-left: 15%;
 }
 
 .admin-container .container-admin {
@@ -30,9 +31,14 @@
 }
 
 .admin-container table {
-    width: 100%;
+    width: 70%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    background-color: white;
+}
+
+.admin-container h2{
+    color: white;
 }
 
 .admin-container table, .admin-container th, .admin-container td {
@@ -55,7 +61,7 @@
 }
 
 .admin-container .action-buttons button {
-    padding: 5px 10px;
+    padding: 5px 10px;  
     font-size: 14px;
     color: white;
     border: none;
@@ -67,15 +73,20 @@
 .vip-button{
     background-color: #f7931a;
 }
+.vip-button:hover{
+    background-color: #ffd000;
+}
 .ban-button{
     background-color: #e20e0e;
+}
+.ban-button:hover{
+    background-color: #9c0707;
 }
 .manage-button{
     background-color: #133159;
 }
-
-.admin-container .action-buttons button:hover {
-    background-color: #1a4068;
+.manage-button:hover{
+    background-color: #307ce0;
 }
 
 .admin-container .filters {
@@ -97,12 +108,13 @@
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
+    margin-right: 25%;
 }
 
 .admin-container .pagination button {
     padding: 10px 15px;
-    background-color: #133159;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -110,11 +122,8 @@
 }
 
 .admin-container .pagination button:hover {
-    background-color: #1a4068;
+    background-color: #3b88da;
 }
-
-
-
 
 @media (max-width: 768px) {
     .admin-container .container-admin {
