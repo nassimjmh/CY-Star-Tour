@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-image: url("https://wallpapercat.com/w/full/4/e/9/65859-3840x2160-desktop-4k-space-station-background-image.jpg");
+  background-image: url("https://preview.redd.it/novas-vertical-ship-challenge-the-varuun-basilica-v0-fzb1wfpjxzie1.png?width=1920&format=png&auto=webp&s=de3eb58784ed2c5f12f447d5be6474cd4b6bea5f");
   background-position: center;
   background-size: cover;
 }
@@ -40,7 +40,7 @@ body{
 }
 .wrapper{
   width: 420px;
-  background: transparent;
+  background: #0B1A26;
   border: 2px solid rgba(255, 255, 255, .2);
   backdrop-filter: blur(3px);
   color: #fff;
@@ -67,7 +67,7 @@ body{
   background: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 1px solid white;
   border-radius: 40px;
   font-size: 16px;
   font-weight : bold;
@@ -112,7 +112,7 @@ body{
   border: none;
   outline: none;
   border-radius: 40px;
-  box-shadow: 0px 0px 20px rgb(251, 231, 239);;
+  box-shadow: 0px 0px 5px rgb(251, 231, 239);;
   cursor: pointer;
   font-size: 16px;
   color:  white;
