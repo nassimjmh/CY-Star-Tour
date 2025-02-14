@@ -1,191 +1,237 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('../font/Inter.ttc') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  body {
-    font-family: 'Inter', sans-serif;
-    background: url("https://manybackgrounds.com/images/hd4/earth-thick-clouds-4k-space-9cz439cbas77vab6.jpg") no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  main {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: stretch;
-    padding: 2vh;
-    margin-top: 10vh;
-    box-sizing: border-box;
-    height: 100%;
-  }
-  .sidebar {
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
-    gap : 50px;
-    font-size: 30px;
-    border-radius: 20px;
-    color: white;
-    box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
-    background-color: lightslategrey;
-    margin-right : 20px;
-  }
-  .sidebar-head{
-    position: relative;
-    display: inline-block;
-  }
-  .sidebar-head .bx-edit {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 25px;
-    color: darkslategrey;
-    background: white;
-    border-radius: 50%;
-    padding: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  .sidebar-head .bx-edit:hover {
-    font-size: 20px;
-    color: black;
-  }
-  .bx-edit {
-    color: darkslategrey;
-    font-size: 30px;
-  }
-  .bx-edit:hover{
-    font-size: 25px;
-    color : black;
-  }
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    display: flex;
-    border-radius: 50%;
-    border: 5px solid #5CF2F2;
-  }
-  .sidebar a {
-    color: white;
-    text-decoration: none;
-  }
-  .sidebar a:hover {
-    text-decoration: underline;
-  }
-  .sidebar .status {
-    color: gold;
-  }
-  .sidebar .status:hover {
-     cursor : pointer;
-    text-decoration: underline;
-  }
-  .info {
-    padding: 20px;
-    border-radius: 5px;
-    width: 1000px;
-    color: black;
-    background-color: white;
-    box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
-  }
-  .info-profile {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espace entre les sections */
-  }
-  .info .header {
-    border-bottom: 3px solid #3D9DF2;
-    margin-bottom: 20px;
-  }
-  .info .line {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 2px solid #123159;
-  }
-  .info .line:last-child {
-    border-bottom: none;
-  }
-  .label {
-    color: #3D9DF2;
-    font-size: 20px;
-  }
-  .value {
-    font-size: 20px;
-  }
-  .recent-trips {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 1000px;
-    color: #3D9DF2;
-    font-size: 20px;
-    box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
-  }
-  .recent-trips h2 {
-    border-bottom: 3px solid #3D9DF2;
-    padding-bottom: 10px;
-    color: black;
-    margin-top: 0;
-  }
-  .recent-trips ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .recent-trips li {
-    padding: 10px 0;
-    border-bottom: 2px solid #123159;
-  }
-  .recent-trips li:last-child {
-    border-bottom: none;
-  }
-  .destinations-info {
-    width: 300px;
-    padding: 20px;
-    background-color: #ffffff;
-    color: #3D9DF2;
-    border-radius: 10px;
-    box-shadow:  6px 15px rgba(0, 0, 0, 0.3);
-  }
-  .destinations-info h2 {
-    color : black;
-    margin-bottom: 10px;
-  }
-  .destinations-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .destinations-info li {
-    padding: 10px 0;
-    border-bottom: 2px solid #123159;
-  }
-  .see-more-btn {
-    margin-top: 20px;
-    margin-left : 100px;
-    display: inline-block;
-    background-color: darkslategrey;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: 0.7s;
-  }
-  .see-more-btn:hover {
-   background-color:#0b1a26;
-    font-size: 15px;
-    transition: 0.7s;
-  }
+  font-family: 'Inter';
+  src: url('../font/Inter.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: url("https://preview.redd.it/the-rosette-nebula-v0-mbmy538z5tie1.png?auto=webp&s=59ae73589eb4d32a8e4b947cc903778add648e7e") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: stretch;
+  padding: 2vh;
+  margin-top: 10vh;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.sidebar {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  gap : 50px;
+  font-size: 25px;
+  border-radius: 20px;
+  color: white;
+  background-color: #0b1a26;
+  margin-right : 20px;
+}
+
+
+.sidebar-head{
+  position: relative;
+  display: inline-block;
+
+}
+.sidebar-head .bx-edit {
+  position: absolute;
+  margin-top: 40px;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  color:#0b1a26;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.sidebar-head .bx-edit:hover {
+  font-size: 23px;
+  margin-top: 40px;
+  color: #0b1a26;
+}
+
+
+.bx-edit {
+  color: #0b1a26;
+  font-size: 30px;
+
+}
+
+.bx-edit:hover{
+  font-size: 28px;
+  color : #0b1a26;
+
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  margin-top: 40px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.sidebar .status {
+  color: #5cf2f2;
+}
+
+.sidebar .status:hover {
+  cursor : pointer;
+  text-decoration: underline;
+}
+
+.info {
+  padding: 10px;
+  border-radius: 20px;
+  width: 870px;
+  color: black;
+  background-color: white;
+}
+
+.info-profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espace entre les sections */
+}
+
+
+
+.info .header {
+  border-bottom: 3px solid #0b1a26;
+  margin-bottom: 20px;
+}
+
+
+
+.info .line {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 2px solid #0b1a26;
+}
+
+.info .line:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: #0b1a26;
+  font-size: 20px;
+}
+
+.value {
+  font-size: 20px;
+}
+
+.recent-trips {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  width: 870px;
+  color: #0b1a26;
+  font-size: 20px;
+}
+
+
+.recent-trips h2 {
+  border-bottom: 3px solid #0b1a26;
+  padding-bottom: 10px;
+  color: #0b1a26;
+  margin-top: 0;
+}
+
+.recent-trips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-trips li {
+  padding: 10px 0;
+  border-bottom: 2px solid #0b1a26;
+}
+
+.recent-trips li:last-child {
+  border-bottom: none;
+}
+
+
+.destinations-info {
+  width: 250px;
+  padding: 20px;
+  background-color: #0b1a26;
+  color: white;
+  border-radius: 20px;
+}
+
+.destinations-info h2 {
+  color : white;
+  margin-bottom: 10px;
+}
+
+.destinations-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.destinations-info li {
+  padding: 10px 0;
+  border-bottom: 2px solid white;
+}
+
+
+
+
+.see-more-btn {
+  margin-top: 20px;
+  margin-left : 100px;
+  display: inline-block;
+  background-color: white;
+  color: #0b1a26;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.7s;
+}
+
+.see-more-btn:hover {
+  font-size: 15px;
+  transition: 0.7s;
+
+}
+
+
