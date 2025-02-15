@@ -187,6 +187,10 @@ nav ul li.logo img {
     width: 21vh;
 }
 
+nav ul li.panellogo img{ /*Admin panel */
+    width: 15vh;
+}
+
 nav ul li:not(:first-child) {
     position: relative;
     font-size: 2vh;
