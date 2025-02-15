@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     height: 100%; /* Assure que le body prend toute la hauteur de la fenêtre */
-
+    background-color: black;
 }
 
 /*###################################*/
@@ -41,6 +41,7 @@
     position: relative;
     justify-content: center; 
     align-items: center; 
+    margin-top: 8vh;
 }
 
 
