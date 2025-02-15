@@ -131,13 +131,13 @@
 .sidebar {
     font-family: 'Inter', sans-serif;
     position: fixed;
-    top: 60px;
+    top: 7vh;
     left: 0;
-    height: calc(100% - 60px); /* Adjusts the height to account for the navigation bar */
+    height: calc(100% - 7vh); /* Adjusts the height to account for the navigation bar */
     width: 13%;
     background-color: #0B1A26;
     border-right: 0.5vh solid black;
-    padding-top: 20px;
+    padding-top: 3vh;
     color: white;    
 }
 
