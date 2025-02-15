@@ -35,15 +35,17 @@
 #Map .title{
     position: absolute;
     white-space: nowrap;
-    top: 15%;
-    left: 16%;
+    top: 20vh;
+    left: 40vh;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 5vh;
-    color: white;
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
     font-size: auto;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
     margin: 0;
+    font-weight: bolder;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    text-align: left;
 }
 .planet{
     position: absolute;
@@ -51,7 +53,7 @@
     height: 10vh;
     border-radius: 50%;
 }
-p:not(.name){
+.title p:not(.name){
     visibility: hidden;
 }  
 .planet:hover p{
