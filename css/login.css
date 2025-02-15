@@ -118,6 +118,19 @@ body{
   color:  white;
   font-weight: 600;
 }
+
+.btn a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn:active{
+  background-color: #0b1a26;
+  transform: scale(0.95);
+}
+
+
+
 .wrapper .register-link{
   font-size: 14.5px;
   text-align: center;
