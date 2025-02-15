@@ -175,6 +175,7 @@
 }
 #book a{
     text-decoration: none;
+    color: black;
 }
 #Book .valid:hover {
     background: #98FB98;
