@@ -31,8 +31,11 @@ html, body {
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 25px;
+    font-style: italic;
+  font-weight: bold;
 }
+
 
 
 #aboutustext{
