@@ -173,7 +173,7 @@
     cursor: pointer;
     top: 40%; /* Centre verticalement */
     left: 70%; /* Centre horizontalement */ 
-    transition: 0,7;
+    transition: 0.7;
 }
 #book a{
     text-decoration: none;
