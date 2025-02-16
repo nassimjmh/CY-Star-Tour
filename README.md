@@ -1,6 +1,10 @@
 # CY-Star-Tour
 
-https://nassimjmh.github.io/CY-Star-Tour/
+URL : https://nassimjmh.github.io/CY-Star-Tour/
+PROFILE PAGE IN FOOTER OR LOGIN BUTTON
+ADMIN PAGE IN FOOTER
+
+
 
 
 ## 🌐 Made using
