@@ -1,7 +1,7 @@
 # CY-Star-Tour
 
-URL : https://nassimjmh.github.io/CY-Star-Tour/
-PROFILE PAGE IN FOOTER OR LOGIN BUTTON
+URL : https://nassimjmh.github.io/CY-Star-Tour/<br>
+PROFILE PAGE IN FOOTER OR LOGIN BUTTON<br>
 ADMIN PAGE IN FOOTER
 
 
