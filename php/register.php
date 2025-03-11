@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -14,11 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $last_name = $_POST['last_name'];  // Correction ici (last-name -> last_name)
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $human = $_POST['human'];
-    $IA = $_POST['IA'];
-    $alien = $_POST['alien'] ;
-    $Coruscant = $_POST['Coruscant'] ;
-    $date_picker = $_POST['date_picker'];
+    $race = $_POST['race'];
 
 
     if (!isset($users[$email])) {
@@ -28,10 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'last_name' => $last_name,
             'email' => $email,
             'password' => $password,
-            'human' => $human,
-            'IA' => $IA,
-            'alien' => $alien,
-            'Coruscant' => $Coruscant,
+            'race' => $race,
             'date_picker' => $date_picker,
         ];
 
@@ -117,16 +109,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <summary class="selecteur">Your Race?</summary>
                 <div class="racelist">
                     <label>
-                        <input type="radio" name="human"> Human
+                        <input type="radio" name="race" value="human"> Human
                     </label>
                     <label>
-                        <input type="radio" name="IA"> IA
+                        <input type="radio" name="race" value="IA"> IA
                     </label>
                     <label>
-                        <input type="radio" name="alien"> Alien
+                        <input type="radio" name="race" value="Alien" > Alien
                     </label>
                     <label>
-                        <input type="radio" name="Coruscant"> Coruscant
+                        <input type="radio" name="race" value="Coruscant" > Coruscant
                     </label>
                 </div>
             </details>
@@ -135,8 +127,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="input-box">
             <details>
                 <summary class="selecteur">Birth Date?</summary>
-                <div class="Birthday">
-                    <input type="date" class="date" name="date_picker" min="4900-01-01">
+                <div class="Birthday" >
+                    <input type="date" class="date" name="date_picker" min="4900-01-01" required>
                 </div>
             </details>
         </div>
