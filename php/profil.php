@@ -1,1 +1,174 @@
 
+<?php
+
+session_start();
+$email = $_SESSION['email'];
+$first_name= $_SESSION["first_name"];
+$role= $_SESSION["role"];
+$last_name= $_SESSION["last_name"];
+$race = $_SESSION["race"];
+$date_picker = $_SESSION["date_picker"];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StarTour - Profile</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="../images/sparkles.png" type="image/png">
+    <link rel="stylesheet" href="profil.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li class="logo">
+                <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo" >
+            </li>
+            <li>
+                <a class="underline" href="../index.html">Home</a>
+            </li>
+            <li>
+                <a class="underline" href="book.html">Destinations</a>
+                <ul class="submenu">
+                    <li><a href="map.html">Map</a></li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a class="underline" href="aboutus.html">About us</a>
+            </li>
+            <li class="research">
+                <a href="book.html"><i class='bx bx-search research'></i></a>
+            </li>
+            <li class="connect">
+                <a href="login.html"><i class='bx bx-user-circle connect'></i></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+
+    <div class="sidebar">
+        <div class="sidebar-head">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="img" class="profile-pic"><a href="#"><i class='bx bx-edit'></i></a>
+        </div>
+        <a href="#">Settings & Preferences &nbsp; <i class='bx bx-cog'></i></a>
+        <a href="#">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
+        <a href="#">Booking & Acess &nbsp;<i class='bx bxs-calendar'></i></a>
+        <a href="#">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
+        <div class="status">Status : <?php echo $role; ?> &nbsp;<i class='bx bxl-sketch'></i></div>
+        <a class="logout" href="login.php">Logout  &nbsp;<i class='bx bx-log-out'></i></a>
+    </div>
+
+
+    <div class="info-profile">
+        <div class="info">
+            <div class="header"><h1>About me&nbsp<a href="#"><i class='bx bx-edit'></i></a></h1></div>
+            <div class="line">
+                <span class="label">Last Name: </span>
+                <span class="value"><?php echo $last_name; ?></span>
+            </div>
+            <div class="line">
+                <span class="label">First Name:</span>
+                <span class="value"><?php echo $first_name; ?></span>
+            </div>
+            <div class="line">
+                <span class="label">Email:</span>
+                <span class="value"><?php echo $email; ?></span>
+            </div>
+            <div class="line">
+                <span class="label">Race:</span>
+                <span class="value"><?php echo $race; ?></span>
+            </div>
+            <div class="line">
+                <span class="label">Date of Birth:</span>
+                <span class="value"><?php echo $date_picker; ?></span>
+            </div>
+        </div>
+        <div class="recent-trips">
+            <h2>Recently Booked Trips</h2>
+            <ul>
+                <li>Mars</li>
+                <li>Venus</li>
+                <li>Kargalan</li>
+                <li>Robotcorp</li>
+                <li>Litunaria</li>
+                <li>Icebergotum</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="destinations-info">
+        <h2>Upcoming Destinations</h2>
+        <ul>
+            <li>Alpha Centauri</li>
+            <li>Andromeda</li>
+            <li>Proxima B</li>
+            <li>Jupiter Moon</li>
+        </ul>
+        <a href="#" class="see-more-btn">See More</a>
+
+    </div>
+
+</main>
+
+
+<!--FOOTER-->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo-footer" >
+            <ul class="payment-logos">
+                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/american-express.svg" alt="amex"></il>
+                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/cartes-bancaires.svg" alt="cartebleue"></il>
+                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/apm/paypal.svg" alt="paypal"></il>
+                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/mastercard.svg" alt="mastercard"></il>
+                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/visa.svg" alt="visa"></il>
+                <il><img src="../images/bitcoin.svg" alt="bitcoin"></il>
+            </ul>
+        </div>
+        <div class="footer-section links">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="book.html">Destinations</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="admin/dashboard.html">Services (admin page)</a></li>
+                <li><a href="profil.html">Contact (profile page)</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>Email: contact@startour.com</p>
+            <p>Phone: +0 831 576 989</p>
+            <p>Address: 49.035, 2.0698 Earth</p>
+        </div>
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Bluesky</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 4090 CY StarTour. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
