@@ -14,6 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $race = $_POST['race'];
+    $date_picker = $_POST['date_picker'];
+    $role = 'Standard';
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 
     if (!isset($users[$email])) {
@@ -22,18 +25,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'first_name' => $first_name,
             'last_name' => $last_name,
             'email' => $email,
-            'password' => $password,
+            'password' => $hashedPassword,
             'race' => $race,
             'date_picker' => $date_picker,
+            'role' => $role,
         ];
 
 
         file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
 
-        $_SESSION['first_name'] = $first_name;
-
-        // Rediriger vers la page de connexion
         header('Location: login.php');
         exit();
     } else {
@@ -51,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="icon" href="../images/sparkles.png" type="image/png">
     <link rel="stylesheet" href="register.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body id="registermenu">
 <header>
