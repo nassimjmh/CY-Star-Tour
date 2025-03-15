@@ -44,7 +44,18 @@ $date_picker = $_SESSION["date_picker"];
         <a href="#">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
         <a href="#">Booking & Acess &nbsp;<i class='bx bxs-calendar'></i></a>
         <a href="#">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
-        <div class="status">Status : <?php echo $role; ?> &nbsp;<i class='bx bxl-sketch'></i></div>
+        <div class="status"> <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Standard') {
+            echo ' <span style="color : green;">'.'Statut :&nbsp' . $role;
+            }
+else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
+    echo ' <span style="color : grey;">'.'Statut :&nbsp' . $role;
+}
+
+else if( isset($_SESSION['role']) && $_SESSION['role'] === 'VIP') {
+    echo ' <span style="color : gold;">'.'Statut :&nbsp' . $role;
+}
+            ?> &nbsp;<i class='bx bxl-sketch'></i></div>
+
         <a class="logout" href="logout.php">Logout &nbsp;<i class='bx bx-log-out'></i></a>
     </div>
 
