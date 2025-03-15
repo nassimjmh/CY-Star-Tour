@@ -8,9 +8,9 @@ $users = json_decode(file_get_contents($file), true);
 $error = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Récupérer les valeurs du formulaire
+
     $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];  // Correction ici (last-name -> last_name)
+    $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $race = $_POST['race'];
@@ -31,11 +31,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'role' => $role,
         ];
 
+        $_SESSION['email'] = $email;
+        $_SESSION["first_name"] = $users[$email]["first_name"];
+        $_SESSION["role"] = $users[$email]["role"];
+        $_SESSION["last_name"] = $users[$email]["last_name"];
+        $_SESSION["race"] = $users[$email]["race"];
+        $_SESSION["date_picker"] = $users[$email]["date_picker"];
+
 
         file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
 
-        header('Location: login.php');
+        header('Location: profil.php');
         exit();
     } else {
         $error = "⚠️ Utilisateur déjà existant.";
@@ -56,31 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body id="registermenu">
 <header>
-    <nav>
-        <ul>
-            <li class="logo">
-                <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo">
-            </li>
-            <li>
-                <a class="underline" href="../index.html">Home</a>
-            </li>
-            <li>
-                <a class="underline" href="book.html">Destinations</a>
-                <ul class="submenu">
-                    <li><a href="map.html">Map</a></li>
-                </ul>
-            </li>
-            <li>
-                <a class="underline" href="aboutus.html">About us</a>
-            </li>
-            <li class="research">
-                <a href="book.html"><i class='bx bx-search research'></i></a>
-            </li>
-            <li class="connect">
-                <a href="login.php"><i class='bx bx-user-circle connect'></i></a>
-            </li>
-        </ul>
-    </nav>
+    <?php include("navbar.php")?>
 </header>
 
 <div class="wrapper">
