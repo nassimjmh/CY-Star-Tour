@@ -30,9 +30,18 @@
         "first_name": "Kargalan",
         "last_name": "Thesunisgone",
         "email": "kargalan@gmail.com",
-        "password": "$2y$10$cchjFIdZ\/FaRjeD94UjDsuN7TLc64bfxUXiirfsuAqtL.qMiwX.\/e",
+        "password": "$2y$10$mYsnSVO3ZzcT3oa0jMnWZ..GSReJMF35kSV5.ynq4vlM54SpnyLRq",
         "race": "Alien",
         "date_picker": "4970-10-17",
         "role": "Standard"
+    },
+    "ia@gmail.com": {
+        "first_name": "IA",
+        "last_name": "IASERMIN",
+        "email": "ia@gmail.com",
+        "password": "$2y$10$EhexaXgS\/8GrwxAThY\/\/iOQfEbKWG8NgrY\/hld70Fa05cnuH9qoAm",
+        "race": "IA",
+        "date_picker": "4900-01-29",
+        "role": "VIP"
     }
 }
