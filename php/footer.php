@@ -1,4 +1,6 @@
 
+
+
 <footer>
     <div class="footer-container">
         <div class="footer-section about">
@@ -18,7 +20,11 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="book.html">Destinations</a></li>
                 <li><a href="aboutus.html">About us</a></li>
-                <li><a href="admin/dashboard.html">Services (admin page)</a></li>
+                <?php
+                if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
+                    echo '<li><a href="admin/dashboard.html">Services (admin page)</a></li>';
+                }
+                ?>
                 <li><a href="profil.html">Contact (profile page)</a></li>
             </ul>
         </div>
