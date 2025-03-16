@@ -23,8 +23,8 @@ $date_picker = $_SESSION["date_picker"];
     <title>StarTour - Profile</title>
     <meta charset="utf-8">
     <link rel="icon" href="../images/sparkles.png" type="image/png">
-    <link rel="stylesheet" href="profil.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/profil.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>

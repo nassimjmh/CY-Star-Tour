@@ -51,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StarTour - Login</title>
     <link rel="icon" href="../images/sparkles.png" type="image/png">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body id="loginmenu">
