@@ -1,3 +1,25 @@
+<?php
+session_start();
+
+$email = $_SESSION['email'];
+$first_name= $_SESSION["first_name"];
+$role= $_SESSION["role"];
+$last_name= $_SESSION["last_name"];
+$race = $_SESSION["race"];
+$date_picker = $_SESSION["date_picker"];
+
+if ( !isset($_SESSION['email']) || !isset($_SESSION['password']) ) {
+
+    header('location: ../login.php');
+}
+
+if ( !isset($_SESSION['role']) || $_SESSION['role'] !== 'Admin') {
+    
+        header('location: ../../index.html');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

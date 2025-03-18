@@ -29,5 +29,5 @@
             </li>
             <li>
                 <a href="settings.php">Settings</a>
-            </li>
+            </li>            
     </div>
