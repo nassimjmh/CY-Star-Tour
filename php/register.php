@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: profil.php');
         exit();
     } else {
-        $error = "⚠️ Utilisateur déjà existant.";
+        $error = "⚠️ User already exists.";
     }
 }
 ?>
