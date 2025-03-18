@@ -7,18 +7,18 @@
             <a class="underline" href="../index.html">Home</a>
         </li>
         <li>
-            <a class="underline" href="book.html">Destinations</a>
+            <a class="underline" href="../html/book.html">Destinations</a>
             <ul class="submenu">
-                <li><a href="map.html">Map</a></li>
+                <li><a href="../html/map.html">Map</a></li>
             </ul>
 
         </li>
 
         <li>
-            <a class="underline" href="aboutus.html">About us</a>
+            <a class="underline" href="../html/aboutus.html">About us</a>
         </li>
         <li class="research">
-            <a href="book.html"><i class='bx bx-search research'></i></a>
+            <a href="../html/book.html"><i class='bx bx-search research'></i></a>
         </li>
         <li class="connect">
             <a href="profil.php"><i class='bx bx-user-circle connect'></i></a>
