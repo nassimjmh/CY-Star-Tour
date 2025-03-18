@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+/*
 if ( !isset($_SESSION['email']) || !isset($_SESSION['password']) ) {
 
     header('location: ../login.php');
@@ -18,7 +18,7 @@ $last_name= $_SESSION["last_name"];
 $race = $_SESSION["race"];
 $date_picker = $_SESSION["date_picker"];
 
-
+*/
 ?>
 
 <!DOCTYPE html>
@@ -70,85 +70,34 @@ $date_picker = $_SESSION["date_picker"];
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>#15081</td>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td><a href="mailto:john@example.com">john@example.com</a></td>
-                            <td>DEFAULT</td>
-                            <td>Human</td>
-                            <td>1990-01-01</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <button onclick="" class="vip-button">Toggle VIP</button>
-                                    <button onclick="" class="ban-button">Ban User</button>
-                                    <button onclick="" class="manage-button">Manage User</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>#10167</td>
-                            <td>Benoît</td>
-                            <td>Hébert</td>
-                            <td><a href="mailto:b-hebert@yahoo.com">b-hebert@yahoo.com</a></td>
-                            <td>VIP</td>
-                            <td>Human</td>
-                            <td>1992-02-02</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <button onclick="" class="vip-button">Toggle VIP</button>
-                                    <button onclick="" class="ban-button">Ban User</button>
-                                    <button onclick="" class="manage-button">Manage User</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>#45566</td>
-                            <td>AI</td>
-                            <td>Bot</td>
-                            <td><a href="mailto:ai@example.com">ai@example.com</a></td>
-                            <td>BANNED</td>
-                            <td>IA</td>
-                            <td>2020-03-03</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <button onclick="" class="vip-button">Toggle VIP</button>
-                                    <button onclick="" class="ban-button">Ban User</button>
-                                    <button onclick="" class="manage-button">Manage User</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>#00897</td>
-                            <td>Zor</td>
-                            <td>El</td>
-                            <td><a href="mailto:zor@example.com">zor@example.com</a></td>
-                            <td>ADMIN</td>
-                            <td>Alien</td>
-                            <td>1985-04-04</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <button onclick="" class="vip-button">Toggle VIP</button>
-                                    <button onclick="" class="ban-button">Ban User</button>
-                                    <button onclick="" class="manage-button">Manage User</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>#11010</td>
-                            <td>Cor</td>
-                            <td>Uscant</td>
-                            <td><a href="mailto:cor@example.com">cor@example.com</a></td>
-                            <td>DEFAULT</td>
-                            <td>Coruscant</td>
-                            <td>1975-05-05</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <button onclick="" class="vip-button">Toggle VIP</button>
-                                    <button onclick="" class="ban-button">Ban User</button>
-                                    <button onclick="" class="manage-button">Manage User</button>
-                                </div>
-                            </td>
+                    <?php
+                        $file = file_get_contents("../users.json");
+                        $users = json_decode($file, true);
+                        if(count($users)!=0){
+                            foreach($users as $users){
+                                ?>      
+                                <tr>
+                                    <td>#00000</td>
+                                    <td><?php echo $users["first_name"] ?></td>
+                                    <td><?php echo $users["last_name"] ?></td>
+                                    <td><a href="mailto:<?php echo $users["email"] ?>"><?php echo $users["email"] ?></a></td>
+                                    <td><?php echo $users["role"] ?></td>
+                                    <td><?php echo $users["race"] ?></td>
+                                    <td><?php echo $users["date_picker"] ?></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <button onclick="" class="vip-button">Toggle VIP</button>
+                                            <button onclick="" class="ban-button">Ban User</button>
+                                            <button onclick="" class="manage-button">Manage User</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                        }
+
+                    ?>
+                       
                     </tbody>
                 </table>
                 <div class="pagination">
