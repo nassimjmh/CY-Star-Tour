@@ -1,0 +1,61 @@
+{
+  "atlantis": {
+    "name": "Atlantis",
+    "image": "../../images/star.png",
+    "presentation": "ICI POUR LE TEXTE",
+    "schedule": [
+      {
+        "day": "Day 1",
+        "activities": [
+          {
+            "title": "TITRE1",
+            "description": "Description"
+          },
+          {
+            "title": "TITRE2",
+            "description": "Description"
+          }
+        ]
+      },
+      {
+        "day": "Day 2",
+        "activities": [
+          {
+            "title": "TITRE1",
+            "description": "Description"
+          },
+          {
+            "title": "TITRE2",
+            "description": "Description"
+          }
+        ]
+      },
+      {
+        "day": "Day 3",
+        "activities": [
+          {
+            "title": "TITRE1",
+            "description": "Description"
+          },
+          {
+            "title": "TITRE2",
+            "description": "Description"
+          }
+        ]
+      },
+      {
+        "day": "Day 4",
+        "activities": [
+          {
+            "title": "TITRE1",
+            "description": "Description"
+          },
+          {
+            "title": "TITRE2",
+            "description": "Description"
+          }
+        ]
+      }
+    ]
+  }
+}
