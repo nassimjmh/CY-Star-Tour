@@ -90,6 +90,9 @@ $date_picker = $_SESSION["date_picker"];
                                     else if($users["role"] === 'VIP') {
                                         echo '<span style="color: gold; font-weight: bolder;">' . $users["role"] ;
                                     }
+                                    else if($users["role"] === 'Banned') {
+                                        echo '<span style="color: red; font-weight: bolder;">' . $users["role"] ;
+                                    }
                                     ?>
                                     </td>
                                     <td><?php echo $users["race"] ?></td>
@@ -105,15 +108,9 @@ $date_picker = $_SESSION["date_picker"];
                                 <?php
                             }
                         }
-
                     ?>
-                       
                     </tbody>
                 </table>
-                <div class="pagination">
-                    <button>Previous</button>
-                    <button>Next</button>
-                </div>
             </section>
         </div>
     </div>

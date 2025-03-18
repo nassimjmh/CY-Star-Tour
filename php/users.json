@@ -43,5 +43,14 @@
         "race": "IA",
         "date_picker": "4900-01-29",
         "role": "VIP"
+    },
+    "g-romuald@python.cy": {
+        "first_name": "Romuald",
+        "last_name": "Grignon",
+        "email": "g-romuald@python.cy",
+        "password": "$2y$10$Puv0uVnXjAPoiogsMdJwMu\/GoJzrsdg82b5M8muFoQJQQQrDhZLVS",
+        "race": "Alien",
+        "date_picker": "4900-01-21",
+        "role": "Banned"
     }
 }
