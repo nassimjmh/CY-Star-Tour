@@ -81,7 +81,17 @@ $date_picker = $_SESSION["date_picker"];
                                     <td><?php echo $users["first_name"] ?></td>
                                     <td><?php echo $users["last_name"] ?></td>
                                     <td><a href="mailto:<?php echo $users["email"] ?>"><?php echo $users["email"] ?></a></td>
-                                    <td><?php echo $users["role"] ?></td>
+                                    <td><?php if ($users["role"] === 'Standard') {
+                                        echo '<span style="color: green; font-weight: bolder;">' . $users["role"] ;
+                                    }
+                                    else if($users["role"] === 'Admin') {
+                                        echo '<span style="color: #696969; font-weight: bolder;">' . $users["role"] ;
+                                    }
+                                    else if($users["role"] === 'VIP') {
+                                        echo '<span style="color: gold; font-weight: bolder;">' . $users["role"] ;
+                                    }
+                                    ?>
+                                    </td>
                                     <td><?php echo $users["race"] ?></td>
                                     <td><?php echo $users["date_picker"] ?></td>
                                     <td>
