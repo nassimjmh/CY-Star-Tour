@@ -10,7 +10,7 @@ ADMIN PAGE IN FOOTER
 ## 🌐 Made using
 
 <a href="https://github.com/nassimjmh/CY-Star-Tour">
-    <img src="https://skillicons.dev/icons?i=html,css&theme=dark" alt="Made using"/>
+    <img src="https://skillicons.dev/icons?i=html,css,php&theme=dark" alt="Made using"/>
 </a>
 
 
