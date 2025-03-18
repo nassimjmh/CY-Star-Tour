@@ -1,13 +1,13 @@
 <?php
 session_start();
-
+/*
 if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
     
         header('location: ../../index.html');
 }else{
     echo "Welcome Admin";
 }
-
+*/
 ?>
 
 <!DOCTYPE html>
