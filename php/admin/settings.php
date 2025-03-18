@@ -11,43 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body id="dashboard">
-    <header>
-        <nav>
-            <ul>
-                <li class="logo">
-                    <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo">
-                </li>
-                <li class="panellogo"><img src="../../images/adminpanel.png" alt=""></li>
-                <li><a class="underline" href="../../index.html">Exit</a></li>
-                <li class="research">
-                    <a href="../book.html"><i class='bx bx-search research'></i></a>
-                </li>
-                <li class="connect">
-                    <a href="../login.html"><i class='bx bx-user-circle connect'></i></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="sidebar">
-        <ul>
-            <li>
-                <a href="dashboard.html"> Dashboard</a>
-            </li>
-            <li>
-                <a href="users.html"> Users</a>
-            </li>
-            <li>
-                <a href="reservations.html">Reservations</a>
-            </li>
-            <li>
-                <a href="destinations.html">Destinations</a>
-            </li>
-            <li>
-                <a href="settings.html">Settings</a>
-            </li>
-    </div>
-
+<?php include("bars.php") ?>
     
     </body>
 </html>
