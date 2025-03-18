@@ -3,8 +3,6 @@
 
 session_start();
 
-
-
 $file = 'users.json';
 $users = json_decode(file_get_contents($file), true);
 $error = "";
@@ -29,18 +27,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             exit();
         } else {
-            $error = "❌ Email ou mot de passe incorrect.";
+            $error = "❌ Wrong email or password";
         }
     } else {
-        $error = "❌ Cet email n'est pas enregistré.";
+        $error = "❌ No account registered on this email.";
     }
 }
 
 
 ?>
-
-
-
 
 
 
