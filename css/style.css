@@ -93,16 +93,6 @@ footer {
     text-decoration: underline;
 }
 
-.footer-bottom {
-    background-color: #0B1A26;
-    padding: 0.5vh 0;
-    font-size: 1.5vh;
-}
-
-.footer-bottom p {
-    margin-top: 2vh;
-    color: #ffffff;
-}
 
 .payment-logos {
     display: flex;

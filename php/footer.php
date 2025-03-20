@@ -42,8 +42,5 @@
             </ul>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 4090 CY StarTour. All rights reserved.</p>
-    </div>
 </footer>
 
