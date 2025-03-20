@@ -29,11 +29,13 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                 <div class="filters">
                     <input type="text" placeholder="Search users...">
                     <select id="status-filter">
-                        <option value="">Filter by Status</option>
+                        <option value="X">Filter by Status</option>
                         <option value="Banned">Banned</option>
                         <option value="Standard">Standard</option>
                         <option value="VIP">VIP</option>
+                        <option value="Stellar Elite">Stellar Elite</option>
                         <option value="Admin">Admin</option>
+
                     </select>
                     <select id="race-filter">
                         <option value="">Filter by Race</option>
@@ -90,6 +92,9 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                     }
                                     else if($users["role"] === 'Banned') {
                                         echo '<span style="color: #ff4444; font-weight: bolder;">' . $users["role"] ;
+                                    }
+                                    else if($users["role"] === 'Stellar Elite') {
+                                        echo '<span style="color: #7851A9; font-weight: bolder;">' . $users["role"] ;
                                     }
                                     ?>
                                     </td>
