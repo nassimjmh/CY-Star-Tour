@@ -112,7 +112,7 @@
     top: -80px;
     border-top-left-radius: 3vh;
     border-top-right-radius: 3vh;
-    background-color: #ffffff;
+    background-color: #0f1a26;
     height: 65vh;
     overflow: hidden;
 }
@@ -125,7 +125,7 @@
 .bannertitle{
     text-shadow: 0px 0px 2px rgb(255, 255, 255);
     position: absolute;
-    color: rgb(0, 0, 0);
+    color: white;
     font-size: 4vh;
     left: 5vh;
     font-weight: bolder;
@@ -165,7 +165,7 @@ to {
     position: relative;
     top: -10vh;
     background-color: #0f1a26;
-    height: 70vh;
+    height: 100vh;
     width: 100%;
     background-size: cover; 
     background-position: center; 
