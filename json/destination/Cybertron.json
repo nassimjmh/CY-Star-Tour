@@ -1,0 +1,42 @@
+{
+  "name": "Cybertron",
+
+  "galaxy": "Movie • +32° 12' 21'' • ★★★★☆",
+
+  "info":"🌡️ 280°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 6,96 m/s²",
+
+  "prix":"1.630 ₴",
+
+  "preimage":"https://preview.redd.it/tfone-iacon-city-concept-art-v0-ghban2x5xjrd1.jpg?width=1080&crop=smart&auto=webp&s=f5f66f90e74d469a03599456174338ed4bd4434f",
+  
+  "resume":"&nbsp;&nbsp;&nbsp;Welcome to <strong>Cybertron</strong>, a legendary metallic world of towering cities, vast plains, and neon-lit chasms. Shaped by endless innovation, it’s a planet rich in history and resilience. <br>&nbsp;&nbsp;&nbsp;Explore its origins, from <strong>Primus</strong> to the <strong>Great War</strong>, and witness its restoration. Cybertron is a symbol of balance between creation and destruction, offering advanced technology, iconic landmarks, and an unforgettable journey.",
+
+  "image": "https://external-preview.redd.it/VlFHiGb-P8-fmuDgqYqgXqtGXu1lndhordzNxeOxIVA.jpg?auto=webp&s=bb2957a8d08855c2c1e0092125f77ec4ade2d720",
+  "presentation": "Welcome to Cybertron – The Beating Heart of the Universe! <br><br>Discover the awe-inspiring world of Cybertron, a planet of towering metallic landscapes, luminous cities, and cutting-edge technology.<br><br>From the majestic spires of Iacon to the endless energy fields of the Sea of Rust, Cybertron offers a perfect fusion of innovation and history.<br><br>Whether you're here to witness the wisdom of the Primes or explore the vast labyrinths of ancient Cybertronian tunnels, adventure awaits on this ever-evolving mechanical wonder. Come and experience the power and grandeur of Cybertron – where every skyline tells a story of legends!",
+  "schedule": [
+    {
+      "title1": "Lacon",
+      "description1": "&nbsp;&nbsp;&nbsp; Begin your adventure in lacon, the vibrant heart of Cybertron.<br> &nbsp;&nbsp;&nbsp; Enjoy a guided tour of the futuristic city, complete with holographic projections and interactive exhibits showcasing Cybertron's rich history and advanced technology !",
+      "title2": "Energon Hunt",
+      "description2": "&nbsp;&nbsp;&nbsp; Explore your surroundings as if you’re searching for hidden Energon sources."
+    },
+    {
+      "title1": "Transformation Training",
+      "description1": "&nbsp;&nbsp;&nbsp; Cybertronians can shift forms, so practice adaptive thinking—switch between two distinct skills (e.g., drawing vs. speed typing, running vs. solving puzzles) to improve mental flexibility.",
+      "title2": "Choose Your Faction",
+      "description2": "&nbsp;&nbsp;&nbsp; Will you be an Autobots or a Decepticons ?<br> Choose wisely, because you  will fight against the other team in physical games !"
+    },
+    {
+      "title1": "Exploration",
+      "description1": "&nbsp;&nbsp;&nbsp; The Grand Iacon Archives: Visit a real-life library or online archive and research something new (science, history, AI). Summarize your findings in English, as if reporting to Cybertron’s High Council.",
+      "title2": "Strategy Games",
+      "description2": "&nbsp;&nbsp;&nbsp; Engage in a strategy game (chess, a tactical video game, or even a mental challenge) to develop your Cybertronian battle instincts.<br> &nbsp;&nbsp;&nbsp; Think like an Autobot or Decepticon!"
+    },
+    {
+      "title1": "The Botanical Gardens",
+      "description1": "&nbsp;&nbsp;&nbsp;Take a serene stroll through Cybertron’s magnificent botanical gardens.<br> &nbsp;&nbsp;&nbsp; These lush landscapes blend organic growth with futuristic technology, offering visitors the chance to see both nature and innovation intertwined.",
+      "title2": "Farewell Spaceport",
+      "description2": "&nbsp;&nbsp;&nbsp; End your journey at Cybertron’s futuristic spaceport.<br> &nbsp;&nbsp;&nbsp; Relax in luxury lounges, enjoy panoramic views of the planet, and grab a souvenir."
+    }
+  ]
+}

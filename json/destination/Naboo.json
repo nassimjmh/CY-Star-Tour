@@ -1,0 +1,42 @@
+{
+  "name": "Naboo",
+
+  "galaxy": "StarWars • -56° 27' 39'' • ★★★★★",
+
+  "info":"🌡️ 303°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 9,81 m/s²",
+
+  "prix":"1.990 ₴",
+
+  "preimage":"https://www.merchmates.co.uk/wp-content/uploads/2024/07/Star-Wars-Planets-Naboo-1024x536.webp",
+  
+  "resume":"&nbsp;&nbsp;&nbsp;Welcome to <strong>Naboo</strong>, a lush Mid Rim planet with rich history and vibrant culture. Explore <strong>Theed</strong>'s royal architecture, the underwater city of <strong>Otoh Gunga</strong>, serene <strong>Lake Paonga</strong>, and the scenic <strong>Gallo Mountains</strong>.<br> &nbsp;&nbsp;&nbsp; Encounter diverse wildlife, relive tales of Queen Padmé Amidala, and discover legendary battles. Naboo blends nature, culture, and history for an unforgettable experience.",
+
+  "image": "https://external-preview.redd.it/i5agE5x3OfPBn3R_kmcB_g66DYQPl7UnZ1R6wnhh_K8.jpg?auto=webp&s=1c94d780fa42c642e39b5d7e4971ddb6ccecc2e1",
+  "presentation": "Welcome to Naboo – A Hidden Gem in the Galaxy!<br><br>Discover the breathtaking beauty of Naboo, a planet of lush green landscapes, shimmering lakes, and stunning architecture.<br><br> From the vibrant city of Theed to the peaceful waters of Lake Paonga, Naboo offers a perfect blend of nature and culture.<br><br> Whether you're here to explore ancient Gungan cities or relax in royal gardens, adventure awaits on this serene paradise. Come and experience the elegance and tranquility of Naboo – where every sunset is a masterpiece!",
+  "schedule": [
+    {
+      "title1": "Royal Elegance",
+      "description1": "&nbsp;&nbsp;&nbsp;Explore Theed Royal Palace, marveling at its golden domes and intricate architecture.<br>&nbsp;&nbsp;&nbsp; Discover the history of Naboo’s noble past !",
+      "title2": "Sunset Serenity",
+      "description2": "&nbsp;&nbsp;&nbsp;Take a scenic sunset cruise on Lake Paonga, where the sky reflects in the shimmering waters as you enjoy a peaceful ride."
+    },
+    {
+      "title1": "Peaceful Morning",
+      "description1": "&nbsp;&nbsp;&nbsp; Enjoy a break ! You really deserve it",
+      "title2": "Mystical Waters",
+      "description2": "&nbsp;&nbsp;&nbsp;Dive into the Gungan Underwater City of Otoh Gunga.<br> &nbsp;&nbsp;&nbsp; Walk through glowing bubble-like halls, meet the locals, and experience a unique aquatic culture."
+    },
+    {
+      "title1": "Safari",
+      "description1": "&nbsp;&nbsp;&nbsp;Ride a Kaadu safari through Naboo’s rolling plains, spotting exotic creatures and feeling the wind rush past you.",
+      "title2": "Cliffs",
+      "description2": "&nbsp;&nbsp;&nbsp; Stargaze from the Varykino Cliffs, where the galaxy unfolds above the tranquil countryside."
+    },
+    {
+      "title1": "Ancient Secrets",
+      "description1": "&nbsp;&nbsp;&nbsp;Hike to the Lost Temple of Shaak-Ran, an ancient ruin hidden in the jungle, whispering stories of Naboo’s forgotten past.",
+      "title2": "Farewell Feast",
+      "description2": "&nbsp;&nbsp;&nbsp;Enjoy a grand farewell banquet in Theed, savoring traditional Naboo cuisine under the soft glow of lanterns."
+    }
+  ]
+}

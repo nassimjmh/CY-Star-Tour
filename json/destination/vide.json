@@ -1,0 +1,49 @@
+{
+  
+  "name": "",
+
+  "galaxy": "",
+
+  "info":"",
+
+  "prix":"",
+
+  "preimage":"",
+  
+  "resume":"",
+
+
+  "image": "",
+
+  
+
+  "presentation": "",
+
+  "schedule": [
+    {
+      "title1": "",
+      "description1": "",
+      "title2": "",
+      "description2": ""
+    },
+    {
+      "title1": "",
+      "description1": "",
+      "title2": "",
+      "description2": ""
+    },
+    {
+      "title1": "",
+      "description1": "",
+      "title2": "",
+      "description2": ""
+    },
+    {
+      "title1": "",
+      "description1": "",
+      "title2": "",
+      "description2": ""
+    }
+  ]
+  
+}

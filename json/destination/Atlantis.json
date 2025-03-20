@@ -1,0 +1,46 @@
+{
+  
+  "name": "Atlantis",
+
+  "galaxy": "Stargate • +12° 46' 30'' • ★★★☆☆",
+
+  "info":"🌡️ 290°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 10,88 m/s²",
+
+  "prix":"1.480 ₴",
+
+  "preimage":"https://cdn.shopify.com/s/files/1/0193/6473/files/stargate-atlantis-wallpapers-31679-3750789_480x480.jpg?v=1579609650",
+  
+  "image": "https://wallpapercrafter.com/desktop3/1053232-action-adventure-atlantis-drama-sci-fi-series.jpg",
+
+  "resume":"&nbsp;&nbsp;&nbsp;Take off to a <strong>legendary floating city</strong>, where <strong>glowing shields</strong> shimmer under the stars and <strong>instant transport chambers</strong> whisk you through breathtaking landscapes. <br> &nbsp;&nbsp;&nbsp;Stroll through <strong>hanging gardens</strong> with panoramic views of an endless ocean, explore <strong>ancient laboratories</strong> transformed into interactive museums, and be dazzled by <strong>light drone shows</strong> that light up the night sky.",
+
+  "presentation": "Step into one of the universe’s greatest mysteries and discover Atlantis, the legendary city of the Ancients, hidden in the heart of the Pegasus Galaxy.<br>This mythical planet, once the crown jewel of an advanced civilization, invites you to explore its floating towers, glowing forests, and endless oceans.<br><br>Dive into its high-tech labs, witness breathtaking drone light shows, and travel through the Stargate to other worlds.<br>Whether you’re an adventurer, a history buff, or a dreamer, Atlantis promises an unforgettable journey through time and space.<br><br>Embark on an unforgettable journey to Atlantis, the legendary city of the Ancients, with this carefully crafted 4-day program.<br>Each day is packed with unique activities to immerse you in the wonders of this extraordinary planet.",
+
+  "schedule": [
+    {
+      "title1": "Guided Tour of the City of Atlantis",
+      "description1": "&nbsp;&nbsp;&nbsp;Explore the main districts of the city, including the Ancients' laboratories, residential quarters, and command areas. <br> &nbsp;&nbsp;&nbsp;Discover the advanced architecture and technologies of the Ancients.",
+      "title2": "Museum of the Ancients",
+      "description2": "&nbsp;&nbsp;&nbsp;Visit the museum dedicated to the Ancients, where you can learn more about their history, culture, and technological advancements."
+    },
+    {
+      "title1": "Stargate Initiation",
+      "description1": "&nbsp;&nbsp;&nbsp;Participate in an initiation session to understand how the Stargate works.<br> &nbsp;&nbsp;&nbsp;Learn how to dial an address and travel through the galaxy.",
+      "title2": "Excursion to a Nearby Planet",
+      "description2": "&nbsp;&nbsp;&nbsp;Use the Stargate for an excursion to a nearby planet, secured and explored by the Atlantis teams. <br>&nbsp;&nbsp;&nbsp;Enjoy a hike or a guided tour to discover the local flora and fauna."
+    },
+    {
+      "title1": "Local Market",
+      "description1": "&nbsp;&nbsp;&nbsp;Visit the local market where you can interact with the inhabitants of Atlantis and buy unique souvenirs. Taste local culinary specialties.",
+      "title2": "Cultural Show",
+      "description2": "&nbsp;&nbsp;&nbsp;Attend a cultural show featuring dances, songs, and traditional stories from the peoples of the Pegasus Galaxy. <br>&nbsp;&nbsp;&nbsp;Participate in interactive workshops to learn more about local customs."
+    },
+    {
+      "title1": "Exploration of Atlantis Surroundings",
+      "description1": "&nbsp;&nbsp;&nbsp;Go on an excursion to explore the immediate surroundings of the city, including nearby forests and rivers. <br>&nbsp;&nbsp;&nbsp;Enjoy a boat ride or a guided hike.",
+      "title2": "Relaxation and Well-being",
+      "description2": "&nbsp;&nbsp;&nbsp;End your stay with an afternoon of relaxation in Atlantis' wellness centers.<br>&nbsp;&nbsp;&nbsp;Enjoy massages, spa treatments, and moments of relaxation in the city's gardens."
+    }
+  ]
+  
+}

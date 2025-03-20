@@ -1,0 +1,44 @@
+{
+  "name": "Open AI",
+
+  "galaxy": "Ia • -34° 75' 32'' • ★★★★☆",
+
+  "info":"🌡️ 290°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 7,83 m/s²",
+
+  "prix":"1.650 ₴",
+
+  "preimage":"https://cdn.shopify.com/s/files/1/0193/6473/files/stargate-atlantis-wallpapers-31679-3750789_480x480.jpg?v=1579609650",
+  
+  "resume":"&nbsp;&nbsp;&nbsp;Welcome to <strong>Openai</strong>, the galaxy's hidden gem! This exotic planet features <strong>glowing oceans</strong>, <strong>floating jungles</strong> with fascinating wildlife, and <strong>crystal-clear waterfalls</strong> suspended by lighter gravity. <br>&nbsp;&nbsp;&nbsp; Enjoy <strong>violet sand beaches</strong>, <strong>thermal geysers</strong> releasing fragrant vapor bubbles, and <strong>glass-and-gold cities</strong> offering luxurious hospitality. Every <strong>sunset</strong> is a captivating display of shifting hues.",
+
+  "image": "../../images/openAI.webp",
+
+  "presentation": "Welcome to OpenAI, the jewel of the OpenAI Galaxy!<br><br>Experience a world where gravity-shift landscapes, bioluminescent flora, and crystal-clear nebula skies create an unforgettable adventure.<br><br>Discover futuristic wonders and immerse yourself in an extraterrestrial paradise unlike any other.",
+  
+  "schedule": [
+    {
+      "title1": "Floating Mountains",
+      "description1": "&nbsp;&nbsp;&nbsp;Explore Open AI's legendary levitating peaks, suspended by powerful magnetic fields. Hike across floating trails and witness a sky unlike any other.",
+      "title2": "Zero-G Spa",
+      "description2": "&nbsp;&nbsp;&nbspRelax in a state-of-the-art zero-gravity thermal pool, where anti-grav bubbles provide a deeply soothing experience."
+    },
+    {
+      "title1": "Neon Forest",
+      "description1": "&nbsp;&nbsp;&nbspWalk through a surreal bioluminescent jungle, where glowing plants pulse in response to your movements.",
+      "title2": "Astral Skydiving",
+      "description2": "&nbsp;&nbsp;&nbspExperience the thrill of free-fall skydiving through an aurora vortex, a celestial light tunnel unlike anything on Earth."
+    },
+    {
+      "title1": "Crystal Caverns",
+      "description1": "&nbsp;&nbsp;&nbspExplore underground caves where luminous crystal formations shift colors in response to sound waves.",
+      "title2": "Starlight Concert",
+      "description2": "&nbsp;&nbsp;&nbspEnjoy a live performance from intergalactic symphonies, synchronized with the rhythm of distant pulsars."
+    },
+    {
+      "title1": "Anti-Gravity Arena",
+      "description1": "&nbsp;&nbsp;&nbspParticipate in a futuristic zero-G sports match, where physics-defying movements create thrilling gameplay.",
+      "title2": "Cosmic Farewell Dinner",
+      "description2": "&nbsp;&nbsp;&nbspConclude your journey with a feast beneath twin suns, featuring cuisine sourced from across the galaxy."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Pandora",
+
+  "galaxy": "Movie • -34° 83' 29'' • ★★★☆☆",
+
+  "info":"🌡️ 290°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 7,85 m/s²",
+
+  "prix":"1.390 ₴",
+
+  "preimage":"https://fr.web.img6.acsta.net/newsv7/16/07/25/16/57/0851920.jpg",
+  
+  "resume":"&nbsp;&nbsp;&nbsp;Welcome to <strong>Pandora</strong>, a mysterious and captivating exomoon, where <strong>breathtaking landscapes</strong>, extraordinary <strong>wildlife</strong>, and the rich culture of the <strong>Na'vi</strong> await. <br>&nbsp;&nbsp;&nbsp;Explore iconic sites like the sacred <strong>Tree of Souls</strong>, the floating <strong>Hallelujah Mountains</strong>, and the towering <strong>Hometree</strong>, home to the Omaticaya tribe. Pandora promises an <strong>unforgettable adventure</strong> filled with wonder and discovery.",
+
+  "image": "https://i.redd.it/landscapes-of-pandora-created-with-midjourney-v0-sa9kr1suyhf91.png?width=1792&format=png&auto=webp&s=b935212c0e79c2e7b5bc448a889cd0faf420c785",
+  "presentation": "Welcome to Pandora, a mysterious and captivating exomoon, where breathtaking landscapes, extraordinary wildlife, and the rich culture of the Na'vi await. <br><br>Explore iconic sites like the sacred Tree of Souls, the floating Hallelujah Mountains, and the towering Hometree, home to the Omaticaya tribe.<br>Pandora promises an unforgettable adventure filled with wonder and discovery.<br><br>Embark on an unforgettable journey to Pandora, the legendary city of the Na'vi, with this carefully crafted 4-day program.<br>Each day is packed with unique activities to immerse you in the wonders of this extraordinary planet.",
+  "schedule": [
+    {
+      "title1": "Bioluminescent Forest Exploration",
+      "description1": "&nbsp;&nbsp;&nbsp;Start your day with a hike through the bioluminescent forest. Discover glowing plants and observe nocturnal creatures that come to life in the soft light of the flora.",
+      "title2": "Visit to the Tree of Souls",
+      "description2": "&nbsp;&nbsp;&nbsp;After a light lunch, head to the Tree of Souls, Pandora's most sacred site.<br>&nbsp;&nbsp;&nbsp;Take time to meditate and connect with the surrounding nature, feeling the spiritual energy that emanates from this iconic place."
+    },
+    {
+      "title1": "Hot Air Balloon Tour",
+      "description1": "&nbsp;&nbsp;&nbsp;Embark on a hot air balloon ride over the Hallelujah Mountains.<br>&nbsp;&nbsp;&nbsp;Marvel at the floating rock formations and celestial waterfalls from above.",
+      "title2": "Banshee Observation",
+      "description2": "&nbsp;&nbsp;&nbsp;After lunch, participate in a Banshee observation session.<br>&nbsp;&nbsp;&nbsp;Learn about the habits and unique characteristics of these majestic aerial dragons as you watch them in their natural habitat."
+    },
+    {
+      "title1": "Meet the Na'vi",
+      "description1": "&nbsp;&nbsp;&nbsp;Spend the morning with the Na'vi, Pandora's indigenous people. Participate in workshops to learn more about their way of life, traditions, and language.",
+      "title2": "Hometree Visit",
+      "description2": "&nbsp;&nbsp;&nbsp;After a shared meal with the Na'vi, visit Hometree, the ancestral home of the Omaticaya tribe.<br>&nbsp;&nbsp;&nbsp;Explore the different levels of this colossal tree and discover how the Na'vi live in harmony with nature."
+    },
+    {
+      "title1": "Crystal Waterfalls Hike",
+      "description1": "&nbsp;&nbsp;&nbsp;On your final day, hike to the Crystal Waterfalls.<br>&nbsp;&nbsp;&nbsp;Enjoy the beauty of the shimmering waterfalls and bathe in the surrounding natural pools.",
+      "title2": "Wildlife Safari",
+      "description2": "&nbsp;&nbsp;&nbsp;End your adventure with a wildlife photography safari.<br>&nbsp;&nbsp;&nbsp;Capture images of Hexapedes, Viperwolves, and other fascinating creatures in their natural environment."
+    }
+  ]
+}
