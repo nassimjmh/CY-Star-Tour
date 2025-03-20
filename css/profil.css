@@ -105,16 +105,76 @@ main {
 
 .sidebar .status:hover {
     cursor : pointer;
-    transform: scale(1.05); /* Légère agrandissement de l'élément */
+    transform: scale(1.05); 
 }
 
 .info {
-    padding: 10px;
-    border-radius: 20px;
-    width: 870px;
-    color: black;
     background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 600px;
+    color: #0b1a26;
+    font-size: 20px;
 }
+
+.info h2 {
+    border-bottom: 3px solid #0b1a26;
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: #0b1a26;
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info li {
+    padding: 15px 0;
+    border-bottom: 2px solid #0b1a26;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info li:last-child {
+    border-bottom: none;
+}
+
+.info input, .info select {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #0b1a26;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.edit-btn, .save-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover, .save-btn:hover {
+    background-color: #4CAF50;
+}
+
+.info form {
+    margin-top: 10px;
+}
+
+.info span {
+    font-weight: bold;
+    color: #0b1a26;
+}
+
 
 .info-profile {
     flex: 1;
@@ -123,14 +183,10 @@ main {
     gap: 20px; /* Espace entre les sections */
 }
 
-
-
 .info .header {
     border-bottom: 3px solid #0b1a26;
     margin-bottom: 20px;
 }
-
-
 
 .info .line {
     display: flex;
@@ -156,7 +212,7 @@ main {
     background-color: white;
     padding: 10px;
     border-radius: 20px;
-    width: 870px;
+    width: 400px;
     color: #0b1a26;
     font-size: 20px;
 }

@@ -80,6 +80,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
     }
 
 }
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
+    $users[$email]['last_name'] = $_POST['last_name'];
+    $users[$email]['first_name'] = $_POST['first_name'];
+    $users[$email]['race'] = $_POST['race'];
+    $users[$email]['date_picker'] = $_POST['date_picker'];
+
+    // Sauvegarde dans le fichier JSON
+    file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+
+    // Recharge la page pour voir les changements
+    header("Location: profil.php");
+    exit();
+}
+
+// Données pour afficher dans la page
+$last_name = $users[$email]['last_name'];
+$first_name = $users[$email]['first_name'];
+$race = $users[$email]['race'];
+$date_picker = $users[$email]['date_picker'];
+
+// Vérifie si on est en mode "édition"
+$edit_mode = isset($_POST['edit']);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -149,29 +174,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
 
 
     <div class="info-profile">
-        <div class="info">
-            <div class="header"><h1>About me&nbsp<a href="#"><i class='bx bx-edit'></i></a></h1></div>
-            <div class="line">
-                <span class="label">Last Name: </span>
-                <span class="value"><?php echo $last_name; ?></span>
-            </div>
-            <div class="line">
-                <span class="label">First Name:</span>
-                <span class="value"><?php echo $first_name; ?></span>
-            </div>
-            <div class="line">
-                <span class="label">Email:</span>
-                <span class="value"><?php echo $email; ?></span>
-            </div>
-            <div class="line">
-                <span class="label">Race:</span>
-                <span class="value"><?php echo $race; ?></span>
-            </div>
-            <div class="line">
-                <span class="label">Date of Birth:</span>
-                <span class="value"><?php echo $date_picker; ?></span>
-            </div>
-        </div>
+    <div class="info">
+        <h2>About Me</h2>
+        <?php if (!$edit_mode): ?>
+            <ul>
+                <li><strong>Last Name:</strong> <?php echo htmlspecialchars($last_name); ?></li>
+                <li><strong>First Name:</strong> <?php echo htmlspecialchars($first_name); ?></li>
+                <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
+                <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
+                <li><strong>Birth Date:</strong> <?php echo htmlspecialchars($date_picker); ?></li>
+            </ul>
+            <form action="profil.php" method="POST">
+                <button type="submit" name="edit" class="edit-btn">Edit Profile</button>
+            </form>
+        <?php else: ?>
+            <form action="profil.php" method="POST">
+                <ul>
+                    <li>
+                        <span>Last Name:</span>
+                        <input type="text" name="last_name" value="<?php echo htmlspecialchars($last_name); ?>" required>
+                    </li>
+                    <li>
+                        <span>First Name:</span>
+                        <input type="text" name="first_name" value="<?php echo htmlspecialchars($first_name); ?>" required>
+                    </li>
+                    <li>
+                        <span>Race:</span>
+                        <select id="race" name="race" required>
+                            <option value="Human" <?php echo $race === 'Human' ? 'selected' : ''; ?>>Human</option>
+                            <option value="IA" <?php echo $race === 'IA' ? 'selected' : ''; ?>>IA</option>
+                            <option value="Alien" <?php echo $race === 'Alien' ? 'selected' : ''; ?>>Alien</option>
+                            <option value="Coruscant" <?php echo $race === 'Coruscant' ? 'selected' : ''; ?>>Coruscant</option>
+                        </select>
+                    </li>
+                    <li>
+                        <span>Birth Date:</span>
+                        <input type="date" name="date_picker" value="<?php echo htmlspecialchars($date_picker); ?>" required>
+                    </li>
+                </ul>
+                <button type="submit" name="update" class="save-btn">Save Changes</button>
+            </form>
+        <?php endif; ?>
+    </div>
+</div>
         <div class="recent-trips">
             <h2>Recently Booked Trips</h2>
             <ul>
