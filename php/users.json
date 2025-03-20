@@ -1,5 +1,5 @@
-{
-    "Sofyane@startour.fr": {
+[
+    {
         "id": 1,
         "first_name": "Sofyane",
         "last_name": "Abajou",
@@ -10,7 +10,7 @@
         "role": "Admin",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Sofyane"
     },
-    "nassim@startour.cy": {
+    {
         "id": 2,
         "first_name": "Jamhour",
         "last_name": "Nassim",
@@ -21,7 +21,7 @@
         "role": "Admin",
         "profile_pic": "uploads\/toji.jpg"
     },
-    "Hicham@startour.fr": {
+    {
         "id": 3,
         "first_name": "Hicham",
         "last_name": "Eljarini",
@@ -32,7 +32,7 @@
         "role": "Admin",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Hicham"
     },
-    "kargalan@gmail.com": {
+    {
         "id": 4,
         "first_name": "Kargalan",
         "last_name": "Thesunisgone",
@@ -43,7 +43,7 @@
         "role": "Standard",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Kargalan"
     },
-    "ia@gmail.com": {
+    {
         "id": 5,
         "first_name": "IA",
         "last_name": "IASERMIN",
@@ -54,7 +54,7 @@
         "role": "VIP",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=IA"
     },
-    "g-romuald@python.cy": {
+    {
         "id": 6,
         "first_name": "Romuald",
         "last_name": "Grignon",
@@ -65,7 +65,7 @@
         "role": "Standard",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Romuald"
     },
-    "a@a": {
+    {
         "id": 7,
         "first_name": "a",
         "last_name": "a",
@@ -76,7 +76,7 @@
         "role": "Admin",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=a"
     },
-    "kea@eisti.cy": {
+    {
         "id": 8,
         "first_name": "Khalid",
         "last_name": "El Amine",
@@ -87,7 +87,7 @@
         "role": "Banned",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Khalid"
     },
-    "zoghlagoat@converge.cy": {
+    {
         "id": 9,
         "first_name": "Naim",
         "last_name": "Zoghlami",
@@ -95,7 +95,7 @@
         "password": "$2y$10$Ii2I1TcBPaEtlVVaYU7z1uOQi3GO5SZ5cUXyIzXvz4GcEYbYsmKy.",
         "race": "Human",
         "date_picker": "4900-01-29",
-        "role": "VIP",
+        "role": "Stellar Elite",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Naim"
     }
-}
+]
