@@ -7,46 +7,80 @@ if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
     $action = $_POST['action'];
-    $current_role = $_POST['current_role'];
-
+    
     // Read the JSON file
     $file = file_get_contents("../users.json");
     $users = json_decode($file, true);
 
-    if (isset($users[$email])) {
-        switch($action) {
-            case 'make_vip':
-                $users[$email]['role'] = 'VIP';
+    if ($action === 'update') {
+        // Handle the edit form submission
+        $original_email = $_POST['original_email'];
+        $new_data = [
+            'first_name' => $_POST['first_name'],
+            'last_name' => $_POST['last_name'],
+            'email' => $_POST['email'],
+            'role' => $_POST['role'],
+            'race' => $_POST['race'],
+            'date_picker' => $_POST['date_picker']
+        ];
+
+        // Find and update the user
+        $updated_users = [];
+        foreach ($users as $user) {
+            if ($user['email'] === $original_email) {
+                // Preserve any other existing fields
+                $new_data = array_merge($user, $new_data);
+                $updated_users[] = $new_data;
+            } else {
+                $updated_users[] = $user;
+            }
+        }
+
+        // Save the changes back to the JSON file
+        file_put_contents("../users.json", json_encode($updated_users, JSON_PRETTY_PRINT));
+        
+        header("Location: users.php");
+        exit();
+    } else {
+        // Handle other actions (make_vip, ban, etc.)
+        $email = $_POST['email'];
+        
+        // Find and update the user
+        foreach ($users as &$user) {
+            if ($user['email'] === $email) {
+                switch($action) {
+                    case 'make_vip':
+                        $user['role'] = 'VIP';
+                        break;
+                    case 'remove_vip':
+                        $user['role'] = 'Standard';
+                        break;
+                    case 'ban':
+                        $user['role'] = 'Banned';
+                        break;
+                    case 'unban':
+                        $user['role'] = 'Standard';
+                        break;
+                    case 'make_admin':
+                        $user['role'] = 'Admin';
+                        break;
+                    case 'remove_admin':
+                        $user['role'] = 'Standard';
+                        break;
+                    case 'manage':
+                        header("Location: edit_user.php?email=" . urlencode($email));
+                        exit();
+                        break;
+                }
                 break;
-            case 'remove_vip':
-                $users[$email]['role'] = 'Standard';
-                break;
-            case 'ban':
-                $users[$email]['role'] = 'Banned';
-                break;
-            case 'unban':
-                $users[$email]['role'] = 'Standard';
-                break;
-            case 'make_admin':
-                $users[$email]['role'] = 'Admin';
-                break;
-            case 'remove_admin':
-                $users[$email]['role'] = 'Standard';
-                break;
-            case 'manage':
-                // Redirect to a user edit page
-                header("Location: edit_user.php?email=" . urlencode($email));
-                exit();
-                break;
+            }
         }
 
         // Save the changes back to the JSON file
         file_put_contents("../users.json", json_encode($users, JSON_PRETTY_PRINT));
+        
+        header("Location: users.php");
+        exit();
     }
-
-    // Redirect back to the users page
-    header("Location: users.php");
-    exit();
 }

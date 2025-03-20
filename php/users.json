@@ -1,5 +1,5 @@
-{
-    "Sofyane@startour.fr": {
+[
+    {
         "first_name": "Abajou",
         "last_name": "Sofyane",
         "email": "Sofyane@startour.fr",
@@ -8,7 +8,7 @@
         "date_picker": "5807-05-09",
         "role": "Admin"
     },
-    "nassim@startour.cy": {
+    {
         "first_name": "Jamhour",
         "last_name": "Nassim",
         "email": "nassim@startour.cy",
@@ -17,7 +17,7 @@
         "date_picker": "5752-10-11",
         "role": "Admin"
     },
-    "Hicham@startour.fr": {
+    {
         "first_name": "Hicham",
         "last_name": "Eljarini",
         "email": "Hicham@startour.fr",
@@ -26,7 +26,7 @@
         "date_picker": "5823-21-01",
         "role": "Admin"
     },
-    "kargalan@gmail.com": {
+    {
         "first_name": "Kargalan",
         "last_name": "Thesunisgone",
         "email": "kargalan@gmail.com",
@@ -35,7 +35,7 @@
         "date_picker": "4970-10-17",
         "role": "Standard"
     },
-    "ia@gmail.com": {
+    {
         "first_name": "IA",
         "last_name": "IASERMIN",
         "email": "ia@gmail.com",
@@ -44,7 +44,7 @@
         "date_picker": "4900-01-29",
         "role": "VIP"
     },
-    "g-romuald@python.cy": {
+    {
         "first_name": "Romuald",
         "last_name": "Grignon",
         "email": "g-romuald@python.cy",
@@ -53,4 +53,4 @@
         "date_picker": "4900-01-21",
         "role": "Banned"
     }
-}
+]

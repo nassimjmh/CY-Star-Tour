@@ -230,62 +230,74 @@
 
 /*-----------------------------------*/
 
-
-/* Replace the existing edit-form related styles */
-.edit-form {
-    max-width: 800px;
-    margin: 20px auto;
+.edit-user-panel {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    margin-top: 11vh;
     padding: 20px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+    margin-left: 7%;
+    width: 97%;
+}
+
+.user-form-container {
+    width: 87%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.edit-form {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    background-color: transparent;
 }
 
 .form-group {
-    margin-bottom: 20px;
-    padding: 12px;
+    margin-bottom: 8px; 
+    padding: 8px;        
     border: 1px solid #ddd;
     background-color: white;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.form-group input,
+.form-group select {
+    width: calc(100% - 12px);
+    padding: 6px;   
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-weight: bold;
     color: #0B1A26;
     font-size: 14px;
 }
 
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    font-family: 'Inter', sans-serif;
-}
-
 .form-actions {
     display: flex;
     gap: 10px;
-    justify-content: flex-end;
-    margin-top: 20px;
-    padding: 12px;
-    border-top: 1px solid #ddd;
+    justify-content: center;
+    margin-top: 12px;    
+    padding: 8px;        
+    background-color: white;
 }
 
 .save-button, .cancel-button {
-    min-width: 100px;
-    padding: 5px 10px;
-    margin: 2px;
+    padding: 8px 16px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    font-size: 12px;
-    white-space: nowrap;
-    transition: all 0.3s ease;
+    font-size: 14px;
+    min-width: 100px;
+    text-align: center;
 }
 
 .save-button {
@@ -293,20 +305,16 @@
     color: white;
 }
 
-.save-button:hover {
-    background-color: white;
-    color: #4CAF50;
-}
-
 .cancel-button {
     background-color: #ff4444;
     color: white;
     text-decoration: none;
-    display: inline-block;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.save-button:hover,
 .cancel-button:hover {
-    background-color: white;
-    color: #ff4444;
+    opacity: 0.8;
 }

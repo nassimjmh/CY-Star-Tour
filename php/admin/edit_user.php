@@ -1,16 +1,20 @@
 <?php
 session_start();
 
+// Check admin access
 if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
     header('location: ../../index.html');
     exit();
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
+// Initialize $userData
+$userData = null;
+
+// Check if we have either POST or GET email parameter
+if (isset($_POST['email']) || isset($_GET['email'])) {
     $file = file_get_contents("../users.json");
     $users = json_decode($file, true);
-    $userEmail = $_POST['email'];
-    $userData = null;
+    $userEmail = isset($_POST['email']) ? $_POST['email'] : $_GET['email'];
 
     // Find the user data
     foreach ($users as $user) {
@@ -19,11 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
             break;
         }
     }
+}
 
-    if (!$userData) {
-        header('location: users.php');
-        exit();
-    }
+// Redirect if no valid user data found
+if (!$userData) {
+    header('location: users.php');
+    exit();
 }
 ?>
 
@@ -41,10 +46,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
 <body id="dashboard">
 <?php include("bars.php") ?>
 
-<div class="admin-container">
-    <div class="container-admin">
+<div class="edit-user-panel">
+    <div class="user-form-container">
         <section>
-            <h2>Edit User</h2>
             <form method="POST" action="update_user.php" class="edit-form">
                 <input type="hidden" name="action" value="update">
                 <input type="hidden" name="original_email" value="<?php echo htmlspecialchars($userData['email']); ?>">
