@@ -5,7 +5,7 @@
     $file = '../json/destination/book.json';
     $planet=json_decode(file_get_contents($file), true);
     $files = '../json/destination' . ucfirst($planet['planets'][0]) . '.json';
-    $planetinfo=json_decode(file_get_contents($files), true);
+    $planetinfo=json_decode(file_get_contents($file), true);
 
 
 ?>
@@ -21,7 +21,7 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
-    <header class=>
+    <header class>
         <?php include("navbar.php") ?>
     </header>
 
