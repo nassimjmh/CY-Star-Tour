@@ -1,0 +1,152 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>StarTour - Map</title>
+        <link rel="icon" href="../images/sparkles.png" type="image/png">
+        <link rel="stylesheet" href="../css/map.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body id="Map">
+        <header>
+            <nav>
+                <ul>
+                    <li class="logo">
+                        <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo" >
+                    </li>
+                    <li>
+                        <a class="underline" href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="underline" href="book.html">Destinations</a>
+                        <ul class="submenu">
+                            <li><a href="map.html">Map</a></li>
+                        </ul>
+                    
+                    </li>
+                       
+                    <li>
+                        <a class="underline" href="aboutus.html">About us</a>
+                    </li>
+                    <li class="research">
+                        <a href="book.html"><i class='bx bx-search research'></i></a>
+                    </li>
+                    <li class="connect">
+                        <a href="login.html"><i class='bx bx-user-circle connect'></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--------------------------------------->
+        <!--------------------------------------->
+        <!--------------------------------------->
+        <!--------------------------------------->
+        <div class="rsearch noclick">
+            <div class="title">
+                <p class="name">Map of the galaxy</p>
+                <div class="planet atlantis">
+                    <a href="destination.php?planet=Atlantis"><img src="../images/planet/atlantis.webp" alt="atlantis"></a>
+                    <p>Atlantis</p>
+                </div>
+                <div class="planet pandora">
+                    <a href="destination.php?planet=Pandora"><img src="../images/planet/pandora.webp" alt="pandora"></a>
+                    <p>Pandora</p>
+                </div>
+                <div class="planet naboo">
+                       <a href="destination.php?planet=Naboo"><img src="../images/planet/naboo.webp" alt="naboo"></a>
+                    <p>Naboo</p>
+                </div>
+                <div class="planet cybertron">
+                <a href="destination.php?planet=Cybertron"><img src="../images/planet/cybertron.webp" alt="cybertron"></a>
+                    <p>Cybertron</p>
+                </div>
+                <div class="planet scarif">
+                  <a href=""><img src="../images/planet/atlantis.webp" alt="atlantis"></a>
+                    <p>Scarif</p>
+                </div>
+                <div class="planet earth">
+                    <a href="destination.php?planet=Earth"><img src="../images/planet/earth.webp" alt="earth"></a>
+                    <p>Earth</p>
+                </div>
+                <div class="planet asuras">
+                   <a href=""><img src="../images/planet/asuras.webp" alt="asuras"></a>
+                    <p>Asuras</p>
+                </div>
+                <div class="planet kamino">
+                    <a href=""><img src="../images/planet/kamino.webp" alt="kamino"></a>
+                    <p>Kamino</p>
+                </div>
+                <div class="planet grok">
+                     <a href=""><img src="../images/planet/grok.webp" alt="grok"></a>
+                    <p>Grok</p>
+                </div>
+                <div class="planet mistral">
+                    <a href=""><img src="../images/planet/mistral.webp" alt="mistral"></a>
+                    <p>Mistral</p>
+                </div>
+                <div class="planet openai">
+                     <a href="destination.php?planet=Openai"><img src="../images/planet/openai.webp" alt="openai"></a>
+                    <p>Openai</p>
+                </div>
+                <div class="planet mars">
+                     <a href="destination.php?planet=Mars"><img src="../images/planet/mars.webp" alt="mars"></a>
+                    <p>Mars</p>
+                </div>
+            </div>
+        </div>
+        
+        <!--------------------------------------->
+  <!--FOOTER-->
+<footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+          <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo-footer" >
+          <ul class="payment-logos">
+              <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/american-express.svg" alt="amex"></il>
+              <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/cartes-bancaires.svg" alt="cartebleue"></il>
+              <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/apm/paypal.svg" alt="paypal"></il>
+              <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/mastercard.svg" alt="mastercard"></il>
+              <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/visa.svg" alt="visa"></il>
+              <il><img src="../images/bitcoin.svg" alt="bitcoin"></il>
+          </ul>
+      </div>
+        <div class="footer-section links">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="book.html">Destinations</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="admin/dashboard.html">Services (admin page)</a></li>
+                <li><a href="profil.html">Contact (profile page)</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>Email: contact@startour.com</p>
+            <p>Phone: +0 831 576 989</p>
+            <p>Address: 49.035, 2.0698 Earth</p>
+        </div>
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Bluesky</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 4090 CY StarTour. All rights reserved.</p>
+    </div>
+  </footer>
+    </body>
+
+    
+    
+</html>
