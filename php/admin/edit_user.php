@@ -72,10 +72,10 @@ if (!$userData) {
                     <label for="role">Role:</label>
                     <div class="custom-select">
                         <select id="role" name="role" required>
+                            <option value="Banned" <?php echo $userData['role'] === 'Banned' ? 'selected' : ''; ?>>Banned</option>
                             <option value="Standard" <?php echo $userData['role'] === 'Standard' ? 'selected' : ''; ?>>Standard</option>
                             <option value="VIP" <?php echo $userData['role'] === 'VIP' ? 'selected' : ''; ?>>VIP</option>
                             <option value="Admin" <?php echo $userData['role'] === 'Admin' ? 'selected' : ''; ?>>Admin</option>
-                            <option value="Banned" <?php echo $userData['role'] === 'Banned' ? 'selected' : ''; ?>>Banned</option>
                         </select>
                     </div>
                 </div>

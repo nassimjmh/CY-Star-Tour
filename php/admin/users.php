@@ -30,10 +30,10 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                     <input type="text" placeholder="Search users...">
                     <select id="status-filter">
                         <option value="">Filter by Status</option>
+                        <option value="Banned">Banned</option>
                         <option value="Standard">Standard</option>
                         <option value="VIP">VIP</option>
                         <option value="Admin">Admin</option>
-                        <option value="Banned">Banned</option>
                     </select>
                     <select id="race-filter">
                         <option value="">Filter by Race</option>
