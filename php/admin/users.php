@@ -46,6 +46,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>PP</th>
                             <th>FIRST NAME</th>
                             <th>LAST NAME</th>
                             <th>EMAIL</th>
@@ -63,7 +64,8 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                             foreach($users as $users){
                                 ?>      
                                 <tr>
-                                    <td>#00000</td>
+                                    <td><?php echo "#" . str_pad($users["id"], 4, '0', STR_PAD_LEFT) ?></td>
+                                    <td><img src="<?php echo $users["profile_pic"]; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;"></td>
                                     <td><?php echo $users["first_name"] ?></td>
                                     <td><?php echo $users["last_name"] ?></td>
                                     <td><a href="mailto:<?php echo $users["email"] ?>"><?php echo $users["email"] ?></a></td>

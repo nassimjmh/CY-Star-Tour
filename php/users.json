@@ -8,7 +8,7 @@
         "race": "Human",
         "date_picker": "5807-05-09",
         "role": "Admin",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Sofyane"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Sofyane"
     },
     "nassim@startour.cy": {
         "id": 2,
@@ -19,7 +19,7 @@
         "race": "Human",
         "date_picker": "5804-11-07",
         "role": "Admin",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Jamhour"
+        "profile_pic": "uploads\/toji (1).jpg"
     },
     "Hicham@startour.fr": {
         "id": 3,
@@ -30,7 +30,7 @@
         "race": "Human",
         "date_picker": "5823-01-21",
         "role": "Admin",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Hicham"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Hicham"
     },
     "kargalan@gmail.com": {
         "id": 4,
@@ -41,7 +41,7 @@
         "race": "Coruscant",
         "date_picker": "4970-10-17",
         "role": "Standard",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Kargalan"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Kargalan"
     },
     "ia@gmail.com": {
         "id": 5,
@@ -52,7 +52,7 @@
         "race": "IA",
         "date_picker": "4900-01-29",
         "role": "VIP",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=IA"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=IA"
     },
     "g-romuald@python.cy": {
         "id": 6,
@@ -63,7 +63,7 @@
         "race": "Alien",
         "date_picker": "4900-01-21",
         "role": "Banned",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Romuald"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Romuald"
     },
     "a@a": {
         "id": 7,
@@ -74,7 +74,7 @@
         "race": "IA",
         "date_picker": "0001-01-01",
         "role": "Admin",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=a"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=a"
     },
     "kea@eisti.cy": {
         "id": 8,
@@ -84,8 +84,8 @@
         "password": "$2y$10$NhFv4QST7.72aD8RLt6une7HhgTN2PNS0xy2l\/o49UNghaXJVmuH6",
         "race": "Alien",
         "date_picker": "4900-01-29",
-        "role": "Standard",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Khalid"
+        "role": "Banned",
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Khalid"
     },
     "zoghlagoat@converge.cy": {
         "id": 9,
@@ -96,6 +96,6 @@
         "race": "Human",
         "date_picker": "4900-01-29",
         "role": "Standard",
-        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Naim"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Naim"
     }
 }

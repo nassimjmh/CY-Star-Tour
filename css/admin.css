@@ -37,13 +37,32 @@
     background-color: white;
 }
 
-.admin-container td:nth-child(5) {
+table th:nth-child(2) { 
+    width: 5px;
+    min-width: 5px;
+    max-width: 5px;
+}
+
+.profile-thumbnail {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+table th:nth-child(5) { 
+    width: 30px;
+    min-width: 30px;
+    max-width: 30px;
+}
+
+.admin-container td:nth-child(6) {
     width: 100px;  
     min-width: 100px;
     max-width: 100px;
 }
 
-.admin-container td:nth-child(5) span {
+.admin-container td:nth-child(6) span {
     display: inline-block;
     width: 100%;
     text-align: center;
