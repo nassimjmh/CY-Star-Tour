@@ -309,16 +309,36 @@ table th:nth-child(5) {
     background-color: white;
 }
 
-/* Add these styles to your admin.css file */
 select#role {
     color: black;
     font-weight: bolder;
 }
 
-select#role:hover {
-    background-color: #f5f5f5; /* Light gray background on hover */
+select:hover {
+    background-color: #f5f5f5; 
     cursor: pointer;
 }
+
+select#status-filter option {
+    font-weight: bolder;
+}
+
+select#status-filter option[value="Standard"] {
+    color: #4CAF50;
+}
+
+select#status-filter option[value="VIP"] {
+    color: gold;
+}
+
+select#status-filter option[value="Admin"] {
+    color: #5e9ae9;
+}
+
+select#status-filter option[value="Banned"] {
+    color: #ff4444;
+}
+
 
 select#role option {
     font-weight: bolder;
