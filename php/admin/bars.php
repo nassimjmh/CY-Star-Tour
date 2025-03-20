@@ -7,7 +7,7 @@
                 <li class="panellogo"><img src="../../images/adminpanel.png" alt=""></li>
                 <li><a class="underline" href="../../index.html">Exit</a></li>
                 <li class="connect">
-                    <a href="profil.php"><i class='bx bx-user-circle connect'></i></a>
+                    <a href="../profil.php"><i class='bx bx-user-circle connect'></i></a>
                 </li>
             </ul>
         </nav>
