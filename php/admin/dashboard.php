@@ -3,12 +3,12 @@ session_start();
 
 if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ) {
 
-    header('location: login.php');
+    header('location: ../login.php');
 }
 
 if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
     
-        header('location: ../index.html');
+        header('location: ../../index.html');
 }
 
 $email = $_SESSION['email'];
@@ -29,9 +29,9 @@ $date_picker = $_SESSION["date_picker"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Admin page for managing users on StarTour">
     <title>StarTour - Admin</title>
-    <link rel="icon" href="../images/sparkles.png" type="image/png">
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../../images/sparkles.png" type="image/png">
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body id="dashboard">

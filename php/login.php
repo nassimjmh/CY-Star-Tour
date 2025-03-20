@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION["date_picker"] = $users[$email]["date_picker"];
 
             if ($users[$email]['role'] === 'Admin') {
-                header('Location: dashboard.php');
+                header('Location: profil.php');
             } else {
                 header('Location: profil.php');
             }

@@ -57,7 +57,7 @@ else if( isset($_SESSION['role']) && $_SESSION['role'] === 'VIP') {
             ?> &nbsp;<i class='bx bxl-sketch'></i>
         </div>
 
-        <a class="logout" href="<?php session_destroy()?>">Logout &nbsp;<i class='bx bx-log-out'></i></a>
+        <a class="logout" href="logout.php">Logout &nbsp;<i class='bx bx-log-out'></i></a>
     </div>
 
 
