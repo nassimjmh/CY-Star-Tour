@@ -8,13 +8,76 @@ if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
 }
 
 
+
+
+$users = json_decode(file_get_contents('users.json'), true);
+
 $email = $_SESSION['email'];
 $first_name= $_SESSION["first_name"];
 $role= $_SESSION["role"];
 $last_name= $_SESSION["last_name"];
 $race = $_SESSION["race"];
 $date_picker = $_SESSION["date_picker"];
+$profile_pic = $_SESSION["profile_pic"];
 
+$target_dir = "uploads/";
+if (!file_exists($target_dir)) {
+    mkdir($target_dir, 0777, true);
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
+    $target_file = $target_dir . basename($_FILES["profile_pic"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+
+    if ( isset($_POST["submit"])){
+
+        if (isset($_FILES["profile_pic"]) && $_FILES["profile_pic"]["error"] == UPLOAD_ERR_OK) {
+            $check = getimagesize($_FILES["profile_pic"]["tmp_name"]);
+            if ($check !== false) {
+                $uploadOk = 1;
+            } else {
+                echo "Ce fichier n'est pas une image.";
+                $uploadOk = 0;
+            }
+        } else {
+            echo "Aucun fichier n'a été téléchargé ou une erreur s'est produite lors du téléchargement.";
+            $uploadOk = 0;
+        }
+    }
+
+
+    if ($_FILES["profile_pic"]["size"] > 500000) {
+        echo "Désolé, votre fichier est trop grand.";
+        $uploadOk = 0;
+    }
+
+    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+        echo "Désolé, seuls les fichiers JPG, JPEG, PNG & GIF sont autorisés.";
+        $uploadOk = 0;
+    }
+
+
+    if ($uploadOk == 0) {
+        echo "Désolé, votre fichier n'a pas été téléchargé.";
+    } else {
+        if (move_uploaded_file($_FILES["profile_pic"]["tmp_name"], $target_file)) {
+            // Mettre à jour l'URL de l'image dans les données utilisateur
+            $users[$email]['profile_pic'] = $target_file;  // Chemin du fichier téléchargé
+
+            // Sauvegarder les modifications dans le fichier JSON
+            file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+
+
+            header('location: profil.php');
+            exit;
+        } else {
+            echo "Désolé, il y a eu une erreur lors du téléchargement de votre fichier.";
+        }
+    }
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +97,15 @@ $date_picker = $_SESSION["date_picker"];
 </header>
 
 <main>
-
+    
 
     <div class="sidebar">
         <div class="sidebar-head">
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="img" class="profile-pic"><a href="#"><i class='bx bx-edit'></i></a>
+            <img src="<?php echo $users[$email]['profile_pic']; ?>" alt="Picture" class="profile-pic"></img>
+            <form action="profil.php" method="POST" enctype="multipart/form-data">
+                <input type="file" name="profile_pic" accept="image/*">
+                <button type="submit" name="submit" class="btn">Change Picture</button>
+            </form>
         </div>
         <a href="#">Settings & Preferences &nbsp; <i class='bx bx-cog'></i></a>
         <a href="#">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
