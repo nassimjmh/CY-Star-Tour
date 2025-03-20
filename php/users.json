@@ -62,7 +62,7 @@
         "password": "$2y$10$Puv0uVnXjAPoiogsMdJwMu\/GoJzrsdg82b5M8muFoQJQQQrDhZLVS",
         "race": "Alien",
         "date_picker": "4900-01-21",
-        "role": "Banned",
+        "role": "Standard",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Romuald"
     },
     "a@a": {
@@ -95,7 +95,7 @@
         "password": "$2y$10$Ii2I1TcBPaEtlVVaYU7z1uOQi3GO5SZ5cUXyIzXvz4GcEYbYsmKy.",
         "race": "Human",
         "date_picker": "4900-01-29",
-        "role": "Standard",
+        "role": "VIP",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Naim"
     }
 }
