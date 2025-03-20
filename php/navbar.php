@@ -8,18 +8,18 @@
             <a class="underline" href="../index.html">Home</a>
         </li>
         <li>
-            <a class="underline" href="../html/book.html">Destinations</a>
+            <a class="underline" href="../php/book.php">Destinations</a>
             <ul class="submenu">
-                <li><a href="../html/map.html">Map</a></li>
+                <li><a href="../php/map.php">Map</a></li>
             </ul>
 
         </li>
 
         <li>
-            <a class="underline" href="../html/aboutus.html">About us</a>
+            <a class="underline" href="../php/aboutus.php">About us</a>
         </li>
         <li class="research">
-            <a href="../html/book.html"><i class='bx bx-search research'></i></a>
+            <a href="../php/book.php"><i class='bx bx-search research'></i></a>
         </li>
         <li class="connect">
             <?php if (!isset($_SESSION['email']) && !isset($_SESSION['password'])): ?>
