@@ -76,6 +76,8 @@ if (!$userData) {
                             <option value="Standard" <?php echo $userData['role'] === 'Standard' ? 'selected' : ''; ?>>Standard</option>
                             <option value="VIP" <?php echo $userData['role'] === 'VIP' ? 'selected' : ''; ?>>VIP</option>
                             <option value="Admin" <?php echo $userData['role'] === 'Admin' ? 'selected' : ''; ?>>Admin</option>
+                            <option value="Stellar Elite" <?php echo $userData['role'] === 'Stellar Elite' ? 'selected' : ''; ?>>Stellar Elite</option>
+
                         </select>
                     </div>
                 </div>
