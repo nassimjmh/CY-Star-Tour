@@ -14,26 +14,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $users = json_decode($file, true);
 
     if ($action === 'update') {
-        // Handle the edit form submission
         $original_email = $_POST['original_email'];
+        $new_email = $_POST['email'];
+        
+        // Create new data array preserving the nested structure
         $new_data = [
+            'id' => $users[$original_email]['id'],
             'first_name' => $_POST['first_name'],
             'last_name' => $_POST['last_name'],
-            'email' => $_POST['email'],
+            'email' => $new_email,
+            'password' => $users[$original_email]['password'], // preserve password
             'role' => $_POST['role'],
             'race' => $_POST['race'],
-            'date_picker' => $_POST['date_picker']
+            'date_picker' => $_POST['date_picker'],
+            'profile_pic' => $users[$original_email]['profile_pic'] // preserve profile pic
         ];
-
-        // Find and update the user
+    
+        // Create new users array
         $updated_users = [];
-        foreach ($users as $user) {
-            if ($user['email'] === $original_email) {
-                // Preserve any other existing fields
-                $new_data = array_merge($user, $new_data);
-                $updated_users[] = $new_data;
+        foreach ($users as $email => $user) {
+            if ($email === $original_email) {
+                if ($original_email !== $new_email) {
+                    // If email changed, create new key
+                    $updated_users[$new_email] = $new_data;
+                } else {
+                    // If email unchanged, keep same key
+                    $updated_users[$email] = $new_data;
+                }
             } else {
-                $updated_users[] = $user;
+                $updated_users[$email] = $user;
             }
         }
 

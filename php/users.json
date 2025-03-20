@@ -1,5 +1,5 @@
-[
-    {
+{
+    "sofyane@startour.cy": {
         "id": 1,
         "first_name": "Sofyane",
         "last_name": "Abajou",
@@ -10,7 +10,7 @@
         "role": "Admin",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Sofyane"
     },
-    {
+    "nassim@startour.cy": {
         "id": 2,
         "first_name": "Nassim",
         "last_name": "Jamhour",
@@ -21,7 +21,7 @@
         "role": "Admin",
         "profile_pic": "uploads\/toji.jpg"
     },
-    {
+    "hicham@startour.cy": {
         "id": 3,
         "first_name": "Hicham",
         "last_name": "El Jarjini",
@@ -32,7 +32,7 @@
         "role": "Admin",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Hicham"
     },
-    {
+    "kargalan@gmail.com": {
         "id": 4,
         "first_name": "Kargalan",
         "last_name": "Thesunisgone",
@@ -43,7 +43,7 @@
         "role": "Standard",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Kargalan"
     },
-    {
+    "ia@gmail.com": {
         "id": 5,
         "first_name": "IA",
         "last_name": "IASERMIN",
@@ -54,7 +54,7 @@
         "role": "VIP",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=IA"
     },
-    {
+    "g-romuald@python.cy": {
         "id": 6,
         "first_name": "Romuald",
         "last_name": "Grignon",
@@ -65,7 +65,7 @@
         "role": "Standard",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Romuald"
     },
-    {
+    "a@a": {
         "id": 7,
         "first_name": "a",
         "last_name": "a",
@@ -76,18 +76,18 @@
         "role": "Admin",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=a"
     },
-    {
+    "kea@eisti.cy": {
         "id": 8,
         "first_name": "Khalid",
         "last_name": "El Amine",
         "email": "kea@eisti.cy",
         "password": "$2y$10$NhFv4QST7.72aD8RLt6une7HhgTN2PNS0xy2l\/o49UNghaXJVmuH6",
-        "race": "Alien",
-        "date_picker": "3969-05-29",
         "role": "Banned",
+        "race": "Alien",
+        "date_picker": "3969-06-29",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Khalid"
     },
-    {
+    "zoghlagoat@converge.cy": {
         "id": 9,
         "first_name": "Naim",
         "last_name": "Zoghlami",
@@ -98,4 +98,4 @@
         "role": "Stellar Elite",
         "profile_pic": "uploads\/zeta.jpeg"
     }
-]
+}
