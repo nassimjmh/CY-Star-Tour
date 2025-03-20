@@ -83,7 +83,7 @@ footer {
 }
 
 .footer-section ul li a {
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -151,11 +151,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: white !important;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5vh 1vh;
 }
+
 
 
 .underline::before {
