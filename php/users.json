@@ -1,65 +1,101 @@
-[
-    {
+{
+    "Sofyane@startour.fr": {
+        "id": 1,
         "first_name": "Sofyane",
         "last_name": "Abajou",
         "email": "Sofyane@startour.fr",
         "password": "$2y$10$D4qsIEayyS4W39E.Dj0\/EeAKb8qcHz2H2twinfwNbDZmqD2EwcbcC",
         "race": "Human",
         "date_picker": "5807-05-09",
-        "role": "Admin"
+        "role": "Admin",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Sofyane"
     },
-    {
+    "nassim@startour.cy": {
+        "id": 2,
         "first_name": "Jamhour",
         "last_name": "Nassim",
         "email": "nassim@startour.cy",
         "password": "$2y$10$HCm\/ftPuRiuWXnNfEB4UweIa.KdW2sdXlvxv.DrpNc2.0Vw.ZG73S",
         "race": "Human",
         "date_picker": "5804-11-07",
-        "role": "Admin"
+        "role": "Admin",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Jamhour"
     },
-    {
+    "Hicham@startour.fr": {
+        "id": 3,
         "first_name": "Hicham",
         "last_name": "Eljarini",
         "email": "Hicham@startour.fr",
         "password": "$2y$10$TUy8j8jBcQY0vCJCwd8aSOPVQpFOV.6ar9gF5ITaE9SusRAsOUveK",
         "race": "Human",
         "date_picker": "5823-01-21",
-        "role": "Admin"
+        "role": "Admin",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Hicham"
     },
-    {
+    "kargalan@gmail.com": {
+        "id": 4,
         "first_name": "Kargalan",
         "last_name": "Thesunisgone",
         "email": "kargalan@gmail.com",
         "password": "$2y$10$mYsnSVO3ZzcT3oa0jMnWZ..GSReJMF35kSV5.ynq4vlM54SpnyLRq",
         "race": "Coruscant",
         "date_picker": "4970-10-17",
-        "role": "Standard"
+        "role": "Standard",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Kargalan"
     },
-    {
+    "ia@gmail.com": {
+        "id": 5,
         "first_name": "IA",
         "last_name": "IASERMIN",
         "email": "ia@gmail.com",
         "password": "$2y$10$EhexaXgS\/8GrwxAThY\/\/iOQfEbKWG8NgrY\/hld70Fa05cnuH9qoAm",
         "race": "IA",
         "date_picker": "4900-01-29",
-        "role": "VIP"
+        "role": "VIP",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=IA"
     },
-    {
+    "g-romuald@python.cy": {
+        "id": 6,
         "first_name": "Romuald",
         "last_name": "Grignon",
         "email": "g-romuald@python.cy",
         "password": "$2y$10$Puv0uVnXjAPoiogsMdJwMu\/GoJzrsdg82b5M8muFoQJQQQrDhZLVS",
         "race": "Alien",
         "date_picker": "4900-01-21",
-        "role": "Banned"
+        "role": "Banned",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Romuald"
     },
-    {
+    "a@a": {
+        "id": 7,
         "first_name": "a",
         "last_name": "a",
         "email": "a@a",
         "password": "$2y$10$CUj56Xn8nA91fdM3y8xwruKsVr8DppQsIzvtlBhZ7ArYJyxq\/Pe9q",
         "race": "IA",
         "date_picker": "0001-01-01",
-        "role": "Admin"
+        "role": "Admin",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=a"
+    },
+    "kea@eisti.cy": {
+        "id": 8,
+        "first_name": "Khalid",
+        "last_name": "El Amine",
+        "email": "kea@eisti.cy",
+        "password": "$2y$10$NhFv4QST7.72aD8RLt6une7HhgTN2PNS0xy2l\/o49UNghaXJVmuH6",
+        "race": "Alien",
+        "date_picker": "4900-01-29",
+        "role": "Standard",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Khalid"
+    },
+    "zoghlagoat@converge.cy": {
+        "id": 9,
+        "first_name": "Naim",
+        "last_name": "Zoghlami",
+        "email": "zoghlagoat@converge.cy",
+        "password": "$2y$10$Ii2I1TcBPaEtlVVaYU7z1uOQi3GO5SZ5cUXyIzXvz4GcEYbYsmKy.",
+        "race": "Human",
+        "date_picker": "4900-01-29",
+        "role": "Standard",
+        "profile_pic": "https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=Naim"
     }
-]
+}

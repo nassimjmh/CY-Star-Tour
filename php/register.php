@@ -20,8 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     if (!isset($users[$email])) {
-
+        $nextId = empty($users) ? 1 : max(array_column($users, 'id')) + 1;
+    
         $users[$email] = [
+            'id' => $nextId,
             'first_name' => $first_name,
             'last_name' => $last_name,
             'email' => $email,
@@ -29,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'race' => $race,
             'date_picker' => $date_picker,
             'role' => $role,
+            'profile_pic' => 'https://api.dicebear.com/9.x/pixel-art/svg?seed=n' . $first_name
         ];
 
         $_SESSION['email'] = $email;
