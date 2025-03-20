@@ -209,7 +209,7 @@ $edit_mode = isset($_POST['edit']);
                     </li>
                     <li>
                         <span>Birth Date:</span>
-                        <input type="date" name="date_picker" value="<?php echo htmlspecialchars($date_picker); ?>" required>
+                        <input type="date" name="date_picker" min="3900-01-01"  max="4025-01-01" value="<?php echo htmlspecialchars($date_picker); ?>" required>
                     </li>
                 </ul>
                 <button type="submit" name="update" class="save-btn">Save Changes</button>
