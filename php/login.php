@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form action="" method="POST">
         <h1>Login <a href="../index.html"><i class='bx bx-undo'></i></a></h1>
         <div class="input-box">
-            <input type="mail" name="email" placeholder="Mail address" required>
+            <input type="email" name="email" placeholder="Mail address" required>
             <i class='bx bx-envelope'></i>
         </div>
         <div class="input-box">
