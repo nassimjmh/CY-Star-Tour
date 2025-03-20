@@ -67,26 +67,33 @@
     border: none;
     cursor: pointer;
     font-size: 12px;
+    min-width: 100px; 
+    white-space: nowrap; 
 }
 
 .vip-button {
     background-color: gold;
     color: black;
+    width: 100px; 
 }
 
 .ban-button {
     background-color: #ff4444;
     color: white;
+    width: 100px;
+
 }
 
 .manage-button {
     background-color: #4CAF50;
     color: white;
+    width: 100px; 
 }
 
 .admin-button {
     background-color: #5e9ae9;
     color: white;
+    width: 100px; 
 }
 
 .action-buttons button:hover {

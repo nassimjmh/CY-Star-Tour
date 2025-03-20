@@ -15,7 +15,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
     <meta name="description" content="Admin page for managing users on StarTour">
     <title>StarTour - Admin</title>
     <link rel="icon" href="../../images/sparkles.png" type="image/png">
-    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/admin.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../../css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -68,16 +68,16 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                     <td><?php echo $users["last_name"] ?></td>
                                     <td><a href="mailto:<?php echo $users["email"] ?>"><?php echo $users["email"] ?></a></td>
                                     <td><?php if ($users["role"] === 'Standard') {
-                                        echo '<span style="color: green; font-weight: bolder;">' . $users["role"] ;
+                                        echo '<span style="color: #4CAF50; font-weight: bolder;">' . $users["role"] ;
                                     }
                                     else if($users["role"] === 'Admin') {
-                                        echo '<span style="color: #696969; font-weight: bolder;">' . $users["role"] ;
+                                        echo '<span style="color: #5e9ae9; font-weight: bolder;">' . $users["role"] ;
                                     }
                                     else if($users["role"] === 'VIP') {
                                         echo '<span style="color: gold; font-weight: bolder;">' . $users["role"] ;
                                     }
                                     else if($users["role"] === 'Banned') {
-                                        echo '<span style="color: red; font-weight: bolder;">' . $users["role"] ;
+                                        echo '<span style="color: #ff4444; font-weight: bolder;">' . $users["role"] ;
                                     }
                                     ?>
                                     </td>
