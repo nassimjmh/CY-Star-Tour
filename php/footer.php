@@ -16,8 +16,8 @@
             <h3>Useful Links</h3>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../html/book.html">Destinations</a></li>
-                <li><a href="../html/aboutus.html">About us</a></li>
+                <li><a href="../php/book.php">Destinations</a></li>
+                <li><a href="../php/aboutus.php">About us</a></li>
                 <?php
                 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
                     echo '<li><a href="admin/dashboard.php">Admin control panel</a></li>';
