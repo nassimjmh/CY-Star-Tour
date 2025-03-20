@@ -84,11 +84,46 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                     <td><?php echo $users["race"] ?></td>
                                     <td><?php echo $users["date_picker"] ?></td>
                                     <td>
-                                        <div class="action-buttons">
-                                            <button onclick="" class="vip-button">Toggle VIP</button>
-                                            <button onclick="" class="ban-button">Ban User</button>
-                                            <button onclick="" class="manage-button">Manage User</button>
-                                        </div>
+                                    <div class="action-buttons">
+                                        <form method="POST" action="update_user.php" style="display: inline;">
+                                            <input type="hidden" name="email" value="<?php echo $users['email']; ?>">
+                                            <input type="hidden" name="current_role" value="<?php echo $users['role']; ?>">
+                                            
+                                            <?php if ($users['role'] !== 'VIP'): ?>
+                                                <button type="submit" name="action" value="make_vip" class="vip-button">
+                                                    Make VIP
+                                                </button>
+                                            <?php else: ?>
+                                                <button type="submit" name="action" value="remove_vip" class="vip-button">
+                                                    Remove VIP
+                                                </button>
+                                            <?php endif; ?>
+
+                                            <?php if ($users['role'] !== 'Banned'): ?>
+                                                <button type="submit" name="action" value="ban" class="ban-button">
+                                                    Ban User
+                                                </button>
+                                            <?php else: ?>
+                                                <button type="submit" name="action" value="unban" class="ban-button">
+                                                    Unban User
+                                                </button>
+                                            <?php endif; ?>
+
+                                            <?php if ($users['role'] !== 'Admin'): ?>
+                                                <button type="submit" name="action" value="make_admin" class="admin-button">
+                                                    Make Admin
+                                                </button>
+                                            <?php else: ?>
+                                                <button type="submit" name="action" value="remove_admin" class="admin-button">
+                                                    Remove Admin
+                                                </button>
+                                            <?php endif; ?>
+
+                                            <button type="submit" name="action" value="manage" class="manage-button">
+                                                Edit User
+                                            </button>
+                                        </form>
+                                    </div>
                                     </td>
                                 </tr>
                                 <?php

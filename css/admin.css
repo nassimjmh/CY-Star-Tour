@@ -60,33 +60,37 @@
     gap: 10px;
 }
 
-.admin-container .action-buttons button {
-    padding: 5px 10px;  
-    font-size: 14px;
-    color: white;
-    border: none;
+.action-buttons button {
+    padding: 5px 10px;
+    margin: 2px;
     border-radius: 4px;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 12px;
 }
 
-.vip-button{
-    background-color: #f7931a;
+.vip-button {
+    background-color: gold;
+    color: black;
 }
-.vip-button:hover{
-    background-color: #ffd000;
+
+.ban-button {
+    background-color: #ff4444;
+    color: white;
 }
-.ban-button{
-    background-color: #e20e0e;
+
+.manage-button {
+    background-color: #4CAF50;
+    color: white;
 }
-.ban-button:hover{
-    background-color: #9c0707;
+
+.admin-button {
+    background-color: #5e9ae9;
+    color: white;
 }
-.manage-button{
-    background-color: #133159;
-}
-.manage-button:hover{
-    background-color: #307ce0;
+
+.action-buttons button:hover {
+    opacity: 0.8;
 }
 
 .admin-container .filters {
