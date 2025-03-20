@@ -22,7 +22,7 @@
                 <li><a href="../html/aboutus.html">About us</a></li>
                 <?php
                 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
-                    echo '<li><a href="admin/dashboard.php">Admin control panel</a></li>';
+                    echo '<li><a href="dashboard.php">Admin control panel</a></li>';
                 }
                 ?>
                 <li><a href="profil.html">Contact (profile page)</a></li>

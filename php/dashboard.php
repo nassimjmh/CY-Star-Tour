@@ -3,12 +3,12 @@ session_start();
 
 if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ) {
 
-    header('location: ../login.php');
+    header('location: login.php');
 }
 
 if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
     
-        header('location: ../../index.html');
+        header('location: ../index.html');
 }
 
 $email = $_SESSION['email'];
