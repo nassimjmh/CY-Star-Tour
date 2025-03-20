@@ -70,21 +70,23 @@ if (!$userData) {
 
                 <div class="form-group">
                     <label for="role">Role:</label>
-                    <select id="role" name="role" required style="color: black; font-weight: bolder;">
-                        <option value="Standard" <?php echo $userData['role'] === 'Standard' ? 'selected' : ''; ?>>Standard</option>
-                        <option value="VIP" <?php echo $userData['role'] === 'VIP' ? 'selected' : ''; ?>>VIP</option>
-                        <option value="Admin" <?php echo $userData['role'] === 'Admin' ? 'selected' : ''; ?>>Admin</option>
-                        <option value="Banned" <?php echo $userData['role'] === 'Banned' ? 'selected' : ''; ?>>Banned</option>
-                    </select>
+                    <div class="custom-select">
+                        <select id="role" name="role" required>
+                            <option value="Standard" <?php echo $userData['role'] === 'Standard' ? 'selected' : ''; ?>>Standard</option>
+                            <option value="VIP" <?php echo $userData['role'] === 'VIP' ? 'selected' : ''; ?>>VIP</option>
+                            <option value="Admin" <?php echo $userData['role'] === 'Admin' ? 'selected' : ''; ?>>Admin</option>
+                            <option value="Banned" <?php echo $userData['role'] === 'Banned' ? 'selected' : ''; ?>>Banned</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="form-group">
                     <label for="race">Race:</label>
                     <select id="race" name="race" required>
-                        <option value="human" <?php echo $userData['race'] === 'human' ? 'selected' : ''; ?>>Human</option>
-                        <option value="ia" <?php echo $userData['race'] === 'ia' ? 'selected' : ''; ?>>IA</option>
-                        <option value="alien" <?php echo $userData['race'] === 'alien' ? 'selected' : ''; ?>>Alien</option>
-                        <option value="coruscant" <?php echo $userData['race'] === 'coruscant' ? 'selected' : ''; ?>>Coruscant</option>
+                        <option value="Human" <?php echo $userData['race'] === 'Human' ? 'selected' : ''; ?>>Human</option>
+                        <option value="IA" <?php echo $userData['race'] === 'IA' ? 'selected' : ''; ?>>IA</option>
+                        <option value="Alien" <?php echo $userData['race'] === 'Alien' ? 'selected' : ''; ?>>Alien</option>
+                        <option value="Coruscant" <?php echo $userData['race'] === 'Coruscant' ? 'selected' : ''; ?>>Coruscant</option>
                     </select>
                 </div>
 

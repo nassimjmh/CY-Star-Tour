@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <summary class="selecteur">Your Race?</summary>
                 <div class="racelist">
                     <label>
-                        <input type="radio" name="race" value="human"> Human
+                        <input type="radio" name="race" value="Human"> Human
                     </label>
                     <label>
                         <input type="radio" name="race" value="IA"> IA
