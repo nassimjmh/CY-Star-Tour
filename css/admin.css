@@ -323,6 +323,10 @@ select#status-filter option {
     font-weight: bolder;
 }
 
+select#status-filter option[value="Banned"] {
+    color: #ff4444;
+}
+
 select#status-filter option[value="Standard"] {
     color: #4CAF50;
 }
@@ -331,17 +335,24 @@ select#status-filter option[value="VIP"] {
     color: gold;
 }
 
+select#status-filter option[value="Stellar Elite"] {
+    color: #7851A9;
+}
+
 select#status-filter option[value="Admin"] {
     color: #5e9ae9;
 }
 
-select#status-filter option[value="Banned"] {
-    color: #ff4444;
-}
+
 
 
 select#role option {
     font-weight: bolder;
+}
+
+
+select#role option[value="Banned"] {
+    color: #ff4444;
 }
 
 select#role option[value="Standard"] {
@@ -352,14 +363,13 @@ select#role option[value="VIP"] {
     color: gold;
 }
 
+select#role option[value="Stellar Elite"] {
+    color: #7851A9;
+}
+
 select#role option[value="Admin"] {
     color: #5e9ae9;
 }
-
-select#role option[value="Banned"] {
-    color: #ff4444;
-}
-
 
 .save-button, .cancel-button {
     padding: 8px 16px;
