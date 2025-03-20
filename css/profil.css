@@ -297,18 +297,12 @@ main {
 .file-label {
     display: inline-block;
     padding: 10px;
-    background-color: #f0f0f0;
-    border: 2px dashed #ccc;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
     text-align: center;
 }
 
-.file-label:hover {
-    background-color: #e0e0e0;
-    border-color: #999;
-}
 
 .file-label i {
     font-size: 24px;
