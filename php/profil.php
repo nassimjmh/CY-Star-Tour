@@ -128,6 +128,9 @@ else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
 else if( isset($_SESSION['role']) && $_SESSION['role'] === 'VIP') {
     echo ' <span style="color : gold;">'.'Statut :&nbsp' . $role;
 }
+else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Banned') {
+    echo ' <span style="color : red;">'.'Statut :&nbsp' . $role;
+}
             ?> &nbsp;<i class='bx bxl-sketch'></i>
         </div>
 
