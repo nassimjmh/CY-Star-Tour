@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: url("https://i.redd.it/xbidi4vbd0z91.jpg") no-repeat center;
+    background: url("https://i.redd.it/ywi6jvge3sra1.gif");
     background-size: cover;
     background-attachment: fixed;
     color: white;
@@ -324,7 +324,7 @@ main {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 17px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
@@ -333,4 +333,27 @@ main {
 
 .custom-btn:hover {
     background-color: #218838;
+}
+
+
+
+.edit-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+.edit-btn:hover{
+    background-color: #218838;
+
 }
