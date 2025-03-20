@@ -70,7 +70,7 @@ if (!$userData) {
 
                 <div class="form-group">
                     <label for="role">Role:</label>
-                    <select id="role" name="role" required>
+                    <select id="role" name="role" required style="color: black; font-weight: bolder;">
                         <option value="Standard" <?php echo $userData['role'] === 'Standard' ? 'selected' : ''; ?>>Standard</option>
                         <option value="VIP" <?php echo $userData['role'] === 'VIP' ? 'selected' : ''; ?>>VIP</option>
                         <option value="Admin" <?php echo $userData['role'] === 'Admin' ? 'selected' : ''; ?>>Admin</option>

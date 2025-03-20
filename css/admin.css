@@ -290,6 +290,38 @@
     background-color: white;
 }
 
+/* Add these styles to your admin.css file */
+select#role {
+    color: black;
+    font-weight: bolder;
+}
+
+select#role:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+    cursor: pointer;
+}
+
+select#role option {
+    font-weight: bolder;
+}
+
+select#role option[value="Standard"] {
+    color: #4CAF50;
+}
+
+select#role option[value="VIP"] {
+    color: gold;
+}
+
+select#role option[value="Admin"] {
+    color: #5e9ae9;
+}
+
+select#role option[value="Banned"] {
+    color: #ff4444;
+}
+
+
 .save-button, .cancel-button {
     padding: 8px 16px;
     border-radius: 4px;

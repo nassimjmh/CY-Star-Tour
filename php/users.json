@@ -1,7 +1,7 @@
 [
     {
-        "first_name": "Abajou",
-        "last_name": "Sofyane",
+        "first_name": "Sofyane",
+        "last_name": "Abajou",
         "email": "Sofyane@startour.fr",
         "password": "$2y$10$D4qsIEayyS4W39E.Dj0\/EeAKb8qcHz2H2twinfwNbDZmqD2EwcbcC",
         "race": "human",
@@ -13,8 +13,8 @@
         "last_name": "Nassim",
         "email": "nassim@startour.cy",
         "password": "$2y$10$HCm\/ftPuRiuWXnNfEB4UweIa.KdW2sdXlvxv.DrpNc2.0Vw.ZG73S",
-        "race": "human",
-        "date_picker": "5752-10-11",
+        "race": "alien",
+        "date_picker": "5804-11-07",
         "role": "Admin"
     },
     {
@@ -31,7 +31,7 @@
         "last_name": "Thesunisgone",
         "email": "kargalan@gmail.com",
         "password": "$2y$10$mYsnSVO3ZzcT3oa0jMnWZ..GSReJMF35kSV5.ynq4vlM54SpnyLRq",
-        "race": "Alien",
+        "race": "human",
         "date_picker": "4970-10-17",
         "role": "Standard"
     },
