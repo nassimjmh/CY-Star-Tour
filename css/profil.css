@@ -231,3 +231,50 @@ main {
     transition: 0.7s;
 
 }
+
+
+
+#file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.file-label:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+
+.file-label i {
+    font-size: 24px;
+    color: #333;
+}
+
+
+.custom-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #218838;
+}
