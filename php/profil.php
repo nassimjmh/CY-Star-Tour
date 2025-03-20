@@ -118,20 +118,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
         <a href="#">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
         <a href="#">Booking & Acess &nbsp;<i class='bx bxs-calendar'></i></a>
         <a href="#">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
-        <div class="status"> <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Standard') {
-            echo ' <span style="color : green;">'.'Statut :&nbsp' . $role;
+        <div class="status">
+
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Standard') {
+            echo ' <span style="color :  #4CAF50;">'.'Status :&nbsp' . $role;
+
             }
-else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
-    echo ' <span style="color : grey;">'.'Statut :&nbsp' . $role; 
+
+            else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
+    echo ' <span style="color : #5e9ae9;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bxs-wrench'></i>";
+}
+            else if( isset($_SESSION['role']) && $_SESSION['role'] === 'VIP') {
+    echo ' <span style="color : gold;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bxl-sketch'></i>";
 }
 
-else if( isset($_SESSION['role']) && $_SESSION['role'] === 'VIP') {
-    echo ' <span style="color : gold;">'.'Statut :&nbsp' . $role;
+            else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Banned') {
+    echo ' <span style="color :#ff4444 ;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bx-dizzy'></i>";
 }
-else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Banned') {
-    echo ' <span style="color : red;">'.'Statut :&nbsp' . $role;
-}
-            ?> &nbsp;<i class='bx bxl-sketch'></i>
+
+            else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Stellar Elite') {
+                echo ' <span style="color :#7851A9 ;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bx-planet'></i>";
+            }
+
+            ?>
+
         </div>
 
         <a class="logout" href="logout.php">Logout &nbsp;<i class='bx bx-log-out'></i></a>
