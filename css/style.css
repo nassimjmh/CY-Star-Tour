@@ -220,6 +220,7 @@ nav .submenu {
     padding: 0;
     margin: 0;
     min-width: 14vh;
+    border-radius : 20px;
 }
 
 nav .submenu li:first-child {
@@ -239,7 +240,7 @@ nav .submenu li a {
 
 nav .submenu li a:hover {
     background-color: #ffffff;
-    color: #0f1a26;
+    color: #0f1a26 !important;
 }
 
 /* Afficher le sous-menu au survol */
