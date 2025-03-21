@@ -1,3 +1,9 @@
+
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +18,7 @@
     
     <body id="aboutus">
         <header>
-           <?php include("../php/navbar.php") ?>;
+           <?php include("../php/navbar.php") ?>
         </header>
 
 
@@ -65,6 +71,6 @@
     </div>
     
 <!--FOOTER-->
-<?php include("../php/footer.php") ?>;
+<?php include("../php/footer.php") ?>
 
 </html>
