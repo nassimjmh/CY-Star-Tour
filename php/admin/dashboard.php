@@ -11,14 +11,6 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
         header('location: ../../index.html');
 }
 
-$email = $_SESSION['email'];
-$first_name= $_SESSION["first_name"];
-$role= $_SESSION["role"];
-$last_name= $_SESSION["last_name"];
-$race = $_SESSION["race"];
-$date_picker = $_SESSION["date_picker"];
-
-
 ?>
 
 
@@ -54,10 +46,17 @@ $date_picker = $_SESSION["date_picker"];
             </div>
         </div>
         <div class="bento-box">
-            <h2>User Growth</h2>
-            <p>New users registered this month.</p>
+            <h2>User base</h2>
+            <p>Users registered.</p>
             <div class="user-growth">
-                <h3>+7,821</h3>
+                <?php
+                    $usersFile = '../users.json';
+                    if (file_exists($usersFile)) {
+                        $usersData = json_decode(file_get_contents($usersFile), true);
+                        $userCount = count($usersData);
+                        echo "<h3>" . $userCount . "</h3>";
+                    }
+                ?>
             </div>
         </div>
         <div class="bento-box">
