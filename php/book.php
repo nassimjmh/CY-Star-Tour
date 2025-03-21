@@ -130,6 +130,11 @@
                 <?php
                 $files = '../json/destination/' . ucfirst($planet['planets'][$index]) . '.json';
                 $planetinfo = json_decode(file_get_contents($files), true);
+
+                if (strtolower($plnt) === 'vide') {
+                    continue;
+                }
+
                 ?>
                 <a href="destination.php?planet=<?php echo ucfirst($planet['planets'][$index]); ?>"><div  class="booking">
                     <img src="<?php echo htmlspecialchars_decode($planetinfo['preimage'], ENT_QUOTES); ?>" alt="image de la planete">
