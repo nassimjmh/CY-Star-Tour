@@ -11,6 +11,7 @@
             <a class="underline" href="../php/book.php">Destinations</a>
             <ul class="submenu">
                 <li><a href="../php/map.php">Map</a></li>
+                <li> <a href="../php/offers.php">Special Offers</a></li>
             </ul>
 
         </li>
@@ -22,7 +23,9 @@
             <a href="../php/book.php"><i class='bx bx-search research'></i></a>
         </li>
         <li class="connect">
-            <?php if (!isset($_SESSION['email']) && !isset($_SESSION['password'])): ?>
+            <?php $current_page = basename($_SERVER['PHP_SELF']);
+
+            if ($current_page!= "profil.php"): ?>
                 <a href="profil.php"><i class='bx bx-user-circle connect'></i></a>
             <?php endif; ?>
         </li>
