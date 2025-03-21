@@ -1,0 +1,72 @@
+/* Styles généraux */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0B1A26; /* Fond sombre pour un effet spatial */
+    color: white;
+    text-align: center;
+}
+
+/* Titre principal */
+h1 {
+    font-family: 'Montblanc', sans-serif;
+    font-size: 3vh;
+    margin-top: 12vh;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.8vh;
+    margin-bottom: 2vh;
+}
+
+/* Conteneur des offres */
+.offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vh;
+    padding: 4vh 2vh;
+}
+
+/* Carte de chaque offre */
+.offer {
+    background-color: #142233;
+    padding: 3vh;
+    border-radius: 10px;
+    width: 30vh;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.offer:hover {
+    transform: translateY(-5px);
+}
+
+.offer h2 {
+    font-size: 2.5vh;
+    color: #FFDD57;
+}
+
+.offer p {
+    font-size: 1.6vh;
+    margin: 1vh 0;
+}
+
+/* Bouton Réserver */
+.btn {
+    display: inline-block;
+    background-color: #FFDD57;
+    color: #0B1A26;
+    padding: 1vh 2vh;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #FFC107;
+}
