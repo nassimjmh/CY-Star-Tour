@@ -1,7 +1,14 @@
 
 <?php  
     session_start();
-    if (isset($_GET['planet'])) {
+   if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
+
+    header('location: login.php');
+}
+
+
+
+if (isset($_GET['planet'])) {
         $selectedPlanet = $_GET['planet'];
     }   else {
         header("Location: map.php");
