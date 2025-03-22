@@ -1,109 +1,106 @@
-* {
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-body {
     background: linear-gradient(to right, #0B1A26, #203a43, #2c5364);
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-}
-
-.container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    width: 40%;
-    max-width: 1200px;
-    min-height: 50vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Container Styles */
+.container {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5vh 2vh;
+    flex-grow: 1;
 }
 
+/* Heading Styles */
 h1 {
-    margin-bottom: 30px;
-    font-size: 32px;
+    font-family: 'Montblanc', sans-serif;
+    font-size: 4vh;
+    margin-bottom: 3vh;
+    color: white;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
+/* Premium Plan Section */
 .plans {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
+    gap: 2vh;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .plan {
     background: rgba(255, 255, 255, 0.15);
-    padding: 40px;
-    border-radius: 15px;
-    width: 40%;
-    max-width: 500px;
+    border-radius: 12px;
+    padding: 2vh 3vh;
+    width: 28vh;
+    max-width: 350px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
 }
 
 .plan:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
-
 .plan h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
+    font-size: 2.5vh;
+    color: #fff;
+    margin-bottom: 1vh;
 }
 
 .plan p {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 1.6vh;
+    color: #ddd;
+    margin-bottom: 2vh;
 }
 
-.price {
+.plan .price {
+    font-size: 1.8vh;
     font-weight: bold;
-    font-size: 22px;
-    color: #FFD700;
+    color: #4A90E2;
+    margin-bottom: 2vh;
 }
 
-
-button {
-    background: linear-gradient(to right, #1E3C72, #2A5298);
+.plan button {
+    background-color: #4A90E2;
     color: white;
     border: none;
-    padding: 15px 25px;
-    font-size: 18px;
+    padding: 1.5vh 3vh;
     border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-top: 10px;
+    font-size: 1.6vh;
     width: 100%;
-    max-width: 400px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background: linear-gradient(to right, #2A5298, #4A90E2);
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+.plan button:hover {
+    background-color: #1E3C72;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .plan {
+        width: 80%;
+    }
 
-body {
-    background-size: 200% 200%;
-    animation: bgAnimation 15s ease infinite;
+    .plans {
+        flex-direction: column;
+    }
 }
