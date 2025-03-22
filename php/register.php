@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <details>
                 <summary class="selecteur">Birth Date?</summary>
                 <div class="Birthday" >
-                    <input type="date" class="date" name="date_picker" min="3900-01-01" max="4025-01-01" required>
+                    <input type="date" class="date" name="date_picker" min="3900-01-01" max="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" value="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" required>
                 </div>
             </details>
         </div>
