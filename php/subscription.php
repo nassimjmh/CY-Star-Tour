@@ -49,15 +49,18 @@ if (isset($_POST['role'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upgrade to Premium</title>
-
+    <title>StarTour - Login</title>
+    <link rel="icon" href="../images/sparkles.png" type="image/png">
+    <link rel="stylesheet" href="../css/payementrole.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/subscription.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <header>
     <?php include("navbar.php") ?>
 </header>
+
+
 <body>
 <div class="container">
     <h1>Choose Your Premium Plan</h1>
@@ -76,6 +79,6 @@ if (isset($_POST['role'])) {
 </div>
 </body>
 
-
+<?php include("footer.php") ?>
 
 </html>
