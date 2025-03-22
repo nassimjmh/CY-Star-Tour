@@ -51,7 +51,7 @@
         "password": "$2y$10$EhexaXgS\/8GrwxAThY\/\/iOQfEbKWG8NgrY\/hld70Fa05cnuH9qoAm",
         "race": "IA",
         "date_picker": "3989-01-29",
-        "role": "VIP",
+        "role": "Standard",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=IA"
     },
     "g-romuald@python.cy": {
@@ -62,7 +62,7 @@
         "password": "$2y$10$Puv0uVnXjAPoiogsMdJwMu\/GoJzrsdg82b5M8muFoQJQQQrDhZLVS",
         "race": "Alien",
         "date_picker": "3983-01-21",
-        "role": "Standard",
+        "role": "VIP",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Romuald"
     },
     "kea@eisti.cy": {
