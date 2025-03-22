@@ -140,10 +140,14 @@ main {
 
 .info input, .info select {
     width: 60%;
-    padding: 0.5rem;
-    border: 0.0625rem solid #0b1a26;
+    padding: 0.625rem;
+    border: 0.0625rem solid #ddd;
     border-radius: 0.25rem;
     font-size: 1rem;
+    background: transparent;
+    height: 100%;
+    outline: none;
+    border-radius: 0.75rem;
 }
 
 .edit-btn, .save-btn {

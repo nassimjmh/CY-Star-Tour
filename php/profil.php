@@ -90,8 +90,8 @@ $edit_mode = isset($_POST['edit']);
     <title>StarTour - Profile</title>
     <meta charset="utf-8">
     <link rel="icon" href="../images/sparkles.png" type="image/png">
-    <link rel="stylesheet" href="../css/profil.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profil.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -162,7 +162,12 @@ $edit_mode = isset($_POST['edit']);
                     <li><strong>First Name:</strong> <?php echo htmlspecialchars($first_name); ?></li>
                     <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
                     <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
-                    <li><strong>Birth Date:</strong> <?php echo htmlspecialchars($date_picker); ?></li>
+                    <li><strong>Birth Date:</strong>
+                    <?php 
+                        // Convert the date string to a DateTime object
+                        $date = new DateTime($date_picker);
+                        echo $date->format('d/m/Y'); 
+                    ?></li>
                 </ul>
                 <form action="profil.php" method="POST">
                     <button type="submit" name="edit" class="edit-btn">Edit Profile</button>
@@ -171,12 +176,17 @@ $edit_mode = isset($_POST['edit']);
                 <form action="profil.php" method="POST">
                     <ul>
                         <li>
+                            <span>First Name:</span>
+                            <input type="text" name="first_name" value="<?php echo htmlspecialchars($first_name); ?>" required>
+                        </li>
+                        <li>
                             <span>Last Name:</span>
                             <input type="text" name="last_name" value="<?php echo htmlspecialchars($last_name); ?>" required>
                         </li>
+
                         <li>
-                            <span>First Name:</span>
-                            <input type="text" name="first_name" value="<?php echo htmlspecialchars($first_name); ?>" required>
+                            <span>Birth Date:</span>
+                            <input type="date" name="date_picker" min="3900-01-01" max="4025-01-01" value="<?php echo htmlspecialchars($date_picker); ?>" required>
                         </li>
                         <li>
                             <span>Race:</span>
@@ -187,10 +197,7 @@ $edit_mode = isset($_POST['edit']);
                                 <option value="Coruscant" <?php echo $race === 'Coruscant' ? 'selected' : ''; ?>>Coruscant</option>
                             </select>
                         </li>
-                        <li>
-                            <span>Birth Date:</span>
-                            <input type="date" name="date_picker" min="3900-01-01" max="4025-01-01" value="<?php echo htmlspecialchars($date_picker); ?>" required>
-                        </li>
+
                     </ul>
                     <button type="submit" name="update" class="save-btn">Save Changes</button>
                 </form>
