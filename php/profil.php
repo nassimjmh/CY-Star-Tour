@@ -145,26 +145,28 @@ $edit_mode = isset($_POST['edit']);
         <a href="#">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
         <div class="status">
 
-            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Standard') {
-            echo ' <span style="color :  #4CAF50;">'.'Status :&nbsp' . $role;
+             <?php
+            if (isset($_SESSION['role'])) {
+                $role = $_SESSION['role'];
 
+                if ($role === 'Standard') {
+                    echo ' <a href="payementrole.php" style="color :  #4CAF50;">' . 'Status :&nbsp' . $role . '</a>';
+                }
+                else if ($role === 'Admin') {
+                    echo ' <a href="payementrole.php" style="color : #5e9ae9;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bxs-wrench'></i>" . '</a>';
+                }
+                else if ($role === 'VIP') {
+                    echo ' <a href="payementrole.php" style="color : gold;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bxl-sketch'></i>" . '</a>';
+                }
+                else if ($role === 'Banned') {
+                    echo ' <a href="payementrole.php" style="color :#ff4444 ;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bx-dizzy'></i>" . '</a>';
+                }
+                else if ($role === 'Stellar Elite') {
+                    echo ' <a href="payementrole.php" style="color :#7851A9 ;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bx-planet'></i>" . '</a>';
+                }
             }
-            else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
-                echo ' <span style="color : #5e9ae9;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bxs-wrench'></i>";
-            }
-            else if( isset($_SESSION['role']) && $_SESSION['role'] === 'VIP') {
-                echo ' <span style="color : gold;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bxl-sketch'></i>";
-            }
-
-            else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Banned') {
-                echo ' <span style="color :#ff4444 ;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bx-dizzy'></i>";
-            }
-
-            else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Stellar Elite') {
-                echo ' <span style="color :#7851A9 ;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bx-planet'></i>";
-            }
-
             ?>
+
 
         </div>
 
