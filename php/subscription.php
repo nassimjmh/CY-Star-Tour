@@ -29,17 +29,7 @@ $rolesPremium = [
 ];
 
 if (isset($_POST['role'])) {
-    $newRole = $_POST['role'];
-
-    if (!isset($rolesPremium[$newRole])) {
-        die("Invalid role.");
-    }
-
-    $users[$email]['role'] = $newRole;
-    file_put_contents("users.json", json_encode($users, JSON_PRETTY_PRINT));
-
-    $_SESSION['role'] = $newRole;
-    header("Location: offers.php");
+    header("Location: #");
     exit();
 }
 ?>
