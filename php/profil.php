@@ -140,7 +140,7 @@ $edit_mode = isset($_POST['edit']);
             </form>
         </div>
         <a href="#">Settings & Preferences &nbsp; <i class='bx bx-cog'></i></a>
-        <a href="#">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
+        <a href="bank.php">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
         <a href="#">Booking & Acess &nbsp;<i class='bx bxs-calendar'></i></a>
         <a href="#">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
         <div class="status">
@@ -149,17 +149,16 @@ $edit_mode = isset($_POST['edit']);
             echo ' <span style="color :  #4CAF50;">'.'Status :&nbsp' . $role;
 
             }
-
             else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
-    echo ' <span style="color : #5e9ae9;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bxs-wrench'></i>";
-}
+                echo ' <span style="color : #5e9ae9;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bxs-wrench'></i>";
+            }
             else if( isset($_SESSION['role']) && $_SESSION['role'] === 'VIP') {
-    echo ' <span style="color : gold;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bxl-sketch'></i>";
-}
+                echo ' <span style="color : gold;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bxl-sketch'></i>";
+            }
 
             else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Banned') {
-    echo ' <span style="color :#ff4444 ;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bx-dizzy'></i>";
-}
+                echo ' <span style="color :#ff4444 ;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bx-dizzy'></i>";
+            }
 
             else if( isset($_SESSION['role']) && $_SESSION['role'] === 'Stellar Elite') {
                 echo ' <span style="color :#7851A9 ;">'.'Status :&nbsp' . $role."&nbsp;&nbsp". "<i class='bx bx-planet'></i>";

@@ -1,6 +1,13 @@
+<style>
+    * {
+        text-align: center;
+    } 
+</style>
+
+<h2>Test page</h2>
 <?php
-    require('getapikey.php');
-    
+
+    require('getapikey.php');    
     $transaction = "154632ABCZWTC";
     $montant = "18000.99";
     $vendeur = "MI-1_I";
