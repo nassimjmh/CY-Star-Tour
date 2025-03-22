@@ -7,78 +7,60 @@ if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
     header('location: login.php');
 }
 
-
-
-
 $users = json_decode(file_get_contents('users.json'), true);
 
 $email = $_SESSION['email'];
-$first_name= $_SESSION["first_name"];
-$role= $_SESSION["role"];
-$last_name= $_SESSION["last_name"];
+$first_name = $_SESSION["first_name"];
+$role = $_SESSION["role"];
+$last_name = $_SESSION["last_name"];
 $race = $_SESSION["race"];
 $date_picker = $_SESSION["date_picker"];
 $profile_pic = $_SESSION["profile_pic"];
 
 $target_dir = "uploads/";
 
-
 if (!file_exists($target_dir)) {
     mkdir($target_dir, 0777, true);
 }
 
+$error_message = '';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
     $target_file = $target_dir . basename($_FILES["profile_pic"]["name"]);
-    $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-
-    if ( isset($_POST["submit"])){
-
+    if (isset($_POST["submit"])) {
         if (isset($_FILES["profile_pic"]) && $_FILES["profile_pic"]["error"] == UPLOAD_ERR_OK) {
             $check = getimagesize($_FILES["profile_pic"]["tmp_name"]);
-            if ($check !== false) {
-                $uploadOk = 1;
-            } else {
-                echo "Ce fichier n'est pas une image.";
-                $uploadOk = 0;
+            if ($check === false) {
+                $error_message = "This file is not an image.";
             }
         } else {
-            echo "Aucun fichier n'a été téléchargé ou une erreur s'est produite lors du téléchargement.";
-            $uploadOk = 0;
+            $error_message = "No file was uploaded or an error occurred.";
+        }
+
+        if ($_FILES["profile_pic"]["size"] > 500000) {
+            $error_message = "Sorry, your file is too large.";
+        }
+
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+            $error_message = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        }
+
+        if (empty($error_message)) {
+            if (move_uploaded_file($_FILES["profile_pic"]["tmp_name"], $target_file)) {
+
+                $users[$email]['profile_pic'] = $target_file;
+
+                file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+
+                header('location: profil.php');
+                exit;
+            } else {
+                $error_message = "Sorry, there was an error uploading your file.";
+            }
         }
     }
-
-
-    if ($_FILES["profile_pic"]["size"] > 500000) {
-        echo "Désolé, votre fichier est trop grand.";
-        $uploadOk = 0;
-    }
-
-    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-        echo "Désolé, seuls les fichiers JPG, JPEG, PNG & GIF sont autorisés.";
-        $uploadOk = 0;
-    }
-
-
-    if ($uploadOk == 0) {
-        echo "Désolé, votre fichier n'a pas été téléchargé.";
-    } else {
-        if (move_uploaded_file($_FILES["profile_pic"]["tmp_name"], $target_file)) {
-            // Mettre à jour l'URL de l'image dans les données utilisateur
-            $users[$email]['profile_pic'] = $target_file;  // Chemin du fichier téléchargé
-
-            // Sauvegarder les modifications dans le fichier JSON
-            file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
-
-
-            header('location: profil.php');
-            exit;
-        } else {
-            echo "Désolé, il y a eu une erreur lors du téléchargement de votre fichier.";
-        }
-    }
-
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
@@ -87,23 +69,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
     $users[$email]['race'] = $_POST['race'];
     $users[$email]['date_picker'] = $_POST['date_picker'];
 
-    // Sauvegarde dans le fichier JSON
     file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
 
-    // Recharge la page pour voir les changements
     header("Location: profil.php");
     exit();
 }
 
-// Données pour afficher dans la page
 $last_name = $users[$email]['last_name'];
 $first_name = $users[$email]['first_name'];
 $race = $users[$email]['race'];
 $date_picker = $users[$email]['date_picker'];
 
-// Vérifie si on est en mode "édition"
 $edit_mode = isset($_POST['edit']);
-
 
 ?>
 
@@ -135,17 +112,21 @@ $edit_mode = isset($_POST['edit']);
 
                 <button type="submit" name="submit" class="custom-btn">
                     <i class='bx bx-upload'></i>Upload
-
-            </button>
+                </button>
+                <?php if (!empty($error_message)): ?>
+                    <div class="error-message" style="color: red; font-size: 12px; margin-top: 5px;">
+                        <?php echo $error_message; ?>
+                    </div>
+                <?php endif; ?>
             </form>
         </div>
         <a href="#">Settings & Preferences &nbsp; <i class='bx bx-cog'></i></a>
-        <a href="bank.php">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
-        <a href="#">Booking & Acess &nbsp;<i class='bx bxs-calendar'></i></a>
+        <a href="#">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
+        <a href="#">Booking & Access &nbsp;<i class='bx bxs-calendar'></i></a>
         <a href="#">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
         <div class="status">
 
-             <?php
+            <?php
             if (isset($_SESSION['role'])) {
                 $role = $_SESSION['role'];
 
@@ -167,72 +148,67 @@ $edit_mode = isset($_POST['edit']);
             }
             ?>
 
-
         </div>
 
         <a class="logout" href="logout.php">Logout &nbsp;<i class='bx bx-log-out'></i></a>
     </div>
 
-
     <div class="info-profile">
-    <div class="info">
-        <h2>About Me</h2>
-        <?php if (!$edit_mode): ?>
-            <ul>
-                <li><strong>Last Name:</strong> <?php echo htmlspecialchars($last_name); ?></li>
-                <li><strong>First Name:</strong> <?php echo htmlspecialchars($first_name); ?></li>
-                <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
-                <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
-                <li><strong>Birth Date:</strong> <?php echo htmlspecialchars($date_picker); ?></li>
-            </ul>
-            <form action="profil.php" method="POST">
-                <button type="submit" name="edit" class="edit-btn">Edit Profile</button>
-            </form>
-        <?php else: ?>
-            <form action="profil.php" method="POST">
+        <div class="info">
+            <h2>About Me</h2>
+            <?php if (!$edit_mode): ?>
                 <ul>
-                    <li>
-                        <span>Last Name:</span>
-                        <input type="text" name="last_name" value="<?php echo htmlspecialchars($last_name); ?>" required>
-                    </li>
-                    <li>
-                        <span>First Name:</span>
-                        <input type="text" name="first_name" value="<?php echo htmlspecialchars($first_name); ?>" required>
-                    </li>
-                    <li>
-                        <span>Race:</span>
-                        <select id="race" name="race" required>
-                            <option value="Human" <?php echo $race === 'Human' ? 'selected' : ''; ?>>Human</option>
-                            <option value="IA" <?php echo $race === 'IA' ? 'selected' : ''; ?>>IA</option>
-                            <option value="Alien" <?php echo $race === 'Alien' ? 'selected' : ''; ?>>Alien</option>
-                            <option value="Coruscant" <?php echo $race === 'Coruscant' ? 'selected' : ''; ?>>Coruscant</option>
-                        </select>
-                    </li>
-                    <li>
-                        <span>Birth Date:</span>
-                        <input type="date" name="date_picker" min="3900-01-01"  max="4025-01-01" value="<?php echo htmlspecialchars($date_picker); ?>" required>
-                    </li>
+                    <li><strong>Last Name:</strong> <?php echo htmlspecialchars($last_name); ?></li>
+                    <li><strong>First Name:</strong> <?php echo htmlspecialchars($first_name); ?></li>
+                    <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
+                    <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
+                    <li><strong>Birth Date:</strong> <?php echo htmlspecialchars($date_picker); ?></li>
                 </ul>
-                <button type="submit" name="update" class="save-btn">Save Changes</button>
-            </form>
-        <?php endif; ?>
-    </div>
-</div>
-        <div class="recent-trips">
-            <h2>Recently Booked Trips</h2>
-            <ul>
-                <li>Mars</li>
-                <li>Venus</li>
-                <li>Kargalan</li>
-                <li>Robotcorp</li>
-                <li>Litunaria</li>
-                <li>Icebergotum</li>
-            </ul>
+                <form action="profil.php" method="POST">
+                    <button type="submit" name="edit" class="edit-btn">Edit Profile</button>
+                </form>
+            <?php else: ?>
+                <form action="profil.php" method="POST">
+                    <ul>
+                        <li>
+                            <span>Last Name:</span>
+                            <input type="text" name="last_name" value="<?php echo htmlspecialchars($last_name); ?>" required>
+                        </li>
+                        <li>
+                            <span>First Name:</span>
+                            <input type="text" name="first_name" value="<?php echo htmlspecialchars($first_name); ?>" required>
+                        </li>
+                        <li>
+                            <span>Race:</span>
+                            <select id="race" name="race" required>
+                                <option value="Human" <?php echo $race === 'Human' ? 'selected' : ''; ?>>Human</option>
+                                <option value="IA" <?php echo $race === 'IA' ? 'selected' : ''; ?>>IA</option>
+                                <option value="Alien" <?php echo $race === 'Alien' ? 'selected' : ''; ?>>Alien</option>
+                                <option value="Coruscant" <?php echo $race === 'Coruscant' ? 'selected' : ''; ?>>Coruscant</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>Birth Date:</span>
+                            <input type="date" name="date_picker" min="3900-01-01" max="4025-01-01" value="<?php echo htmlspecialchars($date_picker); ?>" required>
+                        </li>
+                    </ul>
+                    <button type="submit" name="update" class="save-btn">Save Changes</button>
+                </form>
+            <?php endif; ?>
         </div>
     </div>
 
-
-
+    <div class="recent-trips">
+        <h2>Recently Booked Trips</h2>
+        <ul>
+            <li>Mars</li>
+            <li>Venus</li>
+            <li>Kargalan</li>
+            <li>Robotcorp</li>
+            <li>Litunaria</li>
+            <li>Icebergotum</li>
+        </ul>
+    </div>
 
     <div class="destinations-info">
         <h2>Upcoming Destinations</h2>
@@ -243,13 +219,10 @@ $edit_mode = isset($_POST['edit']);
             <li>Jupiter Moon</li>
         </ul>
         <a href="#" class="see-more-btn">See More</a>
-
     </div>
 
 </main>
 
-
-<!--FOOTER-->
 <?php include("footer.php") ?>
 
 </body>
