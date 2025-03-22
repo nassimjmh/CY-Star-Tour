@@ -71,7 +71,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                             foreach($users as $users){
                                 ?>      
                                 <tr>
-                                    <td><?php echo "#" . str_pad($users["id"], 4, '0', STR_PAD_LEFT) ?></td>
+                                    <td><?php echo "#" . str_pad($users["id"], 4, '0', STR_PAD_LEFT) ?></td>  <!-- Write ID with 5 digits -->
                                     <td>
                                         <?php 
                                         if (strpos($users["profile_pic"], 'http') === 0) {
