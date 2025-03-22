@@ -97,34 +97,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="password" name="password" placeholder="Password" required>
             <i class='bx bxs-lock-alt'></i>
         </div>
-
-        <div class="input-box">
-            <details>
-                <summary class="selecteur">Your Race?</summary>
-                <div class="racelist">
-                    <label>
-                        <input type="radio" name="race" value="Human"> Human
-                    </label>
-                    <label>
-                        <input type="radio" name="race" value="IA"> IA
-                    </label>
-                    <label>
-                        <input type="radio" name="race" value="Alien" > Alien
-                    </label>
-                    <label>
-                        <input type="radio" name="race" value="Coruscant" > Coruscant
-                    </label>
-                </div>
-            </details>
+        <hr class="separator"> <!-- Separator -->
+        <div class="input-box date-box">
+            <label>Birth Date</label>
+            <input type="date" class="date" name="date_picker" min="3900-01-01" max="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" value="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" required>
         </div>
 
         <div class="input-box">
-            <details>
-                <summary class="selecteur">Birth Date?</summary>
-                <div class="Birthday" >
-                    <input type="date" class="date" name="date_picker" min="3900-01-01" max="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" value="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" required>
-                </div>
-            </details>
+            <label>Your Race</label>
+            <select name="race" required>
+                <option value="" disabled selected>Select your race</option>
+                <option value="Human">Human</option>
+                <option value="IA">IA</option>
+                <option value="Alien">Alien</option>
+                <option value="Coruscant">Coruscant</option>
+            </select>
         </div>
 
         <button type="submit" class="btn">Register</button>

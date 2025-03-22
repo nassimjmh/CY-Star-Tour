@@ -60,17 +60,47 @@ body{
 
   margin: 30px 0;
 }
-.input-box input{
+
+/* INPUT BOX */
+
+.input-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box input, .input-box select {
   width: 100%;
   height: 100%;
   background: transparent;
-  border: none;
   outline: none;
-  border-radius: 40px;
-  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  flex-grow: 1;
   font-weight : bold;
   color: white;
-  padding: 20px 45px 20px 20px;
+  font-size: 16px;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 20px 0;
+  width: 100%;
+}
+
+.input-box select option {
+  background: white;
+  color: black;
+}
+
+.input-box select option[value=""][disabled] {
+  display: none;
 }
 
 .input-box input:not(:last-child){
@@ -78,12 +108,25 @@ body{
   border: 2px solid white;
 }
 
-
-
-
 .input-box input::placeholder{
   color: #fff;
 }
+
+.input-box input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);  /* Makes the icon white */
+  cursor: pointer;
+}
+
+.input-box select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Remove the default arrow and replace with another*/
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
 .input-box i{
   position: absolute;
   right: 20px;
@@ -92,21 +135,19 @@ body{
   font-size: 20px;
 }
 
-.racelist label{
-display : inline-block;
-border-radius : 20px;
-margin-top: 12px;
-backdrop-filter: blur(10px);
-text-align : right;
-}
 
-.selecteur:hover{
-  text-decoration: underline;
-
+.input-box label {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: -5px;
+  display: block;
+  margin-top: -15px;
 }
 
 
 
+/* */
 
 .wrapper .remember-forgot{
   display: flex;
