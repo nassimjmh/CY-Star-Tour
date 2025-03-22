@@ -158,16 +158,16 @@ $edit_mode = isset($_POST['edit']);
             <h2>About Me</h2>
             <?php if (!$edit_mode): ?>
                 <ul>
-                    <li><strong>Last Name:</strong> <?php echo htmlspecialchars($last_name); ?></li>
                     <li><strong>First Name:</strong> <?php echo htmlspecialchars($first_name); ?></li>
+                    <li><strong>Last Name:</strong> <?php echo htmlspecialchars($last_name); ?></li>
                     <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
-                    <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
                     <li><strong>Birth Date:</strong>
                     <?php 
                         // Convert the date string to a DateTime object
                         $date = new DateTime($date_picker);
                         echo $date->format('d/m/Y'); 
                     ?></li>
+                    <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
                 </ul>
                 <form action="profil.php" method="POST">
                     <button type="submit" name="edit" class="edit-btn">Edit Profile</button>
@@ -183,7 +183,6 @@ $edit_mode = isset($_POST['edit']);
                             <span>Last Name:</span>
                             <input type="text" name="last_name" value="<?php echo htmlspecialchars($last_name); ?>" required>
                         </li>
-
                         <li>
                             <span>Birth Date:</span>
                             <input type="date" name="date_picker" min="3900-01-01" max="4025-01-01" value="<?php echo htmlspecialchars($date_picker); ?>" required>
