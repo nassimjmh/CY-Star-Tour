@@ -5,7 +5,7 @@
                     <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo">
                 </li>
                 <li class="panellogo"><img src="../../images/adminpanel.png" alt=""></li>
-                <li><a class="underline" href="../../index.html">Exit</a></li>
+                <li><a class="underline" href="../index.php">Exit</a></li>
                 <li class="connect">
                     <a href="../profil.php"><i class='bx bx-user-circle connect'></i></a>
                 </li>

@@ -15,9 +15,9 @@
         <div class="footer-section links">
             <h3>Useful Links</h3>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../php/book.php">Destinations</a></li>
-                <li><a href="../php/aboutus.php">About us</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="book.php">Destinations</a></li>
+                <li><a href="aboutus.php">About us</a></li>
                 <?php
                 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
                     echo '<li><a href="admin/dashboard.php">Admin control panel</a></li>';
@@ -28,17 +28,17 @@
         </div>
         <div class="footer-section contact">
             <h3>Contact</h3>
-            <p>Email: contact@startour.com</p>
+            <p>Email: contact@startour.cy</p>
             <p>Phone: +0 831 576 989</p>
-            <p>Address: 49.035, 2.0698 Earth</p>
+            <p>Address: 49.035, 2.0698 CY</p>
         </div>
         <div class="footer-section social">
             <h3>Follow Us</h3>
             <ul>
-                <li><a href="#">Bluesky</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
+                <li><a href="https://bsky.app/">Bluesky</a></li>
+                <li><a href="https://twitter.com/">Twitter</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
             </ul>
         </div>
     </div>
