@@ -51,7 +51,7 @@ if (isset($_POST['role'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StarTour - Login</title>
     <link rel="icon" href="../images/sparkles.png" type="image/png">
-    <link rel="stylesheet" href="../css/payementrole.css">
+    <link rel="stylesheet" href="../css/subscription.css">
     <link rel="stylesheet" href="../css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
