@@ -5,6 +5,7 @@
 </style>
 
 <h2>Test page</h2>
+<h3><a href="profil.php">Go back</a></h3>
 <?php
 
     require('getapikey.php');    
@@ -14,11 +15,6 @@
     $retour = "http://localhost/retour_paiement.php?session=s";
     
     $api_key = getAPIKey($vendeur);
-    
-    if(preg_match("/^[0-9a-zA-Z]{15}$/", $api_key)) {
-        echo "API Key valide";
-    }
-    
     $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
 ?>
 <form action='https://www.plateforme-smc.fr/cybank/index.php'
@@ -31,5 +27,5 @@
     value='http://localhost/retour_paiement.php?session=s'>
     <input type='hidden' name='control'
     value='<?php echo $control; ?>'>
-    <input type='submit' value="Valider et payer">
+    <input type='submit' value="Pay">
 </form>
