@@ -44,6 +44,33 @@
       "title2": "",
       "description2": ""
     }
+  ],
+  "date": [
+    {
+      "depart": "",
+      "arrive": "",
+      "prix": ""
+    },
+    {
+      "depart": "",
+      "arrive": "",
+      "prix": ""
+    },
+    {
+      "depart": "",
+      "arrive": "",
+      "prix": ""
+    },
+    {
+      "depart": "",
+      "arrive": "",
+      "prix": ""
+    },
+    {
+      "depart": "",
+      "arrive": "",
+      "prix": ""
+    }
   ]
   
 }
