@@ -22,7 +22,7 @@ Subject : [Click-journeY v1.2](documents/Projet_Click_journeY_v1.2_PHASE2.pdf) �
 Project report : [Report 2](documents/phase2report.pdf) 📄<br>
 ### 🌐 Made using
 <a href="https://github.com/nassimjmh/CY-Star-Tour">
-    <img src="https://skillicons.dev/icons?i=html,css,php&theme=dark" alt="Made using"/>
+    <img src="https://skillicons.dev/icons?i=php&theme=dark" alt="Made using"/>
 </a>
 
 ## 👥 Collaborators
