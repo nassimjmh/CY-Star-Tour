@@ -5,7 +5,7 @@
 
   "info":"🌡️ 280°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 6,96 m/s²",
 
-  "prix":"1.630 ₴",
+  "prix":"≃ 1.630 ₴",
 
   "preimage":"https://preview.redd.it/tfone-iacon-city-concept-art-v0-ghban2x5xjrd1.jpg?width=1080&crop=smart&auto=webp&s=f5f66f90e74d469a03599456174338ed4bd4434f",
   
@@ -38,5 +38,58 @@
       "title2": "Farewell Spaceport",
       "description2": "&nbsp;&nbsp;&nbsp; End your journey at Cybertron’s futuristic spaceport.<br> &nbsp;&nbsp;&nbsp; Relax in luxury lounges, enjoy panoramic views of the planet, and grab a souvenir."
     }
+  ],
+  "date": [
+    {
+      "depart": "13/08/5555",
+      "arrive": "18/08/5555",
+      "prix": "1.817 ₴"
+    },
+    {
+      "depart": "13/02/5555",
+      "arrive": "18/02/5555",
+      "prix": "1.978 ₴"
+    },
+    {
+      "depart": "23/06/5555",
+      "arrive": "28/06/5555",
+      "prix": "1.634 ₴"
+    },
+    {
+      "depart": "12/08/5555",
+      "arrive": "17/08/5555",
+      "prix": "1.933 ₴"
+    },
+    {
+      "depart": "08/09/5555",
+      "arrive": "13/09/5555",
+      "prix": "1.217 ₴"
+    },
+    {
+      "depart": "20/02/5555",
+      "arrive": "25/02/5555",
+      "prix": "1.915 ₴"
+    },
+    {
+      "depart": "29/08/5555",
+      "arrive": "03/09/5555",
+      "prix": "1.755 ₴"
+    },
+    {
+      "depart": "23/11/5555",
+      "arrive": "28/11/5555",
+      "prix": "1.237 ₴"
+    },
+    {
+      "depart": "09/11/5555",
+      "arrive": "14/11/5555",
+      "prix": "1.116 ₴"
+    },
+    {
+      "depart": "23/08/5555",
+      "arrive": "28/08/5555",
+      "prix": "1.408 ₴"
+    }
+    
   ]
 }
