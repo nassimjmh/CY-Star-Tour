@@ -4,13 +4,11 @@ CY-Star-Tour is a website engineering school project developed by ABAJOU Sofyane
 Original subject : [Click-journeY](documents/Projet_Click_journeY_v1.0_Présentation.pdf) 📄<br>
 Design language : [PDF](documents/da.pdf) 📄<br>
 
-URL : https://nassimjmh.github.io/CY-Star-Tour/<br>
-
 ## 1️⃣ `Phase 1` Branch
 
 Subject : [Click-journeY v1.1](documents/Projet_Click_journeY_v1.1_PHASE1.pdf) 📄<br>
 Project report : [Report 1](documents/phase1report.pdf) 📄<br>
-Static website URL : https://nassimjmh.github.io/CY-Star-Tour/
+Static website URL : https://nassimjmh.github.io/CY-Star-Tour/ 🛜
 ### 🌐 Made using
 <a href="https://github.com/nassimjmh/CY-Star-Tour">
     <img src="https://skillicons.dev/icons?i=html,css&theme=dark" alt="Made using"/>
