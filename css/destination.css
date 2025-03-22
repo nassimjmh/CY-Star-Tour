@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70vh; /* Prend toute la hauteur de la fenêtre */
+    height: 42.5rem; /* Prend toute la hauteur de la fenêtre */
     background-size:cover; /* Couvre tout l'élément sans déformation */
     background-position:center; /* Centre l'image */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
@@ -41,37 +41,37 @@
     font-size: 385%;
     color: white;
     font-size: auto;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    text-shadow: 0px 0px 0.1rem rgb(0, 0, 0);
     margin: 0;
-    letter-spacing: 4vh;
+    letter-spacing: 2.4rem;
 }
 /********************/
 /********************/
 /********************/
 .presentation{
     position: relative;
-    top: -5vh;
-    border-top-left-radius: 2vh;
-    border-top-right-radius: 2vh;
+    top: -3rem;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
     background-color: #ffffff;
-    height: 40vh;
+    height: 24.2rem;
 }
 .presentationtitle{
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+    text-shadow: 0px 0px 0.1rem rgb(255, 255, 255);
     position: absolute;
     color: #0B1A26;
-    font-size: 4vh;
-    left: 5vh;
+    font-size: 2.5rem;
+    left: 3rem;
     font-weight: bolder;
 }
 .presentationdescription{
     position: absolute;
-    font-size: 2vh;
-    top: 9vh;
+    font-size: 1.2rem;
+    top: 5.5rem;
     text-align: left;
-    line-height: 3vh;
-    letter-spacing: 0.1vh;
-    padding-left: 4vh;
+    line-height: 1.8rem;
+    letter-spacing: 0.06rem;
+    padding-left: 2.4rem;
 }
 /********************/
 /********************/
@@ -79,37 +79,37 @@
 .program{
     position: relative;
     display: flex;
-    top: -5vh;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    top: -3rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
     background-color: #0B1A26;
-    height:65vh;
+    height:40rem;
 }
 .programtitle{
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    text-shadow: 0px 0px 0.1rem rgb(0, 0, 0);
     position: absolute;
     color: white;
-    font-size: 4vh;
-    left: 5vh;
+    font-size: 2.4rem;
+    left: 3rem;
     font-weight: bolder;
 }
 .day{
     position: relative;
-    left: 10vh;
-    top: 13vh;
-    width: 40vh;
-    height: 45vh;
-    margin-right: 5vh;
+    left: 6rem;
+    top: 7.8rem;
+    width: 24.2rem;
+    height: 27.3rem;
+    margin-right: 3rem;
     background-color: white;
-    border-top-left-radius: 2vh;
-    border-bottom-left-radius: 2vh;
-    border-bottom-right-radius: 2vh;
-    border-top-right-radius: 2vh;
-    margin-bottom: 5vh;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    margin-bottom: 3rem;
 }
 .daytitle{
     text-align: center;
-    font-size: 4vh;
+    font-size: 2.4rem;
 }
 .daydescription{
     text-align: center;
@@ -117,32 +117,99 @@
     text-decoration: underline;
 }
 .daydescription2{
-    margin-left: 2vh;
+    margin-left: 1.2rem;
 }
 /********************/
 /********************/
 /********************/
 .reserve{
     position: relative;
-    top: -7vh;
-    border-top-left-radius: 2vh;
-    border-top-right-radius: 2vh;
+    top: -4.2rem;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
     background-color: #ffffff;
-    height: 40vh;
+    height: 24.2rem;
 }
 .reservetitle{
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+    text-shadow: 0px 0px 0.1rem rgb(255, 255, 255);
     position: absolute;
     color: #0B1A26;
-    font-size: 4vh;
-    left: 5vh;
+    font-size: 2.4rem;
+    left: 3rem;
     font-weight: bolder;
 }
-.reservedescription{
+.titlerese{
+    position: relative;
+    font-size: 1.5rem;
+    top: 8rem;
+    left: 6rem;
+}
+.group{
+    position: relative;
+    font-size: 1.1rem;
+    top: 8.5rem;
+    left: 7rem;
+    margin-bottom: 3rem;
+}
+.titlerese2{
+    position: relative;
+    font-size: 1.5rem;
+    top: -10.5rem;
+    left: 30rem;
+}
+.selectgroup2{
+    position: relative;
+    font-size: 1.1rem;
+    top: -12rem;
+    left: 50rem;
+}
+.group2{
+    position: relative;
+    font-size: 1.1rem;
+    top: -11rem;
+    left: 31rem;
+    margin-bottom: 1.4rem;
+}
+.group2 input{
+    width: 10rem;
+}
+.group2 input:last-child{
+    width: 5rem;
+}
+.titlerese3{
     position: absolute;
-    font-size: 2vh;
-    top: 9vh;
-    text-align: left;
-    line-height: 3vh;
-    letter-spacing: 0.1vh;
+    font-size: 1.5rem;
+    top: 8rem;
+    left: 62rem;
+}
+.group3{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 13rem;
+    width: 47rem;
+    position: absolute;
+    font-size: 1.1rem;
+    top: 10.5rem;
+    left: 63rem;
+    margin-bottom: 3rem;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
+    
+}
+.group3 label{
+    display: inline-block;
+    width: 12.5rem;
+    margin-right: 2rem;
+    
+}
+.confirm{
+    position: absolute;
+    font-size: 1.1rem;
+    top: 25rem;
+    left: 105rem;
+    margin-bottom: 3rem;
+    background-color: #0B1A26;
+    border-style: none;
+    color: white;
+    width: 100px; 
 }
