@@ -12,7 +12,7 @@
     $transaction = "154632ABCZWTC";
     $montant = "18000.99";
     $vendeur = "MI-1_I";
-    $retour = "http://localhost/retour_paiement.php?session=s";
+    $retour = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&";
     
     $api_key = getAPIKey($vendeur);
     $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
@@ -24,7 +24,7 @@
     <input type='hidden' name='montant' value='<?php echo $montant; ?>'>
     <input type='hidden' name='vendeur' value='MI-1_I'>
     <input type='hidden' name='retour'
-    value='http://localhost/retour_paiement.php?session=s'>
+    value='https://www.youtube.com/watch?v=dQw4w9WgXcQ&'>
     <input type='hidden' name='control'
     value='<?php echo $control; ?>'>
     <input type='submit' value="Pay">
