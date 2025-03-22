@@ -20,8 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     if (!isset($users[$email])) {
-        $nextId = empty($users) ? 1 : max(array_column($users, 'id')) + 1;
-    
+        $existingIds = array_column($users, 'id');
+        sort($existingIds);
+        $nextId = 1;
+        foreach ($existingIds as $id) {
+            if ($id != $nextId) {
+                break;
+            }
+            $nextId++;
+        }    
         $users[$email] = [
             'id' => $nextId,
             'first_name' => $first_name,

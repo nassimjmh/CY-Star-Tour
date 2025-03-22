@@ -51,6 +51,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         header("Location: users.php");
         exit();
+    }if ($_POST['action'] === 'delete') {
+        $file = file_get_contents("../users.json");
+        $users = json_decode($file, true);
+        
+        // Get the email to delete
+        $email_to_delete = $_POST['original_email'];
+        
+        // Simply remove the user by their email key
+        if (isset($users[$email_to_delete])) {
+            unset($users[$email_to_delete]);
+        }
+        
+        // Save back to file (without array_values)
+        file_put_contents("../users.json", json_encode($users, JSON_PRETTY_PRINT));
+        
+        header('Location: users.php');
+        exit();
     } else {
         // Handle other actions (make_vip, ban, etc.)
         $email = $_POST['email'];

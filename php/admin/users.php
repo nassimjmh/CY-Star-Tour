@@ -29,7 +29,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                 <div class="filters">
                     <input type="text" placeholder="Search users...">
                     <select id="status-filter">
-                        <option value="X">Filter by Status</option>
+                        <option value="X">All Status</option>
                         <option value="Banned">Banned</option>
                         <option value="Standard">Standard</option>
                         <option value="VIP">VIP</option>
@@ -38,7 +38,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
 
                     </select>
                     <select id="race-filter">
-                        <option value="">Filter by Race</option>
+                        <option value="">All Races</option>
                         <option value="human">Human</option>
                         <option value="ia">IA</option>
                         <option value="alien">Alien</option>
@@ -64,6 +64,10 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                         $file = file_get_contents("../users.json");
                         $users = json_decode($file, true);
                         if(count($users)!=0){
+                            // To sort users by ID 
+                            uasort($users, function($a, $b) {
+                                return $a['id'] - $b['id'];
+                            });
                             foreach($users as $users){
                                 ?>      
                                 <tr>

@@ -100,6 +100,7 @@ if (!$userData) {
                 <div class="form-actions">
                     <button type="submit" class="save-button">Save Changes</button>
                     <a href="users.php" class="cancel-button">Cancel</a>
+                    <button type="submit" class="delete-button" name="action" value="delete" onclick="return confirm('Are you sure you want to delete this user?');">Delete User</button>
                 </div>
             </form>
         </section>
