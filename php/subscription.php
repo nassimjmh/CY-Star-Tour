@@ -52,7 +52,7 @@ if (isset($_POST['role'])) {
     <title>Upgrade to Premium</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/payementrole.css">
+    <link rel="stylesheet" href="../css/subscription.css">
 </head>
 
 <header>
