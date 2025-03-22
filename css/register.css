@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: 'Inter';
   src: url('../font/Inter.ttc') format('truetype');
@@ -14,11 +12,9 @@
   font-family: "Inter", "sans-serif";
 }
 
-
-
 #registermenu::before {
   content: "";
-  position: fixed; /* Fixe le fond même au scroll */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -28,48 +24,47 @@
   background-size: cover;
 }
 
-
 body{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background : #0B1A26;
+  background: #0B1A26;
   background-size: cover;
   background-position: center;
 }
-.wrapper{
-  width: 420px;
-  background: #0B1A26;
-  border: 2px solid rgba(255, 255, 255, .2);
-  backdrop-filter: blur(3px);
-  color: #fff;
-  border-radius: 12px;
-  padding: 30px 40px;
-}
-.wrapper h1{
-  font-size: 36px;
-  text-align: center;
-  color : white;
 
+.wrapper{
+  width: 26.25rem;
+  background: #0B1A26;
+  border: 0.125rem solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(0.1875rem);
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 1.875rem 2.5rem;
 }
+
+.wrapper h1{
+  font-size: 2.25rem;
+  text-align: center;
+  color: white;
+}
+
 .wrapper .input-box{
   position: relative;
   width: 100%;
-  height: 50px;
-
-  margin: 30px 0;
+  height: 3.125rem;
+  margin: 1.875rem 0;
 }
 
 /* INPUT BOX */
-
 .input-box {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
 }
 
 .input-box input, .input-box select {
@@ -77,20 +72,20 @@ body{
   height: 100%;
   background: transparent;
   outline: none;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.75rem;
   flex-grow: 1;
-  font-weight : bold;
+  font-weight: bold;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .separator {
   border: none;
-  height: 1px;
+  height: 0.0625rem;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 20px 0;
+  margin: 1.25rem 0;
   width: 100%;
 }
 
@@ -104,8 +99,7 @@ body{
 }
 
 .input-box input:not(:last-child){
-
-  border: 2px solid white;
+  border: 0.125rem solid white;
 }
 
 .input-box input::placeholder{
@@ -113,73 +107,70 @@ body{
 }
 
 .input-box input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);  /* Makes the icon white */
+  filter: invert(1);
   cursor: pointer;
 }
 
 .input-box select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; /* Remove the default arrow and replace with another*/
+  appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 20px;
+  background-position: right 0.625rem center;
+  background-size: 1.25rem;
 }
 
 .input-box i{
   position: absolute;
-  right: 20px;
+  right: 1.25rem;
   top: 30%;
   transform: translate(-50%);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
-
 
 .input-box label {
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: -5px;
+  margin-bottom: -0.3125rem;
   display: block;
-  margin-top: -15px;
+  margin-top: -0.9375rem;
 }
 
-
-
 /* */
-
 .wrapper .remember-forgot{
   display: flex;
   justify-content: space-between;
-  font-size: 14.5px;
-  margin: -15px 0 15px;
+  font-size: 0.90625rem;
+  margin: -0.9375rem 0 0.9375rem;
 }
+
 .remember-forgot label input{
   accent-color: #fff;
-  margin-right: 3px;
-
+  margin-right: 0.1875rem;
 }
+
 .remember-forgot a{
   color: #fff;
   text-decoration: none;
-
 }
+
 .remember-forgot a:hover{
   text-decoration: underline;
 }
 
 .wrapper .btn{
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
   background: transparent;
   border: none;
   outline: none;
-  border-radius: 40px;
-  box-shadow: 0px 0px 5px rgb(251, 231, 239);;
+  border-radius: 2.5rem;
+  box-shadow: 0 0 0.3125rem rgb(251, 231, 239);
   cursor: pointer;
-  font-size: 16px;
-  color:  white;
+  font-size: 1rem;
+  color: white;
   font-weight: 600;
 }
 
@@ -193,23 +184,19 @@ body{
   transform: scale(0.95);
 }
 
-
-
 .wrapper .login-link{
-  font-size: 14.5px;
+  font-size: 0.90625rem;
   text-align: center;
-  margin: 20px 0 15px;
-
+  margin: 1.25rem 0 0.9375rem;
 }
-
 
 .login-link p a{
   color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
-.login-link p a:hover{
 
+.login-link p a:hover{
   text-decoration: underline;
 }
 
@@ -218,7 +205,7 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
 }

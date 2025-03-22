@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Inter';
     src: url('../font/Inter.ttc') format('truetype');
@@ -11,8 +10,7 @@
     color: black;
     margin: 0;
     padding: 0;
-    height: 100%; /* Assure que le body prend toute la hauteur de la fenêtre */
-
+    height: 100%;
 }
 
 /*###################################*/
@@ -25,101 +23,114 @@
     align-items: center;
     background-image: url('https://diapogram.com/upload/2019/04/18/20190418004741-b4a333f7.jpg');
     width: 100%;
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-size: cover; /* Couvre tout l'élément sans déformation */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
-
 }
+
 #Map .title{
     position: absolute;
     white-space: nowrap;
-    top: 20vh;
-    left: 40vh;
+    top: 12.5rem;
+    left: 25rem;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 4vh;
+    font-size: 2.5rem;
     color: rgb(255, 255, 255);
-    font-size: auto;
     margin: 0;
     font-weight: bolder;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    text-shadow: 0px 0px 0.125rem rgb(0, 0, 0);
     text-align: left;
 }
+
 .planet{
     position: absolute;
-    width: 10vh;
-    height: 10vh;
+    width: 6.25rem;
+    height: 6.25rem;
     border-radius: 50%;
 }
+
 .title p:not(.name){
     visibility: hidden;
 }  
+
 .planet:hover p{
-    visibility:visible;
+    visibility: visible;
     position: absolute;
-    top: -7vh;
-    left: 6vh;
-    font-size: 3vh;
+    top: -4.375rem;
+    left: 3.75rem;
+    font-size: 1.875rem;
     color: white;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    text-shadow: 0px 0px 0.125rem rgb(0, 0, 0);
 }
+
 .planet:hover{
-    box-shadow: 0px 0px 10px rgb(109, 108, 108);;
+    box-shadow: 0px 0px 0.625rem rgb(109, 108, 108);
 }
+
 .atlantis{
-    top: 20vh;
-    left: 15vh;
+    top: 12.5rem;
+    left: 9.375rem;
 }
+
 .pandora{
-    top: 40vh;
-    left: 30vh;
+    top: 25rem;
+    left: 18.75rem;
 }
+
 .naboo{
-    top: 30vh;
-    left: 54vh;
+    top: 18.75rem;
+    left: 33.75rem;
 }
+
 .cybertron{
-    top: 47vh;
-    left: 70vh;
+    top: 29.375rem;
+    left: 43.75rem;
 }
+
 .scarif{
-    top: 17vh;
-    left: 80vh;
+    top: 10.625rem;
+    left: 50rem;
 }
+
 .earth{
-    top: 37vh;
-    left: 95vh;
+    top: 23.125rem;
+    left: 59.375rem;
 }
+
 .mistral{
-    top: 65vh;
-    left: 95vh;
+    top: 40.625rem;
+    left: 59.375rem;
 }
+
 .kamino{
-    top: 10vh;
-    left: 110vh;
+    top: 6.25rem;
+    left: 68.75rem;
 }
+
 .grok{
-    top: 60vh;
-    left: 50vh;
+    top: 37.5rem;
+    left: 31.25rem;
 }
+
 .asuras{
-    top: 50vh;
-    left: 120vh;
+    top: 31.25rem;
+    left: 75rem;
 }
+
 .openai{
-    top: 30vh;
-    left: 120vh;
+    top: 18.75rem;
+    left: 75rem;
 }
+
 .mars{
-    top: 50vh;
-    left: 10vh;
+    top: 31.25rem;
+    left: 6.25rem;
 }
+
 .rsearch img{
     height: 100%;
     width: 100%;
 }
-/**/
-
-

@@ -31,65 +31,63 @@ main {
 }
 
 .sidebar {
-    width: 450px;
+    width: 28.125rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: bold;
-    gap : 50px;
-    font-size: 25px;
-    border-radius: 20px;
+    gap: 3.125rem;
+    font-size: 1.5625rem;
+    border-radius: 1.25rem;
     color: white;
     background-color: #0b1a26;
-    margin-right : 20px;
+    margin-right: 1.25rem;
 }
 
 
 .sidebar-head{
     position: relative;
     display: inline-block;
-
 }
+
 .sidebar-head .bx-edit {
     position: absolute;
-    margin-top: 40px;
-    top: 10px;
-    right: 10px;
-    font-size: 25px;
+    margin-top: 2.5rem;
+    top: 0.625rem;
+    right: 0.625rem;
+    font-size: 1.5625rem;
     color:#0b1a26;
     background: white;
     border-radius: 50%;
-    padding: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 0.3125rem;
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
 }
 
 
 .sidebar-head .bx-edit:hover {
-    font-size: 23px;
-    margin-top: 40px;
+    font-size: 1.4375rem;
+    margin-top: 2.5rem;
     color: #0b1a26;
 }
 
 
 .bx-edit {
     color: #0b1a26;
-    font-size: 30px;
-
+    font-size: 1.875rem;
 }
 
 .bx-edit:hover{
-    font-size: 28px;
-    color : #0b1a26;
-
+    font-size: 1.75rem;
+    color: #0b1a26;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 9.375rem;
+    height: 9.375rem;
     display: flex;
-    margin-top: 40px;
+    margin-top: 2.5rem;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 0.3125rem solid white;
 }
 
 .sidebar a {
@@ -101,25 +99,23 @@ main {
     text-decoration: underline;
 }
 
-
-
 .sidebar .status:hover {
-    cursor : pointer;
+    cursor: pointer;
     transform: scale(1.05); 
 }
 
 .info {
     background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    width: 600px;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    width: 37.5rem;
     color: #0b1a26;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .info h2 {
-    border-bottom: 3px solid #0b1a26;
-    padding-bottom: 10px;
+    border-bottom: 0.1875rem solid #0b1a26;
+    padding-bottom: 0.625rem;
     margin-top: 0;
     color: #0b1a26;
 }
@@ -131,8 +127,8 @@ main {
 }
 
 .info li {
-    padding: 15px 0;
-    border-bottom: 2px solid #0b1a26;
+    padding: 0.9375rem 0;
+    border-bottom: 0.125rem solid #0b1a26;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,21 +140,21 @@ main {
 
 .info input, .info select {
     width: 60%;
-    padding: 8px;
-    border: 1px solid #0b1a26;
-    border-radius: 4px;
-    font-size: 16px;
+    padding: 0.5rem;
+    border: 0.0625rem solid #0b1a26;
+    border-radius: 0.25rem;
+    font-size: 1rem;
 }
 
 .edit-btn, .save-btn {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 15px;
+    font-size: 1rem;
+    margin-top: 0.9375rem;
     transition: background-color 0.3s;
 }
 
@@ -167,7 +163,7 @@ main {
 }
 
 .info form {
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 .info span {
@@ -175,24 +171,23 @@ main {
     color: #0b1a26;
 }
 
-
 .info-profile {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espace entre les sections */
+    gap: 1.25rem; /* Espace entre les sections */
 }
 
 .info .header {
-    border-bottom: 3px solid #0b1a26;
-    margin-bottom: 20px;
+    border-bottom: 0.1875rem solid #0b1a26;
+    margin-bottom: 1.25rem;
 }
 
 .info .line {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 2px solid #0b1a26;
+    padding: 0.625rem 0;
+    border-bottom: 0.125rem solid #0b1a26;
 }
 
 .info .line:last-child {
@@ -201,26 +196,25 @@ main {
 
 .label {
     color: #0b1a26;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .value {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .recent-trips {
     background-color: white;
-    padding: 10px;
-    border-radius: 20px;
-    width: 400px;
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+    width: 25rem;
     color: #0b1a26;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
-
 .recent-trips h2 {
-    border-bottom: 3px solid #0b1a26;
-    padding-bottom: 10px;
+    border-bottom: 0.1875rem solid #0b1a26;
+    padding-bottom: 0.625rem;
     color: #0b1a26;
     margin-top: 0;
 }
@@ -232,26 +226,25 @@ main {
 }
 
 .recent-trips li {
-    padding: 10px 0;
-    border-bottom: 2px solid #0b1a26;
+    padding: 0.625rem 0;
+    border-bottom: 0.125rem solid #0b1a26;
 }
 
 .recent-trips li:last-child {
     border-bottom: none;
 }
 
-
 .destinations-info {
-    width: 250px;
-    padding: 20px;
+    width: 15.625rem;
+    padding: 1.25rem;
     background-color: #0b1a26;
     color: white;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .destinations-info h2 {
-    color : white;
-    margin-bottom: 10px;
+    color: white;
+    margin-bottom: 0.625rem;
 }
 
 .destinations-info ul {
@@ -261,34 +254,28 @@ main {
 }
 
 .destinations-info li {
-    padding: 10px 0;
-    border-bottom: 2px solid white;
+    padding: 0.625rem 0;
+    border-bottom: 0.125rem solid white;
 }
 
-
-
-
 .see-more-btn {
-    margin-top: 20px;
-    margin-left : 100px;
+    margin-top: 1.25rem;
+    margin-left: 6.25rem;
     display: inline-block;
     background-color: white;
     color: #0b1a26;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     text-align: center;
     transition: 0.7s;
 }
 
 .see-more-btn:hover {
-    font-size: 15px;
+    font-size: 0.9375rem;
     transition: 0.7s;
-
 }
-
-
 
 #file-input {
     display: none;
@@ -296,32 +283,30 @@ main {
 
 .file-label {
     display: inline-block;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
     text-align: center;
 }
 
-
 .file-label i {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #333;
 }
-
 
 .custom-btn {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
-    margin: 4px 2px;
+    font-size: 1.0625rem;
+    margin: 0.25rem 0.125rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     transition: background-color 0.3s;
 }
 
@@ -329,25 +314,21 @@ main {
     background-color: #218838;
 }
 
-
-
 .edit-btn {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     text-align: right;
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
-    margin: 4px 2px;
+    font-size: 1.0625rem;
+    margin: 0.25rem 0.125rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     transition: background-color 0.3s;
-
 }
 
 .edit-btn:hover{
     background-color: #218838;
-
 }

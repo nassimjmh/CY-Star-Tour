@@ -15,7 +15,7 @@
 .admin-container {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 1.25rem;
     margin-left: 7%;
     width: 91%;
 }
@@ -27,39 +27,39 @@
 }
 
 .admin-container section {
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
 .admin-container table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     background-color: white;
 }
 
 table th:nth-child(2) { 
-    width: 5px;
-    min-width: 5px;
-    max-width: 5px;
+    width: 0.3125rem;
+    min-width: 0.3125rem;
+    max-width: 0.3125rem;
 }
 
 .profile-thumbnail {
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
     object-fit: cover;
     border-radius: 50%;
 }
 
 table th:nth-child(5) { 
-    width: 30px;
-    min-width: 30px;
-    max-width: 30px;
+    width: 1.875rem;
+    min-width: 1.875rem;
+    max-width: 1.875rem;
 }
 
 .admin-container td:nth-child(6) {
-    width: 100px;  
-    min-width: 100px;
-    max-width: 100px;
+    width: 6.25rem;  
+    min-width: 6.25rem;
+    max-width: 6.25rem;
 }
 
 .admin-container td:nth-child(6) span {
@@ -73,11 +73,11 @@ table th:nth-child(5) {
 }
 
 .admin-container table, .admin-container th, .admin-container td {
-    border: 1px solid #ddd;
+    border: 0.0625rem solid #ddd;
 }
 
 .admin-container th, .admin-container td {
-    padding: 12px;
+    padding: 0.75rem;
     text-align: left;
 }
 
@@ -88,43 +88,42 @@ table th:nth-child(5) {
 
 .admin-container .action-buttons {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .action-buttons button {
-    padding: 5px 10px;
-    margin: 2px;
-    border-radius: 4px;
+    padding: 0.3125rem 0.625rem;
+    margin: 0.125rem;
+    border-radius: 0.25rem;
     border: none;
     cursor: pointer;
-    font-size: 12px;
-    min-width: 100px; 
+    font-size: 0.75rem;
+    min-width: 6.25rem; 
     white-space: nowrap; 
 }
 
 .vip-button {
     background-color: gold;
     color: black;
-    width: 100px; 
+    width: 6.25rem; 
 }
 
 .ban-button {
     background-color: #ff4444;
     color: white;
-    width: 100px;
-
+    width: 6.25rem;
 }
 
 .manage-button {
     background-color: #4CAF50;
     color: white;
-    width: 100px; 
+    width: 6.25rem; 
 }
 
 .admin-button {
     background-color: #5e9ae9;
     color: white;
-    width: 100px; 
+    width: 6.25rem; 
 }
 
 .action-buttons button:hover {
@@ -134,30 +133,30 @@ table th:nth-child(5) {
 .admin-container .filters {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
     width: 100%;
 }
 
 .admin-container .filters input, .admin-container .filters select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 0.625rem;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.25rem;
     flex-grow: 1;
 }
 
 .admin-container .pagination {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .admin-container .pagination button {
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     background-color: white;
     color: black;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -167,7 +166,6 @@ table th:nth-child(5) {
     color: white;
 }
 
-
 /*-----------------------------------*/
 
 .sidebar {
@@ -175,7 +173,7 @@ table th:nth-child(5) {
     position: fixed;
     top: 7vh;
     left: 0;
-    height: calc(100% - 7vh); /* Adjusts the height to account for the navigation bar */
+    height: calc(100% - 7vh);
     width: 13%;
     background-color: #0B1A26;
     border-right: 0.5vh solid black;
@@ -201,13 +199,12 @@ table th:nth-child(5) {
     font-size: 3vh;
 }
 
-
 /*-----------------------------------*/
 
 .dashboard {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.25rem;
     margin-top: 11vh;
     margin-left: 13.25%;
     font-family: 'Inter', sans-serif;
@@ -215,13 +212,13 @@ table th:nth-child(5) {
 
 .bento-box {
     background-color: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
     flex: 1;
-    min-width: calc(25% - 20px);
+    min-width: calc(25% - 1.25rem);
     box-sizing: border-box;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 .bento-box h2 {
@@ -237,7 +234,7 @@ table th:nth-child(5) {
 
 .revenue, .sales, .user-growth, .active-users {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .revenue h3, .sales h3, .user-growth h3, .active-users h3 {
@@ -246,14 +243,13 @@ table th:nth-child(5) {
     font-weight: bold;
 }
 
-
 /*-----------------------------------*/
 
 .edit-user-panel {
     font-family: 'Inter', sans-serif;
     margin: 0;
     margin-top: 11vh;
-    padding: 20px;
+    padding: 1.25rem;
     margin-left: 7%;
     width: 97%;
 }
@@ -266,46 +262,46 @@ table th:nth-child(5) {
 
 .edit-form {
     width: 100%;
-    margin: 20px 0;
+    margin: 1.25rem 0;
     padding: 0;
     background-color: transparent;
 }
 
 .form-group {
-    margin-bottom: 8px; 
-    padding: 8px;        
-    border: 1px solid #ddd;
+    margin-bottom: 0.5rem; 
+    padding: 0.5rem;        
+    border: 0.0625rem solid #ddd;
     background-color: white;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     width: 100%;
 }
 
 .form-group input,
 .form-group select {
-    width: calc(100% - 12px);
-    padding: 6px;   
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
+    width: calc(100% - 0.75rem);
+    padding: 0.375rem;   
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
     font-weight: bold;
     color: #0B1A26;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .form-actions {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
     justify-content: center;
-    margin-top: 12px;    
-    padding: 8px;        
+    margin-top: 0.75rem;    
+    padding: 0.5rem;        
     background-color: white;
 }
 
@@ -343,13 +339,9 @@ select#status-filter option[value="Admin"] {
     color: #5e9ae9;
 }
 
-
-
-
 select#role option {
     font-weight: bolder;
 }
-
 
 select#role option[value="Banned"] {
     color: #ff4444;
@@ -372,12 +364,12 @@ select#role option[value="Admin"] {
 }
 
 .save-button, .cancel-button, .delete-button {
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
     border: none;
     cursor: pointer;
-    font-size: 14px;
-    min-width: 100px;
+    font-size: 0.875rem;
+    min-width: 6.25rem;
     text-align: center;
 }
 

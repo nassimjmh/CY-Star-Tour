@@ -31,12 +31,10 @@ html, body {
     transform: translate(-50%, -50%);
     color: white;
     font-family: 'Inter', sans-serif;
-    font-size: 25px;
+    font-size: 1.563rem;
     font-style: italic;
-  font-weight: bold;
+    font-weight: bold;
 }
-
-
 
 #aboutustext{
     background-color: #0B1A26;
@@ -45,7 +43,7 @@ html, body {
 table{
     width: 100%;
     border-collapse: separate; 
-    border-spacing: 5em;
+    border-spacing: 5rem;
 }
 
 table td img{
@@ -56,17 +54,15 @@ table td img{
     margin-right: auto;
 }
 
-
-
 .simplecentered{
     text-align: center;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 #aboutustext{
     color: white;
     font-family: 'Inter', sans-serif;
-    font-size: large;
+    font-size: 1rem;
 }
 
 .aboutusleft{
@@ -75,13 +71,11 @@ table td img{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .aboutusright{
     color: white;
     text-align: right;
-    margin-left: 130;
-    margin-right: 130px;
+    margin-left: 8.125rem;
+    margin-right: 8.125rem;
 }
-

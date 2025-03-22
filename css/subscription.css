@@ -13,23 +13,23 @@ body {
 
 /* Container Styles */
 .container {
-    margin-top: 10vh;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5vh 2vh;
+    padding: 5rem 2rem;
     flex-grow: 1;
 }
 
 /* Heading Styles */
 h1 {
     font-family: 'Montblanc', sans-serif;
-    font-size: 4vh;
-    margin-bottom: 3vh;
+    font-size: 4rem;
+    margin-bottom: 3rem;
     color: white;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
 }
 
 /* Premium Plan Section */
@@ -37,54 +37,54 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2vh;
-    max-width: 1200px;
+    gap: 2rem;
+    max-width: 75rem;
     margin: 0 auto;
 }
 
 .plan {
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
-    padding: 2vh 3vh;
-    width: 28vh;
-    max-width: 350px;
+    border-radius: 0.75rem;
+    padding: 2rem 3rem;
+    width: 28rem;
+    max-width: 21.875rem;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 0.313rem 0.938rem rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0.625rem);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .plan:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    transform: translateY(-0.313rem);
+    box-shadow: 0 0.5rem 1.563rem rgba(255, 255, 255, 0.3);
 }
 
 .plan h2 {
-    font-size: 2.5vh;
+    font-size: 2.5rem;
     color: #fff;
-    margin-bottom: 1vh;
+    margin-bottom: 1rem;
 }
 
 .plan p {
-    font-size: 1.6vh;
+    font-size: 1.6rem;
     color: #ddd;
-    margin-bottom: 2vh;
+    margin-bottom: 2rem;
 }
 
 .plan .price {
-    font-size: 1.8vh;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #4A90E2;
-    margin-bottom: 2vh;
+    margin-bottom: 2rem;
 }
 
 .plan button {
     background-color: #4A90E2;
     color: white;
     border: none;
-    padding: 1.5vh 3vh;
-    border-radius: 8px;
-    font-size: 1.6vh;
+    padding: 1.5rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
     width: 100%;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -95,7 +95,7 @@ h1 {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .plan {
         width: 80%;
     }
