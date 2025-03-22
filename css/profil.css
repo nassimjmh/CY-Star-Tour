@@ -147,6 +147,7 @@ main {
     background: transparent;
     outline: none;
     border-radius: 0.75rem;
+    font-family: "Inter", sans-serif;
 }
 
 .edit-btn, .save-btn {
