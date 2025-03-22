@@ -7,6 +7,14 @@ body {
     color: white;
     text-align: center;
     background-size: 200% 200%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Fixe la hauteur minimale pour que la page occupe toujours toute la fenêtre */
+}
+
+/* Conteneur du corps (main) */
+main {
+    flex-grow: 1; /* Permet à la section principale de grandir et remplir l'espace */
 }
 
 /* Titre principal */
@@ -55,7 +63,6 @@ p {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
-
 /* Titre de l'offre */
 .offer h2 {
     font-size: 2.5vh;
@@ -88,4 +95,95 @@ p {
 .btn:hover {
     background: linear-gradient(to right, #2A5298, #4A90E2);
     box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Footer */
+footer {
+    background-color: #0B1A26;
+    color: #fff;
+    padding: 1vh 0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    border-top: 0.4vh solid black;
+    margin-top: auto; /* Garantit que le footer soit toujours en bas */
+}
+
+/* Conteneur du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 120vh;
+    margin: 0 auto;
+    padding: 0 2vh;
+    margin-bottom: 1vh;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 20vh;
+    margin: 0.5vh;
+    position: relative;
+}
+
+.footer-section img {
+    display: block;
+    margin-left: -50%;
+    margin-top: 25%;
+}
+
+.footer-section h3 {
+    margin-bottom: 1vh;
+    font-size: 2.2vh;
+}
+
+.footer-section ul {
+    margin: 0.4vh 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section p {
+    font-size: 1.5vh;
+}
+
+.footer-section ul li {
+    margin: 0.4vh 0;
+    font-size: 1.5vh;
+}
+
+.footer-section ul li a {
+    color: #fff !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.payment-logos {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 7px;
+    white-space: nowrap;
+    position: absolute;
+    top: 7vh;
+    right: 5vh;
+}
+
+.payment-logos li {
+    padding: 5px;
+}
+
+.payment-logos img {
+    width: 40px;
+    height: auto;
 }
