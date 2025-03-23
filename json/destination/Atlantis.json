@@ -18,6 +18,12 @@
 
   "schedule": [
     {
+      "title1": "Depart",
+      "description1": "The flight departs from CYVCT airport on ",
+      "title2": "",
+      "description2": ", with check-in at 12 PM and departure at 3 PM."
+    },
+    {
       "title1": "Guided Tour of the City of Atlantis",
       "description1": "&nbsp;&nbsp;&nbsp;Explore the main districts of the city, including the Ancients' laboratories, residential quarters, and command areas. <br> &nbsp;&nbsp;&nbsp;Discover the advanced architecture and technologies of the Ancients.",
       "title2": "Museum of the Ancients",
@@ -40,61 +46,66 @@
       "description1": "&nbsp;&nbsp;&nbsp;Go on an excursion to explore the immediate surroundings of the city, including nearby forests and rivers. <br>&nbsp;&nbsp;&nbsp;Enjoy a boat ride or a guided hike.",
       "title2": "Relaxation and Well-being",
       "description2": "&nbsp;&nbsp;&nbsp;End your stay with an afternoon of relaxation in Atlantis' wellness centers.<br>&nbsp;&nbsp;&nbsp;Enjoy massages, spa treatments, and moments of relaxation in the city's gardens."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
+      "title2": "",
+      "description2": ", with check-in at 1 PM and departure at 4 PM"
     }
   ],
   "date": [
     {
-      "depart": "13/08/5555",
-      "arrive": "18/08/5555",
-      "prix": "1.817 ₴"
+      "depart": "05/04/5555",
+      "arrive": "10/04/5555",
+      "prix": "1492"
     },
     {
-      "depart": "13/02/5555",
-      "arrive": "18/02/5555",
-      "prix": "1.978 ₴"
+      "depart": "17/07/5555",
+      "arrive": "22/07/5555",
+      "prix": "1523"
     },
     {
-      "depart": "23/06/5555",
-      "arrive": "28/06/5555",
-      "prix": "1.634 ₴"
+      "depart": "09/01/5555",
+      "arrive": "14/01/5555",
+      "prix": "1478"
     },
     {
-      "depart": "12/08/5555",
-      "arrive": "17/08/5555",
-      "prix": "1.933 ₴"
+      "depart": "30/06/5555",
+      "arrive": "05/07/5555",
+      "prix": "1501"
     },
     {
-      "depart": "08/09/5555",
-      "arrive": "13/09/5555",
-      "prix": "1.217 ₴"
+      "depart": "22/10/5555",
+      "arrive": "27/10/5555",
+      "prix": "1460"
     },
     {
-      "depart": "20/02/5555",
-      "arrive": "25/02/5555",
-      "prix": "1.915 ₴"
+      "depart": "14/03/5555",
+      "arrive": "19/03/5555",
+      "prix": "1485"
     },
     {
-      "depart": "29/08/5555",
-      "arrive": "03/09/5555",
-      "prix": "1.755 ₴"
+      "depart": "03/08/5555",
+      "arrive": "08/08/5555",
+      "prix": "1499"
     },
     {
-      "depart": "23/11/5555",
-      "arrive": "28/11/5555",
-      "prix": "1.237 ₴"
+      "depart": "25/12/5555",
+      "arrive": "30/12/5555",
+      "prix": "1512"
     },
     {
-      "depart": "09/11/5555",
-      "arrive": "14/11/5555",
-      "prix": "1.116 ₴"
+      "depart": "07/09/5555",
+      "arrive": "12/09/5555",
+      "prix": "1456"
     },
     {
-      "depart": "23/08/5555",
-      "arrive": "28/08/5555",
-      "prix": "1.408 ₴"
+      "depart": "19/05/5555",
+      "arrive": "24/05/5555",
+      "prix": "1473"
     }
-    
-  ]
+]
 
   
   
