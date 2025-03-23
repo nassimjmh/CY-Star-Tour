@@ -61,7 +61,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                     </thead>
                     <tbody>
                     <?php
-                        $file = file_get_contents("../users.json");
+                        $file = file_get_contents("../../json/data/users.json");
                         $users = json_decode($file, true);
                         if(count($users)!=0){
                             // To sort users by ID 

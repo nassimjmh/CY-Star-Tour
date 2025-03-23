@@ -7,7 +7,7 @@ if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
     header('location: login.php');
 }
 
-$users = json_decode(file_get_contents('users.json'), true);
+$users = json_decode(file_get_contents('../json/data/users.json'), true);
 
 $email = $_SESSION['email'];
 $first_name = $_SESSION["first_name"];
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
 
                 $users[$email]['profile_pic'] = $target_file;
 
-                file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+                file_put_contents('../json/data/users.json', json_encode($users, JSON_PRETTY_PRINT));
 
                 header('location: profil.php');
                 exit;
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
     $users[$email]['race'] = $_POST['race'];
     $users[$email]['date_picker'] = $_POST['date_picker'];
 
-    file_put_contents('users.json', json_encode($users, JSON_PRETTY_PRINT));
+    file_put_contents('../json/data/users.json', json_encode($users, JSON_PRETTY_PRINT));
 
     header("Location: profil.php");
     exit();

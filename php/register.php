@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$file = 'users.json';
+$file = '../json/data/users.json';
 
 
 $users = json_decode(file_get_contents($file), true);

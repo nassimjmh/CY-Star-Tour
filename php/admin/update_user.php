@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'];
     
     // Read the JSON file
-    $file = file_get_contents("../users.json");
+    $file = file_get_contents("../../json/data/users.json");
     $users = json_decode($file, true);
 
     if ($action === 'update') {
@@ -47,12 +47,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Save the changes back to the JSON file
-        file_put_contents("../users.json", json_encode($updated_users, JSON_PRETTY_PRINT));
+        file_put_contents("../../json.data/users.json", json_encode($updated_users, JSON_PRETTY_PRINT));
         
         header("Location: users.php");
         exit();
     }if ($_POST['action'] === 'delete') {
-        $file = file_get_contents("../users.json");
+        $file = file_get_contents("../../json/data/users.json");
         $users = json_decode($file, true);
         
         // Get the email to delete
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         // Save back to file (without array_values)
-        file_put_contents("../users.json", json_encode($users, JSON_PRETTY_PRINT));
+        file_put_contents("../../json/data/users.json", json_encode($users, JSON_PRETTY_PRINT));
         
         header('Location: users.php');
         exit();
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Save the changes back to the JSON file
-        file_put_contents("../users.json", json_encode($users, JSON_PRETTY_PRINT));
+        file_put_contents("../../json/data/users.json", json_encode($users, JSON_PRETTY_PRINT));
         
         header("Location: users.php");
         exit();
