@@ -1,7 +1,6 @@
 
-<?php  
+<?php
 session_start();
-
 
 if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
 
@@ -9,10 +8,9 @@ if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
 }
 
 
-//Ouvrir le bon fichier
-   
 
-if (isset($_GET['planet'])) {
+//Ouvrir le bon fichier
+    if (isset($_GET['planet'])) {
         $selectedPlanet = $_GET['planet'];
     }   else {
         header("Location: map.php");
@@ -82,33 +80,7 @@ if (isset($_GET['planet'])) {
 
     <body id="Book">
         <header>
-            <nav>
-                <ul>
-                    <li class="logo">
-                        <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo" >
-                    </li>
-                    <li>
-                        <a class="underline" href="../index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="underline" href="book.html">Destinations</a>
-                        <ul class="submenu">
-                            <li><a href="../map.html">Map</a></li>
-                        </ul>
-                    
-                    </li>
-                       
-                    <li>
-                        <a class="underline" href="aboutus.html">About us</a>
-                    </li>
-                    <li class="research">
-                        <a href="book.html"><i class='bx bx-search research'></i></a>
-                    </li>
-                    <li class="connect">
-                        <a href="login.html"><i class='bx bx-user-circle connect'></i></a>
-                    </li>
-                </ul>
-            </nav>
+            <?php include("navbar.php") ?>
         </header>
         <!--------------------------------------->
         <!--------------------------------------->
@@ -222,48 +194,6 @@ if (isset($_GET['planet'])) {
         <!--------------------------------------->
         <!--------------------------------------->
               <!--FOOTER-->
-     <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
-                <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo-footer" >
-                <ul class="payment-logos">
-                    <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/american-express.svg" alt="amex"></il>
-                    <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/cartes-bancaires.svg" alt="cartebleue"></il>
-                    <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/apm/paypal.svg" alt="paypal"></il>
-                    <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/mastercard.svg" alt="mastercard"></il>
-                    <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/visa.svg" alt="visa"></il>
-                    <il><img src="../images/bitcoin.svg" alt="bitcoin"></il>
-                </ul>
-            </div>
-            <div class="footer-section links">
-                <h3>Useful Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="book.html">Destinations</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
-                    <li><a href="admin/dashboard.html">Services (admin page)</a></li>
-                    <li><a href="profil.html">Contact (profile page)</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <h3>Contact</h3>
-                <p>Email: contact@startour.com</p>
-                <p>Phone: +0 831 576 989</p>
-                <p>Address: 49.035, 2.0698 Earth</p>
-            </div>
-            <div class="footer-section social">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="#">Bluesky</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 4090 CY StarTour. All rights reserved.</p>
-        </div>
-    </footer>
+     <?php include("footer.php") ?>
     </body>
 </html>
