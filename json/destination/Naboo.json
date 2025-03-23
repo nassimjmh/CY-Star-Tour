@@ -15,6 +15,12 @@
   "presentation": "Welcome to Naboo – A Hidden Gem in the Galaxy!<br><br>Discover the breathtaking beauty of Naboo, a planet of lush green landscapes, shimmering lakes, and stunning architecture.<br><br> From the vibrant city of Theed to the peaceful waters of Lake Paonga, Naboo offers a perfect blend of nature and culture.<br><br> Whether you're here to explore ancient Gungan cities or relax in royal gardens, adventure awaits on this serene paradise. Come and experience the elegance and tranquility of Naboo – where every sunset is a masterpiece!",
   "schedule": [
     {
+      "title1": "Depart",
+      "description1": "The flight departs from CYVCT airport on ",
+      "title2": "",
+      "description2": ", with check-in at 12 PM and departure at 3 PM."
+    },
+    {
       "title1": "Royal Elegance",
       "description1": "&nbsp;&nbsp;&nbsp;Explore Theed Royal Palace, marveling at its golden domes and intricate architecture.<br>&nbsp;&nbsp;&nbsp; Discover the history of Naboo’s noble past !",
       "title2": "Sunset Serenity",
@@ -37,58 +43,64 @@
       "description1": "&nbsp;&nbsp;&nbsp;Hike to the Lost Temple of Shaak-Ran, an ancient ruin hidden in the jungle, whispering stories of Naboo’s forgotten past.",
       "title2": "Farewell Feast",
       "description2": "&nbsp;&nbsp;&nbsp;Enjoy a grand farewell banquet in Theed, savoring traditional Naboo cuisine under the soft glow of lanterns."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
+      "title2": "",
+      "description2": ", with check-in at 1 PM and departure at 4 PM"
     }
   ],
   "date": [
     {
       "depart": "13/08/5555",
       "arrive": "18/08/5555",
-      "prix": "1.817 ₴"
+      "prix": "1817"
     },
     {
       "depart": "13/02/5555",
       "arrive": "18/02/5555",
-      "prix": "1.978 ₴"
+      "prix": "1978"
     },
     {
       "depart": "23/06/5555",
       "arrive": "28/06/5555",
-      "prix": "1.634 ₴"
+      "prix": "1634"
     },
     {
       "depart": "12/08/5555",
       "arrive": "17/08/5555",
-      "prix": "1.933 ₴"
+      "prix": "1933"
     },
     {
       "depart": "08/09/5555",
       "arrive": "13/09/5555",
-      "prix": "1.217 ₴"
+      "prix": "1217"
     },
     {
       "depart": "20/02/5555",
       "arrive": "25/02/5555",
-      "prix": "1.915 ₴"
+      "prix": "1915"
     },
     {
       "depart": "29/08/5555",
       "arrive": "03/09/5555",
-      "prix": "1.755 ₴"
+      "prix": "1755"
     },
     {
       "depart": "23/11/5555",
-      "arrive": "28/11/5555",
-      "prix": "1.237 ₴"
+      "arrive": "29/11/5555",
+      "prix": "1237"
     },
     {
       "depart": "09/11/5555",
       "arrive": "14/11/5555",
-      "prix": "1.116 ₴"
+      "prix": "1116"
     },
     {
       "depart": "23/08/5555",
       "arrive": "28/08/5555",
-      "prix": "1.408 ₴"
+      "prix": "1408"
     }
     
   ]
