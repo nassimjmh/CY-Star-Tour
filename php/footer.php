@@ -4,12 +4,12 @@
         <div class="footer-section about">
             <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo-footer" >
             <ul class="payment-logos">
-                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/american-express.svg" alt="amex"></il>
-                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/cartes-bancaires.svg" alt="cartebleue"></il>
-                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/apm/paypal.svg" alt="paypal"></il>
-                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/mastercard.svg" alt="mastercard"></il>
-                <il><img src="https://raw.githubusercontent.com/datatrans/payment-logos/bb609198fb0b8f30b9f2b6682b1c0a765225b2c1/assets/cards/visa.svg" alt="visa"></il>
-                <il><img src="../images/bitcoin.svg" alt="bitcoin"></il>
+                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/american-express@2x.png?raw=true" alt="amex"></il>
+                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/medium/cb@2x.png?raw=true" alt="cartebleue"></il>
+                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/paypal@2x.png?raw=true" alt="paypal"></il>
+                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/mastercard@2x.png?raw=true" alt="mastercard"></il>
+                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/visa@2x.png?raw=true" alt="visa"></il>
+                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/medium/bitcoin-2@2x.png?raw=true" alt="bitcoin"></il>
             </ul>
         </div>
         <div class="footer-section links">

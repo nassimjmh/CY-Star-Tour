@@ -92,7 +92,6 @@ footer {
     text-decoration: underline;
 }
 
-
 .payment-logos {
     display: flex;
     justify-content: flex-start; 
@@ -100,8 +99,8 @@ footer {
     gap: 0.4375rem;
     white-space: nowrap;
     position: absolute;
-    top: 4.375rem; 
-    right: 3.125rem; 
+    top: 9rem;
+    right: 5.6rem; 
 }
 
 .payment-logos li {
