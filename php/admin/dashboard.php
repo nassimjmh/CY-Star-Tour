@@ -32,17 +32,29 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
 
     <div class="dashboard">
         <div class="bento-box">
-            <h2>Revenues</h2>
+            <h2>!!!TEST Revenues!!!</h2>
             <p>Total revenues for the current period.</p>
             <div class="revenue">
-                <h3>₴5,351,296</h3>
+                <h3><?php
+                $destinations = json_decode(file_get_contents("../../json/data/destinations.json"), true);
+                $totalRevenue = 0;
+                foreach ($destinations as $destination) {
+                    $totalRevenue += $destination["revenue"];
+                }
+                echo $totalRevenue;?></h3>
             </div>
         </div>
         <div class="bento-box">
-            <h2>Trips per planets</h2>
+            <h2>Total number of trips</h2>
             <p>Total trips for the current period.</p>
             <div class="sales">
-                <h3>2450 / 12</h3>
+                <h3><?php 
+                $destinations = json_decode(file_get_contents("../../json/data/destinations.json"), true);
+                $totalTrips = 0;
+                foreach ($destinations as $destination) {
+                    $totalTrips += $destination["trips"];
+                }
+                echo $totalTrips;?></h3>
             </div>
         </div>
         <div class="bento-box">

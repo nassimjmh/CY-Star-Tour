@@ -59,7 +59,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                     <td><?php echo $destinations["galaxy"] ?></td>
                                     <td><?php echo $destinations["description"] ?></td>
                                     <td><?php echo $destinations["distance"] . " kpc" ?></td>
-                                    <td><?php echo $destinations["price"] . "₴" ?></td>
+                                    <td><?php echo $destinations["revenue"] . "₴" ?></td>
                                     <td><?php echo $destinations["trips"] ?></td>
                                     <td>
                                     <div class="action-buttons">
