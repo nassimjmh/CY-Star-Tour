@@ -50,7 +50,7 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
             <p>Users registered.</p>
             <div class="user-growth">
                 <?php
-                    $usersFile = '../users.json';
+                    $usersFile = '../../json/data/users.json';
                     if (file_exists($usersFile)) {
                         $usersData = json_decode(file_get_contents($usersFile), true);
                         $userCount = count($usersData);
