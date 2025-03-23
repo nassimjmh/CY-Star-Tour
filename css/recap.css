@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#Book {
+    font-family: 'Inter', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Assure que la hauteur s'ajuste au contenu */
+    background-color: black;
+}
+
+/*###################################*/
+/*###################################*/
+/*###################################*/
+.booking{
+    top: 10rem;
+    position: relative;
+    width: 97rem;
+    height: 20rem;
+    background-color: white;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.option{
+    display: flex;
+    justify-content: left; /* Centre horizontalement */
+    align-items: center;
+    gap: 1rem;
+}
+.booking2{
+    
+    top: 9rem;
+    position: relative; 
+    width: 48rem;
+    height: 20rem;
+    background-color: white;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.booking3{
+    top: -1rem;
+    left: 97.5rem;
+    position: relative; 
+    width: 18.5rem;
+    height: 656px;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.middle {
+    display: flex;
+    position: relative;
+    justify-content: left; 
+    align-items: center; 
+    margin-top: 1rem;
+}
+
+/*###################################*/
+/*###################################*/
+.name{
+    position: absolute; 
+    top: -1rem;
+    left: 1rem;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+.division{
+    position: absolute; 
+    top: 1rem;
+    font-size: 2rem;
+    letter-spacing: -1rem;
+}
+
+.listname {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 5rem;
+    left: 3rem;
+    line-height: 1.5;
+}
+.listname input{
+    width: 10rem;
+}
+.listname input:last-child{
+    width: 5rem;
+}
+.programme {
+    display: flex; /* Aligne les divs en ligne */
+    
+}
+.trajet {
+    position: relative;
+    left: -6rem;
+    top: 2rem;
+    font-size: 1rem;
+    margin-right: -2rem;
+    width: 13.1rem; /* Largeur du carré */
+    height: 10rem; /* Hauteur du carré (pour faire un carré parfait) */
+}
+.soustitre{
+    position: relative;
+    top: -1.5rem;
+    left: -1rem;
+    width: 5rem;
+    font-size: 1.5rem;
+    
+}
+.soustitre2{
+    position: relative;
+    top: -1.5rem;
+    left: -1rem;
+    font-size: 1.5rem;
+    
+}
+.listprice{
+    color: green;
+    position: absolute;
+    top: -1.5rem;
+    left:38rem;
+    font-size: 1.5rem;
+    width: 10rem;
+}
+.listprice2{
+    color: green;
+    position: absolute;
+    top: 2rem;
+    left:38rem;
+    font-size: 1.5rem;
+    width: 10rem;
+}
+.listprice3{
+    color: green;
+    position: absolute;
+    top: 6rem;
+    left:38rem;
+    font-size: 1.5rem;
+    width: 10rem;
+}
+.listprice4{
+    color: green;
+    position: absolute;
+    top: 9.5rem;
+    left:38rem;
+    font-size: 1.5rem;
+    width: 10rem;
+}
+.pricetext{
+    width: 15rem;
+    position: relative;
+    top: 6rem;
+    left: 1rem;
+}
+.souspricetext{
+    width: 15rem;
+    color: green;
+    position: relative;
+    top: 5.5rem;
+    left: 2rem;
+}
+.pricetexttotal{
+    width: 6rem;
+    position: relative;
+    top: 6rem;
+    left: 11rem;
+}
+.souspricetexttotal{
+    width: 6rem;
+    color: green;
+    position: relative;
+    top: 5.5rem;
+    left: 12rem;
+}
+.confirm{
+    position: absolute;
+    font-size: 1.1rem;
+    top: -30rem;
+    left: 100rem;
+    margin-bottom: 3rem;
+    background-color: #0B1A26;
+    border-style: none;
+    color: white;
+    width: 100px; 
+}
+.confirm:hover, .back-btn:hover {
+    cursor: pointer; /* Assure que le curseur reste une main au survol */
+}
+.back-btn{
+    position: absolute;
+    font-size: 1.1rem;
+    top: -30rem;
+    left: 2rem;
+    margin-bottom: 3rem;
+    background-color: #0B1A26;
+    border-style: none;
+    color: white;
+    width: 100px; 
+}
