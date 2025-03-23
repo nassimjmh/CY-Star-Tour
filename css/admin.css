@@ -12,6 +12,8 @@
     background-color: #ffffff;
 }
 
+/*------------ADMIN CONTAINER-----------------------*/
+
 .admin-container {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -37,20 +39,20 @@
     background-color: white;
 }
 
-table th:nth-child(2) { 
+.admin-container th:nth-child(2) { 
     width: 0.3125rem;
     min-width: 0.3125rem;
     max-width: 0.3125rem;
 }
 
-.profile-thumbnail {
+.admin-container .profile-thumbnail {
     width: 2.1875rem;
     height: 2.1875rem;
     object-fit: cover;
     border-radius: 50%;
 }
 
-table th:nth-child(5) { 
+.admin-container th:nth-child(5) { 
     width: 1.875rem;
     min-width: 1.875rem;
     max-width: 1.875rem;
@@ -86,10 +88,89 @@ table th:nth-child(5) {
     color: white;
 }
 
-.admin-container .action-buttons {
+.admin-container .filters {
     display: flex;
-    gap: 0.625rem;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    width: 100%;
 }
+
+.admin-container .filters input, .admin-container .filters select {
+    padding: 0.625rem;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.25rem;
+    flex-grow: 1;
+}
+
+/*-----------------------------------*/
+/*------------DESTINATION CONTAINER---------------------*/
+
+.destination-container {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 1.25rem;
+    margin-left: 7%;
+    width: 91%;
+}
+
+.destination-container .container-destination {
+    width: 87%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.destination-container section {
+    margin: 1.25rem 0;
+}
+
+.destination-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.25rem;
+    background-color: white;
+}
+
+.destination-container th:nth-child(2) { 
+    width: 0.3125rem;
+    min-width: 0.3125rem;
+    max-width: 0.3125rem;
+}
+
+.destination-container .profile-thumbnail {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.destination-container td:nth-child(6) span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.destination-container h2{
+    color: white;
+}
+
+.destination-container table, .destination-container th, .destination-container td {
+    border: 0.0625rem solid #ddd;
+}
+
+.destination-container th, .destination-container td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.destination-container th {
+    background-color: #0B1A26;
+    color: white;
+}
+
+
+/*-----------------------------------*/
+
 
 .action-buttons button {
     padding: 0.3125rem 0.625rem;
@@ -128,42 +209,6 @@ table th:nth-child(5) {
 
 .action-buttons button:hover {
     opacity: 0.8;
-}
-
-.admin-container .filters {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.25rem;
-    margin-bottom: 1.25rem;
-    width: 100%;
-}
-
-.admin-container .filters input, .admin-container .filters select {
-    padding: 0.625rem;
-    border: 0.0625rem solid #ddd;
-    border-radius: 0.25rem;
-    flex-grow: 1;
-}
-
-.admin-container .pagination {
-    display: flex;
-    justify-content: center;
-    gap: 0.625rem;
-}
-
-.admin-container .pagination button {
-    padding: 0.625rem 0.9375rem;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.admin-container .pagination button:hover {
-    background-color: #0B1A26;
-    color: white;
 }
 
 /*-----------------------------------*/
