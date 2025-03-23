@@ -147,6 +147,7 @@
 .group{
     position: relative;
     font-size: 1.1rem;
+    width: 20rem;
     top: 8.5rem;
     left: 7rem;
     margin-bottom: 3rem;
@@ -161,6 +162,7 @@
     position: relative;
     font-size: 1.1rem;
     top: -12rem;
+    width: 1rem;
     left: 50rem;
 }
 .group2{
@@ -170,17 +172,37 @@
     left: 31rem;
     margin-bottom: 1.4rem;
 }
-.group2 input{
-    width: 10rem;
+.titlerese4{
+    position: absolute;
+    font-size: 1.5rem;
+    top: 14rem;
+    left: 30rem;
 }
-.group2 input:last-child{
-    width: 5rem;
+.group4{
+    position: relative;
+    font-size: 1.1rem;
+    top: -5rem;
+    left: 31rem;
+    margin-bottom: 1.4rem;
+}
+.titlerese5{
+    position: absolute;
+    font-size: 1.5rem;
+    top: 20rem;
+    left: 30rem;
+}
+.group5{
+    position: relative;
+    font-size: 1.1rem;
+    top: -2rem;
+    left: 31rem;
+    margin-bottom: 1.4rem;
 }
 .titlerese3{
     position: absolute;
     font-size: 1.5rem;
     top: 8rem;
-    left: 62rem;
+    left: 56rem;
 }
 .group3{
     overflow: scroll;
@@ -190,7 +212,7 @@
     position: absolute;
     font-size: 1.1rem;
     top: 10.5rem;
-    left: 63rem;
+    left: 58rem;
     margin-bottom: 3rem;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
@@ -212,4 +234,7 @@
     border-style: none;
     color: white;
     width: 100px; 
+}
+.confirm:hover {
+    cursor: pointer; /* Assure que le curseur reste une main au survol */
 }
