@@ -20,7 +20,7 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Admin page for managing users on StarTour">
-    <title>StarTour - Admin</title>
+    <title>Dashboard - StarTour Admin</title>
     <link rel="icon" href="../../images/sparkles.png" type="image/png">
     <link rel="stylesheet" href="../../css/admin.css">
     <link rel="stylesheet" href="../../css/style.css">

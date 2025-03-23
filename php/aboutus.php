@@ -8,7 +8,7 @@ session_start();
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>CY StarTour - About us</title>
+        <title>StarTour - About us</title>
         <link rel="icon" href="../images/sparkles.png" type="image/png">
         <link rel="stylesheet" href="../css/aboutus.css">
         <link rel="stylesheet" href="../css/style.css">
