@@ -2,7 +2,7 @@
     "Atlantis": {
         "id": 1,
         "name": "Atlantis",
-        "type": "",
+        "galaxy": "Stargate",
         "description": "",
         "distance": 14650,
         "price": 500,
@@ -12,9 +12,9 @@
     "Pandora": {
         "id": 2,
         "name": "Pandora",
-        "type": "",
+        "galaxy": "Movie",
         "description": "",
-        "distance": "",
+        "distance": 25400,
         "price": 0,
         "trips": 0,
         "image": "pandora.webp"
@@ -22,9 +22,9 @@
     "Naboo": {
         "id": 3,
         "name": "Naboo",
-        "type": "",
+        "galaxy": "Star Wars",
         "description": "",
-        "distance": "",
+        "distance": 32500,
         "price": 0,
         "trips": 0,
         "image": "naboo.webp"
@@ -32,9 +32,9 @@
     "Cybertron": {
         "id": 4,
         "name": "Cybertron",
-        "type": "",
+        "galaxy": "Movie",
         "description": "",
-        "distance": "",
+        "distance": 26850,
         "price": 0,
         "trips": 0,
         "image": "cybertron.webp"
@@ -42,9 +42,9 @@
     "Scarif": {
         "id": 5,
         "name": "Scarif",
-        "type": "",
+        "galaxy": "Star Wars",
         "description": "",
-        "distance": "",
+        "distance": 30200,
         "price": 0,
         "trips": 0,
         "image": "scarif.webp"
@@ -52,9 +52,9 @@
     "Earth": {
         "id": 6,
         "name": "Earth",
-        "type": "",
+        "galaxy": "Milky Way",
         "description": "",
-        "distance": "",
+        "distance": 8600,
         "price": 0,
         "trips": 0,
         "image": "earth.webp"
@@ -62,9 +62,9 @@
     "Asuras": {
         "id": 7,
         "name": "Asuras",
-        "type": "",
+        "galaxy": "Stargate",
         "description": "",
-        "distance": "",
+        "distance": 15300,
         "price": 0,
         "trips": 0,
         "image": "asuras.webp"
@@ -72,9 +72,9 @@
     "Kamino": {
         "id": 8,
         "name": "Kamino",
-        "type": "",
+        "galaxy": "Star Wars",
         "description": "",
-        "distance": "",
+        "distance": 31750,
         "price": 0,
         "trips": 0,
         "image": "kamino.webp"
@@ -82,9 +82,9 @@
     "Grok": {
         "id": 9,
         "name": "Grok",
-        "type": "",
+        "galaxy": "Ia",
         "description": "",
-        "distance": "",
+        "distance": 42300,
         "price": 0,
         "trips": 0,
         "image": "grok.webp"
@@ -92,9 +92,9 @@
     "Mistral": {
         "id": 10,
         "name": "Mistral",
-        "type": "",
+        "galaxy": "Ia",
         "description": "",
-        "distance": "",
+        "distance": 41500,
         "price": 0,
         "trips": 0,
         "image": "mistral.webp"
@@ -102,9 +102,9 @@
     "Openai": {
         "id": 11,
         "name": "Openai",
-        "type": "",
+        "galaxy": "Ia",
         "description": "",
-        "distance": "",
+        "distance": 40800,
         "price": 0,
         "trips": 0,
         "image": "openai.webp"
@@ -112,9 +112,9 @@
     "Mars": {
         "id": 12,
         "name": "Mars",
-        "type": "",
+        "galaxy": "Milky Way",
         "description": "",
-        "distance": "",
+        "distance": 8500,
         "price": 0,
         "trips": 0,
         "image": "mars.webp"

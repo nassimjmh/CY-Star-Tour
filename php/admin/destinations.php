@@ -32,7 +32,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                             <th>ID</th>
                             <th>PP</th>
                             <th>NAME</th>
-                            <th>TYPE</th>
+                            <th>GALAXY</th>
                             <th>DESCRIPTION</th>
                             <th>DISTANCE</th>
                             <th>AVERAGE PRICE</th>
@@ -56,9 +56,9 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                         <img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
                                     </td>                                    
                                     <td><?php echo $destinations["name"] ?></td>
-                                    <td><?php echo $destinations["type"] ?></td>
+                                    <td><?php echo $destinations["galaxy"] ?></td>
                                     <td><?php echo $destinations["description"] ?></td>
-                                    <td><?php echo $destinations["distance"] . " Tm" ?></td>
+                                    <td><?php echo $destinations["distance"] . " kpc" ?></td>
                                     <td><?php echo $destinations["price"] . "₴" ?></td>
                                     <td><?php echo $destinations["trips"] ?></td>
                                     <td>
