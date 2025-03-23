@@ -41,7 +41,7 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
                 foreach ($destinations as $destination) {
                     $totalRevenue += $destination["revenue"];
                 }
-                echo $totalRevenue;?></h3>
+                echo $totalRevenue . "₴";?></h3>
             </div>
         </div>
         <div class="bento-box">
