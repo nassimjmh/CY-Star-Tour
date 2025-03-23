@@ -1,22 +1,16 @@
 {
     "1": {
-        "id": "12",
+        "id": "303",
         "planet": "Atlantis",
         "days": [
-            "Day 1",
-            "Day 2"
+            "3"
         ],
-        "quality": "Premium",
+        "quality": "Standard",
         "breakfast": "Yes",
-        "nbpoeple": "1",
-        "selectedDate": "7",
-        "payed": "",
-        "travelers": [
-            {
-                "nom": "Hicham",
-                "prenom": "Hicham",
-                "age": "12"
-            }
-        ]
+        "relax": "Yes",
+        "nbpeople": 1,
+        "selectedDate": "1",
+        "insurance": "Yes",
+        "payed": ""
     }
 }
