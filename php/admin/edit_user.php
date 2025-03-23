@@ -12,7 +12,7 @@ $userData = null;
 
 // Check if we have either POST or GET email parameter
 if (isset($_POST['email']) || isset($_GET['email'])) {
-    $file = file_get_contents("../users.json");
+    $file = file_get_contents("../../json/data/users.json");
     $users = json_decode($file, true);
     $userEmail = isset($_POST['email']) ? $_POST['email'] : $_GET['email'];
 
