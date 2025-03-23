@@ -102,6 +102,17 @@
 .listname input:last-child{
     width: 5rem;
 }
+
+.listname input#confirm{
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.9375rem;
+    transition: background-color 0.3s;
+}
 .programme {
     display: flex; /* Aligne les divs en ligne */
     
