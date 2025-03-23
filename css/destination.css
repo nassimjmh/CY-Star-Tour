@@ -226,15 +226,24 @@
 }
 .confirm{
     position: absolute;
-    font-size: 1.1rem;
+    font-size: 1rem;
     top: 25rem;
     left: 105rem;
     margin-bottom: 3rem;
     background-color: #0B1A26;
-    border-style: none;
+    border: none;
     color: white;
     width: 100px; 
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+
+
 }
+
+
 .confirm:hover {
     cursor: pointer; /* Assure que le curseur reste une main au survol */
 }

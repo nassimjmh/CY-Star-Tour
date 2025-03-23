@@ -102,17 +102,6 @@
 .listname input:last-child{
     width: 5rem;
 }
-
-.listname input#confirm{
-    color: white;
-    border: none;
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.3125rem;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 0.9375rem;
-    transition: background-color 0.3s;
-}
 .programme {
     display: flex; /* Aligne les divs en ligne */
     
@@ -201,26 +190,39 @@
 }
 .confirm{
     position: absolute;
-    font-size: 1.1rem;
+    font-size: 1rem;
     top: -30rem;
     left: 100rem;
     margin-bottom: 3rem;
     background-color: #0B1A26;
-    border-style: none;
+    border: none;
     color: white;
     width: 100px; 
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #4CAF50 ;
 }
+
+
+
 .confirm:hover, .back-btn:hover {
     cursor: pointer; /* Assure que le curseur reste une main au survol */
 }
 .back-btn{
     position: absolute;
-    font-size: 1.1rem;
+    font-size: 1rem;
     top: -30rem;
     left: 2rem;
     margin-bottom: 3rem;
     background-color: #0B1A26;
-    border-style: none;
+    border: none;
     color: white;
     width: 100px; 
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #ff4444
 }
