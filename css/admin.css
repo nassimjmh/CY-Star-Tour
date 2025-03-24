@@ -222,18 +222,17 @@
     position: fixed;
     top: 4.5rem;
     left: 0;
-    height: calc(100% - 4.5rem);
+    height: 100vh;
     width: 13%;
     background-color: #0B1A26;
     border-right: 0.5rem solid black;
     padding-top: 2rem;
     color: white;    
+    z-index: 100;
 }
 
 .sidebar ul {
     list-style: none;
-    align-items: baseline;
-    flex-grow: 1;
 }
 
 .sidebar ul li {
@@ -245,7 +244,7 @@
     text-decoration: none;
     font-weight: bold;
     padding: 0.3rem 0.6rem; 
-    font-size: 1.9rem; 
+    font-size: 1.7rem; 
 }
 
 /*-----------------------------------*/
@@ -254,7 +253,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.25rem;
-    margin-top: 11vh;
+    margin-top: 7.5rem;
     margin-left: 13.25%;
     font-family: 'Inter', sans-serif;
 }
@@ -297,7 +296,7 @@
 .edit-user-panel {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    margin-top: 11vh;
+    margin-top: 7.425rem;
     padding: 1.25rem;
     margin-left: 7%;
     width: 97%;

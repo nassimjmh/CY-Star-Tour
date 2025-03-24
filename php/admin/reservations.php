@@ -16,7 +16,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
     <title>Reservations - StarTour Admin</title>
     <link rel="icon" href="../../images/sparkles.png" type="image/png">
     <link rel="stylesheet" href="../../css/admin.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body id="dashboard">
