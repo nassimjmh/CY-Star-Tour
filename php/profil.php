@@ -224,7 +224,7 @@ $edit_mode = isset($_POST['edit']);
             <li>Proxima B</li>
             <li>Jupiter Moon</li>
         </ul>
-        <a href="#" class="see-more-btn">See More</a>
+        <a href="map.php" class="see-more-btn">See More</a>
     </div>
 
 </main>

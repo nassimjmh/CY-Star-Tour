@@ -63,13 +63,11 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                     <td><?php echo $destinations["trips"] ?></td>
                                     <td>
                                     <div class="action-buttons">
-                                        <form method="POST" action="update_reservation.php" style="display: inline;">
-                                            <input type="hidden" name="name" value="<?php echo $destinations['name']; ?>">
-                                            <input type="hidden" name="id" value="<?php echo $id['role']; ?>">
-                                            <button type="submit" name="action" value="manage" class="manage-button">
+                                        <button class="manage-button">
+                                            <a href="edit_destination.php?name=<?php echo urlencode($destinations['name']); ?>" class="manage-button">
                                                 Edit Destination
-                                            </button>
-                                        </form>
+                                            </a>
+                                        </button>
                                     </div>
                                     </td>
                                 </tr>
