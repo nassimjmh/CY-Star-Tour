@@ -6,7 +6,7 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 
-$json = file_get_contents("users.json");
+$json = file_get_contents("../json/data/users.json");
 $users = json_decode($json, true);
 
 $email = $_SESSION['email'];
