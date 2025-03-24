@@ -220,13 +220,13 @@
 .sidebar {
     font-family: 'Inter', sans-serif;
     position: fixed;
-    top: 7vh;
+    top: 4.5rem;
     left: 0;
-    height: calc(100% - 7vh);
+    height: calc(100% - 4.5rem);
     width: 13%;
     background-color: #0B1A26;
-    border-right: 0.5vh solid black;
-    padding-top: 3vh;
+    border-right: 0.5rem solid black;
+    padding-top: 2rem;
     color: white;    
 }
 
@@ -237,15 +237,15 @@
 }
 
 .sidebar ul li {
-    margin-bottom: 2vh; 
+    margin-bottom: 1.25rem; 
 }
 
 .sidebar ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5vh 1vh;
-    font-size: 3vh;
+    padding: 0.3rem 0.6rem; 
+    font-size: 1.9rem; 
 }
 
 /*-----------------------------------*/
