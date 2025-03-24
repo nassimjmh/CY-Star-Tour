@@ -47,7 +47,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
             $error_message = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         }
 
+      if (file_exists($target_file)) {
+            $error_message = "This name already exists. Please rename your file and try again.";
+        }
+
+
+        
         if (empty($error_message)) {
+
+                if (file_exists($users[$email]['profile_pic'])) {
+                unlink($users[$email]['profile_pic']);
+            }
+
             if (move_uploaded_file($_FILES["profile_pic"]["tmp_name"], $target_file)) {
 
                 $users[$email]['profile_pic'] = $target_file;
@@ -224,7 +235,7 @@ $edit_mode = isset($_POST['edit']);
             <li>Proxima B</li>
             <li>Jupiter Moon</li>
         </ul>
-        <a href="map.php" class="see-more-btn">See More</a>
+        <a href="#" class="see-more-btn">See More</a>
     </div>
 
 </main>
