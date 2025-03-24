@@ -26,8 +26,9 @@ if (!file_exists($target_dir)) {
 $error_message = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
-    $target_file = $target_dir . basename($_FILES["profile_pic"]["name"]);
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    $imageFileType = strtolower(pathinfo($_FILES["profile_pic"]["name"], PATHINFO_EXTENSION));
+    $random_string = bin2hex(random_bytes(16)); // 32 character random string
+    $target_file = $target_dir . $random_string . '.' . $imageFileType;
 
     if (isset($_POST["submit"])) {
         if (isset($_FILES["profile_pic"]) && $_FILES["profile_pic"]["error"] == UPLOAD_ERR_OK) {
@@ -46,13 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
             $error_message = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         }
-
-      if (file_exists($target_file)) {
-            $error_message = "This name already exists. Please rename your file and try again.";
-        }
-
-
-        
+    
         if (empty($error_message)) {
 
                 if (file_exists($users[$email]['profile_pic'])) {

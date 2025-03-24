@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Atlantis",
         "galaxy": "Stargate",
-        "description": "Ancient underwater city with technology",
+        "description": "Ancient underwater city with nothing",
         "distance": 14650,
         "revenue": 500,
         "trips": 24,
