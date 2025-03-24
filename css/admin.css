@@ -171,6 +171,73 @@
 
 /*-----------------------------------*/
 
+/*------------RESERVATION CONTAINER---------------------*/
+
+.reservation-container {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 1.25rem;
+    margin-left: 7%;
+    width: 91%;
+}
+
+.reservation-container .container-reservation {
+    width: 87%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.reservation-container section {
+    margin: 1.25rem 0;
+}
+
+.reservation-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.25rem;
+    background-color: white;
+}
+
+.reservation-container th:nth-child(2) { 
+    width: 0.3125rem;
+    min-width: 0.3125rem;
+    max-width: 0.3125rem;
+}
+
+.reservation-container .profile-thumbnail {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.reservation-container td:nth-child(6) span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.reservation-container h2{
+    color: white;
+}
+
+.reservation-container table, .reservation-container th, .reservation-container td {
+    border: 0.0625rem solid #ddd;
+}
+
+.reservation-container th, .reservation-container td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.reservation-container th {
+    background-color: #0B1A26;
+    color: white;
+}
+
+
+/*-----------------------------------*/
+
 
 .action-buttons button {
     padding: 0.3125rem 0.625rem;

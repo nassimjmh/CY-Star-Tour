@@ -7,7 +7,20 @@
                 <li class="panellogo"><img src="../../images/adminpanel.png" alt=""></li>
                 <li><a class="underline" href="../index.php">Exit</a></li>
                 <li class="connect">
-                    <a href="../profil.php"><i class='bx bx-user-circle connect'></i></a>
+                    <?php 
+                    if (isset($_SESSION['profile_pic'])) {
+                        if (strpos($_SESSION['profile_pic'], 'http') === 0) {
+                            $imgSrc = $_SESSION['profile_pic']; // For external links
+                        } else {
+                            $imgSrc = '../' . $_SESSION['profile_pic']; // For local links in <upload> folder
+                        }
+                    ?>
+                    <a href="../profil.php"><img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 40px; height: 40px; border-radius: 50%;"></a>
+                <?php
+                    } else {
+                        echo "<i class='bx bx-user-circle connect'></i>";
+                    }
+                ?>
                 </li>
             </ul>
         </nav>

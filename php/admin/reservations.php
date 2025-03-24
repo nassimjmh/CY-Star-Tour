@@ -22,124 +22,74 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
 <body id="dashboard">
 <?php include("bars.php") ?>
 
-    <div class="admin-container">
-        <div class="container-admin">
+    <div class="reservation-container">
+        <div class="container-reservation">
             <section>
-                <h2>Manage Users</h2>
-                <div class="filters">
-                    <input type="text" placeholder="Search users...">
-                    <select id="status-filter">
-                        <option value="X">Filter by Status</option>
-                        <option value="Banned">Banned</option>
-                        <option value="Standard">Standard</option>
-                        <option value="VIP">VIP</option>
-                        <option value="Stellar Elite">Stellar Elite</option>
-                        <option value="Admin">Admin</option>
-
-                    </select>
-                    <select id="race-filter">
-                        <option value="">Filter by Race</option>
-                        <option value="human">Human</option>
-                        <option value="ia">IA</option>
-                        <option value="alien">Alien</option>
-                        <option value="coruscant">Coruscant</option>
-                    </select>
-                </div>
+                <h2>Manage Reservations</h2>
                 <table>
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>PP</th>
-                            <th>FIRST NAME</th>
-                            <th>LAST NAME</th>
-                            <th>EMAIL</th>
-                            <th>STATUS</th>
-                            <th>RACE</th>
-                            <th>DATE OF BIRTH</th>
+                            <th>PPP</th>
+                            <th>PLANET</th>
+                            <th>DURATION</th>
+                            <th>QUALITY</th>
+                            <th>BREAKFAST</th>
+                            <th>RELAX</th>
+                            <th>NB</th>
+                            <th>DATE</th>
+                            <th>INSURANCE</th>
+                            <th>PAYED</th>
                             <th>ADMIN ACTIONS</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php
-                        $file = file_get_contents("../../json/data/users.json");
-                        $users = json_decode($file, true);
-                        if(count($users)!=0){
-                            foreach($users as $users){
+                        $file = file_get_contents("../../json/data/booking.json");
+                        $reservations = json_decode($file, true);
+                        if(count($reservations)!=0){
+                            foreach($reservations as $reservations){
                                 ?>      
                                 <tr>
-                                    <td><?php echo "#" . str_pad($users["id"], 4, '0', STR_PAD_LEFT) ?></td>
-                                    <td>
-                                        <?php 
-                                        if (strpos($users["profile_pic"], 'http') === 0) {
-                                            $imgSrc = $users["profile_pic"]; // For external links
-                                        } else {
-                                            $imgSrc = '../' . $users["profile_pic"]; // For local links in <upload> folder
+                                    <td><?php echo "#" . str_pad($reservations["id"], 4, '0', STR_PAD_LEFT) ?></td>
+                                    <td><?php 
+                                        $users = json_decode(file_get_contents("../../json/data/users.json"), true);
+                                        foreach($users as $user) {
+                                            if($user['id'] == $reservations['id']) {
+                                                if (strpos($user["profile_pic"], 'http') === 0) {
+                                                    $profilePic = $user["profile_pic"]; // For external links
+                                                } else {
+                                                    $profilePic = '../' . $user["profile_pic"]; // For local links in <upload> folder
+                                                }
+                                                break;
+                                            }
                                         }
                                         ?>
-                                        <img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
-                                    </td>                                    
-                                    <td><?php echo $users["first_name"] ?></td>
-                                    <td><?php echo $users["last_name"] ?></td>
-                                    <td><a href="mailto:<?php echo $users["email"] ?>"><?php echo $users["email"] ?></a></td>
-                                    <td><?php if ($users["role"] === 'Standard') {
-                                        echo '<span style="color: #4CAF50; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    else if($users["role"] === 'Admin') {
-                                        echo '<span style="color: #5e9ae9; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    else if($users["role"] === 'VIP') {
-                                        echo '<span style="color: gold; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    else if($users["role"] === 'Banned') {
-                                        echo '<span style="color: #ff4444; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    else if($users["role"] === 'Stellar Elite') {
-                                        echo '<span style="color: #7851A9; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    ?>
+                                        <img src="<?php echo $profilePic; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
                                     </td>
-                                    <td><?php echo $users["race"] ?></td>
-                                    <td><?php echo $users["date_picker"] ?></td>
+                                    <td>
+                                        <?php 
+                                        $imgSrc =  '../../images/planet/' . strtolower($reservations["planet"]) . ".webp";
+                                        ?>
+                                        <img src="<?php echo $imgSrc; ?>" alt="PPP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
+                                    </td>                                    
+                                    <td><?php echo $reservations["planet"] ?></td>
+                                    <td><?php echo $reservations["days"][0] ?></td>
+                                    <td><?php echo $reservations["quality"] ?></td>
+                                    <td><?php echo $reservations["breakfast"] ?></td>
+                                    <td><?php echo $reservations["relax"]  ?></td>
+                                    <td><?php echo $reservations["nbpeople"] ?></td>
+                                    <td><?php echo $reservations["selectedDate"] ?></td>
+                                    <td><?php echo $reservations["insurance"] ?></td>
+                                    <td><?php echo $reservations["payed"] === null ? $reservations["payed"] : 'No' ?></td>
                                     <td>
                                     <div class="action-buttons">
-                                        <form method="POST" action="update_user.php" style="display: inline;">
-                                            <input type="hidden" name="email" value="<?php echo $users['email']; ?>">
-                                            <input type="hidden" name="current_role" value="<?php echo $users['role']; ?>">
-                                            
-                                            <?php if ($users['role'] !== 'VIP'): ?>
-                                                <button type="submit" name="action" value="make_vip" class="vip-button">
-                                                    Make VIP
-                                                </button>
-                                            <?php else: ?>
-                                                <button type="submit" name="action" value="remove_vip" class="vip-button">
-                                                    Remove VIP
-                                                </button>
-                                            <?php endif; ?>
-
-                                            <?php if ($users['role'] !== 'Banned'): ?>
-                                                <button type="submit" name="action" value="ban" class="ban-button">
-                                                    Ban User
-                                                </button>
-                                            <?php else: ?>
-                                                <button type="submit" name="action" value="unban" class="ban-button">
-                                                    Unban User
-                                                </button>
-                                            <?php endif; ?>
-
-                                            <?php if ($users['role'] !== 'Admin'): ?>
-                                                <button type="submit" name="action" value="make_admin" class="admin-button">
-                                                    Make Admin
-                                                </button>
-                                            <?php else: ?>
-                                                <button type="submit" name="action" value="remove_admin" class="admin-button">
-                                                    Remove Admin
-                                                </button>
-                                            <?php endif; ?>
-
-                                            <button type="submit" name="action" value="manage" class="manage-button">
-                                                Edit User
-                                            </button>
-                                        </form>
+                                        <button class="manage-button">
+                                            <a href="edit_reservation.php?name= <?php /* echo urlencode($reservations['name']); */?>" class="manage-button">
+                                                Edit Reservation
+                                            </a>
+                                        </button>
                                     </div>
                                     </td>
                                 </tr>
