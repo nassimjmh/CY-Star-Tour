@@ -20,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION["race"] = $users[$email]["race"];
             $_SESSION["date_picker"] = $users[$email]["date_picker"];
             $_SESSION["profile_pic"] = $users[$email]["profile_pic"];
+            $_SESSION["user_id"] = $users[$email]["id"];
+
 
             if ($users[$email]['role'] === 'Admin') {
                 header('Location: profil.php');
