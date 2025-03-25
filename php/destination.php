@@ -1,5 +1,5 @@
 
-<?php  
+<?php
     session_start();
     //Ouvrir le bon fichier
     if (isset($_GET['planet'])) {
@@ -14,10 +14,8 @@
     } else {
         header("Location: map.php");
     }
-    
 
-    
-    
+
 ?>
 
 <!DOCTYPE html>
@@ -47,12 +45,12 @@
         <div class="presentation">
             <p class="presentationtitle">Presentation</p>
             <p class="presentationdescription"><?php echo htmlspecialchars_decode($planet['presentation'], ENT_QUOTES); ?></p>
-                                            
+
         </div>
         <!--------------------------------------->
         <div class="program">
             <p class="programtitle">Schedule</p>
-            <?php 
+            <?php
                 $sub_schedule = array_slice($planet['schedule'], 1, 4);
 
                 foreach ($sub_schedule as $index => $day): ?>
@@ -69,7 +67,7 @@
         <div class="reserve">
             <p class="reservetitle">Book</p>
             <form action="recap.php?planet=<?php echo ucfirst($selectedPlanet); ?>" method="post">
-                
+
                     <label class="titlerese noclick">| Select your machin :</label>
                         <div class="group">
                             <input type="checkbox"  name="days[]" value="1">
@@ -81,7 +79,7 @@
                             <input type="checkbox"  name="days[]" value="4">
                             <label for="rday4">Day 4</label>
                         </div>
-                
+
                     <label class="titlerese noclick">| Select the travel quality : <br></label>
                         <div class="group">
                             <input type="radio"  name="quality" value="Standard" required>
@@ -89,7 +87,7 @@
                             <input type="radio"  name="quality" value="Premium" required>
                             <label >Premium</label>
                         </div>
-                
+
                     <label class="titlerese noclick">| Breakfast included : <br></label>
                         <div class="group">
                             <input type="radio"  name="Breakfast" value="Yes" required>
@@ -97,7 +95,7 @@
                             <input type="radio"  name="Breakfast" value="No" required>
                             <label >No</label>
                         </div>
-                
+
                     <label class="titlerese2 noclick">| Total number of travelers : <br></label>
                         <div class="selectgroup2">
                             <select name="nb">
@@ -123,13 +121,12 @@
                             <input type="radio"  name="insurance" value="No" required>
                             <label >No</label>
                         </div>
-                        
-                    
+
 
                     <label class="titlerese3 noclick">| Select the days : <br></label>
                         <div class="group3">
                             <?php foreach ($planet['date'] as $index => $date): ?>
-                                    <input type="radio" name="date" value="<?php echo $index; ?>">
+                                    <input type="radio" name="date" value="<?php echo $index; ?>" required>
                                     <label>Departure : <?php echo htmlspecialchars($date['depart'], ENT_QUOTES, 'UTF-8'); ?></label>
                                     <label>Arrival : <?php echo htmlspecialchars($date['arrive'], ENT_QUOTES, 'UTF-8'); ?></label>
                                     <label>Price : <?php echo htmlspecialchars($date['prix'], ENT_QUOTES, 'UTF-8'); ?> ₴</label>
@@ -140,8 +137,8 @@
 
 
                             <input class="confirm" type="submit" name="submit" value="Submit">
-                        
-                
+
+
             </form>
         </div>
         <!--------------------------------------->
