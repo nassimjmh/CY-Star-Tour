@@ -63,12 +63,13 @@ $roleBenefits = [
     "VIP" => [
         "Access to luxury cabins.",
         "Priority boarding.",
-        "10% discount on premium options."
+        "10% discount on the total price."
     ],
     "Stellar Elite" => [
+            "Vip advantages",
         "Zero-gravity cocktail included.",
         "Free spaceflight simulator.",
-        "Exclusive access to the space lounge."
+        "30% discount on the total price."
     ],
 
     "Admin" => [
