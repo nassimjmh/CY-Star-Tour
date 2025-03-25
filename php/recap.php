@@ -14,14 +14,13 @@ session_start();
     if (isset($_POST["submit"])) {
     
         $bookingData = [
-            'id' => '303',
+            'id' => $_SESSION['user_id'],
             'planet' => $_GET['planet'],
             'days' => $_POST['days'] ?? [],
             'quality' => $_POST['quality'] ?? '',
             'breakfast' => $_POST['Breakfast'] ?? '',
             'relax' => $_POST['Relax'] ?? '',
             'nbpeople' => isset($_POST['nb']) ? (int)$_POST['nb'] : 1, // Valeur par défaut
-            'selectedDate' => $_POST['date'] ?? [],
             'insurance' => $_POST['insurance'] ?? '',
             'selectedDate' => $_POST['date'] ?? [],
             'payed' => ''
@@ -169,8 +168,28 @@ $booking = $_SESSION['booking_success']; // Récupérer la réservation
                         $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
                         ?>
                     <form action='https://www.plateforme-smc.fr/cybank/index.php' method="POST">
+                        <div>
+                            <input type="text" name="nom[]" placeholder="Name" value="<?php echo htmlspecialchars($_SESSION["first_name"], ENT_QUOTES, 'UTF-8'); ?>"required>
+                            <input type="text" name="prenom[]" placeholder="Last name" value="<?php echo htmlspecialchars($_SESSION["last_name"], ENT_QUOTES, 'UTF-8'); ?>"required>
+                            <select id="options" name="options[]" >
+                                <option value="option1">Human</option>
+                                <option value="option2">IA</option>
+                                <option value="option3">Alien</option>
+                                <option value="option4">Coruscant</option>
+                            </select>
+                            <input type="number" name="age[]" placeholder="Age" min="0" required>
+
+                            <input type='hidden' name='transaction'
+                                   value='<?php echo $transaction; ?>'>
+                            <input type='hidden' name='montant' value='<?php echo $montant; ?>'>
+                            <input type='hidden' name='vendeur' value='<?php echo $vendeur; ?>'>
+                            <input type='hidden' name='retour'
+                                   value='payement.php'>
+                            <input type='hidden' name='control'
+                                   value='<?php echo $control; ?>'>
+                        </div>
                         <?php
-                        for ($i = 0; $i < $booking['nbpeople']; $i++) {
+                        for ($i = 0; $i < $booking['nbpeople']-1; $i++) {
                         ?>
                             <div>
                                 <input type="text" name="nom[]" placeholder="Name" required>
