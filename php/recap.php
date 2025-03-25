@@ -40,6 +40,9 @@ session_start();
     header("Location: recap.php");
 }
 $booking = $_SESSION['booking_success']; // Récupérer la réservation
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -155,7 +158,17 @@ $booking = $_SESSION['booking_success']; // Récupérer la réservation
                     <div class="division noclick"><p>———————————————————————————</p></div>
 
                     <div class="listname">
-                    <form action="map.php" method="post">
+                        <?php
+                        require('getapikey.php');
+                        $montant=$total;
+                        $transaction = "154632ABCZWTC";
+                        $vendeur = "MI-1_I";
+                        $retour = "payement.php";
+
+                        $api_key = getAPIKey($vendeur);
+                        $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
+                        ?>
+                    <form action='https://www.plateforme-smc.fr/cybank/index.php' method="POST">
                         <?php
                         for ($i = 0; $i < $booking['nbpeople']; $i++) {
                         ?>
@@ -169,11 +182,20 @@ $booking = $_SESSION['booking_success']; // Récupérer la réservation
                                     <option value="option4">Coruscant</option>
                                 </select>
                                 <input type="number" name="age[]" placeholder="Age" min="0" required>
+
+                                <input type='hidden' name='transaction'
+                                       value='<?php echo $transaction; ?>'>
+                                <input type='hidden' name='montant' value='<?php echo $montant; ?>'>
+                                <input type='hidden' name='vendeur' value='<?php echo $vendeur; ?>'>
+                                <input type='hidden' name='retour'
+                                       value='payement.php'>
+                                <input type='hidden' name='control'
+                                       value='<?php echo $control; ?>'>
                             </div>
                         <?php
                         }
                         ?>
-                        <input class="confirm" type="submit" name="submit" value="Submit">
+                        <input class="confirm" type="submit" name="submit" value="Pay">
                         <button onclick="history.back()" class="back-btn">Back</button>
                     </form>
                     
