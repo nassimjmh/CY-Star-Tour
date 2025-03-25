@@ -20,11 +20,12 @@ session_start();
             'quality' => $_POST['quality'] ?? '',
             'breakfast' => $_POST['Breakfast'] ?? '',
             'relax' => $_POST['Relax'] ?? '',
-            'nbpeople' => isset($_POST['nb']) ? (int)$_POST['nb'] : 1, // Valeur par défaut
+            'nbpeople' => isset($_POST['nb']) ? (int)$_POST['nb'] : 1,
             'insurance' => $_POST['insurance'] ?? '',
             'selectedDate' => $_POST['date'] ?? [],
             'payed' => ''
         ];
+
 
     $filePath = '../json/data/booking.json';
     $existingBookings = json_decode(file_get_contents($filePath), true);
@@ -37,10 +38,46 @@ session_start();
     file_put_contents($filePath, json_encode($existingBookings, JSON_PRETTY_PRINT));
     $_SESSION['booking_success'] = $bookingData;
     header("Location: recap.php");
+    exit();
 }
 $booking = $_SESSION['booking_success']; // Récupérer la réservation
 
 
+
+$userRole = $_SESSION['role'];
+
+
+$roleColors = [
+    "Standard" => "#4CAF50",
+    "VIP" => "gold",
+    "Stellar Elite" => "#7851A9 ",
+    "Admin" => "#5e9ae9"
+];
+
+$roleBenefits = [
+    "Standard" => [
+        "Standard trip without extras.",
+        "Access to basic activities.",
+        "Standard customer support."
+    ],
+    "VIP" => [
+        "Access to luxury cabins.",
+        "Priority boarding.",
+        "10% discount on premium options."
+    ],
+    "Stellar Elite" => [
+        "Zero-gravity cocktail included.",
+        "Free spaceflight simulator.",
+        "Exclusive access to the space lounge."
+    ],
+
+    "Admin" => [
+        "Can see everything.",
+    ]
+];
+
+$roleColor = $roleColors[$userRole];
+$benefits = $roleBenefits[$userRole];
 
 ?>
 
@@ -257,6 +294,28 @@ $booking = $_SESSION['booking_success']; // Récupérer la réservation
                             <p class="soustitre2">Cancellation insurance :  &nbsp;  No</p>
                             <p class="listprice4">+ 0 ₴</p>
                         <?php endif; ?>
+
+                        <div class="role-section">
+                            <p class="soustitre2">Client Role :</p>
+                            <?php if ($userRole === 'VIP'): ?>
+                                <p class="listrole vip" style="color: <?php echo $roleColor; ?>;">🌟 VIP</p>
+                            <?php elseif ($userRole === 'Stellar Elite'): ?>
+                                <p class="listrole stellar" style="color: <?php echo $roleColor; ?>;"> Stellar Elite</p>
+                            <?php elseif ($userRole === 'Admin'): ?>
+                                <p class="listrole admin" style="color: <?php echo $roleColor; ?>;"> Admin</p>
+                            <?php else: ?>
+                                <p class="listrole standard" style="color: <?php echo $roleColor; ?>;"> Standard Traveler</p>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="role-benefits">
+                            <p class="soustitre2">Your Benefits:</p>
+                            <ul>
+                                <?php foreach ($benefits as $benefit): ?>
+                                    <li><?php echo htmlspecialchars($benefit, ENT_QUOTES, 'UTF-8'); ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
