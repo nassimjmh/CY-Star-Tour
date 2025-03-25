@@ -181,8 +181,24 @@ $benefits = $roleBenefits[$userRole];
                         <?php $total+=5*$booking['nbpeople'] ?>
                         <p class="souspricetext"><?php echo htmlspecialchars($booking['nbpeople'], ENT_QUOTES, 'UTF-8'); ?> x 5 ₴ = <?php echo 5*$booking['nbpeople'] ?> ₴</p>
                     <?php endif; ?>
+                    <?php
+                    $discount = 0;
+                    if ($userRole === 'VIP') {
+                        $discount = 0.10; // 10% discount for VIP
+                    } elseif ($userRole === 'Stellar Elite') {
+                        $discount = 0.30; // 30% discount for Stellar Elite
+                    }
+                    $discountedTotal = $total * (1 - $discount);
+                    ?>
+                      <p class="discount">Discount :</p>
+                    <?php if($discount!==0){
+                        echo $discount. "₴";
+                    }else{
+                        echo "0"."₴";
+                    }
+                   ?>
                     <p class="pricetexttotal">Total :</p>
-                    <p class="souspricetexttotal"><?php echo $total ?> ₴</p>
+                    <p class="souspricetexttotal"><?php echo number_format($discountedTotal, 2) ?> ₴</p>
                     
                 </div>
         </div>
