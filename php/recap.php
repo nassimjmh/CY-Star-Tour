@@ -192,9 +192,9 @@ $benefits = $roleBenefits[$userRole];
                     ?>
                       <p class="discount">Discount :</p>
                     <?php if($discount!==0){
-                        echo $discount. "₴";
+                        echo $discount * 100 . "%";
                     }else{
-                        echo "0"."₴";
+                        echo "0"."%";
                     }
                    ?>
                     <p class="pricetexttotal">Total :</p>
