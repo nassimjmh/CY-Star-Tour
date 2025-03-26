@@ -1,6 +1,10 @@
 
 <?php
     session_start();
+    if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
+
+        header('location: login.php');
+    }
     //Ouvrir le bon fichier
     if (isset($_GET['planet'])) {
         $selectedPlanet = $_GET['planet'];

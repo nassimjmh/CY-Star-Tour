@@ -1,5 +1,9 @@
 <?php
 session_start();
+if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
+
+    header('location: login.php');
+}
     $total=0;
     $totaltravel = 0;
     if (isset($_GET['planet'])) {

@@ -12,5 +12,39 @@
         "selectedDate": "1",
         "insurance": "Yes",
         "payed": ""
+    },
+    "2": {
+        "id": null,
+        "planet": "Atlantis",
+        "days": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "quality": "Standard",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 1,
+        "insurance": "Yes",
+        "selectedDate": "3",
+        "payed": ""
+    },
+    "3": {
+        "id": 2,
+        "planet": "Atlantis",
+        "days": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "quality": "Standard",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 1,
+        "insurance": "Yes",
+        "selectedDate": "1",
+        "payed": ""
     }
 }
