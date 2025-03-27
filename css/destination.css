@@ -179,6 +179,7 @@
     left: 30rem;
 }
 .group4{
+    width: 20rem;
     position: relative;
     font-size: 1.1rem;
     top: -5rem;
@@ -192,6 +193,7 @@
     left: 30rem;
 }
 .group5{
+    width: 20rem;
     position: relative;
     font-size: 1.1rem;
     top: -2rem;
@@ -207,6 +209,7 @@
 .group3{
     overflow: scroll;
     overflow-x: hidden;
+    
     height: 13rem;
     width: 47rem;
     position: absolute;
