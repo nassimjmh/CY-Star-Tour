@@ -128,6 +128,7 @@
     top: -1.5rem;
     left: -1rem;
     font-size: 1.5rem;
+    font-size: 1.5;
     
 }
 .listprice{
@@ -168,25 +169,19 @@
     top: 6rem;
     left: 1rem;
 }
+.pricetext:not(:first-of-type)    {
+    width: 15rem;
+    position: relative;
+    top: 6rem;
+    left: 1rem;
+    margin-top: -0.9rem;
+}
 .souspricetext{
     width: 15rem;
     color: green;
     position: relative;
-    top: 5.5rem;
+    top: 5.3rem;
     left: 2rem;
-}
-.pricetexttotal{
-    width: 6rem;
-    position: relative;
-    top: 6rem;
-    left: 11rem;
-}
-.souspricetexttotal{
-    width: 6rem;
-    color: green;
-    position: relative;
-    top: 5.5rem;
-    left: 12rem;
 }
 .confirm{
     position: absolute;
@@ -224,5 +219,80 @@
     border-radius: 0.3125rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    background-color: #ff4444
+    background-color: #ff4444;
+    text-decoration: none;
+    text-align: center;
+    
 }
+
+/* ++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++ */
+#popup-toggle {
+    display: none;
+}
+
+.popup-btn {
+    position: absolute;
+    top: 2rem; /* Ajuste selon le besoin */
+    left: 100%; /* Place le bouton juste à côté du texte */
+    margin-left: 0.5rem; /* Ajuste l'écart entre le texte et le bouton */
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #0B1A26;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem; /* Ajuste la taille du texte si nécessaire */
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    z-index: 9999;
+    pointer-events: auto;
+    
+    /* Centrer le texte dans le bouton */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#popup-toggle:checked + .popup-overlay {
+    display: flex;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #e11d48;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.blanc{
+    position: relative;
+    top: 9rem;
+    z-index: -1;
+    height: 13rem;
+}
+/* ++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++ */
