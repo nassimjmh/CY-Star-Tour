@@ -18,7 +18,7 @@
     } else {
         header("Location: map.php");
     }
-
+    $filePath = '../json/data/booking.json';
 
 ?>
 
