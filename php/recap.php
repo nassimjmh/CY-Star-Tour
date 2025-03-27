@@ -30,16 +30,17 @@ if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
             'payed' => ''
         ];
 
-
+////////////////
     $filePath = '../json/data/booking.json';
     $existingBookings = json_decode(file_get_contents($filePath), true);
-    if (!is_array($existingBookings)) {
-        $existingBookings = [];
-    }
-    $nextId = empty($existingBookings) ? 1 : max(array_keys($existingBookings)) + 1;
+   if (!is_array($existingBookings)) {
+       $existingBookings = [];
+   }
+   $nextId = empty($existingBookings) ? 1 : max(array_keys($existingBookings)) + 1;
     $existingBookings[$nextId] = $bookingData;
 
     file_put_contents($filePath, json_encode($existingBookings, JSON_PRETTY_PRINT));
+////////////
     $_SESSION['booking_success'] = $bookingData;
     header("Location: recap.php");
     exit();
@@ -70,7 +71,7 @@ $roleBenefits = [
         "10% discount on the total price."
     ],
     "Stellar Elite" => [
-            "Vip advantages",
+        "Vip advantages",
         "Zero-gravity cocktail included.",
         "Free spaceflight simulator.",
         "30% discount on the total price."
@@ -185,24 +186,38 @@ $benefits = $roleBenefits[$userRole];
                         <?php $total+=5*$booking['nbpeople'] ?>
                         <p class="souspricetext"><?php echo htmlspecialchars($booking['nbpeople'], ENT_QUOTES, 'UTF-8'); ?> x 5 ₴ = <?php echo 5*$booking['nbpeople'] ?> ₴</p>
                     <?php endif; ?>
+                    <p class="pricetext">Discount :</p>
                     <?php
-                    $discount = 0;
-                    if ($userRole === 'VIP') {
-                        $discount = 0.10; // 10% discount for VIP
-                    } elseif ($userRole === 'Stellar Elite') {
-                        $discount = 0.30; // 30% discount for Stellar Elite
-                    }
-                    $discountedTotal = $total * (1 - $discount);
+                        $discount = 0;
+                        if ($userRole === 'VIP') {
+                            $discount = 0.10; // 10% discount for VIP
+                        } elseif ($userRole === 'Stellar Elite') {
+                            $discount = 0.30; // 30% discount for Stellar Elite
+                        }
+                        $discountedTotal = $total * (1 - $discount);
                     ?>
-                      <p class="discount">Discount :</p>
-                    <?php if($discount!==0){
-                        echo $discount * 100 ."%";
-                    }else{
-                        echo "0"."%";
-                    }
-                   ?>
-                    <p class="pricetexttotal">Total :</p>
-                    <p class="souspricetexttotal"><?php echo $total."&nbsp". "*"."&nbsp". (1-$discount)."&nbsp"."%"."&nbsp". "="."&nbsp". $discountedTotal ?> ₴</p>
+                    <?php if ($discount !== 0) { ?>
+                        <p class="souspricetext">
+                            <?php echo ($discount * 100) . "%" ; ?>
+                        </p>
+                    <?php } else { ?>
+                        <p class="souspricetext">
+                            <?php echo $discount . " %"?>
+                        </p>
+                    <?php } ?>
+                    
+                    <p class="pricetext"><u>Total :</u></p>
+                    <?php if ($discount !== 0) { ?>
+                        <p class="souspricetext">
+                            <?php echo $total . "&nbsp;" . "*" . "&nbsp;" . ($discount) . "&nbsp;" . "%" . "&nbsp;" . "=" . "&nbsp;"; ?>
+                            <b><?php echo $discountedTotal; ?></b> <b>₴</b> 
+                        </p>
+                    <?php } else { ?>
+                        <p class="souspricetext">
+                            <b><?php echo $discountedTotal; ?></b> <b>₴</b> 
+                        </p>
+                    <?php } ?>
+                    
                     
                 </div>
         </div>
@@ -225,7 +240,8 @@ $benefits = $roleBenefits[$userRole];
                         $api_key = getAPIKey($vendeur);
                         $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
                         ?>
-                    <form action='https://www.plateforme-smc.fr/cybank/index.php' method="POST">
+                 <form action='https://www.plateforme-smc.fr/cybank/index.php' method="POST"> 
+                    <!-- <form action='fin.php' method="POST"> -->
                         <div>
                             <input type="text" name="nom[]" placeholder="Name" value="<?php echo htmlspecialchars($_SESSION["first_name"], ENT_QUOTES, 'UTF-8'); ?>"required>
                             <input type="text" name="prenom[]" placeholder="Last name" value="<?php echo htmlspecialchars($_SESSION["last_name"], ENT_QUOTES, 'UTF-8'); ?>"required>
@@ -273,7 +289,7 @@ $benefits = $roleBenefits[$userRole];
                         }
                         ?>
                         <input class="confirm" type="submit" name="submit" value="Pay">
-                        <button onclick="history.back()" class="back-btn">Back</button>
+                        <a href="destination.php?planet=<?php echo urlencode($p['name']); ?>" class="back-btn">Cancel</a>
                     </form>
                     
                     </div>
@@ -281,7 +297,20 @@ $benefits = $roleBenefits[$userRole];
             </div>
             <div class="middle" >
                 <div class="booking2">
-                    <div class="name"><p>➤ Option</p></div>
+                <div class="name">
+                    <p>➤ Option 
+                        <?php if ($userRole === 'VIP'): ?>
+                            • <span class="listrole vip" style="color: <?php echo $roleColor; ?>;"> VIP</span>
+                        <?php elseif ($userRole === 'Stellar Elite'): ?>
+                            • <span class="listrole stellar" style="color: <?php echo $roleColor; ?>;"> Stellar Elite</span>
+                        <?php elseif ($userRole === 'Admin'): ?>
+                            • <span class="listrole admin" style="color: <?php echo $roleColor; ?>;"> Admin</span>
+                        <?php else: ?>
+                            • <span class="listrole standard" style="color: <?php echo $roleColor; ?>;"> Standard Traveler</span>
+                        <?php endif; ?>
+                        <label for="popup-toggle" class="popup-btn">?</label>
+                    </p>
+                </div>
                     <div class="division noclick"><p>———————————————————————————</p></div>
 
                     <div class="listname">
@@ -316,32 +345,26 @@ $benefits = $roleBenefits[$userRole];
                             <p class="listprice4">+ 0 ₴</p>
                         <?php endif; ?>
 
-                        <div class="role-section">
-                            <p class="soustitre2">Client Role :</p>
-                            <?php if ($userRole === 'VIP'): ?>
-                                <p class="listrole vip" style="color: <?php echo $roleColor; ?>;">🌟 VIP</p>
-                            <?php elseif ($userRole === 'Stellar Elite'): ?>
-                                <p class="listrole stellar" style="color: <?php echo $roleColor; ?>;"> Stellar Elite</p>
-                            <?php elseif ($userRole === 'Admin'): ?>
-                                <p class="listrole admin" style="color: <?php echo $roleColor; ?>;"> Admin</p>
-                            <?php else: ?>
-                                <p class="listrole standard" style="color: <?php echo $roleColor; ?>;"> Standard Traveler</p>
-                            <?php endif; ?>
-                        </div>
-
-                        <div class="role-benefits">
-                            <p class="soustitre2">Your Benefits:</p>
-                            <ul>
-                                <?php foreach ($benefits as $benefit): ?>
-                                    <li><?php echo htmlspecialchars($benefit, ENT_QUOTES, 'UTF-8'); ?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
+                        
+                            <input type="checkbox" id="popup-toggle">
+                                <div class="popup-overlay">
+                                    <div class="popup-content">
+                                        <div class="role-benefits">
+                                            <ul>
+                                                <?php foreach ($benefits as $benefit): ?>
+                                                    <li><?php echo htmlspecialchars($benefit, ENT_QUOTES, 'UTF-8'); ?></li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+                                        <label for="popup-toggle" class="close-btn">Close</label>
+                                    </div>
+                                </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-        
-        
+        <div class="blanc"></div>
+        <?php include("footer.php") ?>
     </body>
 </html>
