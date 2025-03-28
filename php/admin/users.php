@@ -103,7 +103,10 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                     ?>
                                     </td>
                                     <td><?php echo $users["race"] ?></td>
-                                    <td><?php echo $users["date_picker"] ?></td>
+                                    <td><?php 
+                                        // Convert the date string to a DateTime object
+                                        $date = new DateTime($users["date_picker"]);
+                                        echo $date->format('d/m/Y'); ?></td>
                                     <td>
                                     <div class="action-buttons">
                                         <form method="POST" action="update_user.php" style="display: inline;">
