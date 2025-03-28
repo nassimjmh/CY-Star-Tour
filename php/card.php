@@ -1,46 +1,85 @@
 <?php
 session_start();
 
-
 if (!isset($_SESSION['email'])) {
-header('Location: login.php');
-exit();
+    header('Location: login.php');
+    exit();
 }
 
 $file = '../json/data/users.json';
 
-// Charge le fichier JSON
+// Load the JSON file
 $users = json_decode(file_get_contents($file), true);
 $error = "";
 
 $email = $_SESSION['email'];
 
-
 if (!isset($users[$email])) {
-$error = "⚠️ User not found.";
+    $error = "⚠️ User not found.";
+    die();
 } else {
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-$card_holder = $_POST['card_holder'];
-$card_number = $_POST['card_number'];
-$expiry_date = $_POST['expiry_date'];
-$cvv = $_POST['cvv'];
+        // Get the data sent from the form
+        $card_holder = trim($_POST['card_holder']);
+        $card_number = trim($_POST['card_number']);
+        $expiry_date = trim($_POST['expiry_date']);
+        $cvv = trim($_POST['cvv']);
 
+        // Validate the fields
+        if (empty($card_holder)) {
+            $error = "⚠️ Card holder name is required.";
+        } elseif (!preg_match("/^[a-zA-Z ]+$/", $card_holder)) {
+            $error = "⚠️ Card holder name must contain only letters and spaces.";
+        } elseif (empty($card_number) || !preg_match("/^\d{16}$/", $card_number)) {
+            $error = "⚠️ Card number must be 16 digits.";
+        } elseif (!is_valid_card_number($card_number)) {
+            $error = "⚠️ Invalid card number.";
+        } elseif (empty($expiry_date) || !preg_match("/^\d{2}\/\d{2}$/", $expiry_date)) {
+            $error = "⚠️ Expiry date must be in MM/YY format.";
+        } elseif (empty($cvv) || !preg_match("/^\d{3}$/", $cvv)) {
+            $error = "⚠️ CVV must be 3 digits.";
+        }
 
-$users[$email]['card_info'] = [
-'card_holder' => $card_holder,
-'card_number' => $card_number,
-'expiry_date' => $expiry_date,
-'cvv' => $cvv
-];
+        if ($error) {
+            echo "<p style='color:red;'>$error</p>";
+        } else {
+            // If all fields are valid, save the card information in the JSON file
+            $users[$email]['card_info'] = [
+                'card_holder' => $card_holder,
+                'card_number' => $card_number,
+                'expiry_date' => $expiry_date,
+                'cvv' => $cvv
+            ];
 
-file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
+            // Save the updated data back to the JSON file
+            file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
-header('Location: getapikey.php');
-exit();
+            // Redirect to the bank page or confirmation page
+            header('Location: bank.php');
+            exit();
+        }
+    }
 }
-}
 
+// Function to validate card number using Luhn Algorithm
+// FULL AI 
+function is_valid_card_number($number) {
+    $sum = 0;
+    $alt = false;
+    for ($i = strlen($number) - 1; $i >= 0; $i--) {
+        $n = intval($number[$i]);
+        if ($alt) {
+            $n *= 2;
+            if ($n > 9) {
+                $n -= 9;
+            }
+        }
+        $sum += $n;
+        $alt = !$alt;
+    }
+    return $sum % 10 == 0;
+}
 ?>
 
 
