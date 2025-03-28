@@ -1,17 +1,49 @@
-
 <?php
-
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $card_holder = $_POST['card_holder'];
-    $card_number = $_POST['card_number'];
-    $expiry_date = $_POST['expiry_date'];
-    $cvv = $_POST['cvv'];
+if (!isset($_SESSION['email'])) {
+header('Location: login.php');
+exit();
 }
-    
+
+$file = '../json/data/users.json';
+
+// Charge le fichier JSON
+$users = json_decode(file_get_contents($file), true);
+$error = "";
+
+$email = $_SESSION['email'];
+
+
+if (!isset($users[$email])) {
+$error = "⚠️ User not found.";
+} else {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+$card_holder = $_POST['card_holder'];
+$card_number = $_POST['card_number'];
+$expiry_date = $_POST['expiry_date'];
+$cvv = $_POST['cvv'];
+
+
+$users[$email]['card_info'] = [
+'card_holder' => $card_holder,
+'card_number' => $card_number,
+'expiry_date' => $expiry_date,
+'cvv' => $cvv
+];
+
+file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
+
+header('Location: getapikey.php');
+exit();
+}
+}
+
 ?>
+
+
 
 
 
@@ -63,6 +95,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <button type="submit">Pay Now</button>
+        <?php if ($error): ?>
+            <p style="color: red;"><?php echo $error; ?></p>
+        <?php endif; ?>
     </form>
 
 </div>
