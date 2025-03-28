@@ -24,16 +24,22 @@ body {
 }
 
 .container {
-    width: 50%;
+    width: 70%; /* Augmenter la largeur du conteneur pour plus de place */
     max-width: 600px;
-    padding: 3rem;
+    padding: 2rem; /* Réduire légèrement le padding pour que les éléments soient moins éloignés des bords */
     background: #0B1A26;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
 }
+
 
 h1 {
     color: #ffffff;
@@ -56,10 +62,10 @@ label {
 input {
     width: 100%;
     padding: 0.8rem;
-    font-size: 1.1rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    background:#0B1A26;
+    font-size: 1.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     outline: none;
 }
@@ -75,7 +81,7 @@ button {
     font-weight: bold;
     border: none;
     border-radius: 10px;
-    background: forestgreen;
+    background: green;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s, font-size 0.7s, color 0.3s;
@@ -83,17 +89,36 @@ button {
 
 
 button:hover {
-    background-color: darkgreen;
+    background-color: #4CAF50;
     font-size: 0.9375rem;  /* Réduction de la taille de la police */
     transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
+button:hover {
+    background: darkgreen;
+    transform: scale(1.05);
+}
 
 
-.help-message {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url("https://preview.redd.it/novas-vertical-ship-challenge-the-varuun-basilica-v0-fzb1wfpjxzie1.png?width=1920&format=png&auto=webp&s=de3eb58784ed2c5f12f447d5be6474cd4b6bea5f");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Force le body à occuper toute la hauteur de l'écran */
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+}
+
+
+
+
+footer {
+    margin-top: auto; /* Cela pousse le footer vers le bas */
 }
