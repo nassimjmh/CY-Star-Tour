@@ -343,17 +343,39 @@ main {
     align-items: center; /* Centre l'image verticalement avec le texte */
 }
 
-.planet-image {
-    width: 30px; /* Ajuste la largeur selon tes besoins */
-    height: auto;
-    margin-right: 10px; /* Un peu d'espace entre l'image et le texte */
+/* Flèche et espace avant chaque planète */
+.planet-arrow {
+    font-size: 30px;
+    color: black; /* Couleur de la flèche */
+    font-weight: bold;
+    margin-top: 20px;  /* Un peu d'espace avant chaque nouvelle planète */
+    margin-bottom: 10px; /* Un peu d'espace sous la flèche */
 }
 
+/* Style pour l'image de la planète */
+.planet-image {
+    width: 30px;
+    height: auto;
+    margin-right: 10px; /* Espace entre l'image et le texte */
+}
+
+/* Style général de la carte de la planète */
+.planet-card {
+    margin-bottom: 20px; /* Espace entre les cartes */
+    padding: 15px;
+    background-color: black;
+    border: 10px solid white;
+    border-radius: 30px;
+}
 
 .planet-card-container {
+    color: white;
     max-height: 50rem; /* Ajuste cette hauteur selon ton besoin */
     overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse la hauteur */
     padding: 10px; /* Espacement autour du contenu */
-    border: 1px solid #ccc; /* Ajout d'une bordure pour délimiter la zone */
+    border-left: 2px solid black; /* Ajout d'une bordure pour délimiter la zone */
+    border-top: 2px solid black; /* Ajout d'une bordure pour délimiter la zone */
+    border-bottom: 2px solid black; /* Ajout d'une bordure pour délimiter la zone */
+    border-radius : 25px;
     background-color: #f9f9f9; /* Fond léger pour l'apparence */
 }
