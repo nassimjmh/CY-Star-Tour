@@ -118,5 +118,35 @@
         "revenue": 0,
         "trips": 67,
         "image": "mars.webp"
+    },
+    "Arrakis": {
+        "id": 13,
+        "name": "Arrakis",
+        "galaxy": "Movie",
+        "description": "Desert planet known for valuable spice melange",
+        "distance": 45600,
+        "revenue": 0,
+        "trips": 23,
+        "image": "arrakis.webp"
+    },
+    "Axiom": {
+        "id": 14,
+        "name": "Axiom",
+        "galaxy": "Movie",
+        "description": "Luxury starliner housing humans away from Earth",
+        "distance": 12800,
+        "revenue": 0,
+        "trips": 42,
+        "image": "axiom.webp"
+    },
+    "Mann": {
+        "id": 15,
+        "name": "Mann",
+        "galaxy": "Movie",
+        "description": "Ice planet with frozen ammonia surface",
+        "distance": 52300,
+        "revenue": 0,
+        "trips": 8,
+        "image": "mann.webp"
     }
 }
