@@ -12,11 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
 
-    if ( password_verify($password, $users[$email]['role']) ==  "Banned"){
-        $error = "Sorry, your account has been banned. ( If you think that is an error please contact us at : support@startour.cy)";
-    }
-
-    if (isset($users[$email])) {
+    if (isset($users[$email]) && $users[$email]['role'] != 'Banned') {
         if (password_verify($password, $users[$email]['password'])) {
             $_SESSION['email'] = $email;
             $_SESSION["first_name"] = $users[$email]["first_name"];
@@ -27,17 +23,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION["profile_pic"] = $users[$email]["profile_pic"];
             $_SESSION["user_id"] = $users[$email]["id"];
 
-
-            if ($users[$email]['role'] === 'Admin') {
                 header('Location: profil.php');
-            } else {
-                header('Location: profil.php');
-            }
             exit();
-        } else {
+        }
+
+        else {
             $error = "❌ Wrong email or password";
         }
-    } else {
+    }
+
+    if ($users[$email]['role'] === 'Banned'){
+        $error = "❌ Sorry, your account has been banned.(If you think that is an error please contact us at: support@startour.cy)";
+
+    }
+
+    else {
         $error = "❌ No account registered on this email.";
     }
 }
