@@ -1,102 +1,100 @@
 {
-  
   "name": "Grok",
-
   "galaxy": "Ia • -45° 12' 45'' • ★★★★☆",
-
-  "info":"🌡️ 293°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 9,80 m/s²",
-
-  "prix":"1.500 ₴",
-
-  "preimage":"https://img.freepik.com/photos-premium/paysage-extraterrestre-colore-abstrait-deserte-planetes-extraterrestres-pendant-lever-du-soleil_158863-7718.jpg",
-  
-  "resume":"&nbsp;&nbsp;&nbsp;Discover <strong>Grok</strong>, a planet where enchanted forests stand alongside crystal-clear oceans. Breathe the pure air, explore <strong>golden-peaked mountains</strong>, and observe the unique wildlife that glows under the <strong>three moons</strong>. <br>&nbsp;&nbsp;&nbsp; Every sunset is a spectacle of colors, and the nights are illuminated by <strong>perpetual auroras</strong>. It’s a paradise for adventurers, dreamers, and those in search of peace.",
-
-
-  "image": "",
-
-  
-
-  "presentation": "",
-
+  "info": "🌡️ 293°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 9,80 m/s²",
+  "prix": "1.600 ₴",
+  "preimage": "https://img.freepik.com/photos-premium/paysage-extraterrestre-colore-abstrait-deserte-planetes-extraterrestres-pendant-lever-du-soleil_158863-7718.jpg",
+  "image": "https://images8.alphacoders.com/960/960445.jpg",
+  "resume": "&nbsp;&nbsp;&nbsp;Discover <strong>Grok</strong>, a planet where enchanted forests stand alongside crystal-clear oceans. Breathe the pure air, explore <strong>golden-peaked mountains</strong>, and observe the unique wildlife that glows under the <strong>three moons</strong>. <br>&nbsp;&nbsp;&nbsp; Every sunset is a spectacle of colors, and the nights are illuminated by <strong>perpetual auroras</strong>. It’s a paradise for adventurers, dreamers, and those in search of peace.",
+  "presentation": "Embark on an unforgettable journey to Grok, a planet of breathtaking beauty and tranquility.<br>Explore enchanted forests, crystal-clear oceans, and golden-peaked mountains under the glow of three moons.<br><br>Experience the magic of perpetual auroras and vibrant sunsets.<br>Whether you're an adventurer, a dreamer, or seeking peace, Grok offers a unique escape.<br><br>Join our carefully crafted 5-day program to immerse yourself in the wonders of Grok.<br>Each day brings new adventures and unforgettable experiences.",
   "schedule": [
     {
-      "title1": "",
-      "description1": "",
+      "title1": "Depart",
+      "description1": "The flight departs from CYVCT airport on ",
       "title2": "",
-      "description2": ""
+      "description2": ", with check-in at 12 PM and departure at 3 PM."
     },
     {
-      "title1": "",
-      "description1": "",
-      "title2": "",
-      "description2": ""
+      "title1": "Enchanted Forest Hike",
+      "description1": "&nbsp;&nbsp;&nbsp;Embark on a guided hike through Grok's enchanted forests, discovering unique flora and fauna.",
+      "title2": "Crystal-Clear Ocean Dive",
+      "description2": "&nbsp;&nbsp;&nbsp;Dive into the pristine waters and explore the vibrant marine life."
     },
     {
-      "title1": "",
-      "description1": "",
-      "title2": "",
-      "description2": ""
+      "title1": "Golden Mountain Ascent",
+      "description1": "&nbsp;&nbsp;&nbsp;Climb the golden-peaked mountains and enjoy panoramic views of the planet.",
+      "title2": "Wildlife Observation",
+      "description2": "&nbsp;&nbsp;&nbsp;Observe the glowing wildlife under the light of the three moons."
     },
     {
-      "title1": "",
-      "description1": "",
+      "title1": "Aurora Viewing",
+      "description1": "&nbsp;&nbsp;&nbsp;Spend an evening under the perpetual auroras, a mesmerizing light show in the night sky.",
+      "title2": "Cultural Immersion",
+      "description2": "&nbsp;&nbsp;&nbsp;Experience local traditions and customs through interactive workshops and performances."
+    },
+    {
+      "title1": "Relaxation Retreat",
+      "description1": "&nbsp;&nbsp;&nbsp;End your stay with a relaxing retreat in Grok's serene wellness centers.",
+      "title2": "Farewell Dinner",
+      "description2": "&nbsp;&nbsp;&nbsp;Enjoy a special dinner featuring local cuisine and celebrate your journey."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
       "title2": "",
-      "description2": ""
+      "description2": ", with check-in at 1 PM and departure at 4 PM"
     }
   ],
   "date": [
     {
-      "depart": "13/08/5555",
-      "arrive": "18/08/5555",
-      "prix": "1.817 ₴"
+      "depart": "13/08/4025",
+      "arrive": "19/08/4025",
+      "prix": "1817"
     },
     {
-      "depart": "13/02/5555",
-      "arrive": "18/02/5555",
-      "prix": "1.978 ₴"
+      "depart": "13/02/4025",
+      "arrive": "19/02/4025",
+      "prix": "1978"
     },
     {
-      "depart": "23/06/5555",
-      "arrive": "28/06/5555",
-      "prix": "1.634 ₴"
+      "depart": "23/06/4025",
+      "arrive": "29/06/4025",
+      "prix": "1634"
     },
     {
-      "depart": "12/08/5555",
-      "arrive": "17/08/5555",
-      "prix": "1.933 ₴"
+      "depart": "12/08/4025",
+      "arrive": "18/08/4025",
+      "prix": "1933"
     },
     {
-      "depart": "08/09/5555",
-      "arrive": "13/09/5555",
-      "prix": "1.217 ₴"
+      "depart": "08/09/4025",
+      "arrive": "14/09/4025",
+      "prix": "1217"
     },
     {
-      "depart": "20/02/5555",
-      "arrive": "25/02/5555",
-      "prix": "1.915 ₴"
+      "depart": "20/02/4025",
+      "arrive": "26/02/4025",
+      "prix": "1915"
     },
     {
-      "depart": "29/08/5555",
-      "arrive": "03/09/5555",
-      "prix": "1.755 ₴"
+      "depart": "29/08/4025",
+      "arrive": "04/09/4025",
+      "prix": "1755"
     },
     {
-      "depart": "23/11/5555",
-      "arrive": "28/11/5555",
-      "prix": "1.237 ₴"
+      "depart": "23/11/4025",
+      "arrive": "29/11/4025",
+      "prix": "1237"
     },
     {
-      "depart": "09/11/5555",
-      "arrive": "14/11/5555",
-      "prix": "1.116 ₴"
+      "depart": "09/11/4025",
+      "arrive": "15/11/4025",
+      "prix": "1116"
     },
     {
-      "depart": "23/08/5555",
-      "arrive": "28/08/5555",
-      "prix": "1.408 ₴"
+      "depart": "23/08/4025",
+      "arrive": "29/08/4025",
+      "prix": "1408"
     }
-    
   ]
-  
 }
