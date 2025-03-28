@@ -13,6 +13,21 @@
         "insurance": "Yes",
         "payed": ""
     },
+    "2": {
+        "id": "5",
+        "planet": "Pandora",
+        "days": [
+            "2",
+            "3"
+        ],
+        "quality": "Premium",
+        "breakfast": "No",
+        "relax": "Yes",
+        "nbpeople": 2,
+        "selectedDate": "4",
+        "insurance": "Yes",
+        "payed": ""
+    },
     "3": {
         "id": 2,
         "planet": "Atlantis",
@@ -28,6 +43,266 @@
         "nbpeople": 1,
         "insurance": "Yes",
         "selectedDate": "1",
+        "payed": ""
+    },
+    "4": {
+        "id": "7",
+        "planet": "Naboo",
+        "days": [
+            "5",
+            "6"
+        ],
+        "quality": "Luxury",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 3,
+        "selectedDate": "2",
+        "insurance": "No",
+        "payed": ""
+    },
+    "5": {
+        "id": "3",
+        "planet": "Earth",
+        "days": [
+            "1"
+        ],
+        "quality": "Standard",
+        "breakfast": "No",
+        "relax": "No",
+        "nbpeople": 1,
+        "selectedDate": "5",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "6": {
+        "id": "1",
+        "planet": "Cybertron",
+        "days": [
+            "3",
+            "4",
+            "5"
+        ],
+        "quality": "Premium",
+        "breakfast": "Yes",
+        "relax": "No",
+        "nbpeople": 2,
+        "selectedDate": "3",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "7": {
+        "id": "8",
+        "planet": "Mars",
+        "days": [
+            "7"
+        ],
+        "quality": "Standard",
+        "breakfast": "Yes",
+        "relax": "No",
+        "nbpeople": 1,
+        "selectedDate": "2",
+        "insurance": "No",
+        "payed": ""
+    },
+    "8": {
+        "id": "4",
+        "planet": "Scarif",
+        "days": [
+            "2",
+            "3",
+            "4"
+        ],
+        "quality": "Luxury",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 4,
+        "selectedDate": "6",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "9": {
+        "id": "6",
+        "planet": "Kamino",
+        "days": [
+            "1",
+            "2"
+        ],
+        "quality": "Standard",
+        "breakfast": "No",
+        "relax": "Yes",
+        "nbpeople": 2,
+        "selectedDate": "3",
+        "insurance": "No",
+        "payed": ""
+    },
+    "10": {
+        "id": "9",
+        "planet": "Asuras",
+        "days": [
+            "4",
+            "5",
+            "6"
+        ],
+        "quality": "Premium",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 2,
+        "selectedDate": "1",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "11": {
+        "id": "2",
+        "planet": "Grok",
+        "days": [
+            "3"
+        ],
+        "quality": "Luxury",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 1,
+        "selectedDate": "4",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "12": {
+        "id": "5",
+        "planet": "Mistral",
+        "days": [
+            "1",
+            "2"
+        ],
+        "quality": "Standard",
+        "breakfast": "No",
+        "relax": "Yes",
+        "nbpeople": 3,
+        "selectedDate": "2",
+        "insurance": "No",
+        "payed": ""
+    },
+    "13": {
+        "id": "7",
+        "planet": "Openai",
+        "days": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "quality": "Premium",
+        "breakfast": "Yes",
+        "relax": "No",
+        "nbpeople": 2,
+        "selectedDate": "3",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "14": {
+        "id": "1",
+        "planet": "Arrakis",
+        "days": [
+            "2",
+            "3"
+        ],
+        "quality": "Luxury",
+        "breakfast": "Yes",
+        "relax": "No",
+        "nbpeople": 1,
+        "selectedDate": "5",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "15": {
+        "id": "3",
+        "planet": "Axiom",
+        "days": [
+            "1",
+            "2",
+            "3"
+        ],
+        "quality": "Premium",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 4,
+        "selectedDate": "2",
+        "insurance": "No",
+        "payed": ""
+    },
+    "16": {
+        "id": "8",
+        "planet": "Mann",
+        "days": [
+            "5",
+            "6"
+        ],
+        "quality": "Standard",
+        "breakfast": "No",
+        "relax": "Yes",
+        "nbpeople": 2,
+        "selectedDate": "4",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "17": {
+        "id": "6",
+        "planet": "Pandora",
+        "days": [
+            "3",
+            "4",
+            "5"
+        ],
+        "quality": "Luxury",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 3,
+        "selectedDate": "1",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "18": {
+        "id": "4",
+        "planet": "Naboo",
+        "days": [
+            "1"
+        ],
+        "quality": "Standard",
+        "breakfast": "No",
+        "relax": "No",
+        "nbpeople": 1,
+        "selectedDate": "3",
+        "insurance": "No",
+        "payed": ""
+    },
+    "19": {
+        "id": "9",
+        "planet": "Earth",
+        "days": [
+            "2",
+            "3",
+            "4"
+        ],
+        "quality": "Premium",
+        "breakfast": "Yes",
+        "relax": "Yes",
+        "nbpeople": 2,
+        "selectedDate": "6",
+        "insurance": "Yes",
+        "payed": ""
+    },
+    "20": {
+        "id": "3",
+        "planet": "Cybertron",
+        "days": [
+            "5",
+            "6",
+            "7"
+        ],
+        "quality": "Luxury",
+        "breakfast": "Yes",
+        "relax": "No",
+        "nbpeople": 2,
+        "selectedDate": "2",
+        "insurance": "Yes",
         "payed": ""
     }
 }
