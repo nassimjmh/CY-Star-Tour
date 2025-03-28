@@ -132,7 +132,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
             </form>
         </div>
         <a href="#">Settings & Preferences &nbsp; <i class='bx bx-cog'></i></a>
-        <a href="#">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
+        <a href="card.php">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
         <a href="#">Booking & Access &nbsp;<i class='bx bxs-calendar'></i></a>
         <a href="#">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
         <div class="status">
