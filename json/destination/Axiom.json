@@ -3,10 +3,10 @@
 {
   "name": "Axiom",
   "galaxy": "Movie • -37° 12' 22'' • ★★★☆☆",
-  "info": "🌡️ 250°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 1.23 m/s²",
-  "prix": "3.150 ₴",
-  "preimage": "https://i.ytimg.com/vi/c4tPQYNpW9k/maxresdefault.jpg",
-  "image": "https://pbs.twimg.com/media/GTrF4JMXYAADKtr?format=jpg&name=4096x4096",
+  "info": "🌡️ 290°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 8.23 m/s²",
+  "prix": "2.150 ₴",
+  "preimage": "https://wallpaper.forfun.com/fetch/3e/3e6821c38bc8a4168ec4109b95a3c66e.jpeg",
+  "image": "https://screenmusings.org/movie/blu-ray/WALL-E/images/WALL-E-419.jpg",
   "resume": "&nbsp;&nbsp;&nbsp;Embark on a trip to <strong>Axiom, the space resort station</strong>, where you can enjoy various leisure activities like skydiving simulations, bowling, cinema, shopping, and breathtaking views of space.<br> &nbsp;&nbsp;&nbsp;Relax on the artificial beach, while enjoying luxury accommodations and exciting adventures.",
   "presentation": "Experience Axiom, the most advanced space resort in the universe.<br>Take part in thrilling activities such as simulated skiing on zero-gravity slopes, bowling in space, shopping for cosmic souvenirs, and watching the latest space-themed movies in our cinema.<br><br>Admire the magnificent view of distant galaxies and stars while lounging on the space beach. Whether you're looking for relaxation or adventure, Axiom offers the ultimate luxury experience.<br><br>Join us for a 4-day unforgettable vacation where space meets relaxation and entertainment.",
   "schedule": [
@@ -48,15 +48,15 @@
     }
   ],
   "date": [
-    { "depart": "05/04/4025", "arrive": "10/04/4025", "prix": "2142" },
-    { "depart": "17/07/4025", "arrive": "22/07/4025", "prix": "2180" },
-    { "depart": "09/01/4025", "arrive": "14/01/4025", "prix": "2120" },
-    { "depart": "30/06/4025", "arrive": "05/07/4025", "prix": "2155" },
-    { "depart": "22/10/4025", "arrive": "27/10/4025", "prix": "2110" },
-    { "depart": "14/03/4025", "arrive": "19/03/4025", "prix": "2135" },
-    { "depart": "03/08/4025", "arrive": "08/08/4025", "prix": "2165" },
-    { "depart": "25/12/4025", "arrive": "30/12/4025", "prix": "2190" },
-    { "depart": "07/09/4025", "arrive": "12/09/4025", "prix": "2105" },
-    { "depart": "19/05/4025", "arrive": "24/05/4025", "prix": "2128" }
+    { "depart": "05/04/4025", "arrive": "11/04/4025", "prix": "2142" },
+    { "depart": "17/07/4025", "arrive": "23/07/4025", "prix": "2180" },
+    { "depart": "09/01/4025", "arrive": "15/01/4025", "prix": "2120" },
+    { "depart": "30/06/4025", "arrive": "06/07/4025", "prix": "2155" },
+    { "depart": "22/10/4025", "arrive": "28/10/4025", "prix": "2110" },
+    { "depart": "14/03/4025", "arrive": "20/03/4025", "prix": "2135" },
+    { "depart": "03/08/4025", "arrive": "09/08/4025", "prix": "2165" },
+    { "depart": "25/12/4025", "arrive": "31/12/4025", "prix": "2190" },
+    { "depart": "07/09/4025", "arrive": "13/09/4025", "prix": "2105" },
+    { "depart": "19/05/4025", "arrive": "25/05/4025", "prix": "2128" }
   ]
 }
