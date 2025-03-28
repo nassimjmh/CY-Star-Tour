@@ -289,7 +289,7 @@ $benefits = $roleBenefits[$userRole];
                         }
                         ?>
                         <input class="confirm" type="submit" name="submit" value="Pay">
-                        <a href="destination.php?planet=<?php echo urlencode($p['name']); ?>" class="back-btn">Cancel</a>
+                        <a href="destination.php?planet=<?php echo rawurlencode($p['name']); ?>" class="back-btn">Cancel</a>
                     </form>
                     
                     </div>
