@@ -1,97 +1,100 @@
 {
-  "name": "Open AI",
-
+  "name": "OpenAI",
   "galaxy": "Ia • -34° 75' 32'' • ★★★★☆",
-
-  "info":"🌡️ 290°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 7,83 m/s²",
-
-  "prix":"1.650 ₴",
-
-  "preimage":"https://cdn.shopify.com/s/files/1/0193/6473/files/stargate-atlantis-wallpapers-31679-3750789_480x480.jpg?v=1579609650",
-  
-  "resume":"&nbsp;&nbsp;&nbsp;Welcome to <strong>Openai</strong>, the galaxy's hidden gem! This exotic planet features <strong>glowing oceans</strong>, <strong>floating jungles</strong> with fascinating wildlife, and <strong>crystal-clear waterfalls</strong> suspended by lighter gravity. <br>&nbsp;&nbsp;&nbsp; Enjoy <strong>violet sand beaches</strong>, <strong>thermal geysers</strong> releasing fragrant vapor bubbles, and <strong>glass-and-gold cities</strong> offering luxurious hospitality. Every <strong>sunset</strong> is a captivating display of shifting hues.",
-
-  "image": "../../images/openAI.webp",
-
+  "info": "🌡️ 290°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 7,83 m/s²",
+  "prix": "1650 ₴",
+  "preimage": "https://images6.alphacoders.com/526/526772.jpg",
+  "image": "https://wallpapercave.com/wp/wp12519522.jpg",
+  "resume": "&nbsp;&nbsp;&nbsp;Welcome to <strong>Openai</strong>, the galaxy's hidden gem! This exotic planet features <strong>glowing oceans</strong>, <strong>floating jungles</strong> with fascinating wildlife, and <strong>crystal-clear waterfalls</strong> suspended by lighter gravity. <br>&nbsp;&nbsp;&nbsp; Enjoy <strong>violet sand beaches</strong>, <strong>thermal geysers</strong> releasing fragrant vapor bubbles, and <strong>glass-and-gold cities</strong> offering luxurious hospitality. Every <strong>sunset</strong> is a captivating display of shifting hues.",
   "presentation": "Welcome to OpenAI, the jewel of the OpenAI Galaxy!<br><br>Experience a world where gravity-shift landscapes, bioluminescent flora, and crystal-clear nebula skies create an unforgettable adventure.<br><br>Discover futuristic wonders and immerse yourself in an extraterrestrial paradise unlike any other.",
-  
   "schedule": [
+    {
+      "title1": "Depart",
+      "description1": "The flight departs from CYVCT airport on ",
+      "title2": "",
+      "description2": ", with check-in at 12 PM and departure at 3 PM."
+    },
     {
       "title1": "Floating Mountains",
       "description1": "&nbsp;&nbsp;&nbsp;Explore Open AI's legendary levitating peaks, suspended by powerful magnetic fields. Hike across floating trails and witness a sky unlike any other.",
       "title2": "Zero-G Spa",
-      "description2": "&nbsp;&nbsp;&nbspRelax in a state-of-the-art zero-gravity thermal pool, where anti-grav bubbles provide a deeply soothing experience."
+      "description2": "&nbsp;&nbsp;&nbsp;Relax in a state-of-the-art zero-gravity thermal pool, where anti-grav bubbles provide a deeply soothing experience."
     },
     {
       "title1": "Neon Forest",
-      "description1": "&nbsp;&nbsp;&nbspWalk through a surreal bioluminescent jungle, where glowing plants pulse in response to your movements.",
+      "description1": "&nbsp;&nbsp;&nbsp;Walk through a surreal bioluminescent jungle, where glowing plants pulse in response to your movements.",
       "title2": "Astral Skydiving",
-      "description2": "&nbsp;&nbsp;&nbspExperience the thrill of free-fall skydiving through an aurora vortex, a celestial light tunnel unlike anything on Earth."
+      "description2": "&nbsp;&nbsp;&nbsp;Experience the thrill of free-fall skydiving through an aurora vortex, a celestial light tunnel unlike anything on Earth."
     },
     {
       "title1": "Crystal Caverns",
-      "description1": "&nbsp;&nbsp;&nbspExplore underground caves where luminous crystal formations shift colors in response to sound waves.",
+      "description1": "&nbsp;&nbsp;&nbsp;Explore underground caves where luminous crystal formations shift colors in response to sound waves.",
       "title2": "Starlight Concert",
-      "description2": "&nbsp;&nbsp;&nbspEnjoy a live performance from intergalactic symphonies, synchronized with the rhythm of distant pulsars."
+      "description2": "&nbsp;&nbsp;&nbsp;Enjoy a live performance from intergalactic symphonies, synchronized with the rhythm of distant pulsars."
     },
     {
       "title1": "Anti-Gravity Arena",
-      "description1": "&nbsp;&nbsp;&nbspParticipate in a futuristic zero-G sports match, where physics-defying movements create thrilling gameplay.",
+      "description1": "&nbsp;&nbsp;&nbsp;Participate in a futuristic zero-G sports match, where physics-defying movements create thrilling gameplay.",
       "title2": "Cosmic Farewell Dinner",
-      "description2": "&nbsp;&nbsp;&nbspConclude your journey with a feast beneath twin suns, featuring cuisine sourced from across the galaxy."
+      "description2": "&nbsp;&nbsp;&nbsp;Conclude your journey with a feast beneath twin suns, featuring cuisine sourced from across the galaxy."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
+      "title2": "",
+      "description2": ", with check-in at 1 PM and departure at 4 PM"
     }
   ],
   "date": [
     {
-      "depart": "13/08/5555",
-      "arrive": "18/08/5555",
-      "prix": "1.817 ₴"
+      "depart": "13/08/4025",
+      "arrive": "19/08/4025",
+      "prix": "1817 "
     },
     {
-      "depart": "13/02/5555",
-      "arrive": "18/02/5555",
-      "prix": "1.978 ₴"
+      "depart": "13/02/4025",
+      "arrive": "19/02/4025",
+      "prix": "1978 "
     },
     {
-      "depart": "23/06/5555",
-      "arrive": "28/06/5555",
-      "prix": "1.634 ₴"
+      "depart": "23/06/4025",
+      "arrive": "29/06/4025",
+      "prix": "1634 "
     },
     {
-      "depart": "12/08/5555",
-      "arrive": "17/08/5555",
-      "prix": "1.933 ₴"
+      "depart": "12/08/4025",
+      "arrive": "18/08/4025",
+      "prix": "1933 "
     },
     {
-      "depart": "08/09/5555",
-      "arrive": "13/09/5555",
-      "prix": "1.217 ₴"
+      "depart": "08/09/4025",
+      "arrive": "14/09/4025",
+      "prix": "1217 "
     },
     {
-      "depart": "20/02/5555",
-      "arrive": "25/02/5555",
-      "prix": "1.915 ₴"
+      "depart": "20/02/4025",
+      "arrive": "26/02/4025",
+      "prix": "1915 "
     },
     {
-      "depart": "29/08/5555",
-      "arrive": "03/09/5555",
-      "prix": "1.755 ₴"
+      "depart": "29/08/4025",
+      "arrive": "04/09/4025",
+      "prix": "1755 "
     },
     {
-      "depart": "23/11/5555",
-      "arrive": "28/11/5555",
-      "prix": "1.237 ₴"
+      "depart": "23/11/4025",
+      "arrive": "29/11/4025",
+      "prix": "1237 "
     },
     {
-      "depart": "09/11/5555",
-      "arrive": "14/11/5555",
-      "prix": "1.116 ₴"
+      "depart": "09/11/4025",
+      "arrive": "15/11/4025",
+      "prix": "1116 "
     },
     {
-      "depart": "23/08/5555",
-      "arrive": "28/08/5555",
-      "prix": "1.408 ₴"
+      "depart": "23/08/4025",
+      "arrive": "29/08/4025",
+      "prix": "1408 "
     }
-    
   ]
 }
