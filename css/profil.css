@@ -348,3 +348,12 @@ main {
     height: auto;
     margin-right: 10px; /* Un peu d'espace entre l'image et le texte */
 }
+
+
+.planet-card-container {
+    max-height: 50rem; /* Ajuste cette hauteur selon ton besoin */
+    overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse la hauteur */
+    padding: 10px; /* Espacement autour du contenu */
+    border: 1px solid #ccc; /* Ajout d'une bordure pour délimiter la zone */
+    background-color: #f9f9f9; /* Fond léger pour l'apparence */
+}
