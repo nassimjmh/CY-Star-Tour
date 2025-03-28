@@ -16,6 +16,7 @@ $last_name = $_SESSION["last_name"];
 $race = $_SESSION["race"];
 $date_picker = $_SESSION["date_picker"];
 $profile_pic = $_SESSION["profile_pic"];
+$id = $_SESSION["user_id"];
 
 $target_dir = "uploads/";
 
@@ -87,6 +88,10 @@ $race = $users[$email]['race'];
 $date_picker = $users[$email]['date_picker'];
 
 $edit_mode = isset($_POST['edit']);
+
+
+$recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), true);
+
 
 ?>
 
@@ -212,14 +217,21 @@ $edit_mode = isset($_POST['edit']);
 
     <div class="recent-trips">
         <h2>Recently Booked Trips</h2>
-        <ul>
-            <li>Mars</li>
-            <li>Venus</li>
-            <li>Kargalan</li>
-            <li>Robotcorp</li>
-            <li>Litunaria</li>
-            <li>Icebergotum</li>
-        </ul>
+       <?php
+       $found = false;
+
+       foreach ($recentlybooked as $value) {
+        if ($value["id"] == $id) {
+        echo $value["planet"] . "<br>";
+        $false = true;
+        }
+        }
+       if ( !$found ){
+
+           echo "No planets booked yet.";
+       }
+
+       ?>
     </div>
 
     <div class="destinations-info">
