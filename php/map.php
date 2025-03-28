@@ -22,7 +22,7 @@ session_start();
         <!--------------------------------------->
         <div class="rsearch noclick">
             <div class="title">
-                <p class="name">Map of the galaxy</p>
+                <p class="name">| Map of the galaxy</p>
                 <div class="planet atlantis">
                     <a href="destination.php?planet=Atlantis"><img src="../images/planet/atlantis.webp" alt="atlantis"></a>
                     <p>Atlantis</p>
@@ -42,6 +42,10 @@ session_start();
                 <div class="planet scarif">
                   <a href=""><img src="../images/planet/atlantis.webp" alt="atlantis"></a>
                     <p>Scarif</p>
+                </div>
+                <div class="vaisseau axiom">
+                    <a href="destination.php?planet=Axiom"><img src="../images/planet/axiom.webp" alt="earth"></a>
+                    <p>Axiom</p>
                 </div>
                 <div class="planet earth">
                     <a href="destination.php?planet=Earth"><img src="../images/planet/earth.webp" alt="earth"></a>
@@ -70,6 +74,14 @@ session_start();
                 <div class="planet mars">
                      <a href="destination.php?planet=Mars"><img src="../images/planet/mars.webp" alt="mars"></a>
                     <p>Mars</p>
+                </div>
+                <div class="planet mann">
+                     <a href="destination.php?planet=Mann"><img src="../images/planet/mann.png" alt="mars"></a>
+                    <p>Mann</p>
+                </div>
+                <div class="planet arrakis">
+                     <a href="destination.php?planet=Arrakis"><img src="../images/planet/arrakis.png" alt="mars"></a>
+                    <p>Arrakis</p>
                 </div>
             </div>
         </div>
