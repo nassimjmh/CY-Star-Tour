@@ -11,6 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+
+    if ( password_verify($password, $users[$email]['role']) ==  "Banned"){
+        $error = "Sorry, your account has been banned. ( If you think that is an error please contact us at : support@startour.cy)";
+    }
+
     if (isset($users[$email])) {
         if (password_verify($password, $users[$email]['password'])) {
             $_SESSION['email'] = $email;
