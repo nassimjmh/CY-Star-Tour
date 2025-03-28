@@ -36,12 +36,10 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                             <th>PLANET</th>
                             <th>DURATION</th>
                             <th>QUALITY</th>
-                            <th>BREAKFAST</th>
-                            <th>RELAX</th>
+                            <th>OPTIONS</th>
                             <th>NB</th>
                             <th>DATE</th>
-                            <th>INSURANCE</th>
-                            <th>PAYED</th>
+                            <th>PAY</th>
                             <th>ADMIN ACTIONS</th>
                         </tr>
                     </thead>
@@ -77,14 +75,39 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                         <img src="<?php echo $imgSrc; ?>" alt="PPP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
                                     </td>                                    
                                     <td><?php echo $reservation["planet"] ?></td>
-                                    <td><?php echo $reservation["days"][0] ?></td>
+                                    <td><?php echo count($reservation["days"]) . " days" ?></td>
                                     <td><?php echo $reservation["quality"] ?></td>
-                                    <td><?php echo $reservation["breakfast"] ?></td>
-                                    <td><?php echo $reservation["relax"]  ?></td>
-                                    <td><?php echo $reservation["nbpeople"] ?></td>
-                                    <td><?php echo $reservation["selectedDate"] ?></td>
-                                    <td><?php echo $reservation["insurance"] ?></td>
-                                    <td><?php echo $reservation["payed"] === null ? $reservation["payed"] : 'No' ?></td>
+                                    <td><?php 
+                                    if (!strcmp($reservation["breakfast"],"Yes")){
+                                        echo "☕";
+                                    }else{ echo "❌";}
+                                    if (!strcmp($reservation["relax"],"Yes")){
+                                        echo "🧘";
+                                    }else{ echo "❌";}
+                                    if (!strcmp($reservation["insurance"],"Yes")){
+                                        echo "🛡️";
+                                    }else{ echo "❌";}
+                                    
+                                    
+                                    
+                                    ?></td>
+                                    <td><?php echo $reservation["nbpeople"] . " 👥"?></td>
+                                    <td><?php
+                                        $selectedPlanetFile = file_get_contents("../../json/destination/" . $reservation["planet"] . ".json");
+                                        $selectedPlanetData = json_decode($selectedPlanetFile, true);
+                                        
+                                        $selectedDate = $selectedPlanetData["date"][$reservation["selectedDate"]];
+                                        
+                                        echo $selectedDate["depart"] . " - " . $selectedDate["arrive"] . "<br>";
+                                    ?></td>
+                                    <td><?php
+                                    if (strcmp($reservation["payed"],"Yes") == 0){
+                                        echo "✅";
+                                    }else{
+                                        echo "❌";
+                                    }
+                                    
+                                    ?></td>
                                     <td>
                                     <div class="action-buttons">
                                         <button class="manage-button">
