@@ -27,6 +27,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
             <section>
                 <h2>Manage Users</h2>
                 <div class="filters">
+                <form method="GET">
                     <input type="text" placeholder="Search users...">
                     <select id="status-filter">
                         <option value="X">All Status</option>
@@ -44,6 +45,8 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                         <option value="alien">Alien</option>
                         <option value="coruscant">Coruscant</option>
                     </select>
+                <button type="submit">Apply</button>
+                </form>
                 </div>
                 <table>
                     <thead>
