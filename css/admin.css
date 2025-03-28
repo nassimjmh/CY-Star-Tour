@@ -103,6 +103,18 @@
     flex-grow: 1;
 }
 
+.admin-container .filters button {
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.9375rem;
+    transition: background-color 0.3s;
+    background-color: #4CAF50;
+}
+
 /*-----------------------------------*/
 /*------------DESTINATION CONTAINER---------------------*/
 
@@ -209,6 +221,47 @@
     max-width: 0.3125rem;   
 }
 
+.reservation-container th:nth-child(6) { 
+    width: 5.5rem;
+    min-width: 5.5rem;
+    max-width: 5.5rem;   
+}
+
+.reservation-container th:nth-child(7) { 
+    width: 5rem;
+    min-width: 5rem;
+    max-width: 5rem;   
+}
+
+.reservation-container th:nth-child(8) { 
+    width: 4.5rem;
+    min-width: 4.5rem;
+    max-width: 4.5rem;   
+}
+
+.reservation-container th:nth-child(9) { 
+    width: 2.5rem;
+    min-width: 2.5rem;
+    max-width: 2.5rem;      
+}
+
+.reservation-container th:nth-child(10) { 
+    width: 14rem;
+    min-width: 14rem;
+    max-width: 14rem;
+    text-align: center;
+}
+
+.reservation-container th:nth-child(11) { 
+    width: 2.5rem;
+    min-width: 2.5rem;
+    max-width: 2.5rem;      
+}
+
+.reservation-container td:nth-child(10), td:nth-child(9), td:nth-child(11) {
+    text-align: center;
+}
+
 .reservation-container .profile-thumbnail {
     width: 2.1875rem;
     height: 2.1875rem;
@@ -302,7 +355,8 @@
 }
 
 .sidebar ul li {
-    margin-bottom: 1.25rem; 
+    margin-bottom: 1.25rem;
+    position: relative;
 }
 
 .sidebar ul li a {
@@ -310,7 +364,25 @@
     text-decoration: none;
     font-weight: bold;
     padding: 0.3rem 0.6rem; 
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
+    position: relative;
+    display: inline-block;
+}
+
+.underline::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 0.0625rem;
+    background: white;
+    transition : .3s;
+}
+
+.underline:hover:before{
+   width: 100%;
+   z-index : 1000;
 }
 
 /*-----------------------------------*/
