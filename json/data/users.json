@@ -8,7 +8,13 @@
         "race": "Human",
         "date_picker": "4005-05-09",
         "role": "Admin",
-        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Sofyane"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Sofyane",
+        "card_info": {
+            "card_holder": "John",
+            "card_number": "1234 4567 4566 4566 5566",
+            "expiry_date": "12\/26",
+            "cvv": "123"
+        }
     },
     "nassim@startour.cy": {
         "id": 2,
@@ -19,7 +25,13 @@
         "race": "Human",
         "date_picker": "4005-11-07",
         "role": "Admin",
-        "profile_pic": "uploads\/a90be019429ed243abf6a70101f587fb.jpg"
+        "profile_pic": "uploads\/a90be019429ed243abf6a70101f587fb.jpg",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
     },
     "hicham@startour.cy": {
         "id": 3,
@@ -30,7 +42,13 @@
         "race": "Human",
         "date_picker": "4005-01-21",
         "role": "Admin",
-        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Hicham"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Hicham",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
     },
     "kargalan@gmail.com": {
         "id": 4,
@@ -41,7 +59,13 @@
         "race": "Coruscant",
         "date_picker": "4002-10-17",
         "role": "Standard",
-        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Kargalan"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Kargalan",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
     },
     "ia@gmail.com": {
         "id": 5,
@@ -51,8 +75,14 @@
         "password": "$2y$10$EhexaXgS\/8GrwxAThY\/\/iOQfEbKWG8NgrY\/hld70Fa05cnuH9qoAm",
         "race": "IA",
         "date_picker": "3989-01-29",
-        "role": "Standard",
-        "profile_pic": "uploads\/7ab38c8b741691b2e98b211b0d1b0462.jpg"
+        "role": "Banned",
+        "profile_pic": "uploads\/7ab38c8b741691b2e98b211b0d1b0462.jpg",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
     },
     "g-romuald@python.cy": {
         "id": 6,
@@ -63,7 +93,13 @@
         "race": "Alien",
         "date_picker": "3983-01-21",
         "role": "VIP",
-        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Romuald"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Romuald",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
     },
     "kea@eisti.cy": {
         "id": 8,
@@ -74,7 +110,13 @@
         "role": "Banned",
         "race": "Alien",
         "date_picker": "3969-06-29",
-        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Khalid"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Khalid",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
     },
     "zoghlagoat@converge.cy": {
         "id": 9,
@@ -85,7 +127,13 @@
         "race": "Human",
         "date_picker": "3970-01-29",
         "role": "Stellar Elite",
-        "profile_pic": "uploads\/zeta.jpg"
+        "profile_pic": "uploads\/zeta.jpg",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
     },
     "fabien@galileen.cy": {
         "id": 7,
@@ -96,6 +144,20 @@
         "race": "Human",
         "date_picker": "3983-04-22",
         "role": "Standard",
-        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/pixel-art\/svg?seed=nFabien"
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/pixel-art\/svg?seed=nFabien",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
+    },
+    "": {
+        "card_info": {
+            "card_holder": "John",
+            "card_number": "1234 2345 3445 3455 3455",
+            "expiry_date": "12\/26",
+            "cvv": "123"
+        }
     }
 }
