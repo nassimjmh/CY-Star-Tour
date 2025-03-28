@@ -28,26 +28,30 @@
 
         <div class="reco">
             <p class="best noclick">The best destinations of the moment</p>
+            <a href="destination.php?planet=Naboo">
             <div class="recom">
                 <img src="https://www.merchmates.co.uk/wp-content/uploads/2024/07/Star-Wars-Planets-Naboo-1024x536.webp" alt="">
                 <div class="name noclick"><p>Naboo</p></div>
                 <div class="galaxy noclick"><p>| StarWars - ★★★★★ </p></div>
-            </div>
+            </div></a>
+            <a href="destination.php?planet=Scarif">
             <div class="recom">
                 <img src="https://preview.redd.it/8z0hoflvri211.jpg?auto=webp&s=f0dd91685d9be9ac55900619e45e16500fee5b0b" alt="">
                 <div class="name noclick"><p>Scarif</p></div>
                 <div class="galaxy noclick"><p>| StarWars - ★★★★☆ </p></div>
-            </div>
+            </div></a>
+            <a href="destination.php?planet=Cybertron">
             <div class="recom">
                 <img src="https://miro.medium.com/v2/resize:fit:1400/1*QTp5-u_-XbELkf_cTJqMVw.png" alt="">
                 <div class="name noclick"><p>Cybertron</p></div>
                 <div class="galaxy noclick"><p>| Movie - ★★★★☆ </p></div>
-            </div>
+            </div></a>
+            <a href="destination.php?planet=Asuras">
             <div class="recom">
                 <img src="https://www.stargate-fusion.com/uploads/recordpictures/2861/4798/24b3c91933cdce4a44ac-big.jpg?v=afb670642e40324978a3c215a7d84193" alt="">
                 <div class="name noclick"><p>Asuras</p></div>
                 <div class="galaxy noclick"><p>| Stargate - ★★★★☆ </p></div>
-            </div>
+            </div></a>
         </div>
         <div class="banner">
             <p class="bannertitle noclick">Our spacecraft</p>
@@ -70,11 +74,16 @@
             </div>
         </div>
         <div class="image noclick">
-            <p>"A marvel of speed and comfort!"</p>
-            <p><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐</p>
+                <p class="avis">"A marvel of speed and comfort!"</p>
+                <p class="avis"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐</p>
+                <p class="avis2">"It's a perfect 20/20, nothing to say !"</p>
+                <p class="avis2"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐⭐ </p>
+                <p class="avis3">"A space trip to take and retake !"</p>
+                <p class="avis3"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐</p>
+            
+                <p class="nameavis2">-M. Grignon</p>
         </div>
-        <div class="avis">
-        </div>
+        
         
         
 
