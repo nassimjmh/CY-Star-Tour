@@ -29,18 +29,18 @@
     <div class="sidebar">
         <ul>
             <li>
-                <a href="dashboard.php"> Dashboard</a>
+                <a class="underline" href="dashboard.php"> Dashboard</a>
             </li>
             <li>
-                <a href="users.php"> Users</a>
+                <a class="underline" href="users.php"> Users</a>
             </li>
             <li>
-                <a href="reservations.php">Reservations</a>
+                <a class="underline" href="reservations.php">Reservations</a>
             </li>
             <li>
-                <a href="destinations.php">Destinations</a>
+                <a class="underline" href="destinations.php">Destinations</a>
             </li>
             <li>
-                <a href="settings.php">Settings</a>
+                <a class="underline" href="settings.php">Settings</a>
             </li>            
     </div>
