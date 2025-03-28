@@ -219,15 +219,15 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
         <h2>Recently Booked Trips</h2>
        <?php
        $found = false;
-
+if ( $recentlybooked != null ) {
        foreach ($recentlybooked as $value) {
-        if ($value["id"] == $id) {
-        echo $value["planet"] . "<br>";
-        $false = true;
-        }
-        }
-       if ( !$found ){
-
+           if ($value["id"] == $id) {
+               echo $value["planet"] . "<br>";
+               $false = true;
+           }
+       }
+}
+       else if  ( !$found ){
            echo "No planets booked yet.";
        }
 
