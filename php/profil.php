@@ -48,10 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
             $error_message = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         }
-    
+
         if (empty($error_message)) {
 
-                if (file_exists($users[$email]['profile_pic'])) {
+            if (file_exists($users[$email]['profile_pic'])) {
                 unlink($users[$email]['profile_pic']);
             }
 
@@ -173,11 +173,11 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                     <li><strong>Last Name:</strong> <?php echo htmlspecialchars($last_name); ?></li>
                     <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
                     <li><strong>Birth Date:</strong>
-                    <?php 
+                        <?php
                         // Convert the date string to a DateTime object
                         $date = new DateTime($date_picker);
-                        echo $date->format('d/m/Y'); 
-                    ?></li>
+                        echo $date->format('d/m/Y');
+                        ?></li>
                     <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
                 </ul>
                 <form action="profil.php" method="POST">
@@ -215,45 +215,6 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
         </div>
     </div>
 
-    <div class="recent-trips">
-        <h2>Recently Booked Trips</h2>
-     <?php
-
-       $found = false;
-
-       if ( $recentlybooked != null ) {
-    foreach ($recentlybooked as $value) {
-        if ($value["id"] == $id) {
-            echo "<div class='planet-card-container'>";
-            $imgSrc = '../../images/planet/' . strtolower($value["planet"]) . ".webp";
-
-            // Flèche indiquant le début de la planète
-            echo "<div class='planet-arrow'><strong>→</strong></div>";
-
-            echo "<div class='planet-card'>";
-            echo "<p><strong><img src='$imgSrc' alt='" . htmlspecialchars($value["planet"]) . "' class='planet-image'>Planet:</strong> " . htmlspecialchars($value["planet"]) . "</p>";
-            echo "<p><strong>📆 Duration :</strong> " . implode(", ", $value["days"]) . " days</p>";
-            echo "<p><strong>✨ Quality :</strong> " . htmlspecialchars($value["quality"]) . "</p>";
-            echo "<p><strong>☕ Breakfast:</strong> " . ($value["breakfast"] == "Yes" ? "Included 🍽️" : "No❌") . "</p>";
-            echo "<p><strong>💆‍♂️ Relaxation :</strong> " . ($value["relax"] == "Yes" ? "Included 🧘" : "No ❌ ") . "</p>";
-            echo "<p><strong>👥 How many people :</strong> " . htmlspecialchars($value["nbpeople"]) . "</p>";
-            echo "<p><strong>🛡️ Insurance :</strong> " . ($value["insurance"] == "Yes" ? "Included ✅" : "No ❌") . "</p>";
-            echo "<p><strong>📅 Departure date:</strong> " . htmlspecialchars($value["selectedDate"]) . "</p>";
-            echo "</div>";
-
-            $found = true;
-        }
-        $found = false;
-    }
-}
-       if  ( !$found ){
-           echo "No planets booked yet.";
-       }
-       echo "</div>"
-       ?>
-
-    </div>
-
     <div class="destinations-info">
         <h2>Upcoming Destinations</h2>
         <ul>
@@ -264,6 +225,50 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
         </ul>
         <a href="#" class="see-more-btn">See More</a>
     </div>
+
+
+
+    <div class="recent-trips">
+
+        <h2>Recently Booked Trips</h2>
+        <?php
+
+        $found = false;
+
+        if ( $recentlybooked != null ) {
+            foreach ($recentlybooked as $value) {
+                if ($value["id"] == $id) {
+                    echo "<div class='planet-card-container'>";
+                    $imgSrc = '../../images/planet/' . strtolower($value["planet"]) . ".webp";
+                    echo "<div class='planet-arrow'><strong>→</strong></div>";
+
+                    echo "<div class='planet-card'>";
+                    echo "<p><strong><img src='$imgSrc' alt='" . htmlspecialchars($value["planet"]) . "' class='planet-image'>Planet:</strong> " . htmlspecialchars($value["planet"]) . "</p>";
+                    echo "<p><strong>📆 Duration :</strong> " . implode(", ", $value["days"]) . " days</p>";
+                    echo "<p><strong>✨ Quality :</strong> " . htmlspecialchars($value["quality"]) . "</p>";
+                    echo "<p><strong>☕ Breakfast:</strong> " . ($value["breakfast"] == "Yes" ? "Included 🍽️" : "No❌") . "</p>";
+                    echo "<p><strong>💆‍♂️ Relaxation :</strong> " . ($value["relax"] == "Yes" ? "Included 🧘" : "No ❌ ") . "</p>";
+                    echo "<p><strong>👥 How many people :</strong> " . htmlspecialchars($value["nbpeople"]) . "</p>";
+                    echo "<p><strong>🛡️ Insurance :</strong> " . ($value["insurance"] == "Yes" ? "Included ✅" : "No ❌") . "</p>";
+                    echo "<p><strong>📅 Departure date:</strong> " . htmlspecialchars($value["selectedDate"]) . "</p>";
+                    echo "</div>";
+
+                    $found = true;
+                }
+                $found = false;
+            }
+        }
+        if  ( !$found ){
+            echo "No planets booked yet.";
+        }
+        echo "</div>"
+        ?>
+
+    </div>
+
+
+
+
 
 </main>
 
