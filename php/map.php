@@ -80,7 +80,7 @@ session_start();
                     <p>Mann</p>
                 </div>
                 <div class="planet arrakis">
-                     <a href="destination.php?planet=Arrakis"><img src="../images/planet/arrakis.png" alt="mars"></a>
+                     <a href="destination.php?planet=Arrakis"><img src="../images/planet/arrakis.webp" alt="mars"></a>
                     <p>Arrakis</p>
                 </div>
             </div>
