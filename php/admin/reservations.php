@@ -29,7 +29,8 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>RID</th>
+                            <th>UID</th>
                             <th>PP</th>
                             <th>PPP</th>
                             <th>PLANET</th>
@@ -49,14 +50,15 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                         $file = file_get_contents("../../json/data/booking.json");
                         $reservations = json_decode($file, true);
                         if(count($reservations)!=0){
-                            foreach($reservations as $reservations){
+                            foreach($reservations as $key => $reservation){
                                 ?>      
                                 <tr>
-                                    <td><?php echo "#" . str_pad($reservations["id"], 4, '0', STR_PAD_LEFT) ?></td>
+                                    <td><?php echo "R" . str_pad($key, 4, '0', STR_PAD_LEFT) ?></td>
+                                    <td><?php echo "#" . str_pad($reservation["id"], 4, '0', STR_PAD_LEFT) ?></td>
                                     <td><?php 
                                         $users = json_decode(file_get_contents("../../json/data/users.json"), true);
                                         foreach($users as $user) {
-                                            if($user['id'] == $reservations['id']) {
+                                            if($user['id'] == $reservation['id']) {
                                                 if (strpos($user["profile_pic"], 'http') === 0) {
                                                     $profilePic = $user["profile_pic"]; // For external links
                                                 } else {
@@ -70,19 +72,19 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                     </td>
                                     <td>
                                         <?php 
-                                        $imgSrc =  '../../images/planet/' . strtolower($reservations["planet"]) . ".webp";
+                                        $imgSrc =  '../../images/planet/' . strtolower($reservation["planet"]) . ".webp";
                                         ?>
                                         <img src="<?php echo $imgSrc; ?>" alt="PPP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
                                     </td>                                    
-                                    <td><?php echo $reservations["planet"] ?></td>
-                                    <td><?php echo $reservations["days"][0] ?></td>
-                                    <td><?php echo $reservations["quality"] ?></td>
-                                    <td><?php echo $reservations["breakfast"] ?></td>
-                                    <td><?php echo $reservations["relax"]  ?></td>
-                                    <td><?php echo $reservations["nbpeople"] ?></td>
-                                    <td><?php echo $reservations["selectedDate"] ?></td>
-                                    <td><?php echo $reservations["insurance"] ?></td>
-                                    <td><?php echo $reservations["payed"] === null ? $reservations["payed"] : 'No' ?></td>
+                                    <td><?php echo $reservation["planet"] ?></td>
+                                    <td><?php echo $reservation["days"][0] ?></td>
+                                    <td><?php echo $reservation["quality"] ?></td>
+                                    <td><?php echo $reservation["breakfast"] ?></td>
+                                    <td><?php echo $reservation["relax"]  ?></td>
+                                    <td><?php echo $reservation["nbpeople"] ?></td>
+                                    <td><?php echo $reservation["selectedDate"] ?></td>
+                                    <td><?php echo $reservation["insurance"] ?></td>
+                                    <td><?php echo $reservation["payed"] === null ? $reservation["payed"] : 'No' ?></td>
                                     <td>
                                     <div class="action-buttons">
                                         <button class="manage-button">
