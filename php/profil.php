@@ -222,8 +222,20 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 if ( $recentlybooked != null ) {
        foreach ($recentlybooked as $value) {
            if ($value["id"] == $id) {
-               echo $value["planet"] . "<br>";
-               $false = true;
+
+               $imgSrc = '../../images/planet/' . strtolower($value["planet"]) . ".webp";
+
+
+               echo "<div class='planet-card'>";
+               echo "<p><strong> <img src='$imgSrc' alt='" . htmlspecialchars($value["planet"]) . "' class='planet-image'>Planet:</strong> " . htmlspecialchars($value["planet"]) . "</p>";
+               echo "<p><strong>📆 Duration :</strong> " . implode(", ", $value["days"]) . " days</p>";
+               echo "<p><strong>✨ Quality :</strong> " . htmlspecialchars($value["quality"]) . "</p>";
+               echo "<p><strong>☕ Breakfast:</strong> " . ($value["breakfast"] == "Yes" ? "Inclus 🍽️" : "No❌") . "</p>";
+               echo "<p><strong>💆‍♂️ Relaxation :</strong> " . ($value["relax"] == "Yes" ? "Incluse 🧘" : "No ❌ ") . "</p>";
+               echo "<p><strong>👥 How many people :</strong> " . htmlspecialchars($value["nbpeople"]) . "</p>";
+               echo "<p><strong>🛡️ Assurance :</strong> " . ($value["insurance"] == "Yes" ? "Included ✅" : "No ❌") . "</p>";
+               echo "<p><strong>📅 Departure date:</strong> " . htmlspecialchars($value["selectedDate"]) . "</p>";
+               echo "</div>";
            }
        }
 }
