@@ -72,7 +72,7 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
             </div>
         </div>
         <div class="bento-box">
-            <h2>Active Users</h2>
+            <h2>Active Users (Not Working)</h2>
             <p>Users active in the last 30 days.</p>
             <div class="active-users">
                 <h3>5,456</h3>
