@@ -9,94 +9,98 @@
   "prix":"1.480 ₴",
 
   "preimage":"https://www.stargate-fusion.com/uploads/recordpictures/2861/4792/91a83ff1a596b40c5823-big.jpg?v=27c7c5250a3387a594036108ecab9974",
+  "image": "https://www.stargate-fusion.com/uploads/records/2861/1a853aa7-detail.jpg?v=cfe7fd5155a07e300537e4436a1ddda0",
   
-  "resume":"&nbsp;&nbsp;&nbsp;Asuras, a <strong>mystical</strong> planet in the <strong>Pegasus</strong> galaxy, invites you to explore its <strong>breathtaking</strong> landscapes, from vast <strong>green plains</strong> to stunning <strong>oceans</strong>. Discover its imposing <strong>metropolis</strong>, a <strong>technological</strong> marvel inspired by <strong>Lantean</strong> architecture. <br>&nbsp;&nbsp;&nbsp;Asuras is the perfect destination for <strong>nature lovers</strong>, <strong>history enthusiasts</strong>, and <strong>explorers</strong>, offering an <strong>unforgettable</strong> experience at the heart of the universe.",
-
-
-  "image": "",
-
-  
-
-  "presentation": "",
-
+  "resume": "&nbsp;&nbsp;&nbsp;Asuras, a <strong>mystical</strong> planet in the <strong>Pegasus</strong> galaxy, invites you to explore its <strong>breathtaking</strong> landscapes, from vast <strong>green plains</strong> to stunning <strong>oceans</strong>. Discover its imposing <strong>metropolis</strong>, a <strong>technological</strong> marvel inspired by <strong>Lantean</strong> architecture. <br>&nbsp;&nbsp;&nbsp;Asuras is the perfect destination for <strong>nature lovers</strong>, <strong>history enthusiasts</strong>, and <strong>explorers</strong>, offering an <strong>unforgettable</strong> experience at the heart of the universe.",
+  "presentation": "Embark on a journey to Asuras, a mystical planet in the Pegasus galaxy, known for its breathtaking landscapes and technological marvels.<br>Explore vast green plains, stunning oceans, and a metropolis inspired by Lantean architecture.<br><br>Discover the wonders of this planet, from its natural beauty to its advanced technology.<br>Whether you're a nature lover, a history enthusiast, or an explorer, Asuras promises an unforgettable experience.<br><br>Join us on this carefully crafted 4-day program to immerse yourself in the wonders of Asuras.<br>Each day is filled with unique activities to make your journey truly memorable.",
   "schedule": [
     {
-      "title1": "",
-      "description1": "",
+      "title1": "Depart",
+      "description1": "The flight departs from CYVCT airport on ",
       "title2": "",
-      "description2": ""
+      "description2": ", with check-in at 12 PM and departure at 3 PM."
     },
     {
-      "title1": "",
-      "description1": "",
-      "title2": "",
-      "description2": ""
+      "title1": "Guided Tour of Asuras Metropolis",
+      "description1": "&nbsp;&nbsp;&nbsp;Explore the main districts of the metropolis, including the Lantean-inspired architecture and advanced technologies.",
+      "title2": "Museum of Lantean History",
+      "description2": "&nbsp;&nbsp;&nbsp;Visit the museum dedicated to the Lanteans, where you can learn more about their history, culture, and technological advancements."
     },
     {
-      "title1": "",
-      "description1": "",
-      "title2": "",
-      "description2": ""
+      "title1": "Stargate Initiation",
+      "description1": "&nbsp;&nbsp;&nbsp;Participate in an initiation session to understand how the Stargate works.<br> &nbsp;&nbsp;&nbsp;Learn how to dial an address and travel through the galaxy.",
+      "title2": "Excursion to a Nearby Planet",
+      "description2": "&nbsp;&nbsp;&nbsp;Use the Stargate for an excursion to a nearby planet, secured and explored by the Asuras teams. <br>&nbsp;&nbsp;&nbsp;Enjoy a hike or a guided tour to discover the local flora and fauna."
     },
     {
-      "title1": "",
-      "description1": "",
+      "title1": "Local Market",
+      "description1": "&nbsp;&nbsp;&nbsp;Visit the local market where you can interact with the inhabitants of Asuras and buy unique souvenirs. Taste local culinary specialties.",
+      "title2": "Cultural Show",
+      "description2": "&nbsp;&nbsp;&nbsp;Attend a cultural show featuring dances, songs, and traditional stories from the peoples of the Pegasus Galaxy. <br>&nbsp;&nbsp;&nbsp;Participate in interactive workshops to learn more about local customs."
+    },
+    {
+      "title1": "Exploration of Asuras Surroundings",
+      "description1": "&nbsp;&nbsp;&nbsp;Go on an excursion to explore the immediate surroundings of the city, including nearby forests and rivers. <br>&nbsp;&nbsp;&nbsp;Enjoy a boat ride or a guided hike.",
+      "title2": "Relaxation and Well-being",
+      "description2": "&nbsp;&nbsp;&nbsp;End your stay with an afternoon of relaxation in Asuras' wellness centers.<br>&nbsp;&nbsp;&nbsp;Enjoy massages, spa treatments, and moments of relaxation in the city's gardens."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
       "title2": "",
-      "description2": ""
+      "description2": ", with check-in at 1 PM and departure at 4 PM"
     }
   ],
   "date": [
     {
-      "depart": "13/08/5555",
-      "arrive": "18/08/5555",
-      "prix": "1.817 ₴"
+      "depart": "05/04/4025",
+      "arrive": "11/04/4025",
+      "prix": "1560"
     },
     {
-      "depart": "13/02/5555",
-      "arrive": "18/02/5555",
-      "prix": "1.978 ₴"
+      "depart": "17/07/4025",
+      "arrive": "23/07/4025",
+      "prix": "1590"
     },
     {
-      "depart": "23/06/5555",
-      "arrive": "28/06/5555",
-      "prix": "1.634 ₴"
+      "depart": "09/01/4025",
+      "arrive": "15/01/4025",
+      "prix": "1555"
     },
     {
-      "depart": "12/08/5555",
-      "arrive": "17/08/5555",
-      "prix": "1.933 ₴"
+      "depart": "30/06/4025",
+      "arrive": "06/07/4025",
+      "prix": "1580"
     },
     {
-      "depart": "08/09/5555",
-      "arrive": "13/09/5555",
-      "prix": "1.217 ₴"
+      "depart": "22/10/4025",
+      "arrive": "28/10/4025",
+      "prix": "1540"
     },
     {
-      "depart": "20/02/5555",
-      "arrive": "25/02/5555",
-      "prix": "1.915 ₴"
+      "depart": "14/03/4025",
+      "arrive": "20/03/4025",
+      "prix": "1565"
     },
     {
-      "depart": "29/08/5555",
-      "arrive": "03/09/5555",
-      "prix": "1.755 ₴"
+      "depart": "03/08/4025",
+      "arrive": "09/08/4025",
+      "prix": "1579"
     },
     {
-      "depart": "23/11/5555",
-      "arrive": "28/11/5555",
-      "prix": "1.237 ₴"
+      "depart": "25/12/4025",
+      "arrive": "31/12/4025",
+      "prix": "1592"
     },
     {
-      "depart": "09/11/5555",
-      "arrive": "14/11/5555",
-      "prix": "1.116 ₴"
+      "depart": "07/09/4025",
+      "arrive": "13/09/4025",
+      "prix": "1536"
     },
     {
-      "depart": "23/08/5555",
-      "arrive": "28/08/5555",
-      "prix": "1.408 ₴"
+      "depart": "19/05/4025",
+      "arrive": "25/05/4025",
+      "prix": "1553"
     }
-    
   ]
-  
 }
