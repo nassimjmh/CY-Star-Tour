@@ -11,6 +11,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body id="dashboard">
+<style>
+        .sidebar ul li a[href="settings.php"] {
+            color: #5e9ae9;
+    }
+</style>
 <?php include("bars.php") ?>
     
     </body>
