@@ -217,13 +217,14 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 
     <div class="recent-trips">
         <h2>Recently Booked Trips</h2>
-       <?php
-       $found = false;
-if ( $recentlybooked != null ) {
-    echo "<div class='planet-card-container'>";  // Début de la div avec overflow
+     <?php
 
+       $found = false;
+
+       if ( $recentlybooked != null ) {
     foreach ($recentlybooked as $value) {
         if ($value["id"] == $id) {
+            echo "<div class='planet-card-container'>";
             $imgSrc = '../../images/planet/' . strtolower($value["planet"]) . ".webp";
 
             // Flèche indiquant le début de la planète
@@ -242,15 +243,15 @@ if ( $recentlybooked != null ) {
 
             $found = true;
         }
+        $found = false;
     }
-
-    echo "</div>";
 }
-       else if  ( !$found ){
+       if  ( !$found ){
            echo "No planets booked yet.";
        }
-
+       echo "</div>"
        ?>
+
     </div>
 
     <div class="destinations-info">
