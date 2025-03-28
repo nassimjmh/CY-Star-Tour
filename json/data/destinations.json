@@ -1,152 +1,203 @@
 {
     "Atlantis": {
         "id": 1,
+        "note": 3,
         "name": "Atlantis",
         "galaxy": "Stargate",
         "description": "Ancient underwater city with nothing",
         "distance": 14650,
         "revenue": 500,
         "trips": 24,
-        "image": "atlantis.webp"
+        "image": "atlantis.webp",
+        "key": ["Exploration", "Initiation","Relaxation","Cultural"],
+        "price": 1480
     },
     "Pandora": {
         "id": 2,
+        "note": 3,
         "name": "Pandora",
         "galaxy": "Movie",
         "description": "Bioluminescent forests with floating mountains",
         "distance": 25400,
         "revenue": 0,
         "trips": 18,
-        "image": "pandora.webp"
+        "image": "pandora.webp",
+        "key": ["Exploration", "Cultural", "Adventure","Relaxation"],
+        "price": 1390
+
     },
     "Naboo": {
         "id": 3,
+        "note": 5,
         "name": "Naboo",
         "galaxy": "Star Wars",
         "description": "Peaceful planet with beautiful architecture",
         "distance": 32500,
         "revenue": 0,
         "trips": 37,
-        "image": "naboo.webp"
+        "image": "naboo.webp",
+        "key": ["Exploration", "Adventure", "Relaxation"],
+        "price": 1990
+
     },
     "Cybertron": {
         "id": 4,
+        "note": 4,
         "name": "Cybertron",
         "galaxy": "Movie",
         "description": "Metallic homeworld of sentient robots",
         "distance": 26850,
         "revenue": 0,
         "trips": 15,
-        "image": "cybertron.webp"
+        "image": "cybertron.webp",
+        "key": ["Exploration", "Initiation","Cultural"],
+        "price": 1630
     },
     "Scarif": {
         "id": 5,
+        "note": 4,
         "name": "Scarif",
         "galaxy": "Star Wars",
         "description": "Tropical paradise with imperial base",
         "distance": 30200,
         "revenue": 0,
         "trips": 22,
-        "image": "scarif.webp"
+        "image": "scarif.webp",
+        "key": ["Cultural", "Adventure","Relaxation"],
+        "price": 1590
+
     },
     "Earth": {
         "id": 6,
+        "note": 2,
         "name": "Earth",
         "galaxy": "Milky Way",
         "description": "Blue planet with diverse ecosystems",
         "distance": 8600,
         "revenue": 0,
         "trips": 143,
-        "image": "earth.webp"
+        "image": "earth.webp",
+        "key": ["Exploration", "Initiation","Cultural", "Adventure"],
+        "price": 1120
     },
     "Asuras": {
         "id": 7,
+        "note": 4,
         "name": "Asuras",
         "galaxy": "Stargate",
         "description": "Advanced civilization with nanite technology",
         "distance": 15300,
         "revenue": 0,
         "trips": 12,
-        "image": "asuras.webp"
+        "image": "asuras.webp",
+        "key": ["Exploration", "Initiation","Relaxation"],
+        "price": 1480
     },
     "Kamino": {
         "id": 8,
+        "note": 3,
         "name": "Kamino",
         "galaxy": "Star Wars",
         "description": "Stormy ocean planet of cloners",
         "distance": 31750,
         "revenue": 0,
         "trips": 28,
-        "image": "kamino.webp"
+        "image": "kamino.webp",
+        "key": ["Exploration", "Cultural"],
+        "price": 1299
     },
     "Grok": {
         "id": 9,
+        "note": 4,
         "name": "Grok",
         "galaxy": "Ia",
         "description": "Enigmatic world of abstract intelligence",
         "distance": 42300,
         "revenue": 0,
         "trips": 7,
-        "image": "grok.webp"
+        "image": "grok.webp",
+        "key": ["Exploration", "Relaxation"],
+        "price": 1600
     },
     "Mistral": {
         "id": 10,
+        "note": 4,
         "name": "Mistral",
         "galaxy": "Ia",
         "description": "Misty mountains with neural networks",
         "distance": 41500,
         "revenue": 0,
         "trips": 11,
-        "image": "mistral.webp"
+        "image": "mistral.webp",
+        "key": [ "Cultural", "Relaxation"],
+        "price": 1500
+
     },
     "Openai": {
         "id": 11,
+        "note": 4,
         "name": "Openai",
         "galaxy": "Ia",
         "description": "Planet of evolving digital entities",
         "distance": 40800,
         "revenue": 0,
         "trips": 16,
-        "image": "openai.webp"
+        "image": "openai.webp",
+        "key": [ "Cultural",  "Adventure", "Party"],
+        "price": 1650
+
     },
     "Mars": {
         "id": 12,
+        "note": 3,
         "name": "Mars",
         "galaxy": "Milky Way",
         "description": "Red planet with dusty landscapes",
         "distance": 8500,
         "revenue": 0,
         "trips": 67,
-        "image": "mars.webp"
+        "image": "mars.webp",
+        "key": ["Exploration", "Adventure", "Observation"],
+        "price": 1350
+
     },
     "Arrakis": {
         "id": 13,
+        "note": 4,
         "name": "Arrakis",
         "galaxy": "Movie",
         "description": "Desert planet known for valuable spice melange",
         "distance": 45600,
         "revenue": 0,
         "trips": 23,
-        "image": "arrakis.webp"
+        "image": "arrakis.png",
+        "key": ["Exploration", "Observation","Survival"],
+        "price": 2350
     },
     "Axiom": {
         "id": 14,
-        "name": "Axiom",
+        "note": 5,
+        "name": "Axiom",        
         "galaxy": "Movie",
         "description": "Luxury starliner housing humans away from Earth",
         "distance": 12800,
         "revenue": 0,
         "trips": 42,
-        "image": "axiom.webp"
+        "image": "axiom.webp",
+        "key": ["Cultural", "Relaxation","Party"],
+        "price": 2150
     },
     "Mann": {
         "id": 15,
+        "note": 3,
         "name": "Mann",
         "galaxy": "Movie",
         "description": "Ice planet with frozen ammonia surface",
         "distance": 52300,
         "revenue": 0,
         "trips": 8,
-        "image": "mann.webp"
+        "image": "mann.png",
+        "key": ["Exploration", "Cultural","Observation"],
+        "price": 2150
     }
 }
