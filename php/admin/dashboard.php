@@ -32,7 +32,7 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
 
     <div class="dashboard">
         <div class="bento-box">
-            <h2>!!!TEST Revenues!!!</h2>
+            <h2>Revenues</h2>
             <p>Total revenues for the current period.</p>
             <div class="revenue">
                 <h3><?php
