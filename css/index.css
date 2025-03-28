@@ -24,7 +24,7 @@
     left: 0;
     background-image: url('https://wallpapers.com/images/hd/space-ship-digital-art-r8tt3e162a3insvn.jpg');
     width: 100%;
-    height: 100vh; 
+    height: 60rem; 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -34,11 +34,11 @@
 .title{
     position: absolute;
     white-space: nowrap;
-    top: 20vh;
-    left: 40vh;
+    top: 12rem;
+    left: 24rem;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 4vh;
+    font-size: 2.5rem;
     color: rgb(255, 255, 255);
     font-size: auto;
     margin: 0;
@@ -53,7 +53,7 @@
     display: flex;
     top: -60px;
     background-color: #0f1a26;
-    height: 70vh;
+    height: 42.5rem;
 }   
 .recom:hover{
     box-shadow: 0px 0px 9px rgba(255, 255, 255, 0.678);
@@ -61,40 +61,40 @@
 .recom:hover .name{
     position: absolute; 
     color: rgb(255, 255, 255);
-    top: 30vh;
-    left: 2vh;
-    font-size: 3vh;
+    top: 18.2rem;
+    left: 1.2rem;
+    font-size: 1.8rem;
     font-weight: bolder;
 }
 .recom:hover .galaxy{
     position: absolute; 
     color: rgb(255, 255, 255);
     font-weight:800;
-    top: 36vh;
-    left: 2vh;
-    font-size: 2vh;
+    top: 21.8rem;
+    left: 1.2rem;
+    font-size: 1.2rem;
 }
 .best{
     text-shadow: 0px 0px 2px rgb(0, 0, 0);
     position: absolute;
     color: white;
-    font-size: 4vh;
-    left: 5vh;
+    font-size: 2.5rem;
+    left: 3rem;
     font-weight: bolder;
 }
 .recom{
     position: relative;
-    left: 10vh;
-    top: 13vh;
-    width: 40vh;
-    height: 45vh;
-    margin-right: 5vh;
+    left: 6rem;
+    top: 9rem;
+    width: 24rem;
+    height: 27rem;
+    margin-right: 3rem;
     background-color: white;
-    border-top-left-radius: 2vh;
-    border-bottom-left-radius: 2vh;
-    border-bottom-right-radius: 2vh;
-    border-top-right-radius: 2vh;
-    margin-bottom: 5vh;
+    border-top-left-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    margin-bottom: 3rem;
 }
 .reco img{
     position: absolute;
@@ -103,21 +103,21 @@
     width: 100%; /* L'image prend toute la largeur du conteneur */
     height: 100%; /* L'image prend toute la hauteur du conteneur */
     object-fit: cover;
-    border-radius: 2vh;
+    border-radius: 1.2rem;
 }
 
 /*------------*//*------------*//*------------*/
 .banner{
     position: relative;
     top: -80px;
-    border-top-left-radius: 3vh;
-    border-top-right-radius: 3vh;
-    background-color: #0f1a26;
-    height: 65vh;
+    border-top-left-radius: 1.8rem;
+    border-top-right-radius: 1.8rem;
+    background-color: #ffffff;
+    height: 39.5rem;
     overflow: hidden;
 }
 :root {
-    --item-width: 70vh; /* Largeur d'un item */
+    --item-width: 42.5rem; /* Largeur d'un item */
     --gap: 80px; /* Espacement entre les items */
     --speed: 20s; /* Durée de l'animation */
 }
@@ -125,9 +125,9 @@
 .bannertitle{
     text-shadow: 0px 0px 2px rgb(255, 255, 255);
     position: absolute;
-    color: white;
-    font-size: 4vh;
-    left: 5vh;
+    color: #0f1a26;
+    font-size: 2.5rem;
+    left: 3rem;
     font-weight: bolder;
 }
 
@@ -163,37 +163,59 @@ to {
 .image{
     background-image: url('https://i.redd.it/qdfy1uscuwge1.png');
     position: relative;
-    top: -10vh;
+    top: -6rem;
     background-color: #0f1a26;
-    height: 100vh;
+    height: 40rem;
     width: 100%;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     overflow: hidden;
 }
-.image p{
-    position: absolute;
-    left: 110vh;
-    top: 130px;
-    color: white;
-    font-size: 5vh;
-}
-/*------------*//*------------*//*------------*/
 .avis{
     position: relative;
-    top: -100px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background-color: #0f1a26;
-    height: 70vh;
+    left: 70rem;
+    top: 5rem;
+    color: white;
+    font-size: 2rem;
+    
 }
+.avis2{
+    position: relative;
+    left: 78rem;
+    top: 15rem;
+    color: white;
+    font-size: 2rem;
+    
+}
+.nameavis2{
+    position: relative;
+    left: 100rem;
+    top: 18.4rem;
+    color: white;
+    font-size: 1rem;
+    
+}
+.avis3{
+    position: relative;
+    left: 78rem;
+    top: 25rem;
+    color: white;
+    font-size: 2rem;
+    
+}
+
+.image p:not(:first-of-type){
+    margin-top: -7rem;
+}
+
+
 /*------------*//*------------*//*------------*/
 .stat{
     position: relative;
     top: -100px;
     background-color: #ffffff;
-    height: 70vh;
+    height: 42.5rem;
 }
 
 
