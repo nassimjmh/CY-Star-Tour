@@ -170,7 +170,7 @@
         "distance": 45600,
         "revenue": 0,
         "trips": 23,
-        "image": "arrakis.png",
+        "image": "arrakis.webp",
         "key": ["Exploration", "Observation","Survival"],
         "price": 2350
     },
@@ -196,7 +196,7 @@
         "distance": 52300,
         "revenue": 0,
         "trips": 8,
-        "image": "mann.png",
+        "image": "mann.webp",
         "key": ["Exploration", "Cultural","Observation"],
         "price": 2150
     }
