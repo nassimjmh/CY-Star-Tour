@@ -40,7 +40,7 @@ session_start();
                     <p>Cybertron</p>
                 </div>
                 <div class="planet scarif">
-                  <a href=""><img src="../images/planet/atlantis.webp" alt="atlantis"></a>
+                  <a href="destination.php?planet=Scarif"><img src="../images/planet/atlantis.webp" alt="atlantis"></a>
                     <p>Scarif</p>
                 </div>
                 <div class="vaisseau axiom">
@@ -52,19 +52,19 @@ session_start();
                     <p>Earth</p>
                 </div>
                 <div class="planet asuras">
-                   <a href=""><img src="../images/planet/asuras.webp" alt="asuras"></a>
+                   <a href="destination.php?planet=Asuras"><img src="../images/planet/asuras.webp" alt="asuras"></a>
                     <p>Asuras</p>
                 </div>
                 <div class="planet kamino">
-                    <a href=""><img src="../images/planet/kamino.webp" alt="kamino"></a>
+                    <a href="destination.php?planet=Kamino"><img src="../images/planet/kamino.webp" alt="kamino"></a>
                     <p>Kamino</p>
                 </div>
                 <div class="planet grok">
-                     <a href=""><img src="../images/planet/grok.webp" alt="grok"></a>
+                     <a href="destination.php?planet=Grok"><img src="../images/planet/grok.webp" alt="grok"></a>
                     <p>Grok</p>
                 </div>
                 <div class="planet mistral">
-                    <a href=""><img src="../images/planet/mistral.webp" alt="mistral"></a>
+                    <a href="destination.php?planet=Mistral"><img src="../images/planet/mistral.webp" alt="mistral"></a>
                     <p>Mistral</p>
                 </div>
                 <div class="planet openai">
@@ -76,11 +76,11 @@ session_start();
                     <p>Mars</p>
                 </div>
                 <div class="planet mann">
-                     <a href="destination.php?planet=Mann"><img src="../images/planet/mann.webp" alt="mars"></a>
+                     <a href="destination.php?planet=Mann"><img src="../images/planet/mann.png" alt="mars"></a>
                     <p>Mann</p>
                 </div>
                 <div class="planet arrakis">
-                     <a href="destination.php?planet=Arrakis"><img src="../images/planet/arrakis.webp" alt="mars"></a>
+                     <a href="destination.php?planet=Arrakis"><img src="../images/planet/arrakis.png" alt="mars"></a>
                     <p>Arrakis</p>
                 </div>
             </div>
