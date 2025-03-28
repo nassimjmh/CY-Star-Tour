@@ -1,12 +1,43 @@
+
+<?php
+
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $card_holder = $_POST['card_holder'];
+    $card_number = $_POST['card_number'];
+    $expiry_date = $_POST['expiry_date'];
+    $cvv = $_POST['cvv'];
+}
+    
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StarPay - Secure Payment</title>
-    <link rel="stylesheet" href="../css/card.css">
+    <title>StarTour - Card</title>
+    <link rel="icon" href="../images/sparkles.png" type="image/png">
+    <link rel="stylesheet" href="../css/card.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
+<header>
+    <?php include("navbar.php")?>
+
+</header>
+
+
+
 <body>
+
 
 <div class="container">
     <h1> StarPay - Secure Payment</h1>
@@ -33,9 +64,16 @@
 
         <button type="submit">Pay Now</button>
     </form>
+
 </div>
 
-<p class="help-message">If you experience any issues, contact us at support@startour.cy</p>
 
 </body>
+
+<footer>
+
+    <?php include ("footer.php"); ?>
+</footer>
+
+
 </html>
