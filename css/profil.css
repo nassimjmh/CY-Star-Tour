@@ -337,3 +337,14 @@ main {
 .edit-btn:hover{
     background-color: #218838;
 }
+
+.planet-image-container {
+    display: inline-flex;
+    align-items: center; /* Centre l'image verticalement avec le texte */
+}
+
+.planet-image {
+    width: 30px; /* Ajuste la largeur selon tes besoins */
+    height: auto;
+    margin-right: 10px; /* Un peu d'espace entre l'image et le texte */
+}
