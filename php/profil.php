@@ -225,6 +225,10 @@ if ( $recentlybooked != null ) {
     foreach ($recentlybooked as $value) {
         if ($value["id"] == $id) {
             $imgSrc = '../../images/planet/' . strtolower($value["planet"]) . ".webp";
+
+            // Flèche indiquant le début de la planète
+            echo "<div class='planet-arrow'><strong>→</strong></div>";
+
             echo "<div class='planet-card'>";
             echo "<p><strong><img src='$imgSrc' alt='" . htmlspecialchars($value["planet"]) . "' class='planet-image'>Planet:</strong> " . htmlspecialchars($value["planet"]) . "</p>";
             echo "<p><strong>📆 Duration :</strong> " . implode(", ", $value["days"]) . " days</p>";
@@ -235,6 +239,7 @@ if ( $recentlybooked != null ) {
             echo "<p><strong>🛡️ Insurance :</strong> " . ($value["insurance"] == "Yes" ? "Included ✅" : "No ❌") . "</p>";
             echo "<p><strong>📅 Departure date:</strong> " . htmlspecialchars($value["selectedDate"]) . "</p>";
             echo "</div>";
+
             $found = true;
         }
     }
