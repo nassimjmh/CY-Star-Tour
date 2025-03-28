@@ -1,19 +1,19 @@
 {
   "name": "Mars",
-
   "galaxy": "MilkyWay • +1° 92' 92'' • ★★★☆☆",
-
-  "info":"🌡️ 230°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 3,71 m/s²",
-
-  "prix":"1.350 ₴",
-
-  "preimage":"https://external-preview.redd.it/mars-base-for-200-people-in-for-all-mankind-season-4-v0-m4w7k_jttcHgrZTzWOl4VAAHFK44hk-sH-GAKedUW5A.jpg?auto=webp&s=c99e5ce8a27e19a5ffe8b3c6bc24bade44136639",
-  
-  "resume":"&nbsp;&nbsp;&nbsp;Come explore <strong>Mars</strong>, the red planet transformed into a futuristic world! Discover <strong>space bases</strong> at the cutting edge of technology, nestled amidst breathtaking <strong>Martian landscapes</strong>. Walk on historic soil, surrounded by <strong>mountains</strong>, <strong>craters</strong>, and endless horizons. <br>&nbsp;&nbsp;&nbsp; Join the pioneers of <strong>space exploration</strong> and experience an unforgettable adventure on <strong>Mars</strong>.",
-
+  "info": "🌡️ 230°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 3,71 m/s²",
+  "prix": "1.350 ₴",
+  "preimage": "https://external-preview.redd.it/mars-base-for-200-people-in-for-all-mankind-season-4-v0-m4w7k_jttcHgrZTzWOl4VAAHFK44hk-sH-GAKedUW5A.jpg?auto=webp&s=c99e5ce8a27e19a5ffe8b3c6bc24bade44136639",
   "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfG3WQ4RE3gKTe-Gp0IWm94Bbll28ItRx89Eii3kqTU7yY9c0ILNsPkrVaapCnMGWYar2-VwX5HXH1l0bL1vs_rHwNbGvyFqOR-RRTCYRf1JrXktQ8hRDRFV7xFS5p85Nq2Z4a382QaWUfJxjZBsoEtuXyZyqXspiq-foNF08plGaxH9Qyo5sb2u-ovWtv/s2048/050%20Happy%20Valley%20Mars%20base%20in%20%27For%20All%20Mankind%27%20season%204_humanMars.net.jpg",
+  "resume": "&nbsp;&nbsp;&nbsp;Come explore <strong>Mars</strong>, the red planet transformed into a futuristic world! Discover <strong>space bases</strong> at the cutting edge of technology, nestled amidst breathtaking <strong>Martian landscapes</strong>. Walk on historic soil, surrounded by <strong>mountains</strong>, <strong>craters</strong>, and endless horizons. <br>&nbsp;&nbsp;&nbsp; Join the pioneers of <strong>space exploration</strong> and experience an unforgettable adventure on <strong>Mars</strong>.",
   "presentation": "Travel to Mars, the Reimagined Red Planet! Welcome to Galactic Horizons, your interstellar travel agency.<br><br>Forget earthly beaches and embark on an extraordinary adventure to Mars, where science fiction becomes reality!<br><br>Set off on an incredible journey to Mars and experience something truly unique.<br><br>Let yourself be transported beyond earthly boundaries and explore a fascinating new world!",
   "schedule": [
+    {
+      "title1": "Depart",
+      "description1": "The flight departs from CYVCT airport on ",
+      "title2": "",
+      "description2": ", with check-in at 12 PM and departure at 3 PM."
+    },
     {
       "title1": "Olympus Mons",
       "description1": "&nbsp;&nbsp;&nbsp;Begin your adventure with an exploration of Olympus Mons, the largest volcano in the Solar System, standing 25 km high. Despite its immense size, its gentle slopes make it an accessible climb, offering breathtaking panoramic views.",
@@ -37,59 +37,64 @@
       "description1": "&nbsp;&nbsp;&nbsp;Conclude your journey with a visit to the Tharsis volcanic plateau, home to 12 massive volcanoes spread across 4,000 km.",
       "title2": "Interactive workshop",
       "description2": "&nbsp;&nbsp;&nbsp;Participate in an interactive workshop on Martian volcanology, where you’ll learn about the forces that shaped these giants and their role in the planet’s evolution."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
+      "title2": "",
+      "description2": ", with check-in at 1 PM and departure at 4 PM"
     }
   ],
   "date": [
     {
-      "depart": "13/08/5555",
-      "arrive": "18/08/5555",
-      "prix": "1.817 ₴"
+      "depart": "13/08/4025",
+      "arrive": "19/08/4025",
+      "prix": "1817"
     },
     {
-      "depart": "13/02/5555",
-      "arrive": "18/02/5555",
-      "prix": "1.978 ₴"
+      "depart": "13/02/4025",
+      "arrive": "19/02/4025",
+      "prix": "1978"
     },
     {
-      "depart": "23/06/5555",
-      "arrive": "28/06/5555",
-      "prix": "1.634 ₴"
+      "depart": "23/06/4025",
+      "arrive": "29/06/4025",
+      "prix": "1634"
     },
     {
-      "depart": "12/08/5555",
-      "arrive": "17/08/5555",
-      "prix": "1.933 ₴"
+      "depart": "12/08/4025",
+      "arrive": "18/08/4025",
+      "prix": "1933"
     },
     {
-      "depart": "08/09/5555",
-      "arrive": "13/09/5555",
-      "prix": "1.217 ₴"
+      "depart": "08/09/4025",
+      "arrive": "14/09/4025",
+      "prix": "1217"
     },
     {
-      "depart": "20/02/5555",
-      "arrive": "25/02/5555",
-      "prix": "1.915 ₴"
+      "depart": "20/02/4025",
+      "arrive": "26/02/4025",
+      "prix": "1915"
     },
     {
-      "depart": "29/08/5555",
-      "arrive": "03/09/5555",
-      "prix": "1.755 ₴"
+      "depart": "29/08/4025",
+      "arrive": "04/09/4025",
+      "prix": "1755"
     },
     {
-      "depart": "23/11/5555",
-      "arrive": "28/11/5555",
-      "prix": "1.237 ₴"
+      "depart": "23/11/4025",
+      "arrive": "29/11/4025",
+      "prix": "1237 "
     },
     {
-      "depart": "09/11/5555",
-      "arrive": "14/11/5555",
-      "prix": "1.116 ₴"
+      "depart": "09/11/4025",
+      "arrive": "15/11/4025",
+      "prix": "1116 "
     },
     {
-      "depart": "23/08/5555",
-      "arrive": "28/08/5555",
-      "prix": "1.408 ₴"
+      "depart": "23/08/4025",
+      "arrive": "29/08/4025",
+      "prix": "1408 "
     }
-    
   ]
 }
