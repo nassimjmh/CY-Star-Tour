@@ -76,7 +76,7 @@ session_start();
                     <p>Mars</p>
                 </div>
                 <div class="planet mann">
-                     <a href="destination.php?planet=Mann"><img src="../images/planet/mann.png" alt="mars"></a>
+                     <a href="destination.php?planet=Mann"><img src="../images/planet/mann.webp" alt="mars"></a>
                     <p>Mann</p>
                 </div>
                 <div class="planet arrakis">
