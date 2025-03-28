@@ -16,6 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $race = $_POST['race'];
     $date_picker = $_POST['date_picker'];
     $role = 'Standard';
+    $card_holder="";
+    $card_number="";
+    $expiry_date="";
+    $cvv ="";
+    
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 
@@ -38,7 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'race' => $race,
             'date_picker' => $date_picker,
             'role' => $role,
-            'profile_pic' => 'https://api.dicebear.com/9.x/pixel-art/svg?seed=n' . $first_name
+            'profile_pic' => 'https://api.dicebear.com/9.x/pixel-art/svg?seed=n' . $first_name,
+        'card_info' => [ 
+            'card_holder' => $card_holder,
+            'card_number' => $card_number,
+            'expiry_date' => $expiry_date,
+            'cvv' => $cvv
+          ]
         ];
 
         $_SESSION['email'] = $email;
