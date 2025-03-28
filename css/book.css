@@ -130,35 +130,31 @@
 }
 
 #Book .start {
-    width: 11%; /*Changer la taille du module*/
+    width: 13rem; /*Changer la taille du module*/
     position: absolute;
-    top: 40%;
-    left: 20%;
+    top: 23rem;
+    left: 20rem;
 }
 #Book .end {
-    width: 11%; /*Changer la taille du module*/
+    width: 15rem; /*Changer la taille du module*/
     position: absolute;
-    top: 40%;
-    left: 32%;
+    top: 23rem;
+    left: 35rem;
 }
 #Book .when {
-    width: 11%; /*Changer la taille du module*/
+    width: 12rem; /*Changer la taille du module*/
     position: absolute;
-    top: 40%;
-    left: 45%;
+    top: 23rem;
+    left: 52rem;
 }
 
 #Book .number {
-    width: 11%; /*Changer la taille du module*/
+    width: 12rem; /*Changer la taille du module*/
     position: absolute;
-    top: 40%;
-    left: 57%;
+    top: 23rem;
+    left: 66rem;
 }
-#Book .date{
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-}
+
 #Book .valid{
     position: absolute; 
     padding: 12px 60px;
@@ -169,8 +165,8 @@
     font-weight: bold;
     border: none;
     cursor: pointer;
-    top: 40%; /* Centre verticalement */
-    left: 70%; /* Centre horizontalement */ 
+    top: 23rem; /* Centre verticalement */
+    left: 80rem; /* Centre horizontalement */ 
     transition: 0.7s;
 }
 
@@ -211,5 +207,15 @@
     padding: 5px 0;
 }
 /**/
-
+#Book .dropdown-content2{ /*Le carré*/
+    background-color: #0f1A26;
+    padding: 10px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+#Book .dropdown-content2 label { /*Le texte*/
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 5px 0;
+}
 
