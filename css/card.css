@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://preview.redd.it/novas-vertical-ship-challenge-the-varuun-basilica-v0-fzb1wfpjxzie1.png?width=1920&format=png&auto=webp&s=de3eb58784ed2c5f12f447d5be6474cd4b6bea5f");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    width: 50%;
+    max-width: 600px;
+    padding: 3rem;
+    background: #0B1A26;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background:#0B1A26;
+    color: #ffffff;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: forestgreen;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
+}
+
+
+button:hover {
+    background-color: darkgreen;
+    font-size: 0.9375rem;  /* Réduction de la taille de la police */
+    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
+}
+
+
+.help-message {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
