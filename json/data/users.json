@@ -151,13 +151,5 @@
             "expiry_date": "",
             "cvv": ""
         }
-    },
-    "": {
-        "card_info": {
-            "card_holder": "John",
-            "card_number": "1234 2345 3445 3455 3455",
-            "expiry_date": "12\/26",
-            "cvv": "123"
-        }
     }
 }
