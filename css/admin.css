@@ -198,10 +198,15 @@
     background-color: white;
 }
 
-.reservation-container th:nth-child(2) { 
+.reservation-container th:nth-child(3) { 
     width: 0.3125rem;
     min-width: 0.3125rem;
     max-width: 0.3125rem;
+}
+.reservation-container th:nth-child(4) { 
+    width: 0.3125rem;
+    min-width: 0.3125rem;
+    max-width: 0.3125rem;   
 }
 
 .reservation-container .profile-thumbnail {
@@ -209,12 +214,6 @@
     height: 2.1875rem;
     object-fit: cover;
     border-radius: 50%;
-}
-
-.reservation-container td:nth-child(6) span {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
 }
 
 .reservation-container h2{
