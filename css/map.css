@@ -34,7 +34,7 @@
     position: absolute;
     white-space: nowrap;
     top: 12.5rem;
-    left: 25rem;
+    left: 22rem;
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 2.5rem;
@@ -51,7 +51,11 @@
     height: 6.25rem;
     border-radius: 50%;
 }
-
+.vaisseau{
+    position: absolute;
+    width: 11.25rem;
+    height: 8.25rem;
+}
 .title p:not(.name){
     visibility: hidden;
 }  
@@ -65,10 +69,20 @@
     color: white;
     text-shadow: 0px 0px 0.125rem rgb(0, 0, 0);
 }
+.vaisseau:hover p{
+    visibility: visible;
+    position: absolute;
+    top: -3.375rem;
+    left: 8.75rem;
+    font-size: 1.875rem;
+    color: white;
+    text-shadow: 0px 0px 0.125rem rgb(0, 0, 0);
+}
 
 .planet:hover{
     box-shadow: 0px 0px 0.625rem rgb(109, 108, 108);
 }
+
 
 .atlantis{
     top: 12.5rem;
@@ -94,10 +108,13 @@
     top: 10.625rem;
     left: 50rem;
 }
-
+.axiom{
+    top: 21.125rem;
+    left: 53.375rem;
+}
 .earth{
-    top: 23.125rem;
-    left: 59.375rem;
+    top: 20.125rem;
+    left: -5.375rem;
 }
 
 .mistral{
@@ -129,7 +146,14 @@
     top: 31.25rem;
     left: 6.25rem;
 }
-
+.mann{
+    top: 10.25rem;
+    left: 25.25rem;
+}
+.arrakis{
+    top: 10.25rem;
+    left: 85.25rem;
+}
 .rsearch img{
     height: 100%;
     width: 100%;
