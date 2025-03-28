@@ -1,102 +1,100 @@
 {
-  
   "name": "Scarif",
-
   "galaxy": "StarWars • +45° 48' 15'' • ★★★★☆",
-
-  "info":"🌡️ 306°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 9,68 m/s²",
-
-  "prix":"1.590 ₴",
-
-  "preimage":"https://preview.redd.it/8z0hoflvri211.jpg?auto=webp&s=f0dd91685d9be9ac55900619e45e16500fee5b0b",
-  
-  "resume":"&nbsp;&nbsp;&nbsp;Discover <strong>Scarif</strong>, a paradisiacal planet with <strong>turquoise oceans</strong>, pristine <strong>sandy beaches</strong>, and exotic <strong>islands</strong> lined with <strong>palm trees</strong>. Located in the <strong>Outer Rim Territories</strong>, this unique destination combines natural beauty and <strong>galactic history</strong>. <br>&nbsp;&nbsp;&nbsp; Explore the remnants of the <strong>Galactic Empire</strong>, dive into <strong>crystal-clear waters</strong>, and marvel at breathtaking landscapes, from lush <strong>jungles</strong> to abandoned <strong>industrial sites</strong>.",
-
-
-  "image": "",
-
-  
-
-  "presentation": "",
-
+  "info": "🌡️ 306°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 9,68 m/s²",
+  "prix": "1.590 ₴",
+  "preimage": "https://i.redd.it/dxi1wrpja1k11.jpg",
+  "image": "https://preview.redd.it/8z0hoflvri211.jpg?auto=webp&s=f0dd91685d9be9ac55900619e45e16500fee5b0b",
+  "resume": "&nbsp;&nbsp;&nbsp;Discover <strong>Scarif</strong>, a paradisiacal planet with <strong>turquoise oceans</strong>, pristine <strong>sandy beaches</strong>, and exotic <strong>islands</strong> lined with <strong>palm trees</strong>. Located in the <strong>Outer Rim Territories</strong>, this unique destination combines natural beauty and <strong>galactic history</strong>. <br>&nbsp;&nbsp;&nbsp; Explore the remnants of the <strong>Galactic Empire</strong>, dive into <strong>crystal-clear waters</strong>, and marvel at breathtaking landscapes, from lush <strong>jungles</strong> to abandoned <strong>industrial sites</strong>.",
+  "presentation": "Welcome to Scarif, a tropical paradise in the Outer Rim Territories.<br>Experience the beauty of turquoise oceans, sandy beaches, and exotic islands lined with palm trees.<br><br>Explore the remnants of the Galactic Empire and dive into crystal-clear waters.<br>Discover breathtaking landscapes, from lush jungles to abandoned industrial sites.<br><br>Join our carefully crafted 5-day program to immerse yourself in the wonders of Scarif.<br>Each day brings new adventures and unforgettable experiences.",
   "schedule": [
     {
-      "title1": "",
-      "description1": "",
+      "title1": "Depart",
+      "description1": "The flight departs from CYVCT airport on ",
       "title2": "",
-      "description2": ""
+      "description2": ", with check-in at 12 PM and departure at 3 PM."
     },
     {
-      "title1": "",
-      "description1": "",
-      "title2": "",
-      "description2": ""
+      "title1": "Beach Relaxation",
+      "description1": "&nbsp;&nbsp;&nbsp;Start your day with relaxation on the pristine sandy beaches of Scarif. Enjoy the turquoise waters and soak up the sun.",
+      "title2": "Snorkeling Adventure",
+      "description2": "&nbsp;&nbsp;&nbsp;Explore the crystal-clear waters with a snorkeling adventure. Discover vibrant marine life and coral reefs."
     },
     {
-      "title1": "",
-      "description1": "",
-      "title2": "",
-      "description2": ""
+      "title1": "Jungle Trek",
+      "description1": "&nbsp;&nbsp;&nbsp;Embark on a trek through the lush jungles of Scarif. Discover exotic flora and fauna as you navigate the dense foliage.",
+      "title2": "Historical Site Visit",
+      "description2": "&nbsp;&nbsp;&nbsp;Visit the remnants of the Galactic Empire's installations and learn about the planet's role in galactic history."
     },
     {
-      "title1": "",
-      "description1": "",
+      "title1": "Island Hopping",
+      "description1": "&nbsp;&nbsp;&nbsp;Spend a day island-hopping and exploring the exotic islands of Scarif. Enjoy the beauty of palm-lined beaches and hidden coves.",
+      "title2": "Cultural Experience",
+      "description2": "&nbsp;&nbsp;&nbsp;Immerse yourself in the local culture with traditional performances and cuisine."
+    },
+    {
+      "title1": "Abandoned Industrial Tour",
+      "description1": "&nbsp;&nbsp;&nbsp;Explore the abandoned industrial sites of Scarif, witnessing the remnants of the Galactic Empire's operations.",
+      "title2": "Farewell Dinner",
+      "description2": "&nbsp;&nbsp;&nbsp;Celebrate your journey with a special dinner featuring local cuisine and cultural performances."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
       "title2": "",
-      "description2": ""
+      "description2": ", with check-in at 1 PM and departure at 4 PM"
     }
   ],
   "date": [
     {
-      "depart": "13/08/5555",
-      "arrive": "18/08/5555",
-      "prix": "1.817 ₴"
+      "depart": "13/08/4025",
+      "arrive": "19/08/4025",
+      "prix": "1817"
     },
     {
-      "depart": "13/02/5555",
-      "arrive": "18/02/5555",
-      "prix": "1.978 ₴"
+      "depart": "13/02/4025",
+      "arrive": "19/02/4025",
+      "prix": "1978"
     },
     {
-      "depart": "23/06/5555",
-      "arrive": "28/06/5555",
-      "prix": "1.634 ₴"
+      "depart": "23/06/4025",
+      "arrive": "29/06/4025",
+      "prix": "1634"
     },
     {
-      "depart": "12/08/5555",
-      "arrive": "17/08/5555",
-      "prix": "1.933 ₴"
+      "depart": "12/08/4025",
+      "arrive": "18/08/4025",
+      "prix": "1933"
     },
     {
-      "depart": "08/09/5555",
-      "arrive": "13/09/5555",
-      "prix": "1.217 ₴"
+      "depart": "08/09/4025",
+      "arrive": "14/09/4025",
+      "prix": "1217"
     },
     {
-      "depart": "20/02/5555",
-      "arrive": "25/02/5555",
-      "prix": "1.915 ₴"
+      "depart": "20/02/4025",
+      "arrive": "26/02/4025",
+      "prix": "1915"
     },
     {
-      "depart": "29/08/5555",
-      "arrive": "03/09/5555",
-      "prix": "1.755 ₴"
+      "depart": "29/08/4025",
+      "arrive": "04/09/4025",
+      "prix": "1755"
     },
     {
-      "depart": "23/11/5555",
-      "arrive": "28/11/5555",
-      "prix": "1.237 ₴"
+      "depart": "23/11/4025",
+      "arrive": "29/11/4025",
+      "prix": "1237"
     },
     {
-      "depart": "09/11/5555",
-      "arrive": "14/11/5555",
-      "prix": "1.116 ₴"
+      "depart": "09/11/4025",
+      "arrive": "15/11/4025",
+      "prix": "1116"
     },
     {
-      "depart": "23/08/5555",
-      "arrive": "28/08/5555",
-      "prix": "1.408 ₴"
+      "depart": "23/08/4025",
+      "arrive": "29/08/4025",
+      "prix": "1408"
     }
-    
   ]
-  
 }
