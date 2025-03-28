@@ -160,11 +160,13 @@ main {
     cursor: pointer;
     font-size: 1rem;
     margin-top: 0.9375rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
 
-.edit-btn:hover, .save-btn:hover {
+.edit-btn:hover, .save-btn:hover , .custom-btn:hover {
     background-color: #4CAF50;
+    font-size: 0.9375rem;  /* Réduction de la taille de la police */
+    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
 
 .info form {
@@ -379,3 +381,5 @@ main {
     border-radius : 25px;
     background-color: #f9f9f9; /* Fond léger pour l'apparence */
 }
+
+
