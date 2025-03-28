@@ -52,7 +52,7 @@
             "5",
             "6"
         ],
-        "quality": "Luxury",
+        "quality": "Premium",
         "breakfast": "Yes",
         "relax": "Yes",
         "nbpeople": 3,
@@ -112,7 +112,7 @@
             "3",
             "4"
         ],
-        "quality": "Luxury",
+        "quality": "Premium",
         "breakfast": "Yes",
         "relax": "Yes",
         "nbpeople": 4,
@@ -157,7 +157,7 @@
         "days": [
             "3"
         ],
-        "quality": "Luxury",
+        "quality": "Premium",
         "breakfast": "Yes",
         "relax": "Yes",
         "nbpeople": 1,
@@ -204,7 +204,7 @@
             "2",
             "3"
         ],
-        "quality": "Luxury",
+        "quality": "Premium",
         "breakfast": "Yes",
         "relax": "No",
         "nbpeople": 1,
@@ -251,7 +251,7 @@
             "4",
             "5"
         ],
-        "quality": "Luxury",
+        "quality": "Premium",
         "breakfast": "Yes",
         "relax": "Yes",
         "nbpeople": 3,
@@ -297,7 +297,7 @@
             "6",
             "7"
         ],
-        "quality": "Luxury",
+        "quality": "Premium",
         "breakfast": "Yes",
         "relax": "No",
         "nbpeople": 2,
