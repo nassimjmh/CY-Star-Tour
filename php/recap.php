@@ -1,5 +1,8 @@
 <?php
 session_start();
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+$base_url = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+$return_url = rtrim($base_url, '/') . '/payement.php';
 if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
 
     header('location: login.php');
@@ -27,23 +30,14 @@ if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
             'nbpeople' => isset($_POST['nb']) ? (int)$_POST['nb'] : 1,
             'insurance' => $_POST['insurance'] ?? '',
             'selectedDate' => $_POST['date'] ?? [],
-            'payed' => ''
         ];
 
-////////////////
-    $filePath = '../json/data/booking.json';
-    $existingBookings = json_decode(file_get_contents($filePath), true);
-   if (!is_array($existingBookings)) {
-       $existingBookings = [];
-   }
-   $nextId = empty($existingBookings) ? 1 : max(array_keys($existingBookings)) + 1;
-    $existingBookings[$nextId] = $bookingData;
 
-    file_put_contents($filePath, json_encode($existingBookings, JSON_PRETTY_PRINT));
-////////////
     $_SESSION['booking_success'] = $bookingData;
     header("Location: recap.php");
     exit();
+///
+
 }
 $booking = $_SESSION['booking_success']; // Récupérer la réservation
 
@@ -231,22 +225,21 @@ $benefits = $roleBenefits[$userRole];
 
                     <div class="listname">
                         <?php
-                        require('getapikey.php');
-                        $montant=$total;
-                        $length = rand(10, 24); // Random length between 10 and 24 characters
-                        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; // All characters possible
-                        $transaction = '';
-                        for ($i = 0; $i < $length; $i++) {
-                            $transaction .= $characters[rand(0, strlen($characters) - 1)]; // Random transaction ID
-                        }
-                        $vendeur = "MI-1_I";
-                        $retour = "payement.php";
+                            require('getapikey.php');
+                            $montant=$total;
+                            $length = rand(10, 24); // Random length between 10 and 24 characters
+                            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; // All characters possible
+                            $transaction = '';
+                            for ($i = 0; $i < $length; $i++) {
+                                $transaction .= $characters[rand(0, strlen($characters) - 1)]; // Random transaction ID
+                            }
+                            $vendeur = "MI-1_I";
+                            $retour = $return_url;
 
-                        $api_key = getAPIKey($vendeur);
-                        $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
+                            $api_key = getAPIKey($vendeur);
+                            $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
                         ?>
                  <form action='https://www.plateforme-smc.fr/cybank/index.php' method="POST"> 
-                    <!-- <form action='fin.php' method="POST"> -->
                         <div>
                             <input type="text" name="nom[]" placeholder="Name" value="<?php echo htmlspecialchars($_SESSION["first_name"], ENT_QUOTES, 'UTF-8'); ?>"required>
                             <input type="text" name="prenom[]" placeholder="Last name" value="<?php echo htmlspecialchars($_SESSION["last_name"], ENT_QUOTES, 'UTF-8'); ?>"required>
@@ -263,7 +256,7 @@ $benefits = $roleBenefits[$userRole];
                             <input type='hidden' name='montant' value='<?php echo $montant; ?>'>
                             <input type='hidden' name='vendeur' value='<?php echo $vendeur; ?>'>
                             <input type='hidden' name='retour'
-                                   value='payement.php'>
+                                   value='<?php echo $return_url; ?>'>
                             <input type='hidden' name='control'
                                    value='<?php echo $control; ?>'>
                         </div>
