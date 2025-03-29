@@ -215,18 +215,6 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
         </div>
     </div>
 
-    <div class="destinations-info">
-        <h2>Upcoming Destinations</h2>
-        <ul>
-            <li>Alpha Centauri</li>
-            <li>Andromeda</li>
-            <li>Proxima B</li>
-            <li>Jupiter Moon</li>
-        </ul>
-        <a href="#" class="see-more-btn">See More</a>
-    </div>
-
-
 
     <div class="recent-trips">
 
@@ -239,7 +227,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
             foreach ($recentlybooked as $value) {
                 if ($value["id"] == $id) {
                     echo "<div class='planet-card-container'>";
-                    $imgSrc = '../images/planet/' . strtolower($value["planet"]) . ".webp";
+                    $imgSrc = '../../images/planet/' . strtolower($value["planet"]) . ".webp";
                     echo "<div class='planet-arrow'><strong>→</strong></div>";
 
                     echo "<div class='planet-card'>";
@@ -251,6 +239,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                     echo "<p><strong>👥 How many people :</strong> " . htmlspecialchars($value["nbpeople"]) . "</p>";
                     echo "<p><strong>🛡️ Insurance :</strong> " . ($value["insurance"] == "Yes" ? "Included ✅" : "No ❌") . "</p>";
                     echo "<p><strong>📅 Departure date:</strong> " . htmlspecialchars($value["selectedDate"]) . "</p>";
+                    echo "<p><strong> 💲 Price:</strong> " . htmlspecialchars($value["payment_amount"]) . "</p>";
                     echo "</div>";
 
                     $found = true;
