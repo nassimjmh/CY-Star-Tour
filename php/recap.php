@@ -1,8 +1,10 @@
 <?php
 session_start();
+
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $base_url = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
 $return_url = rtrim($base_url, '/') . '/payement.php';
+
 if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
 
     header('location: login.php');
@@ -251,14 +253,6 @@ $benefits = $roleBenefits[$userRole];
                             </select>
                             <input type="number" name="age[]" placeholder="Age" min="0" required>
 
-                            <input type='hidden' name='transaction'
-                                   value='<?php echo $transaction; ?>'>
-                            <input type='hidden' name='montant' value='<?php echo $montant; ?>'>
-                            <input type='hidden' name='vendeur' value='<?php echo $vendeur; ?>'>
-                            <input type='hidden' name='retour'
-                                   value='<?php echo $return_url; ?>'>
-                            <input type='hidden' name='control'
-                                   value='<?php echo $control; ?>'>
                         </div>
                         <?php
                         for ($i = 0; $i < $booking['nbpeople']-1; $i++) {
@@ -286,6 +280,14 @@ $benefits = $roleBenefits[$userRole];
                         <?php
                         }
                         ?>
+                        <input type='hidden' name='transaction'
+                                   value='<?php echo $transaction; ?>'>
+                            <input type='hidden' name='montant' value='<?php echo $montant; ?>'>
+                            <input type='hidden' name='vendeur' value='<?php echo $vendeur; ?>'>
+                            <input type='hidden' name='retour'
+                                   value='<?php echo $return_url; ?>'>
+                            <input type='hidden' name='control'
+                                   value='<?php echo $control; ?>'>
                         <input class="confirm" type="submit" name="submit" value="Pay">
                         <a href="destination.php?planet=<?php echo rawurlencode($p['name']); ?>" class="back-btn">Cancel</a>
                     </form>
