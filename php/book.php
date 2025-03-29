@@ -64,7 +64,7 @@
         <div class="start">
             <details open>
                 <summary>Choose your galaxy :</summary>
-                <div class="dropdown-content">
+                <div class="dropdown-content3">
                     <label>
                         <input type="checkbox" name="galaxy[]" value="Stargate"> Stargate
                     </label>
@@ -79,6 +79,9 @@
                     </label>
                     <label>
                         <input type="checkbox" name="galaxy[]" value="Ia"> Ia
+                    </label>
+                    <label>
+                        <input type="checkbox" name="galaxy[]" value="Game"> Game
                     </label>
                 </div>
             </details>
