@@ -91,15 +91,30 @@ main {
 .sidebar a {
     color: white;
     text-decoration: none;
-}
-
-.sidebar a:hover {
-    text-decoration: underline;
+    position: relative;  /* Add this */
+    display: inline-block;  /* Add this */
+    padding: 5px;  /* Add this for better hover area */
 }
 
 .sidebar .status:hover {
     cursor: pointer;
     transform: scale(1.05);
+}
+
+.underline::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 0.0625rem;
+    background: white;
+    transition : .3s;
+}
+
+.underline:hover:before{
+   width: 100%;
+   z-index : 1000;
 }
 
 .info {
