@@ -1,0 +1,60 @@
+{
+  "name": "Freljord",
+  "galaxy": "Game • -35° 12' 25'' • ★★★★☆",
+  "info": "🌡️ 260°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 8.82 m/s²",
+  "prix": "2.120 ₴",
+  "preimage": "https://theriotmmo.com/wp-content/uploads/2023/11/song-of-nunu-digital-artbook-images-the-journey-20-freljord-scaled.webp",
+  "image": "https://runeterrablog.wordpress.com/wp-content/uploads/2015/11/tumblr_mmeztbdwof1r4psebo2_1280.jpg",
+  "resume": "&nbsp;&nbsp;&nbsp;Journey to the <strong>icy wilderness of Freljord</strong>, where snow-covered peaks rise above ancient forests, and the mighty <strong>Frostguard</strong> protect their sacred lands.<br> &nbsp;&nbsp;&nbsp;Wander through the <strong>frostbitten tundra</strong>, explore ancient <strong>ruins of a forgotten era</strong>, and witness the fierce <strong>tribal battles</strong> that define this unforgiving land.",
+  "presentation": "Step into the epic world of Freljord, a land of ice and legend.<br>Traverse through the <strong>frosty valleys</strong> and towering mountains, where the tribes of Freljord wage eternal conflict. Explore the ancient strongholds, uncover the mysteries of <strong>Ashe’s tribe</strong>, and experience the harsh but breathtaking beauty of this land.<br><br>Witness the <strong>frost giants</strong>, meet the legendary warriors of Freljord, and learn about the ancient magic that binds the land and its people.<br><br>Embark on a journey through this mythical frozen world with a 5-day exploration, where you’ll experience thrilling adventures and uncover the secrets of Freljord’s past and future.",
+  "schedule": [
+    {
+      "title1": "Depart",
+      "description1": "The flight departs from CYFRE airport on ",
+      "title2": "",
+      "description2": ", with check-in at 12 PM and departure at 3 PM."
+    },
+    {
+      "title1": "Exploration of Freljord’s Peaks",
+      "description1": "&nbsp;&nbsp;&nbsp;Explore the towering mountains and deep, frost-covered valleys of Freljord. Witness the beauty of the unyielding glaciers and meet the local tribes.<br> &nbsp;&nbsp;&nbsp;Discover the magical forces that control the land’s winter storm.",
+      "title2": "Frostguard’s Ancient Keep",
+      "description2": "&nbsp;&nbsp;&nbsp;Visit the stronghold of the Frostguard, a powerful group of warriors dedicated to protecting the realm from external threats and preserving ancient traditions."
+    },
+    {
+      "title1": "Tribal Leadership and History",
+      "description1": "&nbsp;&nbsp;&nbsp;Meet the leaders of Freljord’s tribes. Learn about their cultures, beliefs, and the legendary figures who shaped their history.<br> &nbsp;&nbsp;&nbsp;Participate in a traditional <strong>tribal council</strong> to witness the politics and alliances that govern the land.",
+      "title2": "Winter Hunt",
+      "description2": "&nbsp;&nbsp;&nbsp;Join an exhilarating winter hunt across the frozen landscape.<br> &nbsp;&nbsp;&nbsp;Learn the ancient skills needed to survive in the harshest cold while hunting for mystical creatures that roam the tundra."
+    },
+    {
+      "title1": "Ancient Ruins Exploration",
+      "description1": "&nbsp;&nbsp;&nbsp;Discover ancient ruins buried beneath the ice, remnants of long-forgotten civilizations.<br> &nbsp;&nbsp;&nbsp;Uncover the history of these civilizations, and learn about their downfall in Freljord’s cold grip.",
+      "title2": "",
+      "description2": ""
+    },
+    {
+      "title1": "Ice Magic Training",
+      "description1": "&nbsp;&nbsp;&nbsp;Train with local shamans and magicians to learn the ancient ice magic of Freljord.<br> &nbsp;&nbsp;&nbsp;Master the ability to manipulate the cold and the storm to survive the harshest conditions.",
+      "title2": "Legendary Champion Encounter",
+      "description2": "&nbsp;&nbsp;&nbsp;Meet some of the legendary champions of Freljord, including the mighty <strong>Ashe</strong> and the fearsome <strong>Sejuani</strong>.<br> &nbsp;&nbsp;&nbsp;Hear their stories and experience their strength firsthand."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
+      "title2": "",
+      "description2": ", with check-in at 1 PM and departure at 4 PM"
+    }
+  ],
+  "date": [
+    { "depart": "10/06/4025", "arrive": "15/06/4025", "prix": "2205" },
+    { "depart": "22/08/4025", "arrive": "27/08/4025", "prix": "2150" },
+    { "depart": "04/02/4025", "arrive": "09/02/4025", "prix": "2100" },
+    { "depart": "18/03/4025", "arrive": "23/03/4025", "prix": "2250" },
+    { "depart": "11/11/4025", "arrive": "16/11/4025", "prix": "2200" },
+    { "depart": "28/05/4025", "arrive": "02/06/4025", "prix": "2050" },
+    { "depart": "12/07/4025", "arrive": "17/07/4025", "prix": "2180" },
+    { "depart": "04/09/4025", "arrive": "09/09/4025", "prix": "2130" },
+    { "depart": "02/01/4025", "arrive": "07/01/4025", "prix": "2080" },
+    { "depart": "14/04/4025", "arrive": "19/04/4025", "prix": "2220" }
+  ]
+}
