@@ -181,7 +181,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                     <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
                 </ul>
                 <form action="profil.php" method="POST">
-                    <button type="submit" name="edit" class="edit-btn">Edit Profile</button>
+                    <button type="submit" name="edit" class="edit-btn"><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" alt="" class="param"></button>
                 </form>
             <?php else: ?>
                 <form action="profil.php" method="POST">
@@ -239,6 +239,11 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 
         ?>
         
+    </div>
+    
+    <div class="imagerien"> 
+
+
 
     </div>
 
