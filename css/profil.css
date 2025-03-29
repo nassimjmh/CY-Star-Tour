@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: url("https://i.redd.it/ywi6jvge3sra1.gif");
+    background: url("https://preview.redd.it/the-eyes-of-cygnus-starless-v0-huahm3eo7xpe1.jpeg?width=1080&crop=smart&auto=webp&s=e89a3236eb094e09b2e09a40292e925756eda783");
     background-size: cover;
     background-attachment: fixed;
     color: white;
@@ -223,36 +223,62 @@ main {
 }
 
 .recent-trips {
+    position: absolute;
+    left: 74rem;
+    height: 50rem;
+    width: 40rem;
     background-color: white;
     padding: 0.625rem;
-    border-radius: 1.25rem;
-    width: 25rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
     color: #0b1a26;
     font-size: 1.25rem;
-    flex-grow: 0; /* Ne prend pas plus de place que nécessaire */
+    flex-grow: 0; 
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .recent-trips h2 {
-    border-bottom: 0.1875rem solid #0b1a26;
-    padding-bottom: 0.625rem;
+    border-bottom: 0.2rem solid #0b1a26;
+    padding-bottom: 0.6rem;
     color: #0b1a26;
     margin-top: 0;
 }
 
-.recent-trips ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.book{
+    position: relative;
+    height: 15rem;
+    border-radius: 1.25rem;
+    background-color: #0b1a26;
+    margin-top: -1rem;
 }
 
-.recent-trips li {
-    padding: 0.625rem 0;
-    border-bottom: 0.125rem solid #0b1a26;
+.namebook{
+    color: white;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+}
+.optionbook{
+    color: white;
+    position: relative;
+    top: -1rem;
+    left: 14rem;
+    font-size: 1rem;
+}
+/* Style pour l'image de la planète */
+.planet-image {
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    width: auto;
+    height: 10rem;
+    margin-right: 10px; 
 }
 
-.recent-trips li:last-child {
-    border-bottom: none;
-}
+
+
 
 .destinations-info {
     width: 15.625rem;
@@ -353,44 +379,4 @@ main {
     background-color: #218838;
 }
 
-.planet-image-container {
-    display: inline-flex;
-    align-items: center; /* Centre l'image verticalement avec le texte */
-}
 
-/* Flèche et espace avant chaque planète */
-.planet-arrow {
-    font-size: 30px;
-    color: black; /* Couleur de la flèche */
-    font-weight: bold;
-    margin-top: 20px;  /* Un peu d'espace avant chaque nouvelle planète */
-    margin-bottom: 10px; /* Un peu d'espace sous la flèche */
-}
-
-/* Style pour l'image de la planète */
-.planet-image {
-    width: 30px;
-    height: auto;
-    margin-right: 10px; /* Espace entre l'image et le texte */
-}
-
-/* Style général de la carte de la planète */
-.planet-card {
-    margin-bottom: 20px; /* Espace entre les cartes */
-    padding: 15px;
-    background-color: black;
-    border: 10px solid white;
-    border-radius: 30px;
-}
-
-.planet-card-container {
-    color: white;
-    max-height: 50rem; /* Ajuste cette hauteur selon ton besoin */
-    overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse la hauteur */
-    padding: 10px; /* Espacement autour du contenu */
-    border-left: 2px solid black; /* Ajout d'une bordure pour délimiter la zone */
-    border-top: 2px solid black; /* Ajout d'une bordure pour délimiter la zone */
-    border-bottom: 2px solid black; /* Ajout d'une bordure pour délimiter la zone */
-    border-radius : 25px;
-    background-color: #f9f9f9; /* Fond léger pour l'apparence */
-}
