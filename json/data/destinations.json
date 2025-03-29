@@ -119,19 +119,18 @@
         "key": ["Exploration", "Relaxation"],
         "price": 1600
     },
-    "Mistral": {
+    "Timber": {
         "id": 10,
-        "note": 4,
-        "name": "Mistral",
-        "galaxy": "Ia",
-        "description": "Misty mountains with neural networks",
-        "distance": 41500,
+        "note": 3,
+        "name": "Timber",
+        "galaxy": "Game",
+        "description": "Step into the enigmatic world of Timber Hearth.",
+        "distance": 32900,
         "revenue": 0,
-        "trips": 11,
-        "image": "mistral.webp",
-        "key": [ "Cultural", "Relaxation"],
-        "price": 1500
-
+        "trips": 8,
+        "image": "mann.webp",
+        "key": ["Exploration", "Party","Relaxation","Cultural"],
+        "price": 2420
     },
     "Openai": {
         "id": 11,
@@ -199,5 +198,32 @@
         "image": "mann.webp",
         "key": ["Exploration", "Cultural","Observation"],
         "price": 2150
+    },
+    "Freljord": {
+        "id": 16,
+        "note": 4,
+        "name": "Freljord",
+        "galaxy": "Game",
+        "description": "Freljord is a brutal, icy land of survival.",
+        "distance": 30303,
+        "revenue": 0,
+        "trips": 8,
+        "image": "freljord.png",
+        "key": ["Exploration", "Adventure","Survival","Cultural"],
+        "price": 2120
+    },
+    "Mistral": {
+        "id": 17,
+        "note": 4,
+        "name": "Mistral",
+        "galaxy": "Ia",
+        "description": "Misty mountains with neural networks",
+        "distance": 41500,
+        "revenue": 0,
+        "trips": 11,
+        "image": "mistral.webp",
+        "key": [ "Cultural", "Relaxation"],
+        "price": 1500
+
     }
 }
