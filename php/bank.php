@@ -27,7 +27,7 @@
     <input type='hidden' name='transaction'
     value='<?php echo $transaction; ?>'>
     <input type='hidden' name='montant' value='<?php echo $montant; ?>'>
-    <input type='hidden' name='vendeur' value='MI-1_I'>
+    <input type='hidden' name='vendeur' value='<?php echo $vendeur; ?>'>
     <input type='hidden' name='retour'
     value='https://www.youtube.com/watch?v=dQw4w9WgXcQ&'>
     <input type='hidden' name='control'

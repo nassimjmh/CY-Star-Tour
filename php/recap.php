@@ -233,7 +233,12 @@ $benefits = $roleBenefits[$userRole];
                         <?php
                         require('getapikey.php');
                         $montant=$total;
-                        $transaction = "154632ABCZWTC";
+                        $length = rand(10, 24); // Random length between 10 and 24 characters
+                        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; // All characters possible
+                        $transaction = '';
+                        for ($i = 0; $i < $length; $i++) {
+                            $transaction .= $characters[rand(0, strlen($characters) - 1)]; // Random transaction ID
+                        }
                         $vendeur = "MI-1_I";
                         $retour = "payement.php";
 
