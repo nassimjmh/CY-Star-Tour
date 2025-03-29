@@ -54,6 +54,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                             <th>OPTIONS</th>
                             <th>NB</th>
                             <th>DATE</th>
+                            <th>PRICE</th>
                             <th>PAY</th>
                             <th>ADMIN ACTIONS</th>
                         </tr>
@@ -115,8 +116,11 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                         
                                         echo $selectedDate["depart"] . " - " . $selectedDate["arrive"] . "<br>";
                                     ?></td>
+                                    <td><?php $revenue= $reservation["payment_amount"];
+                                    echo number_format($revenue, 0, '.', ',') . "₴";
+                                    ?></td>
                                     <td><?php
-                                    if (strcmp($reservation["payed"],"Yes") == 0){
+                                    if ($reservation["payed"]){
                                         echo "✅";
                                     }else{
                                         echo "❌";

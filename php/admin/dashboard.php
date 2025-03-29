@@ -50,12 +50,14 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
             <p>Total revenues for the current period.</p>
             <div class="revenue">
                 <h3><?php
-                $destinations = json_decode(file_get_contents("../../json/data/destinations.json"), true);
                 $totalRevenue = 0;
-                foreach ($destinations as $destination) {
-                    $totalRevenue += $destination["revenue"];
+                $reservations = json_decode(file_get_contents("../../json/data/booking.json"), true);
+                foreach ($reservations as $reservation) {
+                    $totalRevenue += $reservation["payment_amount"];
                 }
-                echo $totalRevenue . "₴";?></h3>
+                // Format with commas
+                echo number_format($totalRevenue, 0, '.', ',') . "₴";
+                ?></h3>
             </div>
         </div>
         <div class="bento-box">

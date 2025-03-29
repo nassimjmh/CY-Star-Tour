@@ -257,6 +257,11 @@
     min-width: 2.5rem;
     max-width: 2.5rem;      
 }
+.reservation-container th:nth-child(12) { 
+    width: 2.5rem;
+    min-width: 2.5rem;
+    max-width: 2.5rem;      
+}
 
 .reservation-container td:nth-child(10), td:nth-child(9), td:nth-child(11) {
     text-align: center;
