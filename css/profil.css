@@ -122,6 +122,7 @@ main {
     padding: 1.25rem;
     border-radius: 1.25rem;
     width: 37.5rem;
+    height: 22rem;
     color: #0b1a26;
     font-size: 1.25rem;
 }
@@ -163,23 +164,7 @@ main {
     font-family: "Inter", sans-serif;
 }
 
-.edit-btn, .save-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.3125rem;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 0.9375rem;
-    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
-}
 
-.edit-btn:hover, .save-btn:hover , .custom-btn:hover {
-    background-color: #4CAF50;
-    font-size: 0.9375rem;  /* Réduction de la taille de la police */
-    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
-}
 
 .info form {
     margin-top: 0.625rem;
@@ -363,22 +348,61 @@ main {
 }
 
 .edit-btn {
-    background-color: #4CAF50;
+    position: relative;
+    top: -22.5rem;
+    left: 10rem;
     border: none;
-    color: white;
-    padding: 0.625rem 1.25rem;
     text-align: right;
     text-decoration: none;
-    display: inline-block;
-    font-size: 1.0625rem;
-    margin: 0.25rem 0.125rem;
     cursor: pointer;
+    display: inline-block; /* Empêche le changement de position */
+    transition: transform 0.3s ease; /* Assure une transition fluide */
+}
+
+
+.edit-btn:hover {
+    transform: scale(0.8);
+}
+.param {
+    position: relative;
+    height: 2rem;
+    transition: font-size 0.7s, height 0.7s;
+}
+
+.save-btn {
+    position: relative;
+    left: 28.5rem;
+    top: -24.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem;
     border-radius: 0.3125rem;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.9375rem;
+    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
 
-.edit-btn:hover{
-    background-color: #218838;
+ .save-btn:hover , .custom-btn:hover {
+    background-color: #4CAF50;
+    font-size: 0.9375rem;  /* Réduction de la taille de la police */
+    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
 
-
+.imagerien {
+    background-image: url("../images/img.png");
+    background-size:cover; /* Couvre tout l'élément sans déformation */
+    background-position:center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    overflow: hidden;
+    position: absolute;
+    top: 33rem;
+    left: 33rem;
+    background-color: white;
+    border-radius: 1.25rem;
+    width: 39.5rem;
+    height: 25.5rem;
+    color: #0b1a26;
+    font-size: 1.25rem;
+}
