@@ -270,6 +270,7 @@ main {
 /* Style pour l'image de la planète */
 .planet-image {
     position: absolute;
+    max-width: 10rem;
     top: 4rem;
     left: 1rem;
     width: auto;
