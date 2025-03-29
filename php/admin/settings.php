@@ -10,11 +10,21 @@
     <link rel="stylesheet" href="../../css/style.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body id="dashboard">
+<body id="settings">
 <style>
         .sidebar ul li a[href="settings.php"] {
             color: #5e9ae9;
-    }
+            position: relative;
+        }
+        .sidebar ul li a[href="settings.php"]::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: white;
+        }
 </style>
 <?php include("bars.php") ?>
     
