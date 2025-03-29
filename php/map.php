@@ -84,11 +84,11 @@ session_start();
                     <p>Arrakis</p>
                 </div>
                 <div class="planet freljord">
-                     <a href="destination.php?planet=Freljord"><img src="../images/planet/Freljord.png" alt="freljord"></a>
+                     <a href="destination.php?planet=Freljord"><img src="../images/planet/freljord.webp" alt="freljord"></a>
                     <p>Freljord</p>
                 </div>
                 <div class="planet timber">
-                     <a href="destination.php?planet=Timber"><img src="../images/planet/Timber.png" alt="timber"></a>
+                     <a href="destination.php?planet=Timber"><img src="../images/planet/timber.webp" alt="timber"></a>
                     <p>Timber</p>
                 </div>
             </div>
