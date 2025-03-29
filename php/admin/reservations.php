@@ -91,7 +91,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                         <img src="<?php echo $imgSrc; ?>" alt="PPP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
                                     </td>                                    
                                     <td><?php echo $reservation["planet"] ?></td>
-                                    <td><?php echo count($reservation["days"]) . " days" ?></td>
+                                    <td><?php echo count($reservation["days"]) . " activities" ?></td>
                                     <td><?php echo $reservation["quality"] ?></td>
                                     <td><?php 
                                     if (!strcmp($reservation["breakfast"],"Yes")){
