@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../font/Inter.ttc') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#Book {
+    font-family: 'Inter', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Assure que la hauteur s'ajuste au contenu */
+    background-color: black;
+}
+
+/*###################################*/
+/*###################################*/
+.payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Carré avec un fond et des ombres */
+.payment-box {
+    background-color: white;
+    color: #0B1A26;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Style du titre */
+.payment-box h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Style des autres informations */
+.payment-box p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Style du bouton */
+.payment-box .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0B1A26;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.yes{
+    color: green;
+}
+.no{
+    color: red;
+}
