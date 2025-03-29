@@ -86,10 +86,17 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
             </div>
         </div>
         <div class="bento-box">
-            <h2>Active Users (Not Working)</h2>
-            <p>Users active in the last 30 days.</p>
+            <h2>Number of destinations</h2>
+            <p>Number of currently available destinations</p>
             <div class="active-users">
-                <h3>5,456</h3>
+                <h3><?php 
+                $destinationFile = '../../json/data/destinations.json';
+                if (file_exists($destinationFile)) {
+                    $destinationData = json_decode(file_get_contents($destinationFile), true);
+                    $destinationCount = count($destinationData);
+                    echo $destinationCount;
+                }
+                ?></h3>
             </div>
         </div>
     </div> 
