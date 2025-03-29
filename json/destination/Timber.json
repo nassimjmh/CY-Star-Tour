@@ -1,0 +1,60 @@
+{
+  "name": "Timber",
+  "galaxy": "Game • -48° 08' 35'' • ★★★☆☆",
+  "info": "🌡️ 290°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 9.81 m/s²",
+  "prix": "2.420 ₴",
+  "preimage": "https://www.mobiusdigitalgames.com/uploads/4/7/3/2/47328935/ow-village-orig_orig.png",
+  "image": "https://www.mobiusdigitalgames.com/uploads/4/7/3/2/47328935/ow-th-village_orig.png",
+  "resume": "&nbsp;&nbsp;&nbsp;Journey to the <strong>mysterious Timber Hearth</strong>, the lush, verdant planet where <strong>ancient secrets</strong> lie beneath its quiet surface.<br> &nbsp;&nbsp;&nbsp;Explore its <strong>forests and caves</strong>, navigate through <strong>floating islands</strong>, and uncover the mysteries of the Nomai, a long-lost civilization.",
+  "presentation": "Step into the enigmatic world of Timber Hearth, a planet rich in natural beauty and hidden ancient knowledge.<br>Explore its <strong>dense forests</strong>, <strong>cavernous undergrounds</strong>, and towering stone arches.<br><br>Learn about the <strong>Nomai</strong> ruins scattered across the planet, discover their past, and delve into the <strong>quantum mechanics</strong> that shape this mysterious world.<br><br>Whether you're a scientist, an explorer, or a mystery-seeker, Timber Hearth offers a one-of-a-kind adventure to the heart of the unknown.",
+  "schedule": [
+    {
+      "title1": "Depart",
+      "description1": "The flight departs from CYTIM airport on ",
+      "title2": "",
+      "description2": ", with check-in at 10 AM and departure at 1 PM."
+    },
+    {
+      "title1": "Exploration of Timber Hearth's Surface",
+      "description1": "&nbsp;&nbsp;&nbsp;Start your adventure by exploring the planet's lush surface.<br> &nbsp;&nbsp;&nbsp;Navigate through forests, ascend to floating islands, and discover the vibrant fauna that call this planet home.",
+      "title2": "Nomai Ruins",
+      "description2": "&nbsp;&nbsp;&nbsp;Visit the mysterious Nomai ruins scattered across the planet.<br> &nbsp;&nbsp;&nbsp;Learn about their culture, technology, and their connection to the greater mysteries of the universe."
+    },
+    {
+      "title1": "Underground Cavern Exploration",
+      "description1": "&nbsp;&nbsp;&nbsp;Venture deep into Timber Hearth’s underground caves.<br> &nbsp;&nbsp;&nbsp;Discover glowing crystals and hidden chambers as you uncover ancient artifacts left behind by the Nomai.",
+      "title2": "Quantum Physics Experience",
+      "description2": "&nbsp;&nbsp;&nbsp;Learn about the quantum phenomena that define Timber Hearth’s unique physics.<br> &nbsp;&nbsp;&nbsp;Participate in experiments and explore the interplay between space and time in the heart of the planet."
+    },
+    {
+      "title1": "Floating Island Adventure",
+      "description1": "&nbsp;&nbsp;&nbsp;Embark on a thrilling journey across Timber Hearth’s floating islands.<br> &nbsp;&nbsp;&nbsp;Use your knowledge of gravity and physics to navigate the challenging terrain and uncover the secrets hidden in the sky.",
+      "title2": "",
+      "description2": ""
+    },
+    {
+      "title1": "Nomai's Lost Knowledge",
+      "description1": "&nbsp;&nbsp;&nbsp;Delve deeper into the mysteries of the Nomai, uncovering their ancient technology and their ultimate quest.<br> &nbsp;&nbsp;&nbsp;Join an expedition to one of their most significant sites and try to piece together their history.",
+      "title2": "Quantum Rift Observation",
+      "description2": "&nbsp;&nbsp;&nbsp;Observe a rare quantum rift that appears around Timber Hearth.<br> &nbsp;&nbsp;&nbsp;Witness the strange interactions between space and time as you study the rift's effects on the environment."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
+      "title2": "",
+      "description2": ", with check-in at 9 AM and departure at 12 PM."
+    }
+  ],
+  "date": [
+    { "depart": "14/05/4025", "arrive": "19/05/4025", "prix": "2555" },
+    { "depart": "22/06/4025", "arrive": "27/06/4025", "prix": "2300" },
+    { "depart": "01/09/4025", "arrive": "06/09/4025", "prix": "2850" },
+    { "depart": "18/11/4025", "arrive": "23/11/4025", "prix": "2100" },
+    { "depart": "30/01/4025", "arrive": "04/02/4025", "prix": "2200" },
+    { "depart": "10/03/4025", "arrive": "15/03/4025", "prix": "2350" },
+    { "depart": "07/06/4025", "arrive": "12/06/4025", "prix": "2420" },
+    { "depart": "03/08/4025", "arrive": "08/08/4025", "prix": "2255" },
+    { "depart": "21/10/4025", "arrive": "26/10/4025", "prix": "2205" },
+    { "depart": "15/12/4025", "arrive": "20/12/4025", "prix": "2650" }
+  ]
+}
