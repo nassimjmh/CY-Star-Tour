@@ -213,6 +213,17 @@
     max-height: 240px;
     overflow-y: auto;
 }
+#Book .dropdown-content3{ /*Le carré*/
+    background-color: #0f1A26;
+    padding: 10px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+#Book .dropdown-content3 label { /*Le texte*/
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 5px 0;
+}
 #Book .dropdown-content2 label { /*Le texte*/
     color: rgb(255, 255, 255);
     display: block;
