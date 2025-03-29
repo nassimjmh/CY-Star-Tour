@@ -8,6 +8,7 @@
                 <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/medium/cb@2x.png?raw=true" alt="cartebleue"></il>
                 <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/paypal@2x.png?raw=true" alt="paypal"></il>
                 <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/mastercard@2x.png?raw=true" alt="mastercard"></il>
+                <il><img src="../images/cybank.webp" alt="cybank"></il>
                 <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/visa@2x.png?raw=true" alt="visa"></il>
                 <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/medium/bitcoin-2@2x.png?raw=true" alt="bitcoin"></il>
             </ul>
