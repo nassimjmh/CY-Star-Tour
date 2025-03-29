@@ -6,10 +6,15 @@
         "galaxy": "Stargate",
         "description": "Ancient underwater city with nothing",
         "distance": 14650,
-        "revenue": 500,
-        "trips": 24,
+        "revenue": 3470,
+        "trips": 2,
         "image": "atlantis.webp",
-        "key": ["Exploration", "Initiation","Relaxation","Cultural"],
+        "key": [
+            "Exploration",
+            "Initiation",
+            "Relaxation",
+            "Cultural"
+        ],
         "price": 1480
     },
     "Pandora": {
@@ -19,12 +24,16 @@
         "galaxy": "Movie",
         "description": "Bioluminescent forests with floating mountains",
         "distance": 25400,
-        "revenue": 0,
-        "trips": 18,
+        "revenue": 6620,
+        "trips": 2,
         "image": "pandora.webp",
-        "key": ["Exploration", "Cultural", "Adventure","Relaxation"],
+        "key": [
+            "Exploration",
+            "Cultural",
+            "Adventure",
+            "Relaxation"
+        ],
         "price": 1390
-
     },
     "Naboo": {
         "id": 3,
@@ -33,12 +42,15 @@
         "galaxy": "Star Wars",
         "description": "Peaceful planet with beautiful architecture",
         "distance": 32500,
-        "revenue": 0,
-        "trips": 37,
+        "revenue": 3940,
+        "trips": 2,
         "image": "naboo.webp",
-        "key": ["Exploration", "Adventure", "Relaxation"],
+        "key": [
+            "Exploration",
+            "Adventure",
+            "Relaxation"
+        ],
         "price": 1990
-
     },
     "Cybertron": {
         "id": 4,
@@ -47,10 +59,14 @@
         "galaxy": "Movie",
         "description": "Metallic homeworld of sentient robots",
         "distance": 26850,
-        "revenue": 0,
-        "trips": 15,
+        "revenue": 6540,
+        "trips": 2,
         "image": "cybertron.webp",
-        "key": ["Exploration", "Initiation","Cultural"],
+        "key": [
+            "Exploration",
+            "Initiation",
+            "Cultural"
+        ],
         "price": 1630
     },
     "Scarif": {
@@ -60,12 +76,15 @@
         "galaxy": "Star Wars",
         "description": "Tropical paradise with imperial base",
         "distance": 30200,
-        "revenue": 0,
-        "trips": 22,
+        "revenue": 4250,
+        "trips": 1,
         "image": "scarif.webp",
-        "key": ["Cultural", "Adventure","Relaxation"],
+        "key": [
+            "Cultural",
+            "Adventure",
+            "Relaxation"
+        ],
         "price": 1590
-
     },
     "Earth": {
         "id": 6,
@@ -74,10 +93,15 @@
         "galaxy": "Milky Way",
         "description": "Blue planet with diverse ecosystems",
         "distance": 8600,
-        "revenue": 0,
-        "trips": 143,
+        "revenue": 4290,
+        "trips": 2,
         "image": "earth.webp",
-        "key": ["Exploration", "Initiation","Cultural", "Adventure"],
+        "key": [
+            "Exploration",
+            "Initiation",
+            "Cultural",
+            "Adventure"
+        ],
         "price": 1120
     },
     "Asuras": {
@@ -87,10 +111,14 @@
         "galaxy": "Stargate",
         "description": "Advanced civilization with nanite technology",
         "distance": 15300,
-        "revenue": 0,
-        "trips": 12,
+        "revenue": 3560,
+        "trips": 1,
         "image": "asuras.webp",
-        "key": ["Exploration", "Initiation","Relaxation"],
+        "key": [
+            "Exploration",
+            "Initiation",
+            "Relaxation"
+        ],
         "price": 1480
     },
     "Kamino": {
@@ -100,10 +128,13 @@
         "galaxy": "Star Wars",
         "description": "Stormy ocean planet of cloners",
         "distance": 31750,
-        "revenue": 0,
-        "trips": 28,
+        "revenue": 1475,
+        "trips": 1,
         "image": "kamino.webp",
-        "key": ["Exploration", "Cultural"],
+        "key": [
+            "Exploration",
+            "Cultural"
+        ],
         "price": 1299
     },
     "Grok": {
@@ -113,10 +144,13 @@
         "galaxy": "Ia",
         "description": "Enigmatic world of abstract intelligence",
         "distance": 42300,
-        "revenue": 0,
-        "trips": 7,
+        "revenue": 1795,
+        "trips": 1,
         "image": "grok.webp",
-        "key": ["Exploration", "Relaxation"],
+        "key": [
+            "Exploration",
+            "Relaxation"
+        ],
         "price": 1600
     },
     "Timber": {
@@ -127,9 +161,14 @@
         "description": "Step into the enigmatic world of Timber Hearth.",
         "distance": 32900,
         "revenue": 0,
-        "trips": 8,
+        "trips": 0,
         "image": "mann.webp",
-        "key": ["Exploration", "Party","Relaxation","Cultural"],
+        "key": [
+            "Exploration",
+            "Party",
+            "Relaxation",
+            "Cultural"
+        ],
         "price": 2420
     },
     "Openai": {
@@ -139,12 +178,15 @@
         "galaxy": "Ia",
         "description": "Planet of evolving digital entities",
         "distance": 40800,
-        "revenue": 0,
-        "trips": 16,
+        "revenue": 4120,
+        "trips": 1,
         "image": "openai.webp",
-        "key": [ "Cultural",  "Adventure", "Party"],
+        "key": [
+            "Cultural",
+            "Adventure",
+            "Party"
+        ],
         "price": 1650
-
     },
     "Mars": {
         "id": 12,
@@ -153,12 +195,15 @@
         "galaxy": "Milky Way",
         "description": "Red planet with dusty landscapes",
         "distance": 8500,
-        "revenue": 0,
-        "trips": 67,
+        "revenue": 1150,
+        "trips": 1,
         "image": "mars.webp",
-        "key": ["Exploration", "Adventure", "Observation"],
+        "key": [
+            "Exploration",
+            "Adventure",
+            "Observation"
+        ],
         "price": 1350
-
     },
     "Arrakis": {
         "id": 13,
@@ -167,23 +212,31 @@
         "galaxy": "Movie",
         "description": "Desert planet known for valuable spice melange",
         "distance": 45600,
-        "revenue": 0,
-        "trips": 23,
+        "revenue": 1990,
+        "trips": 1,
         "image": "arrakis.webp",
-        "key": ["Exploration", "Observation","Survival"],
+        "key": [
+            "Exploration",
+            "Observation",
+            "Survival"
+        ],
         "price": 2350
     },
     "Axiom": {
         "id": 14,
         "note": 5,
-        "name": "Axiom",        
+        "name": "Axiom",
         "galaxy": "Movie",
         "description": "Luxury starliner housing humans away from Earth",
         "distance": 12800,
-        "revenue": 0,
-        "trips": 42,
+        "revenue": 3780,
+        "trips": 1,
         "image": "axiom.webp",
-        "key": ["Cultural", "Relaxation","Party"],
+        "key": [
+            "Cultural",
+            "Relaxation",
+            "Party"
+        ],
         "price": 2150
     },
     "Mann": {
@@ -193,10 +246,14 @@
         "galaxy": "Movie",
         "description": "Ice planet with frozen ammonia surface",
         "distance": 52300,
-        "revenue": 0,
-        "trips": 8,
+        "revenue": 1680,
+        "trips": 1,
         "image": "mann.webp",
-        "key": ["Exploration", "Cultural","Observation"],
+        "key": [
+            "Exploration",
+            "Cultural",
+            "Observation"
+        ],
         "price": 2150
     },
     "Freljord": {
@@ -207,9 +264,14 @@
         "description": "Freljord is a brutal, icy land of survival.",
         "distance": 30303,
         "revenue": 0,
-        "trips": 8,
+        "trips": 0,
         "image": "freljord.png",
-        "key": ["Exploration", "Adventure","Survival","Cultural"],
+        "key": [
+            "Exploration",
+            "Adventure",
+            "Survival",
+            "Cultural"
+        ],
         "price": 2120
     },
     "Mistral": {
@@ -219,11 +281,13 @@
         "galaxy": "Ia",
         "description": "Misty mountains with neural networks",
         "distance": 41500,
-        "revenue": 0,
-        "trips": 11,
+        "revenue": 1830,
+        "trips": 1,
         "image": "mistral.webp",
-        "key": [ "Cultural", "Relaxation"],
+        "key": [
+            "Cultural",
+            "Relaxation"
+        ],
         "price": 1500
-
     }
 }
