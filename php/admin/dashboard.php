@@ -8,7 +8,7 @@ if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ) {
 
 if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
     
-        header('location: ../../index.html');
+    header('location: ../index.php');
 }
 
 ?>
