@@ -32,7 +32,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
             left: 0;
             width: 100%;
             height: 1px;
-            background: white;
+            background: #5e9ae9;
         }
 </style>
 <?php include("bars.php") ?>
