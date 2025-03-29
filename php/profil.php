@@ -239,7 +239,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
             foreach ($recentlybooked as $value) {
                 if ($value["id"] == $id) {
                     echo "<div class='planet-card-container'>";
-                    $imgSrc = '../../images/planet/' . strtolower($value["planet"]) . ".webp";
+                    $imgSrc = '../images/planet/' . strtolower($value["planet"]) . ".webp";
                     echo "<div class='planet-arrow'><strong>→</strong></div>";
 
                     echo "<div class='planet-card'>";
