@@ -65,26 +65,24 @@ if ( !isset($_SESSION['role']) && $_SESSION['role'] !== 'Admin') {
             <p>Total trips for the current period.</p>
             <div class="sales">
                 <h3><?php 
-                $destinations = json_decode(file_get_contents("../../json/data/destinations.json"), true);
-                $totalTrips = 0;
-                foreach ($destinations as $destination) {
-                    $totalTrips += $destination["trips"];
-                }
-                echo $totalTrips;?></h3>
+                $bookings = json_decode(file_get_contents("../../json/data/booking.json"), true);
+                $totalTrips = count($bookings);
+                echo $totalTrips;
+                ?></h3>
             </div>
         </div>
         <div class="bento-box">
             <h2>User base</h2>
             <p>Users registered.</p>
             <div class="user-growth">
-                <?php
+                <h3><?php
                     $usersFile = '../../json/data/users.json';
                     if (file_exists($usersFile)) {
                         $usersData = json_decode(file_get_contents($usersFile), true);
                         $userCount = count($usersData);
-                        echo "<h3>" . $userCount . "</h3>";
+                        echo $userCount;
                     }
-                ?>
+                ?></h3>
             </div>
         </div>
         <div class="bento-box">
