@@ -121,7 +121,10 @@
     top: 40.625rem;
     left: 59.375rem;
 }
-
+.timber{
+    top: 40.5rem;
+    left: 18.25rem;
+}
 .kamino{
     top: 6.25rem;
     left: 68.75rem;
@@ -130,6 +133,10 @@
 .grok{
     top: 37.5rem;
     left: 31.25rem;
+}
+.freljord{
+    top: 27.5rem;
+    left: 90.25rem;
 }
 
 .asuras{
