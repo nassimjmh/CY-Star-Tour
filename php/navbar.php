@@ -11,7 +11,7 @@
             <a class="underline" href="book.php">Destinations</a>
             <ul class="submenu">
                 <li><a href="map.php">Map</a></li>
-                <li> <a href="offers.php">Special Offers</a></li>
+                <li> <a href="#">Special Offers</a></li>
             </ul>
 
         </li>

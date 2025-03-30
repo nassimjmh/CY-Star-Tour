@@ -142,19 +142,19 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                 $role = $_SESSION['role'];
 
                 if ($role === 'Standard') {
-                    echo ' <a href="subscription.php" style="color :  #4CAF50;">' . 'Status :&nbsp' . $role . '</a>';
+                    echo ' <a href="#" style="color :  #4CAF50;">' . 'Status :&nbsp' . $role . '</a>';
                 }
                 else if ($role === 'Admin') {
-                    echo ' <a href="subscription.php" style="color : #5e9ae9;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bxs-wrench'></i>" . '</a>';
+                    echo ' <a href="#" style="color : #5e9ae9;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bxs-wrench'></i>" . '</a>';
                 }
                 else if ($role === 'VIP') {
-                    echo ' <a href="subscription.php" style="color : gold;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bxl-sketch'></i>" . '</a>';
+                    echo ' <a href="#" style="color : gold;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bxl-sketch'></i>" . '</a>';
                 }
                 else if ($role === 'Banned') {
-                    echo ' <a href="subscription.php" style="color :#ff4444 ;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bx-dizzy'></i>" . '</a>';
+                    echo ' <a href="#" style="color :#ff4444 ;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bx-dizzy'></i>" . '</a>';
                 }
                 else if ($role === 'Stellar Elite') {
-                    echo ' <a href="subscription.php" style="color :#7851A9 ;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bx-planet'></i>" . '</a>';
+                    echo ' <a href="#" style="color :#7851A9 ;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bx-planet'></i>" . '</a>';
                 }
             }
             ?>
