@@ -8,12 +8,10 @@
             <a class="underline" href="index.php">Home</a>
         </li>
         <li>
-            <a class="underline" href="book.php">Destinations</a>
-            <ul class="submenu">
-                <li><a href="map.php">Map</a></li>
+            <a class="underline" href="map.php">Destinations</a>
+            <!-- <ul class="submenu">
                 <li> <a href="#">Special Offers</a></li>
-            </ul>
-
+            </ul>-->
         </li>
 
         <li>
