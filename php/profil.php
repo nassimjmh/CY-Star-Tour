@@ -114,7 +114,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 <main>
     <div class="sidebar">
         <div class="sidebar-head">
-            <img src="<?php echo $users[$email]['profile_pic']; ?>" alt="Picture" class="profile-pic"></img>
+            <img src="<?php echo "../" . $users[$email]['profile_pic']; ?>" alt="Picture" class="profile-pic"></img>
             <form action="profil.php" method="POST" enctype="multipart/form-data">
                 <input type="file" name="profile_pic" id="file-input" accept="image/*">
                 <label for="file-input" class="file-label">

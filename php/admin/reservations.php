@@ -56,7 +56,6 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                             <th>DATE</th>
                             <th>PRICE</th>
                             <th>PAY</th>
-                            <th>ADMIN ACTIONS</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -76,7 +75,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                                 if (strpos($user["profile_pic"], 'http') === 0) {
                                                     $profilePic = $user["profile_pic"]; // For external links
                                                 } else {
-                                                    $profilePic = '../' . $user["profile_pic"]; // For local links in <upload> folder
+                                                    $profilePic = '../../' . $user["profile_pic"]; // For local links in <upload> folder
                                                 }
                                                 break;
                                             }
@@ -127,15 +126,6 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                     }
                                     
                                     ?></td>
-                                    <td>
-                                    <div class="action-buttons">
-                                        <button class="manage-button">
-                                            <a href="edit_reservation.php?name= <?php /* echo urlencode($reservations['name']); */?>" class="manage-button">
-                                                Edit Reservation
-                                            </a>
-                                        </button>
-                                    </div>
-                                    </td>
                                 </tr>
                                 <?php
                             }

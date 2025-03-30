@@ -95,7 +95,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                         if (strpos($users["profile_pic"], 'http') === 0) {
                                             $imgSrc = $users["profile_pic"]; // For external links
                                         } else {
-                                            $imgSrc = '../' . $users["profile_pic"]; // For local links in <upload> folder
+                                            $imgSrc = '../../' . $users["profile_pic"]; // For local links in <upload> folder
                                         }
                                         ?>
                                         <img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
