@@ -38,7 +38,7 @@
                         }
                     } else {
                         ?>
-                        <img src="../images/invisiblepfp.png" alt="PP" class="profile-thumbnail" style="width: 40px; height: 40px; border-radius: 50%;">
+                        <img src="../images/invisiblepfp.png" alt="PP" class="profile-thumbnail" style="width: 40px; height: 40px; border-radius: 50%; font-weight:bold;">
                         <?php  }
                     ?>
                 </li>

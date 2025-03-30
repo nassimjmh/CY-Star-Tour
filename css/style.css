@@ -188,9 +188,7 @@ nav ul li:last-child.connect {
 }
 
 nav ul li.research {
-    position: relative;
     left: 28.125rem;
-    margin-left: auto;
 }
 
 nav .research {

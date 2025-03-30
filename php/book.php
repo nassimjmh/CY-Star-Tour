@@ -43,8 +43,8 @@
     <head>
         <title>StarTour - Book</title>
         <link rel="icon" href="../images/sparkles.png" type="image/png">
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/book.css">
+        <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
+        <link rel="stylesheet" href="../css/book.css?v=<?php echo time(); ?>">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
