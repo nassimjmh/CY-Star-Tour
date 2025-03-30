@@ -34,9 +34,12 @@
                         <a href="profil.php"><img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 40px; height: 40px; border-radius: 50%;"></a>
                     <?php
                         } else {
-                            ?> <a href="profil.php"><i class='bx bx-user-circle connect'></i></a> <?php
+                            ?> <a href="profil.php"><i class='bx bx-user-circle connect'></i></a><?php
                         }
-                    }
+                    } else {
+                        ?>
+                        <img src="../images/invisiblepfp.png" alt="PP" class="profile-thumbnail" style="width: 40px; height: 40px; border-radius: 50%;">
+                        <?php  }
                     ?>
                 </li>
     </ul>
