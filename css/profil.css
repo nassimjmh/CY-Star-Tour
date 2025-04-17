@@ -40,7 +40,7 @@ main {
     font-size: 1.5625rem;
     border-radius: 1.25rem;
     color: white;
-    background-color: #0b1a26;
+    background-color: var(--blue);
     margin-right: 1.25rem;
     padding: 1rem;
 }
@@ -56,7 +56,7 @@ main {
     top: 0.625rem;
     right: 0.625rem;
     font-size: 1.5625rem;
-    color:#0b1a26;
+    color:var(--blue);
     background: white;
     border-radius: 50%;
     padding: 0.3125rem;
@@ -66,17 +66,17 @@ main {
 .sidebar-head .bx-edit:hover {
     font-size: 1.4375rem;
     margin-top: 2.5rem;
-    color: #0b1a26;
+    color: var(--blue);
 }
 
 .bx-edit {
-    color: #0b1a26;
+    color: var(--blue);
     font-size: 1.875rem;
 }
 
 .bx-edit:hover{
     font-size: 1.75rem;
-    color: #0b1a26;
+    color: var(--blue);
 }
 
 .profile-pic {
@@ -118,31 +118,32 @@ main {
 }
 
 .info {
-    background-color: white;
+    background-color: var(--white);
     padding: 1.25rem;
     border-radius: 1.25rem;
     width: 37.5rem;
     height: 22rem;
-    color: #0b1a26;
+    color: var(--blue);
     font-size: 1.25rem;
 }
 
 .info h2 {
-    border-bottom: 0.1875rem solid #0b1a26;
+    border-bottom: 0.1875rem solid var(--black);
     padding-bottom: 0.625rem;
     margin-top: 0;
-    color: #0b1a26;
+    color: var(--black);
 }
 
 .info ul {
     list-style: none;
+    color: var(--black);
     padding: 0;
     margin: 0;
 }
 
 .info li {
     padding: 0.9375rem 0;
-    border-bottom: 0.125rem solid #0b1a26;
+    border-bottom: 0.125rem solid var(--black);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,7 +173,7 @@ main {
 
 .info span {
     font-weight: bold;
-    color: #0b1a26;
+    color: var(--blue);
 }
 
 .info-profile {
@@ -183,7 +184,7 @@ main {
 }
 
 .info .header {
-    border-bottom: 0.1875rem solid #0b1a26;
+    border-bottom: 0.1875rem solid var(--blue);
     margin-bottom: 1.25rem;
 }
 
@@ -191,7 +192,7 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 0.625rem 0;
-    border-bottom: 0.125rem solid #0b1a26;
+    border-bottom: 0.125rem solid var(--blue);
 }
 
 .info .line:last-child {
@@ -199,7 +200,7 @@ main {
 }
 
 .label {
-    color: #0b1a26;
+    color: var(--blue);
     font-size: 1.25rem;
 }
 
@@ -212,11 +213,11 @@ main {
     left: 74rem;
     height: 50rem;
     width: 40rem;
-    background-color: white;
+    background-color: var(--white);
     padding: 0.625rem;
     border-top-left-radius: 1.25rem;
     border-bottom-left-radius: 1.25rem;
-    color: #0b1a26;
+    color: var(--blue);
     font-size: 1.25rem;
     flex-grow: 0; 
     overflow: scroll;
@@ -225,9 +226,9 @@ main {
 }
 
 .recent-trips h2 {
-    border-bottom: 0.2rem solid #0b1a26;
+    border-bottom: 0.2rem solid var(--black);
     padding-bottom: 0.6rem;
-    color: #0b1a26;
+    color: var(--black);
     margin-top: 0;
 }
 
@@ -235,7 +236,7 @@ main {
     position: relative;
     height: 15rem;
     border-radius: 1.25rem;
-    background-color: #0b1a26;
+    background-color: var(--blue);
     margin-top: -1rem;
 }
 
@@ -270,7 +271,7 @@ main {
 .destinations-info {
     width: 15.625rem;
     padding: 1.25rem;
-    background-color: #0b1a26;
+    background-color: var(--blue);
     color: white;
     border-radius: 1.25rem;
 }
@@ -296,7 +297,7 @@ main {
     margin-left: 6.25rem;
     display: inline-block;
     background-color: white;
-    color: #0b1a26;
+    color: var(--blue);
     padding: 0.625rem 1.25rem;
     font-size: 1rem;
     text-decoration: none;
@@ -403,6 +404,6 @@ main {
     border-radius: 1.25rem;
     width: 39.5rem;
     height: 25.5rem;
-    color: #0b1a26;
+    color: var(--blue);
     font-size: 1.25rem;
 }
