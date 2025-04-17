@@ -7,8 +7,9 @@
 }
 
 #Book{
+    background-color: var(--white);
     font-family: 'Inter', sans-serif;
-    color: black;
+    color: var(--black);
     margin: 0;
     padding: 0;
     height: 100%; /* Assure que le body prend toute la hauteur de la fenêtre */
@@ -32,6 +33,7 @@
 
 }
 #Book .title{
+    
     position: absolute;
     white-space: nowrap;
     top: 25%;
@@ -53,13 +55,13 @@
     top: -3rem;
     border-top-left-radius: 1.2rem;
     border-top-right-radius: 1.2rem;
-    background-color: #ffffff;
+    background-color: var(--white);
     height: 24.2rem;
 }
 .presentationtitle{
-    text-shadow: 0px 0px 0.1rem rgb(255, 255, 255);
+    text-shadow: 0px 0px 0.1rem var(--white);
     position: absolute;
-    color: #0B1A26;
+    color: var(--black);
     font-size: 2.5rem;
     left: 3rem;
     font-weight: bolder;
@@ -82,7 +84,7 @@
     top: -3rem;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    background-color: #0B1A26;
+    background-color: var(--blue);
     height:40rem;
 }
 .programtitle{
@@ -100,7 +102,7 @@
     width: 24.2rem;
     height: 27.3rem;
     margin-right: 3rem;
-    background-color: white;
+    background-color: var(--white);
     border-top-left-radius: 1.2rem;
     border-bottom-left-radius: 1.2rem;
     border-bottom-right-radius: 1.2rem;
@@ -127,13 +129,13 @@
     top: -4.2rem;
     border-top-left-radius: 1.2rem;
     border-top-right-radius: 1.2rem;
-    background-color: #ffffff;
+    background-color: var(--white);
     height: 24.2rem;
 }
 .reservetitle{
-    text-shadow: 0px 0px 0.1rem rgb(255, 255, 255);
+    text-shadow: 0px 0px 0.1rem var(--white);;
     position: absolute;
-    color: #0B1A26;
+    color: var(--black);
     font-size: 2.4rem;
     left: 3rem;
     font-weight: bolder;
@@ -233,7 +235,7 @@
     top: 25rem;
     left: 105rem;
     margin-bottom: 3rem;
-    background-color: #0B1A26;
+    background-color: var(--blue);
     border: none;
     color: white;
     width: 100px; 
