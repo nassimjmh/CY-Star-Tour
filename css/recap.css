@@ -7,11 +7,11 @@
 
 #Book {
     font-family: 'Inter', sans-serif;
-    color: black;
+    color: var(--black);
     margin: 0;
     padding: 0;
     height: 100vh; /* Assure que la hauteur s'ajuste au contenu */
-    background-color: black;
+    background-color: var(--black);
 }
 
 /*###################################*/
@@ -22,7 +22,7 @@
     position: relative;
     width: 97rem;
     height: 20rem;
-    background-color: white;
+    background-color: var(--white);
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1rem;
@@ -42,7 +42,7 @@
     position: relative; 
     width: 48rem;
     height: 20rem;
-    background-color: white;
+    background-color: var(--white);
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1rem;
@@ -55,7 +55,7 @@
     position: relative; 
     width: 18.5rem;
     height: 656px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1rem;
@@ -189,7 +189,6 @@
     top: -30rem;
     left: 100rem;
     margin-bottom: 3rem;
-    background-color: #0B1A26;
     border: none;
     color: white;
     width: 100px; 
@@ -211,7 +210,7 @@
     top: -30rem;
     left: 2rem;
     margin-bottom: 3rem;
-    background-color: #0B1A26;
+    background-color: var(--blue);
     border: none;
     color: white;
     width: 100px; 
@@ -239,8 +238,8 @@
     margin-left: 0.5rem; /* Ajuste l'écart entre le texte et le bouton */
     width: 1.5rem;
     height: 1.5rem;
-    background: #0B1A26;
-    color: white;
+    background: var(--black);
+    color: var(--white);
     border: none;
     border-radius: 50%;
     font-size: 1.2rem; /* Ajuste la taille du texte si nécessaire */
@@ -272,7 +271,7 @@
 }
 
 .popup-content {
-    background: white;
+    background: var(--white);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
