@@ -5,6 +5,9 @@
     font-style: normal;
 }
 
+
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -17,8 +20,19 @@ html {
     user-select: none;
 }
 /*##################################*/
+:root {
+    --blue: #0B1A26; /*   var(--blue)   */
+    --white: #FFF8F8; /*   var(--white)   */
+    --black: #000000; /*   var(--black)   */
+}
+.dark {
+    --blue: #0B1A26;
+    --white: #161619;
+    --black: #FFFFFF;
+}
+/*##################################*/
 footer {
-    background-color: #0B1A26;
+    background-color: var(--blue);
     color: #fff;
     padding: 0.625rem 0;
     text-align: center;
@@ -74,7 +88,7 @@ footer {
     font-size: 0.9375rem;
 }
 
-.footer-section ul li a {
+.footer-section ul li a { 
     color: #fff !important;
     text-decoration: none;
     transition: color 0.3s;
@@ -114,7 +128,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #0B1A26;
+    background-color: var(--blue);
     border-bottom: 0.3125rem solid black;
     color: white;
     padding: 1.25rem 0;
@@ -205,7 +219,7 @@ nav .submenu {
     top: 100%;
     left: 0;
     background-color: #1a2735;
-    list-style: none;
+    list-style: none; 
     padding: 0;
     margin: 0;
     min-width: 8.75rem;
@@ -229,7 +243,7 @@ nav .submenu li a {
 
 nav .submenu li a:hover {
     background-color: #ffffff;
-    color: #0f1a26 !important;
+    color: var(--blue) !important;
 }
 
 /* Afficher le sous-menu au survol */
@@ -276,3 +290,17 @@ nav ul li:hover .submenu {
         opacity: 1;
     }
 }
+
+#theme-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 1rem;
+    transition: transform 0.2s;
+  }
+  
+  #theme-toggle:hover {
+    transform: scale(1.2);
+  }
