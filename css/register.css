@@ -29,14 +29,14 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #0B1A26;
+  background: var(--blue);
   background-size: cover;
   background-position: center;
 }
 
 .wrapper{
   width: 26.25rem;
-  background: #0B1A26;
+  background: var(--blue);
   border: 0.125rem solid rgba(255, 255, 255, .2);
   backdrop-filter: blur(0.1875rem);
   color: #fff;
@@ -180,7 +180,7 @@ body{
 }
 
 .btn:active{
-  background-color: #0b1a26;
+  background-color: var(--blue);
   transform: scale(0.95);
 }
 
