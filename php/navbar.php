@@ -17,6 +17,9 @@
         <li>
             <a class="underline" href="aboutus.php">About us</a>
         </li>
+        <li>
+        <button id="theme-toggle" aria-label="Changer le thème">💡</button>
+        </li>
         <li class="research">
             <a href="book.php"><i class='bx bx-search research'></i></a>
         </li>
@@ -44,3 +47,10 @@
                 </li>
     </ul>
 </nav>
+
+<script>
+  const button = document.getElementById('theme-toggle');
+  button.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+</script>
