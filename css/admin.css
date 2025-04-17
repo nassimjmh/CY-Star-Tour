@@ -4,13 +4,11 @@
     font-weight: normal;
     font-style: normal;
 }
-
 #admin {
     margin: 0;
     padding: 0;
     height: auto;
-    background-color: #ffffff;
-}
+} 
 
 /*------------ADMIN CONTAINER-----------------------*/
 
@@ -19,7 +17,8 @@
     margin: 0;
     padding: 1.25rem;
     margin-left: 7%;
-    width: 91%;
+    width: 91%; 
+    color: var(--black);
 }
 
 .admin-container .container-admin {
@@ -36,7 +35,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1.25rem;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .admin-container th:nth-child(2) { 
@@ -84,9 +83,9 @@
 }
 
 .admin-container th {
-    background-color: #0B1A26;
+    background-color: var(--blue);
     color: white;
-}
+} 
 
 .admin-container .filters {
     display: flex;
@@ -99,6 +98,8 @@
 .admin-container .filters input, .admin-container .filters select {
     padding: 0.625rem;
     border: 0.0625rem solid #ddd;
+    background-color: var(--white);
+    color: var(--black);
     border-radius: 0.25rem;
     flex-grow: 1;
 }
@@ -124,6 +125,7 @@
     padding: 1.25rem;
     margin-left: 7%;
     width: 91%;
+    background-color: var(--white);
 }
 
 .destination-container .container-destination {
@@ -140,14 +142,15 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1.25rem;
-    background-color: white;
+    background-color: var(--white);
+    color: var(--black);
 }
 
 .destination-container th:nth-child(2) { 
     width: 0.3125rem;
     min-width: 0.3125rem;
     max-width: 0.3125rem;
-}
+} 
 
 .destination-container .profile-thumbnail {
     width: 2.1875rem;
@@ -176,21 +179,23 @@
 }
 
 .destination-container th {
-    background-color: #0B1A26;
+    background-color: var(--blue);
     color: white;
 }
 
 
-/*-----------------------------------*/
+/*-----------------------------------*/ 
 
 /*------------RESERVATION CONTAINER---------------------*/
 
 .reservation-container {
+    background-color: var(--white);
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 1.25rem;
     margin-left: 7%;
     width: 91%;
+    
 }
 
 .reservation-container .container-reservation {
@@ -207,7 +212,8 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1.25rem;
-    background-color: white;
+    background-color: var(--white);
+    color: var(--black);
 }
 
 .reservation-container th:nth-child(3) { 
@@ -288,7 +294,7 @@
 }
 
 .reservation-container th {
-    background-color: #0B1A26;
+    background-color: var(--blue);
     color: white;
 }
 
@@ -318,7 +324,7 @@
 }
 
 .ban-button {
-    background-color: #ff4444;
+    background-color: #ff4444;  
     color: white;
     width: 6.25rem;
 }
@@ -348,10 +354,10 @@
     left: 0;
     height: 100vh;
     width: 13%;
-    background-color: #0B1A26;
+    background-color: var(--blue);
     border-right: 0.5rem solid black;
     padding-top: 2rem;
-    color: white;    
+    color: var(--white);    
     z-index: 100;
 }
 
@@ -381,7 +387,7 @@
     left: 0;
     width: 0;
     height: 0.0625rem;
-    background: white;
+    background: var(--white);
     transition : .3s;
 }
 
@@ -393,6 +399,7 @@
 /*-----------------------------------*/
 
 .dashboard {
+    background-color: var(--white);
     display: flex;
     flex-wrap: wrap;
     gap: 1.25rem;
@@ -402,7 +409,7 @@
 }
 
 .bento-box {
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 0.375rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     padding: 1.25rem;
@@ -415,12 +422,12 @@
 .bento-box h2 {
     margin-top: 0;
     font-size: 1.5em;
-    color: #333;
+    color: var(--black);
 }
 
 .bento-box p {
     font-size: 1em;
-    color: #666;
+    color: var(--black);
 }
 
 .revenue, .sales, .user-growth, .active-users {
@@ -437,6 +444,7 @@
 /*-----------------------------------*/
 
 .edit-user-panel {
+    background-color: var(--white);
     font-family: 'Inter', sans-serif;
     margin: 0;
     margin-top: 7.425rem;
@@ -462,7 +470,7 @@
     margin-bottom: 0.5rem; 
     padding: 0.5rem;        
     border: 0.0625rem solid #ddd;
-    background-color: white;
+    background-color: var(--white);
     box-sizing: border-box;
     border-radius: 0.25rem;
     width: 100%;
@@ -479,11 +487,11 @@
     box-sizing: border-box;
 }
 
-.form-group label {
+.form-group label { 
     display: block;
     margin-bottom: 0.25rem;
     font-weight: bold;
-    color: #0B1A26;
+    color: var(--black);
     font-size: 0.875rem;
 }
 
@@ -493,7 +501,7 @@
     justify-content: center;
     margin-top: 0.75rem;    
     padding: 0.5rem;        
-    background-color: white;
+    background-color: var(--white);
 }
 
 select#role {
