@@ -6,8 +6,8 @@
 }
 
 #Fond{
-    background-color: black;
-    color: black;
+    background-color: var(--white);
+    color: var(--black);
     margin: 0;
     padding: 0;
     padding-top: 60px;
@@ -39,11 +39,11 @@
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 2.5rem;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: auto;
     margin: 0;
     font-weight: bolder;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    text-shadow: 0px 0px 2px black;
     text-align: left;
 
 }
@@ -52,7 +52,7 @@
     position: relative;
     display: flex;
     top: -60px;
-    background-color: #0f1a26;
+    background-color: var(--blue);
     height: 42.5rem;
 }   
 .recom:hover{
@@ -60,7 +60,7 @@
 }
 .recom:hover .name{
     position: absolute; 
-    color: rgb(255, 255, 255);
+    color: white;
     top: 18.2rem;
     left: 1.2rem;
     font-size: 1.8rem;
@@ -68,7 +68,7 @@
 }
 .recom:hover .galaxy{
     position: absolute; 
-    color: rgb(255, 255, 255);
+    color: white;
     font-weight:800;
     top: 21.8rem;
     left: 1.2rem;
@@ -89,7 +89,7 @@
     width: 24rem;
     height: 27rem;
     margin-right: 3rem;
-    background-color: white;
+    background-color: var(--white);
     border-top-left-radius: 1.2rem;
     border-bottom-left-radius: 1.2rem;
     border-bottom-right-radius: 1.2rem;
@@ -112,7 +112,7 @@
     top: -80px;
     border-top-left-radius: 1.8rem;
     border-top-right-radius: 1.8rem;
-    background-color: #ffffff;
+    background-color: var(--white);
     height: 39.5rem;
     overflow: hidden;
 }
@@ -123,9 +123,9 @@
 }
 
 .bannertitle{
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+    text-shadow: 0px 0px 0.1rem var(--white);
     position: absolute;
-    color: #0f1a26;
+    color: var(--w_black);
     font-size: 2.5rem;
     left: 3rem;
     font-weight: bolder;
@@ -164,7 +164,7 @@ to {
     background-image: url('https://i.redd.it/qdfy1uscuwge1.png');
     position: relative;
     top: -6rem;
-    background-color: #0f1a26;
+    background-color: var(--blue);
     height: 40rem;
     width: 100%;
     background-size: cover; 
@@ -214,7 +214,7 @@ to {
 .stat{
     position: relative;
     top: -100px;
-    background-color: #ffffff;
+    background-color: var(--white);
     height: 42.5rem;
 }
 
