@@ -6,6 +6,8 @@
                 </li>
                 <li class="panellogo"><img src="../../images/adminpanel.png" alt=""></li>
                 <li><a class="underline" href="../index.php">Exit</a></li>
+                <li><a id="theme-toggle">💡</a></li>
+                
                 <li class="connect">
                     <?php 
                     if (isset($_SESSION['profile_pic'])) {
@@ -44,3 +46,11 @@
                 <a class="underline" href="settings.php">Settings</a>
             </li>            
     </div>
+
+    <script>
+  const toggleButton = document.getElementById("theme-toggle");
+
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+  });
+</script>
