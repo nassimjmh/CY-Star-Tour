@@ -7,11 +7,11 @@
 
 #Book {
     font-family: 'Inter', sans-serif;
-    color: black;
+    color: var(--black);
     margin: 0;
     padding: 0;
     height: 100vh; /* Assure que la hauteur s'ajuste au contenu */
-    background-color: black;
+    background-color: var(--black);
 }
 
 /*###################################*/
@@ -25,8 +25,8 @@
 
 /* Carré avec un fond et des ombres */
 .payment-box {
-    background-color: white;
-    color: #0B1A26;
+    background-color: var(--white);
+    color: var(--black);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@
 .payment-box .btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #0B1A26;
+    background-color: var(--blue);
     color: white;
     border: none;
     border-radius: 5px;
