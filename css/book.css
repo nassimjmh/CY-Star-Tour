@@ -7,7 +7,7 @@
 
 #Book{
     font-family: 'Inter', sans-serif;
-    color: black;
+    color: var(--black);
     margin: 0;
     padding: 0;
     height: 100%; /* Assure que le body prend toute la hauteur de la fenêtre */
@@ -22,7 +22,7 @@
     margin: auto; 
     width: 160vh;
     height: 45vh;
-    background-color: white;
+    background-color: var(--white);
     border-top-left-radius: 2.5vh;
     border-bottom-left-radius: 2.5vh;
     border-bottom-right-radius: 2vh;
@@ -35,7 +35,7 @@
 }
 
 .middle {
-    background-color: #000000;
+    background-color: black;
     padding: 2vh;
     position: relative;
     justify-content: center; 
@@ -159,8 +159,8 @@
     position: absolute; 
     padding: 12px 60px;
     border-radius: 5px;
-    background: white;
-    color: #0f1A26;
+    background: #4CAF50 ;
+    color: white;
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -173,7 +173,7 @@
 
 #Book a{
     text-decoration: none;
-    color : black;
+    color : var(--black);
 }
 
 
@@ -184,8 +184,8 @@
 }
 #Book details { /*La boxe*/
     border-radius: 5px;
-    background-color: #ffffff;
-    color: #0f1A26;
+    background-color: var(--white);
+    color: var(--black);
     cursor: pointer;
 }
 
@@ -195,37 +195,37 @@
 }
 
 #Book .dropdown-content{ /*Le carré*/
-    background-color: #0f1A26;
+    background-color: var(--blue);
     padding: 10px;
     max-height: 150px;
     overflow-y: auto;
 }
 
 #Book .dropdown-content label { /*Le texte*/
-    color: rgb(255, 255, 255);
+    color: white;
     display: block;
     padding: 5px 0;
 }
 /**/
 #Book .dropdown-content2{ /*Le carré*/
-    background-color: #0f1A26;
+    background-color: var(--blue);
     padding: 10px;
     max-height: 240px;
     overflow-y: auto;
 }
 #Book .dropdown-content3{ /*Le carré*/
-    background-color: #0f1A26;
+    background-color: var(--blue);
     padding: 10px;
     max-height: 240px;
     overflow-y: auto;
 }
 #Book .dropdown-content3 label { /*Le texte*/
-    color: rgb(255, 255, 255);
+    color: white;
     display: block;
     padding: 5px 0;
 }
 #Book .dropdown-content2 label { /*Le texte*/
-    color: rgb(255, 255, 255);
+    color: white;
     display: block;
     padding: 5px 0;
 }
