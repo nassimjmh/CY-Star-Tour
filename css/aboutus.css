@@ -11,7 +11,7 @@ html, body {
 }
 
 #aboutus{
-    background-color: #0B1A26;
+    background-color: var(--blue);
 }
 
 .image-earth {
@@ -37,7 +37,7 @@ html, body {
 }
 
 #aboutustext{
-    background-color: #0B1A26;
+    background-color: var(--blue);
 }
 
 table{
