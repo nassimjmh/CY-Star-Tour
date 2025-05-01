@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: profil.php');
         exit();
     } else {
-        $error = "⚠️ This email is already taken. Please choose another one.";
+        $error = " This email is already taken. Please choose another one.";
     }
 }
 ?>
