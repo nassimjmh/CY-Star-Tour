@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: profil.php');
         exit();
     } else {
-        $error = "⚠️ This email is already taken. Please choose another one.";
+        $error = " This email is already taken. Please choose another one.";
     }
 }
 ?>
@@ -91,32 +91,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="POST" id="registerForm">
         <h1>Register</h1>
         <div class="input-box">
-            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="first_name" placeholder="First Name">
             <i class='bx bxs-user'></i>
         </div>
         <div class="input-box">
-            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="text" name="last_name" placeholder="Last Name">
             <i class='bx bxs-user'></i>
         </div>
 
         <div class="input-box">
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="email" name="email" placeholder="Email">
             <i class='bx bx-envelope'></i>
         </div>
 
         <div class="input-box">
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password">
             <i class='bx bxs-lock-alt'></i>
         </div>
         <hr class="separator"> <!-- Separator -->
         <div class="input-box date-box">
             <label>Birth Date</label>
-            <input type="date" class="date" name="date_picker" min="3900-01-01" max="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" value="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" required>
+            <input type="date" class="date" name="date_picker" min="3900-01-01" max="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>" value="<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>">
         </div>
 
         <div class="input-box">
             <label>Your Race</label>
-            <select name="race" required>
+            <select name="race">
                 <option value="" disabled selected>Select your race</option>
                 <option value="Human">Human</option>
                 <option value="IA">IA</option>
@@ -133,16 +133,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-        <!-- server error -->
+        <!-- server error -->   <!-- client error -->
 
         <?php if (!empty($error)) : ?>
-            <p style="color:red;"><?php echo htmlspecialchars($error); ?></p>
+            <div id="errorBox" style="display:block;"><?php echo htmlspecialchars($error); ?></div>
         <?php endif; ?>
 
-        <!-- client error -->
-
-        <div id="errorBox" class="error-message" ></div>
-
+        
         <style>
             #errorBox {
                 display: none;
@@ -179,7 +176,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         let errorMsg = "";
 
 
-
         if (!firstName || !lastName || !email || !password || !race || !date) {
             errorMsg += " All fields must be filled.\n";
         }
@@ -191,10 +187,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
 
-
         if (password.length < 6) {
             errorMsg += " Password must be at least 6 characters long.\n";
         }
+
 
 
         // print error if error
