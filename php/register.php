@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 break;
             }
             $nextId++;
-        }    
+        }
         $users[$email] = [
             'id' => $nextId,
             'first_name' => $first_name,
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: profil.php');
         exit();
     } else {
-        $error = " This email is already taken. Please choose another one.";
+        $error = "⚠️ This email is already taken. Please choose another one.";
     }
 }
 ?>
@@ -133,13 +133,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-        <!-- server error -->   <!-- client error -->
+        <!-- server error -->  <!-- client error -->
 
-        <?php if (!empty($error)) : ?>
-            <div id="errorBox" style="display:block;"><?php echo htmlspecialchars($error); ?></div>
-        <?php endif; ?>
 
-        
+        <div id="errorBox" class="error-message" >
+
+            <?php if (!empty($error)) : ?>
+                <p style="color:red;"><?php echo htmlspecialchars($error); ?></p>
+            <?php endif; ?>
+
+        </div>
+
         <style>
             #errorBox {
                 display: none;
@@ -172,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const password = document.querySelector('[name="password"]').value;
         const race = document.querySelector('[name="race"]').value;
         const date = document.querySelector('[name="date_picker"]').value;
-
+        const errorBox = document.getElementById("errorBox");
         let errorMsg = "";
 
 
