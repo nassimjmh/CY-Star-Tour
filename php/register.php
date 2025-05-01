@@ -142,25 +142,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
         </div>
 
-
-        <style>
+      <style>
             #errorBox {
                 display: none;
-                background-color: #ffe0e0;
-                border: 1px solid #ff6666;
-                color: #b30000;
-                padding: 12px 16px;
-                border-radius: 10px;
-                margin-top: 10px;
-                font-size: 13px;
+                background: linear-gradient(145deg, #1e1e2f, #2c2c3f);
+                border: 1px solid #ff4d4d;
+                color: #ffcccc;
+                padding: 14px 20px;
+                border-radius: 12px;
+                margin-top: 15px;
+                font-size: 14px;
+                font-weight: bold;
                 text-align: center;
-                box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
-                transition: all 0.3s ease-in-out;
+                box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
+                animation: pulseGlow 2.5s infinite ease-in-out;
             }
 
             #errorBox::before {
-                content: "⚠️ ";
-                margin-right: 8px;
+                content: "⚠️";
+                color: #ff4d4d;
+                font-weight: bold;
+            }
+
+            @keyframes pulseGlow {
+                0% {
+                    box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
+                }
+                50% {
+                    box-shadow: 0 0 20px rgba(255, 77, 77, 0.5);
+                }
+                100% {
+                    box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
+                }
             }
         </style>
     </form>
