@@ -190,11 +190,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             errorMsg += " Please enter a valid email address.\n";
         }
 
-        // email already used ?
-
-        if (users[email]) {
-            errorMsg += " Email already used, please choose an other one";
-        }
 
 
         if (password.length < 6) {
