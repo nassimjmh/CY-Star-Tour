@@ -197,14 +197,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
 
-        const minDate = new Date("3900-01-01");
-        const maxDate = new Date("<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>");
-        const selectedDate = new Date(date);
-        if (selectedDate < minDate || selectedDate > maxDate) {
-            errorMsg += " Please choose a valid birth date.\n";
-        }
-
-
         // print error if error
 
         if (errorMsg !== "") {
