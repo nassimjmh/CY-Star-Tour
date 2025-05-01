@@ -191,8 +191,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
 
-        if (password.length < 6) {
-            errorMsg += " Password must be at least 6 characters long.\n";
+        if (password.length < 5) {
+            errorMsg += " Password must be at least 5 characters long.\n";
         }
 
 
