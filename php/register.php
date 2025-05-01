@@ -131,18 +131,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>Already have an account? <a href="login.php">Login</a></p>
         </div>
 
+        
+
+        <!-- server error -->   <!-- client error -->
 
 
-        <!-- server error -->  <!-- client error -->
-
-
-        <div id="errorBox" class="error-message" >
-
+        <div id="errorBox" class="error-message" style="<?php echo !empty($error) ? 'display:block;' : 'display:none;'; ?>">
             <?php if (!empty($error)) : ?>
                 <p><?php echo htmlspecialchars($error); ?></p>
             <?php endif; ?>
-
         </div>
+
 
         <style>
             #errorBox {
