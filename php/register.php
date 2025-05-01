@@ -139,7 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div id="errorBox" class="error-message" >
 
             <?php if (!empty($error)) : ?>
-                <p style="color:red;"><?php echo htmlspecialchars($error); ?></p>
+                <p><?php echo htmlspecialchars($error); ?></p>
             <?php endif; ?>
 
         </div>
