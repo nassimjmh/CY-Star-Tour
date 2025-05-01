@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: profil.php');
         exit();
     } else {
-        $error = "⚠️ User already exists.";
+        $error = "⚠️ This email is already taken. Please choose another one.";
     }
 }
 ?>
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </header>
 
 <div class="wrapper">
-    <form method="POST">
+    <form method="POST" id="registerForm">
         <h1>Register</h1>
         <div class="input-box">
             <input type="text" name="first_name" placeholder="First Name" required>
@@ -125,16 +125,105 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </select>
         </div>
 
+
         <button type="submit" class="btn">Register</button>
         <div class="login-link">
             <p>Already have an account? <a href="login.php">Login</a></p>
         </div>
 
+
+
+        <!-- server error -->
+
         <?php if (!empty($error)) : ?>
             <p style="color:red;"><?php echo htmlspecialchars($error); ?></p>
         <?php endif; ?>
+
+        <!-- client error -->
+
+        <div id="errorBox" class="error-message" ></div>
+
+        <style>
+            #errorBox {
+                display: none;
+                background-color: #ffe0e0;
+                border: 1px solid #ff6666;
+                color: #b30000;
+                padding: 12px 16px;
+                border-radius: 10px;
+                margin-top: 10px;
+                font-size: 13px;
+                text-align: center;
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+                transition: all 0.3s ease-in-out;
+            }
+
+            #errorBox::before {
+                content: "⚠️ ";
+                margin-right: 8px;
+            }
+        </style>
     </form>
 </div>
+
+
+<script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+        const firstName = document.querySelector('[name="first_name"]').value.trim();
+        const lastName = document.querySelector('[name="last_name"]').value.trim();
+        const email = document.querySelector('[name="email"]').value.trim();
+        const password = document.querySelector('[name="password"]').value;
+        const race = document.querySelector('[name="race"]').value;
+        const date = document.querySelector('[name="date_picker"]').value;
+
+        let errorMsg = "";
+
+
+
+        if (!firstName || !lastName || !email || !password || !race || !date) {
+            errorMsg += " All fields must be filled.\n";
+        }
+
+        // email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            errorMsg += " Please enter a valid email address.\n";
+        }
+
+        // email already used ?
+
+        if (users[email]) {
+            errorMsg += " Email already used, please choose an other one";
+        }
+
+
+        if (password.length < 6) {
+            errorMsg += " Password must be at least 6 characters long.\n";
+        }
+
+
+        const minDate = new Date("3900-01-01");
+        const maxDate = new Date("<?php echo date('Y')+2000; ?>-<?php echo date('m-d'); ?>");
+        const selectedDate = new Date(date);
+        if (selectedDate < minDate || selectedDate > maxDate) {
+            errorMsg += " Please choose a valid birth date.\n";
+        }
+
+
+        // print error if error
+
+        if (errorMsg !== "") {
+            e.preventDefault(); // sending blocked
+            errorBox.innerHTML = errorMsg;
+            errorBox.style.display = "block";
+        } else {
+            errorBox.style.display = "none";
+        }
+    });
+</script>
+
+
+
 
 </body>
 </html>
