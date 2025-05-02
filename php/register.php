@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="input-box">
             <label>Your Race</label>
             <select name="race">
-                <option value="" disabled selected>Select your race</option>
+                <option value="" disabled>Select your race</option>
                 <option value="Human">Human</option>
                 <option value="IA">IA</option>
                 <option value="Alien">Alien</option>
@@ -202,22 +202,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             errorMsg += " Please enter a valid email address.\n";
         }
 
-
-        if (password.length < 5) {
+        if (password.length < 5 ) {
             errorMsg += " Password must be at least 5 characters long.\n";
         }
 
+        if (!/\d/.test(password)) {
+            errorMsg +=("Password must contain a number.\n");
+        }
 
+        if (!/[^a-zA-Z0-9]/.test(password)) {
+            errorMsg += ("Password must contain a special character (Ex : &,*,#)\n");
+        }
 
-        // print error if error
 
         if (errorMsg !== "") {
             e.preventDefault(); // sending blocked
-            errorBox.innerHTML = errorMsg;
+            errorBox.innerHTML = errorMsg.replace(/\n/g, "<br>");
             errorBox.style.display = "block";
         } else {
             errorBox.style.display = "none";
         }
+
     });
 </script>
 
