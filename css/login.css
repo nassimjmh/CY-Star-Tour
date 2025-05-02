@@ -105,6 +105,13 @@ body{
   text-decoration: underline;
 }
 
+
+
+#lockIcon {
+  cursor: pointer;
+}
+
+
 .wrapper .btn{
   width: 100%;
   height: 2.5rem;
