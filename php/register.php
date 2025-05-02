@@ -108,6 +108,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="password" name="password" placeholder="Password">
             <i class='bx bxs-lock-alt'></i>
         </div>
+        <div id="password-strength" style="margin-top: 5px; font-weight: bold;"></div>
+
         <hr class="separator"> <!-- Separator -->
         <div class="input-box date-box">
             <label>Birth Date</label>
@@ -181,6 +183,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <script>
+    const passwordInput = document.querySelector('[name="password"]');
+    const strengthBox = document.getElementById("password-strength");
+
+    passwordInput.addEventListener("input", function () {
+        const pwdLength = passwordInput.value.length;
+        const containsNumber = /\d/.test(passwordInput.value);
+        const containsSpecialChar = /[^a-zA-Z0-9]/.test(passwordInput.value);
+
+        if (pwdLength < 3 && !containsNumber && !containsSpecialChar) {
+            strengthBox.innerText = "🟥 No security";
+            strengthBox.style.color = "red";
+        } else if (pwdLength >= 8 && (containsNumber && containsSpecialChar)) {
+            strengthBox.innerText = "🟩 Perfect security";
+            strengthBox.style.color = "green";
+        } else {
+            strengthBox.innerText = " 🟧 Moderate security";
+            strengthBox.style.color = "orange";
+        }
+    });
+
     document.getElementById("registerForm").addEventListener("submit", function(e) {
         const firstName = document.querySelector('[name="first_name"]').value.trim();
         const lastName = document.querySelector('[name="last_name"]').value.trim();
@@ -191,38 +213,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const errorBox = document.getElementById("errorBox");
         let errorMsg = "";
 
-
         if (!firstName || !lastName || !email || !password || !race || !date) {
             errorMsg += " All fields must be filled.\n";
         }
 
-        // email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             errorMsg += " Please enter a valid email address.\n";
         }
 
-        if (password.length < 5 ) {
-            errorMsg += " Password must be at least 5 characters long.\n";
+        if (password.length < 8 ) {
+            errorMsg += " Password must be at least 8 characters long.\n";
         }
 
         if (!/\d/.test(password)) {
-            errorMsg +=("Password must contain a number.\n");
+            errorMsg += " Password must contain a number.\n";
         }
 
         if (!/[^a-zA-Z0-9]/.test(password)) {
-            errorMsg += ("Password must contain a special character (Ex : &,*,#)\n");
+            errorMsg += " Password must contain a special character (Ex : &,*,#)\n";
         }
 
-
         if (errorMsg !== "") {
-            e.preventDefault(); // sending blocked
+            e.preventDefault();
             errorBox.innerHTML = errorMsg.replace(/\n/g, "<br>");
             errorBox.style.display = "block";
         } else {
             errorBox.style.display = "none";
         }
-
     });
 </script>
 
