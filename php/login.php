@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -23,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION["profile_pic"] = $users[$email]["profile_pic"];
             $_SESSION["user_id"] = $users[$email]["id"];
 
-                header('Location: profil.php');
+            header('Location: profil.php');
             exit();
         }
 
@@ -45,8 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,15 +54,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/login.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Ajout du curseur pointer pour l'icône du cadenas */
+        #lockIcon {
+            cursor: pointer; /* Change le curseur en main (pointer) lorsqu'on survole l'icône */
+        }
+    </style>
 </head>
 <body id="loginmenu">
 <header>
-  <?php include("navbar.php")?>
-
-
+    <?php include("navbar.php")?>
 </header>
-
-
 
 <div class="wrapper">
     <form action="" method="POST">
@@ -75,8 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <i class='bx bx-envelope'></i>
         </div>
         <div class="input-box">
-            <input type="password" name="password" placeholder="Password" required>
-            <i class='bx bxs-lock-alt' ></i>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt' id="lockIcon" onclick="togglePasswordVisibility()"></i>
         </div>
         <div class="remember-forgot">
             <label><input type="checkbox">Remember Me</label>
@@ -84,19 +83,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <button type="submit" class="btn">Login</button>
         <div class="register-link">
-            <p>Dont have an account? <a href="register.php">Register</a></p>
-
+            <p>Don't have an account? <a href="register.php">Register</a></p>
         </div>
         <?php if (!empty($error)) : ?>
             <p style="color:red;"><?php echo htmlspecialchars($error); ?></p>
         <?php endif; ?>
-
     </form>
 </div>
 
+<script>
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('password');
+        const lockIcon = document.getElementById('lockIcon');
 
-
-
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            lockIcon.classList.remove('bxs-lock-alt');  // Remove closed lock icon
+            lockIcon.classList.add('bxs-lock-open');    // Add open lock icon
+        } else {
+            passwordInput.type = 'password';
+            lockIcon.classList.remove('bxs-lock-open'); // Remove open lock icon
+            lockIcon.classList.add('bxs-lock-alt');     // Add closed lock icon
+        }
+    }
+</script>
 
 </body>
 </html>
