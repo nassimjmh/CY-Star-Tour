@@ -195,7 +195,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // Mot de passe
+ 
     const passwordInput = document.querySelector('[name="password"]');
     const strengthBox = document.getElementById("password-strength");
 
@@ -206,19 +206,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const containsSpecialChar = /[^a-zA-Z0-9]/.test(password);
         let passwordErrors = [];
 
-        // Niveau de sécurité
-        if (pwdLength < 3 && !containsNumber && !containsSpecialChar) {
-            strengthBox.innerText = "🟥 No security";
+        
+     if (pwdLength < 3 && !containsNumber && !containsSpecialChar) {
+            strengthBox.innerText = "🕳️ No security";
             strengthBox.style.color = "red";
         } else if (pwdLength >= 8 && containsNumber && containsSpecialChar) {
-            strengthBox.innerText = "🟩 Perfect security";
+            strengthBox.innerText = "🌟 Perfect security";
             strengthBox.style.color = "green";
         } else {
-            strengthBox.innerText = "🟧 Moderate security";
+            strengthBox.innerText = "🌌 Moderate security";
             strengthBox.style.color = "orange";
         }
 
-        // Erreurs mot de passe
+
+        
         if (pwdLength < 8) {
             passwordErrors.push("Password must be at least 8 characters long.");
         }
