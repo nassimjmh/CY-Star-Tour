@@ -23,6 +23,15 @@ Project report : [Report 2](documents/phase2report.pdf) 📄<br>
     <img src="https://skillicons.dev/icons?i=php&theme=light" alt="Made using"/>
 </a>
 
+## 3️⃣ `Phase 3` Branch
+
+Subject : [Click-journeY v1.3](documents/Projet_Click_journeY_v1.3_PHASE3.pdf) 📄<br>
+Project report : [Report 3](documents/phase3report.pdf) 📄<br>
+### 🌐 Made using
+<a href="https://github.com/nassimjmh/CY-Star-Tour">
+    <img src="https://skillicons.dev/icons?i=js&theme=light" alt="Made using"/>
+</a>
+
 ## 👥 Collaborators
 
 <a href="https://github.com/nassimjmh/CY-Star-Tour/graphs/contributors">
