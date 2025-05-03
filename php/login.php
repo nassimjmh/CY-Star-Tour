@@ -54,12 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="../css/login.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        /* Ajout du curseur pointer pour l'icône du cadenas */
-        #lockIcon {
-            cursor: pointer; /* Change le curseur en main (pointer) lorsqu'on survole l'icône */
-        }
-    </style>
 </head>
 <body id="loginmenu">
 <header>
