@@ -291,6 +291,82 @@ nav ul li:hover .submenu {
     }
 }
 
+
+/* Harmonise le bouton panier avec les autres icônes */
+nav ul li.cart-icon {
+    position: relative;
+    top: 0.1rem;
+    font-size: 1.8rem;
+}
+
+#cart-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: inherit;
+}
+
+#cart-toggle i {
+    color: white;
+    font-size: inherit;
+    vertical-align: middle;
+}
+
+
+#cart-count {
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+
+.cart-dropdown {
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    background: var(--white);
+    color: var(--black);
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 0.8rem;
+    width: 300px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.cart-dropdown.hidden {
+    display: none;
+}
+
+.cart-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.cart-dropdown li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3rem 0;
+}
+
+.empty-msg {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 0.5rem;
+    font-size : 1.3rem;
+}
+
+
 #theme-toggle {
     font-size: 1.5rem;
     background: none;
