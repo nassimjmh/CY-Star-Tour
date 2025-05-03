@@ -44,12 +44,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'date_picker' => $date_picker,
             'role' => $role,
             'profile_pic' => 'https://api.dicebear.com/9.x/pixel-art/svg?seed=n' . $first_name,
-        'card_info' => [
-            'card_holder' => $card_holder,
-            'card_number' => $card_number,
-            'expiry_date' => $expiry_date,
-            'cvv' => $cvv
-          ]
+            'card_info' => [
+                'card_holder' => $card_holder,
+                'card_number' => $card_number,
+                'expiry_date' => $expiry_date,
+                'cvv' => $cvv
+            ]
         ];
 
         $_SESSION['email'] = $email;
@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>Already have an account? <a href="login.php">Login</a></p>
         </div>
 
-        
+
 
         <!-- server error -->   <!-- client error -->
 
@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
         </div>
 
-      <style>
+        <style>
             #errorBox {
                 display: none;
                 background: linear-gradient(145deg, #1e1e2f, #2c2c3f);
@@ -183,66 +183,94 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <script>
+    const errorBox = document.getElementById("errorBox");
+
+    function showErrors(errors) {
+        if (errors.length > 0) {
+            errorBox.innerHTML = errors.join("<br>");
+            errorBox.style.display = "block";
+        } else {
+            errorBox.innerHTML = "";
+            errorBox.style.display = "none";
+        }
+    }
+
+    // Mot de passe
     const passwordInput = document.querySelector('[name="password"]');
     const strengthBox = document.getElementById("password-strength");
 
     passwordInput.addEventListener("input", function () {
-        const pwdLength = passwordInput.value.length;
-        const containsNumber = /\d/.test(passwordInput.value);
-        const containsSpecialChar = /[^a-zA-Z0-9]/.test(passwordInput.value);
+        const password = passwordInput.value;
+        const pwdLength = password.length;
+        const containsNumber = /\d/.test(password);
+        const containsSpecialChar = /[^a-zA-Z0-9]/.test(password);
+        let passwordErrors = [];
 
+        // Niveau de sécurité
         if (pwdLength < 3 && !containsNumber && !containsSpecialChar) {
             strengthBox.innerText = "🟥 No security";
             strengthBox.style.color = "red";
-        } else if (pwdLength >= 8 && (containsNumber && containsSpecialChar)) {
+        } else if (pwdLength >= 8 && containsNumber && containsSpecialChar) {
             strengthBox.innerText = "🟩 Perfect security";
             strengthBox.style.color = "green";
         } else {
-            strengthBox.innerText = " 🟧 Moderate security";
+            strengthBox.innerText = "🟧 Moderate security";
             strengthBox.style.color = "orange";
         }
+
+        // Erreurs mot de passe
+        if (pwdLength < 8) {
+            passwordErrors.push("Password must be at least 8 characters long.");
+        }
+        if (!containsNumber) {
+            passwordErrors.push("Password must contain a number.");
+        }
+        if (!containsSpecialChar) {
+            passwordErrors.push("Password must contain a special character (Ex: &,*,#).");
+        }
+
+        showErrors(passwordErrors);
     });
 
-    document.getElementById("registerForm").addEventListener("submit", function(e) {
+    // Email
+    const emailInput = document.querySelector('[name="email"]');
+    emailInput.addEventListener("input", function () {
+        const email = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let emailErrors = [];
+
+        if (!emailRegex.test(email)) {
+            emailErrors.push("Please enter a valid email address.");
+        }
+
+        showErrors(emailErrors);
+    });
+
+    // Submit global
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
         const firstName = document.querySelector('[name="first_name"]').value.trim();
         const lastName = document.querySelector('[name="last_name"]').value.trim();
-        const email = document.querySelector('[name="email"]').value.trim();
-        const password = document.querySelector('[name="password"]').value;
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
         const race = document.querySelector('[name="race"]').value;
         const date = document.querySelector('[name="date_picker"]').value;
-        const errorBox = document.getElementById("errorBox");
-        let errorMsg = "";
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let errors = [];
 
         if (!firstName || !lastName || !email || !password || !race || !date) {
-            errorMsg += " All fields must be filled.\n";
+            errors.push("All fields must be filled.");
         }
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            errorMsg += " Please enter a valid email address.\n";
-        }
-
-        if (password.length < 8 ) {
-            errorMsg += " Password must be at least 8 characters long.\n";
-        }
-
-        if (!/\d/.test(password)) {
-            errorMsg += " Password must contain a number.\n";
-        }
-
-        if (!/[^a-zA-Z0-9]/.test(password)) {
-            errorMsg += " Password must contain a special character (Ex : &,*,#)\n";
-        }
-
-        if (errorMsg !== "") {
+        if (errors.length > 0) {
             e.preventDefault();
-            errorBox.innerHTML = errorMsg.replace(/\n/g, "<br>");
-            errorBox.style.display = "block";
+            showErrors(errors);
         } else {
-            errorBox.style.display = "none";
+            showErrors([]);
         }
+
     });
 </script>
+
 
 
 
