@@ -87,7 +87,6 @@ $first_name = $users[$email]['first_name'];
 $race = $users[$email]['race'];
 $date_picker = $users[$email]['date_picker'];
 
-$edit_mode = isset($_POST['edit']);
 
 
 $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), true);
@@ -104,6 +103,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
     <link rel="stylesheet" href="../css/profil.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../js/profile.js"></script>
 </head>
 <body>
 
@@ -167,23 +167,20 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
     <div class="info-profile">
         <div class="info">
             <h2>About Me</h2>
-            <?php if (!$edit_mode): ?>
-                <ul>
-                    <li><strong>First Name:</strong> <?php echo htmlspecialchars($first_name); ?></li>
-                    <li><strong>Last Name:</strong> <?php echo htmlspecialchars($last_name); ?></li>
-                    <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
-                    <li><strong>Birth Date:</strong>
-                        <?php
-                        // Convert the date string to a DateTime object
-                        $date = new DateTime($date_picker);
-                        echo $date->format('d/m/Y');
-                        ?></li>
-                    <li><strong>Race:</strong> <?php echo htmlspecialchars($race); ?></li>
-                </ul>
-                <form action="profil.php" method="POST">
-                    <button type="submit" name="edit" class="edit-btn"><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" alt="" class="param"></button>
-                </form>
-            <?php else: ?>
+            <ul id="profile-info">
+                <li><strong>First Name:</strong> <span id="first-name"><?php echo htmlspecialchars($first_name); ?></span></li>
+                <li><strong>Last Name:</strong> <span id="last-name"><?php echo htmlspecialchars($last_name); ?></span></li>
+                <li><strong>Email:</strong> <span id="email"><?php echo htmlspecialchars($email); ?></span></li>
+                <li><strong>Birth Date:</strong> <span id="birth-date"><?php echo (new DateTime($date_picker))->format('d/m/Y'); ?></span></li>
+                <li><strong>Race:</strong> <span id="race"><?php echo htmlspecialchars($race); ?></span></li>
+            </ul>
+            <button id="edit-btn" class="edit-btn"><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" alt="" class="param"></button>
+            <button id="save-btn" class="save-btn" style="display: none;">Save</button>
+        </div>
+    </div>
+
+
+<!--
                 <form action="profil.php" method="POST">
                     <ul>
                         <li>
@@ -210,8 +207,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 
                     </ul>
                     <button type="submit" name="update" class="save-btn">Save Changes</button>
-                </form>
-            <?php endif; ?>
+                </form>  -->
         </div>
     </div>
 
