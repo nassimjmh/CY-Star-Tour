@@ -58,5 +58,13 @@
     { "depart": "25/12/4025", "arrive": "31/12/4025", "prix": "2390" },
     { "depart": "07/09/4025", "arrive": "13/09/4025", "prix": "2305" },
     { "depart": "19/05/4025", "arrive": "25/05/4025", "prix": "2328" }
-  ]
+  ],
+  "img": [
+    "https://awakening-cdn.dunegames.com/uploads/img/landscape-331c82.jpg",
+    "https://cdn.futura-sciences.com/sources/images/desert-Namib.jpg",
+    "https://images.squarespace-cdn.com/content/v1/60717288fa44b4252e051906/1624538008426-HD75AOG6OENNB4TTF2P9/planete-arrakis-ver-sable.jpeg",
+    "https://actualitte.com/uploads/images/dune-planete-arrakis-habitable-etude-scientifiques-2021-619e58f269f15588485550.jpg",
+    "https://preview.redd.it/8zm6jxq6dn951.jpg?auto=webp&s=d28c7b722857847b8a33bae372ac9d2eb59c0ea3",
+    "https://images.squarespace-cdn.com/content/v1/60717288fa44b4252e051906/1624537095516-UO08O4LG9MAZ8OZ81WZB/planete-arrakis-paysage.jpeg"
+]
 }
