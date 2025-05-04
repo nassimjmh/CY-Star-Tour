@@ -53,10 +53,14 @@
 .presentation{
     position: relative;
     top: -3rem;
-    border-top-left-radius: 1.2rem;
-    border-top-right-radius: 1.2rem;
     background-color: var(--white);
     height: 24.2rem;
+}
+.schedule{
+    position: relative;
+    top: -3rem;
+    height: 6rem;
+    margin-bottom: -2rem;
 }
 .presentationtitle{
     text-shadow: 0px 0px 0.1rem var(--white);
@@ -78,174 +82,296 @@
 /********************/
 /********************/
 /********************/
-.program{
+/*****************/
+.banner {
     position: relative;
+    width: 100%;
+    height: 30rem;
+    top: -5rem;
+}
+
+.slider {
+    position: relative;
+    max-height: 30rem;
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-track {
     display: flex;
-    top: -3rem;
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    background-color: var(--blue);
-    height:40rem;
+    max-height: 30rem;
+    height: 30rem;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
-.programtitle{
-    text-shadow: 0px 0px 0.1rem rgb(0, 0, 0);
-    position: absolute;
-    color: white;
-    font-size: 2.4rem;
-    left: 3rem;
-    font-weight: bolder;
-}
-.day{
+
+.item {
+    flex: 0 0 60%;
+    margin: 0 1.5%;
+    transform: scale(0.85);
+    transition: transform 0.5s, opacity 0.5s;
     position: relative;
-    left: 6rem;
-    top: 7.8rem;
-    width: 24.2rem;
-    height: 27.3rem;
-    margin-right: 3rem;
-    background-color: var(--white);
-    border-top-left-radius: 1.2rem;
-    border-bottom-left-radius: 1.2rem;
-    border-bottom-right-radius: 1.2rem;
-    border-top-right-radius: 1.2rem;
-    margin-bottom: 3rem;
+    overflow: hidden; 
 }
-.daytitle{
-    text-align: center;
-    font-size: 2.4rem;
+
+.item.active {
+    opacity: 1;
+    transform: scale(1);
 }
-.daydescription{
-    text-align: center;
-    font-weight: bolder;
-    text-decoration: underline;
+
+.item img {
+    display: block;
+    width: 100%;
 }
-.daydescription2{
-    margin-left: 1.2rem;
+
+.dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--black);
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #4B61F5;
 }
 /********************/
+/********************/
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+}
+
+/* Barre de navigation */
+.nav-bar {
+    position: absolute;
+    flex-direction: column; 
+    border-right: 0.5rem solid var(--black);   
+    max-width: 10rem;
+    background-color: var(--blue);
+    color: white;
+    height: 30rem;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+/* Items de la barre de navigation */
+.nav-item {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: var(--white);
+    color: var(--black);
+    transform: scale(1.1);
+}
+
+.nav-item.active {
+    background-color: #4B61F5;
+    color: white;
+    font-weight: bold;
+}
+
+/* Zone de texte */
+.text-container {
+    background-color: var(--white);
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-text {
+    font-size: 25px;
+    color: var(--black);
+    text-align: center;
+}
+
+#title1{
+    position: absolute;
+    top: 1rem;
+    left: 12rem;
+}
+#description1 {
+    font-size: 20px;
+    max-width: 65rem;
+    height: 8rem;
+    max-height: 8rem;
+    position: absolute;
+    top: 6rem;
+    left: 13rem;
+    text-align: left; 
+}
+#title2{
+    position: absolute;
+    top: 14rem;
+    left: 12rem;
+}
+#description2{
+    font-size: 20px;
+    max-width: 65rem;
+    height: 8rem;
+    max-height: 8rem;
+    position: absolute;
+    top: 19rem;
+    left: 13rem;
+    text-align: left; 
+
+}
+#map img {
+    position: absolute;
+    top: 0;
+    left: 79rem;
+    height: 30rem;
+    width: 37rem;
+}
+.autre{
+    top: -4rem;
+}
+
 /********************/
 /********************/
 .reserve{
-    position: relative;
-    top: -4.2rem;
-    border-top-left-radius: 1.2rem;
-    border-top-right-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--white);
-    height: 24.2rem;
 }
 .reservetitle{
+    align-self: flex-start;
+    margin-left: 3rem;
     text-shadow: 0px 0px 0.1rem var(--white);;
-    position: absolute;
     color: var(--black);
     font-size: 2.4rem;
-    left: 3rem;
     font-weight: bolder;
+
 }
-.titlerese{
+  
+.group {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    display: none;
+    overflow: visible;
+
+}
+.group.active {
+    display: block; /* Afficher les groupes actifs */
+}
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     position: relative;
-    font-size: 1.5rem;
-    top: 8rem;
-    left: 6rem;
 }
-.group{
+
+.slide-container .group {
+    display: none;
+}
+
+.slide-container .group.active {
+    display: block;
+}
+
+
+.navigation-button {
     position: relative;
-    font-size: 1.1rem;
-    width: 20rem;
-    top: 8.5rem;
-    left: 7rem;
-    margin-bottom: 3rem;
-}
-.titlerese2{
-    position: relative;
-    font-size: 1.5rem;
-    top: -10.5rem;
-    left: 30rem;
-}
-.selectgroup2{
-    position: relative;
-    font-size: 1.1rem;
-    top: -12rem;
-    width: 1rem;
-    left: 50rem;
-}
-.group2{
-    position: relative;
-    font-size: 1.1rem;
-    top: -11rem;
-    left: 31rem;
-    margin-bottom: 1.4rem;
-}
-.titlerese4{
-    position: absolute;
-    font-size: 1.5rem;
-    top: 14rem;
-    left: 30rem;
-}
-.group4{
-    width: 20rem;
-    position: relative;
-    font-size: 1.1rem;
-    top: -5rem;
-    left: 31rem;
-    margin-bottom: 1.4rem;
-}
-.titlerese5{
-    position: absolute;
-    font-size: 1.5rem;
-    top: 20rem;
-    left: 30rem;
-}
-.group5{
-    width: 20rem;
-    position: relative;
-    font-size: 1.1rem;
-    top: -2rem;
-    left: 31rem;
-    margin-bottom: 1.4rem;
-}
-.titlerese3{
-    position: absolute;
-    font-size: 1.5rem;
-    top: 8rem;
-    left: 56rem;
-}
-.group3{
-    overflow: scroll;
-    overflow-x: hidden;
-    
-    height: 13rem;
-    width: 47rem;
-    position: absolute;
-    font-size: 1.1rem;
-    top: 10.5rem;
-    left: 58rem;
-    margin-bottom: 3rem;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
-    
-}
-.group3 label{
-    display: inline-block;
-    width: 12.5rem;
-    margin-right: 2rem;
-    
-}
-.confirm{
-    position: absolute;
-    font-size: 1rem;
-    top: 25rem;
-    left: 105rem;
-    margin-bottom: 3rem;
-    background-color: var(--blue);
-    border: none;
+    background-color: #4CAF50;
     color: white;
-    width: 100px; 
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.3125rem;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 2rem;
+
 }
 
-
-.confirm:hover {
-    cursor: pointer; /* Assure que le curseur reste une main au survol */
+#suivantBtn{
+    left: 30rem;
 }
+#prevButton{
+    left: -30rem;
+}
+.navigation-button:hover {
+    background-color: #45a049;
+}
+
+.titlerese{
+    text-align: center;
+}
+
+.radio-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.radio-row div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+
+}
+.radio-row img{
+    height: 5rem;
+    margin-bottom: 0.5rem;
+}
+.radio-row label{
+    margin-bottom: 0.5rem;
+}
+.radio-row button{
+    margin-top: 2rem;
+}
+.groupdays {
+    border: 1px solid black;
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+}
+.groupdays p {
+    font-size: 16px;
+    margin: 0.5rem;
+    transform: translateY(-1rem);
+}
+
+input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--black);
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+  
+input:checked {
+    background-color: #4B61F5;
+}
+  
+.group2 p{
+    font-size: 1.5rem;
+}
+
