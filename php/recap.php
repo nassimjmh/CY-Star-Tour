@@ -149,7 +149,6 @@ $benefits = $roleBenefits[$userRole];
                     <p class="souspricetext"><?php echo htmlspecialchars($p['date'][$booking['selectedDate']]['prix'], ENT_QUOTES, 'UTF-8'); ?> ₴</p>
                     <?php $total+= $p['date'][$booking['selectedDate']]['prix']?>
                     <p class="pricetext">Travel program per person :</p>
-                    <?php $total+=$totaltravel*75 ?>
                     <p class="souspricetext"><?php echo htmlspecialchars($totaltravel, ENT_QUOTES, 'UTF-8'); ?> x 75 ₴ = <?php echo $totaltravel*75 ?> ₴</p>
                     <p class="pricetext">Number of passengers :</p>
                     <p class="souspricetext"><?php echo htmlspecialchars($booking['nbpeople'], ENT_QUOTES, 'UTF-8'); ?> x <?php echo htmlspecialchars($totaltravel*75, ENT_QUOTES, 'UTF-8'); ?>₴ = <?php echo $booking['nbpeople']*75*$totaltravel ?> ₴</p>
