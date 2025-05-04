@@ -17,8 +17,11 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
         saveBtn.style.display = "inline-block";
     });
 
-/*
 
+
+  // ????????????
+  
+  
     saveBtn.addEventListener("click", function () { // When Save button is clicked
         profileInfo.querySelectorAll("input").forEach(input => {
             const span = document.createElement("span");
@@ -67,5 +70,5 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
     function formatDateForDisplay(date) {
         const [year, month, day] = date.split("-");
         return `${day}/${month}/${year}`;
-    } */
+    } 
 });
