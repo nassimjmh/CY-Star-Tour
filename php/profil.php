@@ -180,7 +180,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
     </div>
 
 
-<!--
+<!-- Manque PHP maj valeurs javascript
                 <form action="profil.php" method="POST">
                     <ul>
                         <li>
