@@ -9,6 +9,7 @@
         "date_picker": "4005-05-09",
         "role": "Admin",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Sofyane",
+        "remember_token": null,
         "card_info": {
             "card_holder": "John",
             "card_number": "1234 4567 4566 4566 5566",
@@ -59,7 +60,7 @@
         "race": "Coruscant",
         "date_picker": "4002-10-17",
         "role": "Standard",
-        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/avataaars-neutral\/svg?seed=Kargalan",
+        "profile_pic": "uploads\/8dae609c13665be49ad1620e56916733.jpg",
         "card_info": {
             "card_holder": "",
             "card_number": "",
@@ -151,5 +152,8 @@
             "expiry_date": "",
             "cvv": ""
         }
+    },
+    "": {
+        "remember_token": "4a7d326ad57e704accc5c51b10b49191"
     }
 }
