@@ -78,77 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 </div>
 
-<style>
-    #errorBox {
-        display: none;
-        background: linear-gradient(145deg, #1e1e2f, #2c2c3f);
-        border: 1px solid #ff4d4d;
-        color: #ffcccc;
-        padding: 14px 20px;
-        border-radius: 12px;
-        margin-top: 15px;
-        font-size: 14px;
-        font-weight: bold;
-        text-align: center;
-        box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
-        animation: pulseGlow 2.5s infinite ease-in-out;
-    }
 
-    #errorBox::before {
-        content: "⚠️ ";
-        color: #ff4d4d;
-        font-weight: bold;
-    }
-
-    @keyframes pulseGlow {
-        0% { box-shadow: 0 0 10px rgba(255, 77, 77, 0.2); }
-        50% { box-shadow: 0 0 20px rgba(255, 77, 77, 0.5); }
-        100% { box-shadow: 0 0 10px rgba(255, 77, 77, 0.2); }
-    }
-</style>
-
-<script>
-    function togglePasswordVisibility() {
-        const passwordInput = document.getElementById('password');
-        const lockIcon = document.getElementById('lockIcon');
-
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            lockIcon.classList.replace('bxs-lock-alt', 'bxs-lock-open');
-        } else {
-            passwordInput.type = 'password';
-            lockIcon.classList.replace('bxs-lock-open', 'bxs-lock-alt');
-        }
-    }
-
-    function showErrors(errors) {
-        const errorBox = document.getElementById("errorBox");
-        if (errors.length > 0) {
-            errorBox.innerHTML = errors.join("<br>");
-            errorBox.style.display = "block";
-        } else {
-            errorBox.innerHTML = "";
-            errorBox.style.display = "none";
-        }
-    }
-
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const errors = [];
-
-        if (!email.trim() || !password.trim()) {
-            errors.push("All fields must be filled.");
-        }
-
-        if (errors.length > 0) {
-            e.preventDefault();
-            showErrors(errors);
-        } else {
-            showErrors([]);
-        }
-    });
-</script>
+<script src="../js/login.js"></script>
 
 </body>
 </html>
