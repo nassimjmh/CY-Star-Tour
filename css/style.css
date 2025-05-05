@@ -309,6 +309,92 @@ nav ul li:hover .submenu {
 
   #theme-toggle:hover {
     transform: scale(1.2);
-  }
+  } 
 
 
+
+
+
+
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.dropdown-cart {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background-color: var(--white);
+    width: 30rem;
+    max-height: 25rem;
+    overflow: auto;
+    overflow-x: hidden;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 100;
+    border-radius: 8px;
+    padding: 10px;
+}
+.book{
+    position: relative;
+    height: 15rem;
+    border-radius: 1.25rem;
+    background-color: var(--blue);
+    margin-top: -1rem;
+}
+
+.namebook{
+    color: white;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+}
+.optionbook{
+    color: white;
+    position: relative;
+    top: -1rem;
+    left: 14rem;
+    font-size: 1rem;
+}
+.planet-image {
+    position: absolute;
+    max-width: 10rem;
+    top: 4rem;
+    left: 1rem;
+    width: auto;
+    height: 10rem;
+    margin-right: 10px; 
+}
+
+.dropdown-cart.active {
+    display: block;
+}
+
+
+
+.dropdown-cart hr {
+    margin: 5px 0;
+}
+.yo{
+    color: var(--black);
+}
