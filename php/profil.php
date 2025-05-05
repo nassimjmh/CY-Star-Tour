@@ -70,16 +70,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
     }
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
-    $users[$email]['last_name'] = $_POST['last_name'];
-    $users[$email]['first_name'] = $_POST['first_name'];
-    $users[$email]['race'] = $_POST['race'];
-    $users[$email]['date_picker'] = $_POST['date_picker'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)) {
+    // Handle JSON input
+    $input = json_decode(file_get_contents('php://input'), true);
 
-    file_put_contents('../json/data/users.json', json_encode($users, JSON_PRETTY_PRINT));
+    if ($input) {
+        $users[$email]['last_name'] = $input['last_name'];
+        $users[$email]['first_name'] = $input['first_name'];
+        $users[$email]['race'] = $input['race'];
+        $users[$email]['date_picker'] = $input['date_picker'];
 
-    header("Location: profil.php");
-    exit();
+        file_put_contents('../json/data/users.json', json_encode($users, JSON_PRETTY_PRINT));
+
+        // Respond with success
+        echo json_encode(['success' => true]);
+        exit();
+    } else {
+        // Respond with error
+        echo json_encode(['success' => false, 'message' => 'Invalid JSON input']);
+        exit();
+    }
 }
 
 $last_name = $users[$email]['last_name'];
@@ -93,6 +103,8 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -180,38 +192,6 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
     </div>
 
 
-<!-- Manque PHP maj valeurs javascript
-                <form action="profil.php" method="POST">
-                    <ul>
-                        <li>
-                            <span>First Name:</span>
-                            <input type="text" name="first_name" value="<?php echo htmlspecialchars($first_name); ?>" required>
-                        </li>
-                        <li>
-                            <span>Last Name:</span>
-                            <input type="text" name="last_name" value="<?php echo htmlspecialchars($last_name); ?>" required>
-                        </li>
-                        <li>
-                            <span>Birth Date:</span>
-                            <input type="date" name="date_picker" min="3900-01-01" max="4025-01-01" value="<?php echo htmlspecialchars($date_picker); ?>" required>
-                        </li>
-                        <li>
-                            <span>Race:</span>
-                            <select id="race" name="race" required>
-                                <option value="Human" <?php echo $race === 'Human' ? 'selected' : ''; ?>>Human</option>
-                                <option value="IA" <?php echo $race === 'IA' ? 'selected' : ''; ?>>IA</option>
-                                <option value="Alien" <?php echo $race === 'Alien' ? 'selected' : ''; ?>>Alien</option>
-                                <option value="Coruscant" <?php echo $race === 'Coruscant' ? 'selected' : ''; ?>>Coruscant</option>
-                            </select>
-                        </li>
-
-                    </ul>
-                    <button type="submit" name="update" class="save-btn">Save Changes</button>
-                </form>  -->
-        </div>
-    </div>
-
-
     <div class="recent-trips">
         <h2>Recently Booked Trips</h2>
         
@@ -239,14 +219,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
     
     <div class="imagerien"> 
 
-
-
     </div>
-
-
-
-
-
 </main>
 
 <?php include("footer.php") ?>
