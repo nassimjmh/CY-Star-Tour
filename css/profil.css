@@ -405,7 +405,7 @@ main {
     margin-top: 0.9375rem;
     transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
-.cancel-btn:hover , .custom-btn:hover {
+.cancel-btn:hover {
     background-color: #ff4444;
     font-size: 0.9375rem;  /* Réduction de la taille de la police */
     transition: background-color 0.3s, font-size 0.7s, color 0.3s;
