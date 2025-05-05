@@ -44,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'date_picker' => $date_picker,
             'role' => $role,
             'profile_pic' => 'https://api.dicebear.com/9.x/pixel-art/svg?seed=n' . $first_name,
+            'remember_token' => null,
             'card_info' => [
                 'card_holder' => $card_holder,
                 'card_number' => $card_number,
@@ -59,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION["race"] = $users[$email]["race"];
         $_SESSION["date_picker"] = $users[$email]["date_picker"];
         $_SESSION["profile_pic"] = $users[$email]["profile_pic"];
+         $_SESSION["remember_token"] = $users[$email]["remember_token"];
 
         file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
