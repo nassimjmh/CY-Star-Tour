@@ -13,8 +13,9 @@
             <a class="underline" href="aboutus.php">About us</a>
         </li>
         <li>
-            <button id="theme-toggle" aria-label="Changer le thème">💡</button>
+            <button id="theme-toggle" aria-label="Changer le thème"> 🌑</button>
         </li>
+
 
         <?php if (isset($_SESSION['email'])): ?>
             <style>
@@ -66,6 +67,9 @@
                 .dropdown-cart hr {
                     margin: 5px 0;
                 }
+
+
+
             </style>
 
             <?php
@@ -127,43 +131,54 @@
     </ul>
 </nav>
 
+
+
+
 <script>
-  // Fonction pour définir un cookie
-  function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-      const date = new Date();
-      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-      expires = "; expires=" + date.toUTCString();
+    // Fonction pour définir un cookie
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
-  }
 
-  // Fonction pour obtenir un cookie
-  function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    // Fonction pour obtenir un cookie
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+        }
+        return null;
     }
-    return null;
-  }
 
-  // Vérifier le cookie pour le mode sombre et appliquer le thème
-  const darkMode = getCookie('darkMode');
-  if (darkMode === 'enabled') {
-    document.body.classList.add('dark');
-  }
+    const button = document.getElementById('theme-toggle');
+    const darkMode = getCookie('darkMode');
 
-  const button = document.getElementById('theme-toggle');
-  button.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    if (document.body.classList.contains('dark')) {
-      setCookie('darkMode', 'enabled', 365); // Sauvegarder le mode sombre pour 1 an
+    // Appliquer le thème selon le cookie + icône
+    if (darkMode === 'enabled') {
+        document.body.classList.add('dark');
+        button.textContent = '💡'; // soleil pour indiquer qu'on est en sombre
     } else {
-      setCookie('darkMode', 'disabled', 365); // Sauvegarder le mode clair pour 1 an
+        button.textContent = '🌑'; // lune pour indiquer qu'on est en clair
     }
-  });
+
+    // Changement de thème + icône au clic
+    button.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        if (document.body.classList.contains('dark')) {
+            setCookie('darkMode', 'enabled', 365);
+            button.textContent = '💡️';
+        } else {
+            setCookie('darkMode', 'disabled', 365);
+            button.textContent = '🌑';
+        }
+    });
 </script>
+
