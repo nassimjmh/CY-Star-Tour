@@ -1,13 +1,55 @@
 <?php
 session_start();
 
+
+
 $file = '../json/data/users.json';
 $users = json_decode(file_get_contents($file), true);
 $error = "";
 
+//cookies
+
+if (!isset($_SESSION['email']) && isset($_COOKIE['remember_token'])) {
+    foreach ($users as $email => $userData) {
+        if (isset($userData['remember_token']) && $userData['remember_token'] === $_COOKIE['remember_token']) {
+            $_SESSION['email'] = $email;
+            $_SESSION["first_name"] = $userData["first_name"];
+            $_SESSION["role"] = $userData["role"];
+            $_SESSION["last_name"] = $userData["last_name"];
+            $_SESSION["race"] = $userData["race"];
+            $_SESSION["date_picker"] = $userData["date_picker"];
+            $_SESSION["profile_pic"] = $userData["profile_pic"];
+            $_SESSION["user_id"] = $userData["id"];
+            header('Location: profil.php');
+            exit();
+        }
+    }
+}
+
+
+
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
+
+
+
+    if (isset($_POST['remember_me'])) {
+        // Génère un token sécurisé
+        $token = bin2hex(random_bytes(16));
+
+        // Sauvegarde le token côté client dans un cookie
+        setcookie('remember_token', $token, time() + (30 * 24 * 60 * 60), "/");
+
+        // Mets à jour le fichier JSON
+        $users[$email]['remember_token'] = $token;
+        file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
+    }
+
+
 
     if (isset($users[$email])) {
         if ($users[$email]['role'] === 'Banned') {
@@ -30,6 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "No account registered with this email.";
     }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="remember-forgot">
-            <label><input type="checkbox">Remember Me</label>
+            <label><input type="checkbox" name="remember_me">Remember Me</label>
             <a href="#">Forgot Password</a>
         </div>
 
