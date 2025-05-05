@@ -16,93 +16,78 @@
             <button id="theme-toggle" aria-label="Changer le thème"> 🌑</button>
         </li>
 
-
-        <?php if (isset($_SESSION['email'])): ?>
-            <style>
-                .cart-container {
-                    position: relative;
-                    display: inline-block;
-                }
-
-                .cart-icon {
-                    font-size: 24px;
-                    cursor: pointer;
-                    position: relative;
-                }
-
-                .cart-count {
-                    position: absolute;
-                    top: -8px;
-                    right: -10px;
-                    background: red;
-                    color: white;
-                    font-size: 12px;
-                    padding: 2px 6px;
-                    border-radius: 50%;
-                }
-
-                .dropdown-cart {
-                    display: none;
-                    position: absolute;
-                    right: 0;
-                    top: 35px;
-                    background-color: white;
-                    min-width: 200px;
-                    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-                    z-index: 100;
-                    border-radius: 8px;
-                    padding: 10px;
-                }
-
-                .cart-container:hover .dropdown-cart {
-                    display: block;
-                }
-
-                .dropdown-cart p {
-                    margin: 0;
-                    font-size: 14px;
-                    color: #333;
-                }
-
-                .dropdown-cart hr {
-                    margin: 5px 0;
-                }
+        <?php
+        if (isset($_SESSION['email'])):
+            // Charger les données JSON
+            $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), true);
+            $id = $_SESSION["user_id"];
+            // Vérifier si le fichier JSON a été chargé correctement
+            if ($recentlybooked === null) {
+                echo "<p>Error loading booking data.</p>";
+            } else {
+        ?>
 
 
-
-            </style>
 
             <?php
             include '../php/cart.php';
             list($cartItems, $cartCount) = getCartItems();
             ?>
 
-
-            <li class="cart-container">
-                <i class='bx bx-shopping-bag cart-icon'></i>
-                <span class="cart-count"><?php echo $cartCount; ?></span>
-
-                <div class="dropdown-cart">
-                    <p>Your space bag:</p>
-                    <hr>
-                    <?php if ($cartCount > 0): ?>
-                        <?php foreach ($cartItems as $item): ?>
-                            <p><?php echo htmlspecialchars($item['planet']); ?> - <?php echo htmlspecialchars($item['nbpeople']); ?> people</p>
-
-
-                        <?php endforeach; ?>
-                    <?php else: ?>
-                        <p>Your cart is empty.</p>
-                    <?php endif; ?>
-                </div>
-            </li>
-
-        <?php endif; ?>
-
+            
 
         <li class="research">
             <a href="book.php"><i class='bx bx-search research'></i></a>
         </li>
+
+        <li class="cart-container">
+            <i class='bx bx-shopping-bag cart-icon'></i>
+            <?php
+            $paidBookings = array_filter($recentlybooked, function($booking) {
+                return isset($booking['payed']) && $booking['payed'] !== true;
+            });
+            ?>
+            <span class="cart-count"><?php echo count($paidBookings); ?></span>
+
+            <div class="dropdown-cart">
+                <p class="yo">Recently Booked Trips:</p>
+                <hr>
+                <?php if (!empty($recentlybooked)): ?>
+                    <?php
+                        $hasUnpaidBookings = false; // Variable de contrôle
+                        foreach ($recentlybooked as $reservationId => $value) {
+                            $imgSrc = '../images/planet/' . strtolower($value["planet"]) . ".webp";
+                            if ($value["payed"] == false) {
+                                $hasUnpaidBookings = true; // Mettre à jour la variable de contrôle
+                                ?>
+                                <a href="recap2.php?id=<?php echo urlencode($reservationId); ?>&planet=<?php echo urlencode($value['planet']); ?>" class="book-link">
+                                    <div class="book">
+                                        <p class="namebook"> <?php echo htmlspecialchars($value['planet'], ENT_QUOTES, 'UTF-8'); ?> </p>
+                                        <p class="optionbook"><strong>✨ Quality travel :</strong> <?php echo htmlspecialchars($value['quality'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                        <p class="optionbook"><strong>☕ Breakfast :</strong> <?php echo htmlspecialchars($value['breakfast'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                        <p class="optionbook"><strong>💆‍♂️ Zero gravity relaxation :</strong> <?php echo htmlspecialchars($value['relax'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                        <p class="optionbook"><strong>🛡️ Cancellation insurance :</strong> <?php echo htmlspecialchars($value['insurance'], ENT_QUOTES, 'UTF-8'); ?></p>
+                                        <p class="optionbook"><strong>💸 Price :</strong> <?php echo htmlspecialchars($value['payment_transaction'], ENT_QUOTES, 'UTF-8'); ?> ₴</p>
+                                        <img src='<?php echo $imgSrc ?>' class='planet-image'>
+                                    </div>
+                                </a>
+                                <?php
+                            }
+                        }
+                        if (!$hasUnpaidBookings) {
+                            echo "<p>No</p>"; // Afficher "No" s'il n'y a aucune réservation non payée
+                        }
+                    ?>
+                <?php else: ?>
+                    <p>No recently booked trips.</p>
+                <?php endif; ?>
+            </div>
+        </li>
+
+        <?php
+            } // Fin de la vérification du chargement JSON
+        endif;
+        ?>
         <li class="connect">
             <?php
             $current_page = basename($_SERVER['PHP_SELF']);
@@ -131,9 +116,6 @@
     </ul>
 </nav>
 
-
-
-
 <script>
     // Fonction pour définir un cookie
     function setCookie(name, value, days) {
@@ -146,7 +128,7 @@
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-    // Fonction pour obtenir un cookie
+    // Fonction pour obtenir un cookie img
     function getCookie(name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -180,5 +162,19 @@
             button.textContent = '🌑';
         }
     });
-</script>
 
+    // Gestion de l'affichage du panier
+    const cartContainer = document.querySelector('.cart-container');
+    const dropdownCart = document.querySelector('.dropdown-cart');
+
+    cartContainer.addEventListener('click', (event) => {
+        event.stopPropagation(); // Empêche la propagation de l'événement de clic
+        dropdownCart.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!cartContainer.contains(event.target)) {
+            dropdownCart.classList.remove('active');
+        }
+    });
+</script>
