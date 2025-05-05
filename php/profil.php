@@ -230,7 +230,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                         <p class="optionbook"><strong>☕ Breakfast :</strong> <?php echo htmlspecialchars($value['breakfast'], ENT_QUOTES, 'UTF-8'); ?></p>
                         <p class="optionbook"><strong>💆‍♂️ Zero gravity relaxation :</strong> <?php echo htmlspecialchars($value['relax'], ENT_QUOTES, 'UTF-8'); ?></p>
                         <p class="optionbook"><strong>🛡️ Cancellation insurance :</strong> <?php echo htmlspecialchars($value['insurance'], ENT_QUOTES, 'UTF-8'); ?></p>
-                        <p class="optionbook"><strong>💸 Price :</strong> <?php echo htmlspecialchars($value['payment_transaction'], ENT_QUOTES, 'UTF-8'); ?> ₴</p>
+                        <p class="optionbook"><strong>💸 Price :</strong> <?php echo htmlspecialchars($value['payment_amount'], ENT_QUOTES, 'UTF-8'); ?> ₴</p>
                         <img src='<?php echo $imgSrc ?>' class='planet-image'>
                     </div>
                     <?php
