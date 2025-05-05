@@ -187,6 +187,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                 <li><strong>Race:</strong> <span id="race"><?php echo htmlspecialchars($race); ?></span></li>
             </ul>
             <button id="edit-btn" class="edit-btn"><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" alt="" class="param"></button>
+            <button id="cancel-btn" class="cancel-btn" style="display: none;">Cancel</button>
             <button id="save-btn" class="save-btn" style="display: none;">Save</button>
         </div>
     </div>

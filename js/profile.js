@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () { //script runs only after the HTML document has been fully loaded
     const editBtn = document.getElementById("edit-btn");
     const saveBtn = document.getElementById("save-btn");
+    const cancelBtn = document.getElementById("cancel-btn");
     const profileInfo = document.getElementById("profile-info");
 
     editBtn.addEventListener("click", function () { // When Edit button is clicked
@@ -9,11 +10,15 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
             input.type = span.id === "birth-date" ? "date" : "text"; // Use date input for birth date and text for the others
             input.value = span.id === "birth-date" ? formatDateForInput(span.textContent) : span.textContent;
             input.id = span.id;
+
+            input.dataset.originalValue = span.textContent; // Dom to store original data
+
             span.replaceWith(input); // become an input
         });
 
         // Toggle button visibility
         editBtn.style.display = "none";
+        cancelBtn.style.display = "inline-block";
         saveBtn.style.display = "inline-block";
     });
 
@@ -45,7 +50,25 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
 
         // Toggle button visibility
         saveBtn.style.display = "none";
+        cancelBtn.style.display = "none";
         editBtn.style.display = "inline-block";
+    });
+
+    cancelBtn.addEventListener("click",function() { // When cancel button is clicked
+        profileInfo.querySelectorAll("input").forEach(input => {
+            const span = document.createElement("span");
+            span.id = input.id;
+            span.textContent = input.value;
+
+            span.textContent = input.dataset.originalValue; // Keep original value
+
+            input.replaceWith(span); // Is no longer an input
+        });
+
+        saveBtn.style.display = "none";
+        cancelBtn.style.display = "none";
+        editBtn.style.display = "inline-block";
+
     });
 
 

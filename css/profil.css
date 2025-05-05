@@ -372,7 +372,7 @@ main {
 
 .save-btn {
     position: relative;
-    left: 28.5rem;
+    left: 25.5rem;
     top: -28.5rem;
     background-color: #4CAF50;
     color: white;
@@ -385,8 +385,28 @@ main {
     transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
 
- .save-btn:hover , .custom-btn:hover {
+.save-btn:hover , .custom-btn:hover {
     background-color: #4CAF50;
+    font-size: 0.9375rem;  /* Réduction de la taille de la police */
+    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
+}
+
+.cancel-btn {
+    position: relative;
+    left: 24.5rem;
+    top: -28.5rem;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 0.9375rem;
+    transition: background-color 0.3s, font-size 0.7s, color 0.3s;
+}
+.cancel-btn:hover , .custom-btn:hover {
+    background-color: #ff4444;
     font-size: 0.9375rem;  /* Réduction de la taille de la police */
     transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
