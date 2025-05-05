@@ -18,7 +18,7 @@ $date_picker = $_SESSION["date_picker"];
 $profile_pic = $_SESSION["profile_pic"];
 $id = $_SESSION["user_id"];
 
-$target_dir = "uploads/";
+$target_dir = "../uploads/";
 
 if (!file_exists($target_dir)) {
     mkdir($target_dir, 0777, true);
@@ -126,7 +126,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 <main>
     <div class="sidebar">
         <div class="sidebar-head">
-            <img src="<?php echo "../" . $users[$email]['profile_pic']; ?>" alt="Picture" class="profile-pic"></img>
+            <img src="<?php echo $users[$email]['profile_pic']; ?>" alt="Picture" class="profile-pic"></img>
             <form action="profil.php" method="POST" enctype="multipart/form-data">
                 <input type="file" name="profile_pic" id="file-input" accept="image/*">
                 <label for="file-input" class="file-label">

@@ -75,7 +75,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                                 if (strpos($user["profile_pic"], 'http') === 0) {
                                                     $profilePic = $user["profile_pic"]; // For external links
                                                 } else {
-                                                    $profilePic = '../../' . $user["profile_pic"]; // For local links in <upload> folder
+                                                    $profilePic = '../' . $user["profile_pic"]; // For local links in <upload> folder
                                                 }
                                                 break;
                                             }

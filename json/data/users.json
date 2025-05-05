@@ -26,7 +26,7 @@
         "race": "Human",
         "date_picker": "4005-11-07",
         "role": "Admin",
-        "profile_pic": "uploads\/a90be019429ed243abf6a70101f587fb.jpg",
+        "profile_pic": "..\/uploads\/a90be019429ed243abf6a70101f587fb.jpg",
         "card_info": {
             "card_holder": "",
             "card_number": "",
@@ -60,7 +60,7 @@
         "race": "Coruscant",
         "date_picker": "4002-10-17",
         "role": "Standard",
-        "profile_pic": "uploads\/8dae609c13665be49ad1620e56916733.jpg",
+        "profile_pic": "..\/uploads\/887d58f9ff2e72ab2252dc34efb98a5c.png",
         "card_info": {
             "card_holder": "",
             "card_number": "",
@@ -77,7 +77,7 @@
         "race": "IA",
         "date_picker": "3989-01-29",
         "role": "Banned",
-        "profile_pic": "uploads\/7ab38c8b741691b2e98b211b0d1b0462.jpg",
+        "profile_pic": "..\/uploads\/7ab38c8b741691b2e98b211b0d1b0462.jpg",
         "card_info": {
             "card_holder": "",
             "card_number": "",
@@ -128,7 +128,7 @@
         "race": "Human",
         "date_picker": "3970-01-29",
         "role": "Stellar Elite",
-        "profile_pic": "uploads\/zeta.jpg",
+        "profile_pic": "..\/uploads\/zeta.jpg",
         "card_info": {
             "card_holder": "",
             "card_number": "",
@@ -152,8 +152,5 @@
             "expiry_date": "",
             "cvv": ""
         }
-    },
-    "": {
-        "remember_token": "4a7d326ad57e704accc5c51b10b49191"
     }
 }
