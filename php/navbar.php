@@ -16,13 +16,85 @@
             <button id="theme-toggle" aria-label="Changer le thème">💡</button>
         </li>
 
-        <?php
+        <?php if (isset($_SESSION['email'])): ?>
+            <style>
+                .cart-container {
+                    position: relative;
+                    display: inline-block;
+                }
 
-        if (isset($_SESSION['email'])) {
+                .cart-icon {
+                    font-size: 24px;
+                    cursor: pointer;
+                    position: relative;
+                }
 
-            echo "<li><i class='bx bx-shopping-bag'></i></li>";
-        }
-        ?>
+                .cart-count {
+                    position: absolute;
+                    top: -8px;
+                    right: -10px;
+                    background: red;
+                    color: white;
+                    font-size: 12px;
+                    padding: 2px 6px;
+                    border-radius: 50%;
+                }
+
+                .dropdown-cart {
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 35px;
+                    background-color: white;
+                    min-width: 200px;
+                    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                    z-index: 100;
+                    border-radius: 8px;
+                    padding: 10px;
+                }
+
+                .cart-container:hover .dropdown-cart {
+                    display: block;
+                }
+
+                .dropdown-cart p {
+                    margin: 0;
+                    font-size: 14px;
+                    color: #333;
+                }
+
+                .dropdown-cart hr {
+                    margin: 5px 0;
+                }
+            </style>
+
+            <?php
+            include '../php/cart.php';
+            list($cartItems, $cartCount) = getCartItems();
+            ?>
+
+
+            <li class="cart-container">
+                <i class='bx bx-shopping-bag cart-icon'></i>
+                <span class="cart-count"><?php echo $cartCount; ?></span>
+
+                <div class="dropdown-cart">
+                    <p>Your space bag:</p>
+                    <hr>
+                    <?php if ($cartCount > 0): ?>
+                        <?php foreach ($cartItems as $item): ?>
+                            <p><?php echo htmlspecialchars($item['planet']); ?> - <?php echo htmlspecialchars($item['nbpeople']); ?> people</p>
+
+
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>Your cart is empty.</p>
+                    <?php endif; ?>
+                </div>
+            </li>
+
+        <?php endif; ?>
+
 
         <li class="research">
             <a href="book.php"><i class='bx bx-search research'></i></a>
