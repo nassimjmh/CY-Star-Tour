@@ -113,13 +113,13 @@
     border-top-left-radius: 1.8rem;
     border-top-right-radius: 1.8rem;
     background-color: var(--white);
-    height: 39.5rem;
+    height: 60rem;
     overflow: hidden;
 }
 :root {
     --item-width: 42.5rem; /* Largeur d'un item */
     --gap: 80px; /* Espacement entre les items */
-    --speed: 20s; /* Durée de l'animation */
+    --speed: 15s; /* Durée de l'animation */
 }
 
 .bannertitle{
