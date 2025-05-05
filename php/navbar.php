@@ -15,6 +15,10 @@
         <li>
             <button id="theme-toggle" aria-label="Changer le thème">💡</button>
         </li>
+
+        <li>
+           <i class='bx bx-shopping-bag'></i>
+        </li>
         <li class="research">
             <a href="book.php"><i class='bx bx-search research'></i></a>
         </li>
