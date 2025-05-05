@@ -60,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION["race"] = $users[$email]["race"];
         $_SESSION["date_picker"] = $users[$email]["date_picker"];
         $_SESSION["profile_pic"] = $users[$email]["profile_pic"];
+         $_SESSION["remember_token"] = $users[$email]["remember_token"];
 
         file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
