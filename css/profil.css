@@ -350,7 +350,7 @@ main {
 
 .edit-btn {
     position: relative;
-    top: -22.5rem;
+    top: -21.5rem;
     left: 10rem;
     border: none;
     text-align: right;
@@ -373,7 +373,7 @@ main {
 .save-btn {
     position: relative;
     left: 28.5rem;
-    top: -24.5rem;
+    top: -28.5rem;
     background-color: #4CAF50;
     color: white;
     border: none;
