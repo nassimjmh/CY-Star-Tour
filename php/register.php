@@ -44,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'date_picker' => $date_picker,
             'role' => $role,
             'profile_pic' => 'https://api.dicebear.com/9.x/pixel-art/svg?seed=n' . $first_name,
+            'remember_token' => null,
             'card_info' => [
                 'card_holder' => $card_holder,
                 'card_number' => $card_number,
