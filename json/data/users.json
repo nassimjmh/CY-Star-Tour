@@ -32,7 +32,8 @@
             "card_number": "",
             "expiry_date": "",
             "cvv": ""
-        }
+        },
+        "remember_token": "049ad01dd9e45510b8e259436efffcf5"
     },
     "hicham@startour.cy": {
         "id": 3,
@@ -146,6 +147,24 @@
         "date_picker": "3983-04-22",
         "role": "Standard",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/pixel-art\/svg?seed=nFabien",
+        "card_info": {
+            "card_holder": "",
+            "card_number": "",
+            "expiry_date": "",
+            "cvv": ""
+        }
+    },
+    "ssinam@startour.cy": {
+        "id": 10,
+        "first_name": "Ssinam",
+        "last_name": "Ramjouh",
+        "email": "ssinam@startour.cy",
+        "password": "$2y$10$PsiRRuvdnaTsWagtYQ1JEO51ufnX7V2vp0uzkf3OHbWIRxo0lRyDu",
+        "race": "Human",
+        "date_picker": "4025-05-01",
+        "role": "Standard",
+        "profile_pic": "https:\/\/api.dicebear.com\/9.x\/pixel-art\/svg?seed=nSsinam",
+        "remember_token": null,
         "card_info": {
             "card_holder": "",
             "card_number": "",

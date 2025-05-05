@@ -14,7 +14,7 @@
                         if (strpos($_SESSION['profile_pic'], 'http') === 0) {
                             $imgSrc = $_SESSION['profile_pic']; // For external links
                         } else {
-                            $imgSrc = '../../' . $_SESSION['profile_pic']; // For local links in <upload> folder
+                            $imgSrc = '../' . $_SESSION['profile_pic']; // For local links in <upload> folder
                         }
                     ?>
                     <a href="../profil.php"><img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 40px; height: 40px; border-radius: 50%;"></a>
