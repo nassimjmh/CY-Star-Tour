@@ -1,49 +1,49 @@
 <?php
-    session_start();
-    if ( !isset($_SESSION['email']) && !isset($_SESSION['password']) ){
-        header('location: login.php');
-    }
-    $booking = $_SESSION['booking_success']; // Récupérer la réservation
-    $p=$_SESSION['planet_data'];// Récupérer la planete
-    //
-    //
-    $status = $_GET['status'] ?? null;
-    $montant = $_GET['montant'] ?? null;
-    $transaction = $_GET['transaction'] ?? null;
-    $vendeur = $_GET['vendeur'] ?? null;
-    $control = $_GET['control'] ?? null;
-    //
-    
+session_start();
+if (!isset($_SESSION['email']) && !isset($_SESSION['password'])) {
+    header('location: login.php');
+}
 
-    if ($status === 'accepted') {
-        $booking['payment_amount'] = $montant;
-        $booking['payment_transaction'] = $transaction;
-        $booking['payed'] = true;
-        $_SESSION['booking_success'] = $booking;
-        // Enregistrer les informations
-        $filePath = '../json/data/booking.json';
-        $existingBookings = json_decode(file_get_contents($filePath), true);
-        if (!is_array($existingBookings)) {
-            $existingBookings = [];
-        }
-        // Générer l'ID suivant pour la réservation
-        $nextId = empty($existingBookings) ? 1 : max(array_keys($existingBookings)) + 1;
-    
-        // Ajouter la nouvelle réservation à la liste
-        $existingBookings[$nextId] = $_SESSION['booking_success'];
-    
+$booking = $_SESSION['booking_success']; // Récupérer la réservation
+$p = $_SESSION['planet_data']; // Récupérer la planète
+
+$status = $_GET['status'] ?? null;
+$montant = $_GET['montant'] ?? null;
+$transaction = $_GET['transaction'] ?? null;
+$vendeur = $_GET['vendeur'] ?? null;
+$control = $_GET['control'] ?? null;
+
+if ($status === 'accepted') {
+    $booking['payment_amount'] = $montant;
+    $booking['payment_transaction'] = $transaction;
+    $booking['payed'] = true;
+    $_SESSION['booking_success'] = $booking;
+
+    // Enregistrer les informations
+    $filePath = '../json/data/booking.json';
+    $existingBookings = json_decode(file_get_contents($filePath), true);
+    if (!is_array($existingBookings)) {
+        $existingBookings = [];
+    }
+
+    // Utiliser la clé stockée dans la session pour mettre à jour la réservation
+    $bookingKey = $_SESSION['booking_key'];
+    if (isset($existingBookings[$bookingKey])) {
+        // Mettre à jour la réservation existante
+        $existingBookings[$bookingKey] = $booking;
+
         // Sauvegarder les modifications dans le fichier JSON
         file_put_contents($filePath, json_encode($existingBookings, JSON_PRETTY_PRINT));
-        header('Location: payement.php');
-        // Marquer que la réservation a été ajoutée
-    }  elseif ($status === 'denied') {
-        $booking['payment_amount'] = $montant;
-        $booking['payment_transaction'] = $transaction;
-        $booking['payed'] = false;
-        $_SESSION['booking_success'] = $booking;
-        header('Location: payement.php');
     }
 
+    header('Location: payement.php');
+} elseif ($status === 'denied') {
+    $booking['payment_amount'] = $montant;
+    $booking['payment_transaction'] = $transaction;
+    $booking['payed'] = false;
+    $_SESSION['booking_success'] = $booking;
+    header('Location: payement.php');
+}
 ?>
 
 <!DOCTYPE html>
