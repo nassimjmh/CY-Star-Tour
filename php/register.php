@@ -143,136 +143,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p><?php echo htmlspecialchars($error); ?></p>
             <?php endif; ?>
         </div>
-
-        <style>
-            #errorBox {
-                display: none;
-                background: linear-gradient(145deg, #1e1e2f, #2c2c3f);
-                border: 1px solid #ff4d4d;
-                color: #ffcccc;
-                padding: 14px 20px;
-                border-radius: 12px;
-                margin-top: 15px;
-                font-size: 14px;
-                font-weight: bold;
-                text-align: center;
-                box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
-                animation: pulseGlow 2.5s infinite ease-in-out;
-            }
-
-            #errorBox::before {
-                content: "⚠️";
-                color: #ff4d4d;
-                font-weight: bold;
-            }
-
-            @keyframes pulseGlow {
-                0% {
-                    box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
-                }
-                50% {
-                    box-shadow: 0 0 20px rgba(255, 77, 77, 0.5);
-                }
-                100% {
-                    box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
-                }
-            }
-        </style>
+        
+        
     </form>
 </div>
 
 
-<script>
-    const errorBox = document.getElementById("errorBox");
-
-    function showErrors(errors) {
-        if (errors.length > 0) {
-            errorBox.innerHTML = errors.join("<br>");
-            errorBox.style.display = "block";
-        } else {
-            errorBox.innerHTML = "";
-            errorBox.style.display = "none";
-        }
-    }
-
-    // Mot de passe
-    const passwordInput = document.querySelector('[name="password"]');
-    const strengthBox = document.getElementById("password-strength");
-
-    passwordInput.addEventListener("input", function () {
-        const password = passwordInput.value;
-        const pwdLength = password.length;
-        const containsNumber = /\d/.test(password);
-        const containsSpecialChar = /[^a-zA-Z0-9]/.test(password);
-        let passwordErrors = [];
-
-
-
-        if (pwdLength < 3 && !containsNumber && !containsSpecialChar) {
-            strengthBox.innerText = "🕳️ No security " + " " + pwdLength + " " +"space characters";
-            strengthBox.style.color = "red";
-        } else if (pwdLength >= 8 && containsNumber && containsSpecialChar) {
-            strengthBox.innerText = "🌟 Perfect security" + " " + pwdLength + " " +"space characters";
-            strengthBox.style.color = "green";
-        } else {
-            strengthBox.innerText = "🌌 Moderate security" + " " + pwdLength + " " +"space characters";
-            strengthBox.style.color = "orange";
-        }
-
-
-
-        // Erreurs mot de passe
-        if (pwdLength < 8) {
-            passwordErrors.push("Password must be at least 8 characters long.");
-        }
-        if (!containsNumber) {
-            passwordErrors.push("Password must contain a number.");
-        }
-        if (!containsSpecialChar) {
-            passwordErrors.push("Password must contain a special character (Ex: &,*,#).");
-        }
-
-        showErrors(passwordErrors);
-    });
-
-    // Email
-    const emailInput = document.querySelector('[name="email"]');
-    emailInput.addEventListener("input", function () {
-        const email = emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        let emailErrors = [];
-
-        if (!emailRegex.test(email)) {
-            emailErrors.push("Please enter a valid email address.");
-        }
-
-        showErrors(emailErrors);
-    });
-
-    // Submit global
-    document.getElementById("registerForm").addEventListener("submit", function (e) {
-        const firstName = document.querySelector('[name="first_name"]').value.trim();
-        const lastName = document.querySelector('[name="last_name"]').value.trim();
-        const email = emailInput.value.trim();
-        const password = passwordInput.value;
-        const race = document.querySelector('[name="race"]').value;
-        const date = document.querySelector('[name="date_picker"]').value;
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        let errors = [];
-
-        if (!firstName || !lastName || !email || !password || !race || !date) {
-            errors.push("All fields must be filled.");
-        }
-
-        if (errors.length > 0) {
-            e.preventDefault();
-            showErrors(errors);
-        } else {
-            showErrors([]);
-        }
-
-    });
-</script>
+<script src ="../js/register.js"></script>
 
 
 
