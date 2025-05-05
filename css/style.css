@@ -137,7 +137,7 @@ header {
 }
 
 nav {
-    margin-left: 5rem;
+    margin-left: 2rem;
     display: flex;
     justify-content: center;
 }
@@ -152,7 +152,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 1.25rem;
+    margin: 0 0.8rem;
 }
 
 nav ul li a {
