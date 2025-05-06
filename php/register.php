@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'cvv' => $cvv
             ]
         ];
-        $_SESSION["id"] = $users[$email]["id"];
+
         $_SESSION['email'] = $email;
         $_SESSION["first_name"] = $users[$email]["first_name"];
         $_SESSION["role"] = $users[$email]["role"];
@@ -61,6 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION["date_picker"] = $users[$email]["date_picker"];
         $_SESSION["profile_pic"] = $users[$email]["profile_pic"];
          $_SESSION["remember_token"] = $users[$email]["remember_token"];
+         $_SESSION["id"] = $users[$email]["id"];
 
         file_put_contents($file, json_encode($users, JSON_PRETTY_PRINT));
 
@@ -107,8 +108,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="input-box">
-            <input type="password" id="password" name="password" placeholder="Password">
-            <i class='bx bxs-lock-alt' id="lockIcon" onclick="togglePasswordVisibility()"></i>
+        <input type="password" id="password" name="password" placeholder="Password">
+        <i class='bx bxs-lock-alt' id="lockIcon" onclick="togglePasswordVisibility()"></i>
         </div>
         <div id="password-strength" style="margin-top: 5px; font-weight: bold;"></div>
 
