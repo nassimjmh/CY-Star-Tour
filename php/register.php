@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'cvv' => $cvv
             ]
         ];
-
+        $_SESSION["id"] = $users[$email]["id"];
         $_SESSION['email'] = $email;
         $_SESSION["first_name"] = $users[$email]["first_name"];
         $_SESSION["role"] = $users[$email]["role"];
@@ -107,8 +107,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="input-box">
-            <input type="password" name="password" placeholder="Password">
-            <i class='bx bxs-lock-alt'></i>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <i class='bx bxs-lock-alt' id="lockIcon" onclick="togglePasswordVisibility()"></i>
         </div>
         <div id="password-strength" style="margin-top: 5px; font-weight: bold;"></div>
 
