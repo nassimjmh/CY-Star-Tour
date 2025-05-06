@@ -20,7 +20,7 @@
         if (isset($_SESSION['email'])):
             // Charger les données JSON
             $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), true);
-            $id = $_SESSION["user_id"];
+            $id = $_SESSION["id"];
             // Vérifier si le fichier JSON a été chargé correctement
             if ($recentlybooked === null) {
                 echo "<p>Error loading booking data.</p>";
@@ -41,24 +41,22 @@
         </li>
 
         <li class="cart-container">
-            <i class='bx bx-shopping-bag cart-icon'></i>
-            <?php
-            $paidBookings = array_filter($recentlybooked, function($booking) {
-                return isset($booking['payed']) && $booking['payed'] !== true;
-            });
-            ?>
-            <span class="cart-count"><?php echo count($paidBookings); ?></span>
+            
 
             <div class="dropdown-cart">
                 <p class="yo">Recently Booked Trips:</p>
                 <hr>
                 <?php if (!empty($recentlybooked)): ?>
                     <?php
+                    
+                        $paidBookings = 0;
+                    
                         $hasUnpaidBookings = false; // Variable de contrôle
                         foreach ($recentlybooked as $reservationId => $value) {
                             $imgSrc = '../images/planet/' . strtolower($value["planet"]) . ".webp";
-                            if ($value["payed"] == false) {
+                            if ($value["id"] == $id && $value["payed"] == false) {
                                 $hasUnpaidBookings = true; // Mettre à jour la variable de contrôle
+                                $paidBookings ++ ;
                                 ?>
                                 <a href="recap2.php?id=<?php echo urlencode($reservationId); ?>&planet=<?php echo urlencode($value['planet']); ?>" class="book-link">
                                     <div class="book">
@@ -67,7 +65,7 @@
                                         <p class="optionbook"><strong>☕ Breakfast :</strong> <?php echo htmlspecialchars($value['breakfast'], ENT_QUOTES, 'UTF-8'); ?></p>
                                         <p class="optionbook"><strong>💆‍♂️ Zero gravity relaxation :</strong> <?php echo htmlspecialchars($value['relax'], ENT_QUOTES, 'UTF-8'); ?></p>
                                         <p class="optionbook"><strong>🛡️ Cancellation insurance :</strong> <?php echo htmlspecialchars($value['insurance'], ENT_QUOTES, 'UTF-8'); ?></p>
-                                        <p class="optionbook"><strong>💸 Price :</strong> <?php echo htmlspecialchars($value['payment_transaction'], ENT_QUOTES, 'UTF-8'); ?> ₴</p>
+                                        <p class="optionbook"><strong>💸 Price :</strong> <?php echo htmlspecialchars($value['payment_amount'], ENT_QUOTES, 'UTF-8'); ?> ₴</p>
                                         <img src='<?php echo $imgSrc ?>' class='planet-image'>
                                     </div>
                                 </a>
@@ -75,13 +73,15 @@
                             }
                         }
                         if (!$hasUnpaidBookings) {
-                            echo "<p>No</p>"; // Afficher "No" s'il n'y a aucune réservation non payée
+                            echo "<p><p>No recently booked trips.</p></p>"; 
                         }
                     ?>
                 <?php else: ?>
                     <p>No recently booked trips.</p>
                 <?php endif; ?>
             </div>
+            <i class='bx bx-shopping-bag cart-icon'></i>
+            <span class="cart-count"><?php echo $paidBookings; ?></span>
         </li>
 
         <?php
