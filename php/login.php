@@ -19,7 +19,7 @@ if (!isset($_SESSION['email']) && isset($_COOKIE['remember_token'])) {
             $_SESSION["race"] = $userData["race"];
             $_SESSION["date_picker"] = $userData["date_picker"];
             $_SESSION["profile_pic"] = $userData["profile_pic"];
-            $_SESSION["user_id"] = $userData["id"];
+            $_SESSION["id"] = $userData["id"];
             header('Location: profil.php');
             exit();
         }
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION["race"] = $users[$email]["race"];
             $_SESSION["date_picker"] = $users[$email]["date_picker"];
             $_SESSION["profile_pic"] = $users[$email]["profile_pic"];
-            $_SESSION["user_id"] = $users[$email]["id"];
+            $_SESSION["id"] = $users[$email]["id"];
             header('Location: profil.php');
             exit();
         } else {
