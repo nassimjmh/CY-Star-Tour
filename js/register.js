@@ -1,3 +1,20 @@
+
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password');
+    const lockIcon = document.getElementById('lockIcon');
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        lockIcon.classList.replace('bxs-lock-alt', 'bxs-lock-open');
+    } else {
+        passwordInput.type = 'password';
+        lockIcon.classList.replace('bxs-lock-open', 'bxs-lock-alt');
+    }
+}
+
+
+
+
 const errorBox = document.getElementById("errorBox");
 
 function showErrors(errors) {
