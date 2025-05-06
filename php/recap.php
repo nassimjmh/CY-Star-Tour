@@ -11,7 +11,6 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['password'])) {
 
 $total = 0; // Initialisation de $total
 $totaltravel = 0;
-
 if (isset($_GET['planet'])) {
     $selectedPlanet = $_GET['planet'];
     $file = '../json/destination/' . ucfirst($selectedPlanet) . '.json';
@@ -65,7 +64,7 @@ if (isset($_POST["submit"])) {
         'relax' => $_POST['Relax'] ?? '',
         'nbpeople' => isset($_POST['nb']) ? (int)$_POST['nb'] : 1,
         'insurance' => $_POST['insurance'] ?? '',
-        'payment_transaction' => $discountedTotal, // Use the discounted total
+        'payment_amount' => $discountedTotal, // Use the discounted total
         'selectedDate' => $_POST['date'] ?? [],
     ];
     $bookingData['payed'] = false;
