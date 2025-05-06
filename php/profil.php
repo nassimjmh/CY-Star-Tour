@@ -195,13 +195,13 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 
     <div class="recent-trips">
         <h2>Recently Booked Trips</h2>
-        
-                
+
+
         <?php
-             foreach ($recentlybooked as $value) {
-                $imgSrc = '../images/planet/' . strtolower($value["planet"]) . ".webp";
-                if ($value["id"] == $id) {?>
-                    <div class="book">
+        foreach ($recentlybooked as $value) {
+            $imgSrc = '../images/planet/' . strtolower($value["planet"]) . ".webp";
+            if ($value["id"] == $id && $value["payed"]===true) {?>
+                <div class="book">
                     <p class="namebook"> <?php echo htmlspecialchars($value['planet'], ENT_QUOTES, 'UTF-8'); ?> </p>
                     <p class="optionbook"><strong>✨ Quality travel :</strong> <?php echo htmlspecialchars($value['quality'], ENT_QUOTES, 'UTF-8'); ?></p>
                     <p class="optionbook"><strong>☕ Breakfast :</strong> <?php echo htmlspecialchars($value['breakfast'], ENT_QUOTES, 'UTF-8'); ?></p>
@@ -209,16 +209,16 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                     <p class="optionbook"><strong>🛡️ Cancellation insurance :</strong> <?php echo htmlspecialchars($value['insurance'], ENT_QUOTES, 'UTF-8'); ?></p>
                     <p class="optionbook"><strong>💸 Price :</strong> <?php echo htmlspecialchars($value['payment_amount'], ENT_QUOTES, 'UTF-8'); ?> ₴</p>
                     <img src='<?php echo $imgSrc ?>' class='planet-image'>
-                    </div> 
-                   <?php }?>
-                   
-            <?php }
+                </div>
+            <?php }?>
+
+        <?php }
 
         ?>
-        
+
     </div>
-    
-    <div class="imagerien"> 
+
+    <div class="imagerien">
 
     </div>
 </main>
