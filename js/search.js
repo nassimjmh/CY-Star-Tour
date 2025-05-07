@@ -6,15 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
         rating: [],
         price: null,
     };
-
-    const planetElements = document.querySelectorAll('.booking'); // Class booking
+// Class booking except no result display
+    const planetElements = document.querySelectorAll('.booking:not(#no-results .booking)'); 
 
 
     
     const updateFilters = () => {
+        let hasResults = false;
         planetElements.forEach(planet => {
-            let hasResults = false;
-
             const galaxy = planet.getAttribute('data-galaxy');
             const keywords = planet.getAttribute('data-keywords').split(',');
             const rating = planet.getAttribute('data-rating');
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         const noResultsMessage = document.getElementById('no-results');
-        noResultsMessage.style.display = hasResults ? 'none' : 'block';
+        noResultsMessage.style.display = hasResults ? 'none' : '';
     };
 
     // Add event listeners to filter inputs
@@ -77,4 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
         updateFilters();
     });
+
+
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('click', function () { // For being able to unclick radio type
+            if (this.dataset.clicked === 'true') {
+                this.checked = false; 
+                this.dataset.clicked = 'false'; 
+            } else {
+                this.dataset.clicked = 'true'; 
+            }
+        });
+    });
+
 });

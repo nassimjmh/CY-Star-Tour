@@ -27,13 +27,8 @@
 
     <form>
     <div class="rsearch noclick">
-    <div class="title">
-                <p>Where will be your next destination?</p>
-                
-            </div>
-        <div class="start">
-            <details open>
-                <summary>Choose your galaxy :</summary>
+        <div class="end">
+                <summary>GALAXY</summary>
                 <div class="dropdown-content3">
                     <label>
                         <input type="checkbox" name="galaxy[]" value="Stargate"> Stargate
@@ -56,9 +51,8 @@
                 </div>
             </details>
         </div>
-        <div class="end">
-            <details open>
-                <summary>Choose your experience :</summary>
+        <div class="start">
+                <summary>EXPERIENCE</summary>
                 <div class="dropdown-content2">
                     <label>
                         <input type="checkbox" name="keywords[]" value="Exploration"> Exploration
@@ -88,8 +82,7 @@
             </details>
         </div>
         <div class="when">
-            <details open>
-                <summary>Choose the rating :</summary>
+                <summary>RATING</summary>
                 <div class="dropdown-content">
                     <label>
                         <input type="checkbox" name="rating[]" value="1"> ★
@@ -110,8 +103,7 @@
             </details>
         </div>
         <div class="number">
-            <details open>
-                <summary>Choose the price :</summary>
+                <summary>PRICE RANGE</summary>
                 <div class="dropdown-content">
                     <label>
                         <input type="radio" name="price" value="1500"> ≤ 1.500 ₴
@@ -172,8 +164,20 @@
                     </div>
                 </a>
             <?php endforeach; ?>
-            <div id="no-results" style="display: none; text-align: center; margin-top: 20px;">
-                <p>No destinations match your criteria.</p>
+            <a href="#">
+            <div id="no-results" style="display: none;">
+            <div class="booking"</div>
+                        <img src="../images/ouvrier.jpg">
+                        <div class="name"><p>➤ No results...</p></div>
+                        <div class="galaxy"><p>| Li&bili </p></div>
+                        <div class="info"><p>🌡️ 115.1°K(ea)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 8.88 m/s²</p></div>
+                        <div class="division"><p>————————————————————————————————————————————————</p></div>
+                        <div class="description"><p>Nobody has the <strong>model</strong> they need to find the <strong>result</strong>.
+And yet, the <strong>system</strong> behaves as if governed by <strong>linear</strong> rules, quietly evolving in time.
+Perhaps the <strong>planet</strong> is <strong>trigonalisable...</strong> we just haven’t identified the correct <strong>basis</strong> yet.</p></div>
+                        <div class="prix"><p>9.999₴</p></div> 
+                    </div>
+                </a>
             </div>
         </div>
     </body>

@@ -28,11 +28,13 @@
     border-bottom-right-radius: 2vh;
     border-top-right-radius: 2vh;
     margin-bottom: 5vh;
+    left: 5rem;
 }
 
 .booking:hover{
     box-shadow: 0px 0px 9px rgba(255, 255, 255, 0.678);
 }
+
 
 .middle {
     background-color: black;
@@ -40,7 +42,7 @@
     position: relative;
     justify-content: center; 
     align-items: center; 
-    margin-top: 8vh;
+
 }
 
 
@@ -107,55 +109,41 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    background-image: url('https://wallpaper.forfun.com/fetch/c7/c792185c2222f9c7909ec2514ef9d6d1.jpeg');
+    background-color: var(--white); /* Use white background */
     width: 100%;
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-size: cover; /* Couvre tout l'élément sans déformation */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    height: 40vh; /* Full height of the viewport */
     overflow: hidden;
-
-}
-#Book .title{
-    position: absolute;
-    white-space: nowrap;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 385%;
-    color: white;
-    text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
+    border-radius: 10px; /* Optional: Add rounded corners for a cleaner look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 #Book .start {
     width: 13rem; /*Changer la taille du module*/
     position: absolute;
-    top: 23rem;
+    top: 7.8rem;
     left: 20rem;
 }
 #Book .end {
     width: 15rem; /*Changer la taille du module*/
     position: absolute;
-    top: 23rem;
+    top: 7.8rem;
     left: 35rem;
 }
 #Book .when {
     width: 12rem; /*Changer la taille du module*/
     position: absolute;
-    top: 23rem;
+    top: 7.8rem;
     left: 52rem;
 }
 
 #Book .number {
     width: 12rem; /*Changer la taille du module*/
     position: absolute;
-    top: 23rem;
+    top: 7.8rem;
     left: 66rem;
 }
 
-#Book .valid{
+#Book .valid{ /* Valid = RESET button */
     position: absolute; 
     padding: 12px 60px;
     border-radius: 5px;
@@ -165,15 +153,16 @@
     font-weight: bold;
     border: none;
     cursor: pointer;
-    top: 23rem; /* Centre verticalement */
+    top: 15rem;
     left: 80rem; /* Centre horizontalement */ 
     transition: 0.7s;
 }
 
 
-#Book a{
+#Book a {
     text-decoration: none;
-    color : var(--black);
+    color: var(--black);
+    display: inline-block; /* Problem : asymetry */
 }
 
 
@@ -186,47 +175,37 @@
     border-radius: 5px;
     background-color: var(--white);
     color: var(--black);
+    box-shadow: 0px 2px 2px var(--black);
     cursor: pointer;
 }
 
 #Book summary { /*Le texte dedans*/
     padding: 10px;
     outline: none;
+    font-weight: bold;
+    font-size: larger;
 }
 
-#Book .dropdown-content{ /*Le carré*/
-    background-color: var(--blue);
-    padding: 10px;
-    max-height: 150px;
-    overflow-y: auto;
-}
 
-#Book .dropdown-content label { /*Le texte*/
-    color: white;
-    display: block;
-    padding: 5px 0;
-}
 /**/
-#Book .dropdown-content2{ /*Le carré*/
-    background-color: var(--blue);
+
+#Book .dropdown-content, 
+#Book .dropdown-content2, 
+#Book .dropdown-content3 {
     padding: 10px;
     max-height: 240px;
-    overflow-y: auto;
+    overflow-y: auto; 
+    background-color: var(--lighter-gray); 
+    margin-top: -1rem;
 }
-#Book .dropdown-content3{ /*Le carré*/
-    background-color: var(--blue);
-    padding: 10px;
-    max-height: 240px;
-    overflow-y: auto;
-}
-#Book .dropdown-content3 label { /*Le texte*/
-    color: white;
+
+#Book .dropdown-content label, 
+#Book .dropdown-content2 label, 
+#Book .dropdown-content3 label {
+    color: var(--black);
     display: block;
     padding: 5px 0;
 }
-#Book .dropdown-content2 label { /*Le texte*/
-    color: white;
-    display: block;
-    padding: 5px 0;
-}
+
+
 
