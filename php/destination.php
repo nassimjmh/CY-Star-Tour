@@ -31,6 +31,25 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 
+
+
+    <style>
+        .error-message {
+            display: none;
+            background: rgba(255, 0, 60, 0.1);
+            border: 1px solid #ff2e63;
+            color: #ff2e63;
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            box-shadow: 0 0 8px #ff2e63aa;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+
+    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const navItems = document.querySelectorAll('.nav-item');
@@ -275,6 +294,10 @@
                     </div>
                 </div>
             </form>
+
+
+            <div id="error-message" class="error-message"></div>
+
             <div class="group2">
                 <button type="button" id="suivantBtn" class="navigation-button">Next</button>
                 <button type="button" id="prevButton" class="navigation-button">Back</button>
@@ -346,6 +369,7 @@
             const nextButton = document.getElementById('suivantBtn');
             const prevButton = document.getElementById('prevButton');
             const submitButton = document.querySelector('button[type="submit"]');
+            const errorMessage = document.getElementById('error-message');
 
             function showGroup(index) {
                 groups.forEach((group, i) => {
@@ -380,14 +404,21 @@
                     const currentInputs = currentGroupElement.querySelectorAll('input[type="radio"], input[type="checkbox"]');
                     const isChecked = Array.from(currentInputs).some(input => input.checked);
 
+
+
+
+
                     if (isChecked) {
+                        errorMessage.style.display = 'none';
                         if (currentGroup < groups.length - 1) {
                             currentGroup++;
                             showGroup(currentGroup);
                         }
                     } else {
-                        alert('Please select at least one option before proceeding.');
+                        errorMessage.textContent = 'Please select at least one option to continue your space journey.';
+                        errorMessage.style.display = 'block';
                     }
+
                 } else {
                     // Skip validation for the second group
                     if (currentGroup < groups.length - 1) {
@@ -401,6 +432,7 @@
                 if (currentGroup > 0) {
                     currentGroup--;
                     showGroup(currentGroup);
+                    errorMessage.style.display = 'none'; // hide errormessage
                 }
             }
 
