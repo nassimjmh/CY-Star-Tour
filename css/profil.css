@@ -411,19 +411,4 @@ main {
     transition: background-color 0.3s, font-size 0.7s, color 0.3s;
 }
 
-.imagerien {
-    background-image: url("../images/img.png");
-    background-size:cover; /* Couvre tout l'élément sans déformation */
-    background-position:center; /* Centre l'image */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
-    overflow: hidden;
-    position: absolute;
-    top: 33rem;
-    left: 33rem;
-    background-color: white;
-    border-radius: 1.25rem;
-    width: 39.5rem;
-    height: 25.5rem;
-    color: var(--blue);
-    font-size: 1.25rem;
-}
+
