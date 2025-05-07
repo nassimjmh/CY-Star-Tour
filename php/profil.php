@@ -218,9 +218,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 
     </div>
 
-    <div class="imagerien">
-
-    </div>
+ 
 </main>
 
 <?php include("footer.php") ?>
