@@ -32,24 +32,6 @@
     </head>
 
 
-
-    <style>
-        .error-message {
-            display: none;
-            background: rgba(255, 0, 60, 0.1);
-            border: 1px solid #ff2e63;
-            color: #ff2e63;
-            padding: 12px 20px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1rem;
-            box-shadow: 0 0 8px #ff2e63aa;
-            transition: all 0.3s ease-in-out;
-            text-align: center;
-        }
-
-    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const navItems = document.querySelectorAll('.nav-item');
