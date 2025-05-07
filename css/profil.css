@@ -153,7 +153,7 @@ main {
     border-bottom: none;
 }
 
-.info input, .info select {
+.info input {
     width: 60%;
     padding: 0.625rem;
     border: 0.0625rem solid #ddd;
@@ -165,7 +165,15 @@ main {
     font-family: "Inter", sans-serif;
 }
 
-
+.info span {
+    width: 60%;
+    padding: 0.625rem;
+    font-size: 1rem;
+    background: transparent;
+    outline: none;
+    border-radius: 0.75rem;
+    font-family: "Inter", sans-serif;
+}
 
 .info form {
     margin-top: 0.625rem;
@@ -350,7 +358,7 @@ main {
 
 .edit-btn {
     position: relative;
-    top: -21.5rem;
+    top: -22rem;
     left: 10rem;
     border: none;
     text-align: right;
@@ -373,7 +381,7 @@ main {
 .save-btn {
     position: relative;
     left: 25.5rem;
-    top: -28.5rem;
+    top: -23.5rem;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -394,7 +402,7 @@ main {
 .cancel-btn {
     position: relative;
     left: 24.5rem;
-    top: -28.5rem;
+    top: -23.5rem;
     background-color: #ff4444;
     color: white;
     border: none;

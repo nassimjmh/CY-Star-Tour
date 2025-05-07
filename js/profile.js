@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
         profileInfo.querySelectorAll("span").forEach(span => {
             const input = document.createElement("input");
             input.type = span.id === "birth-date" ? "date" : "text"; // Use date input for birth date and text for the others
-            input.value = span.id === "birth-date" ? formatDateForInput(span.textContent) : span.textContent;
+            input.value = span.textContent;
             input.id = span.id;
 
             input.dataset.originalValue = span.textContent; // Dom to store original data
@@ -32,13 +32,22 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
         });
 
 
-        const updatedData = {
+       const updatedData = {
             first_name: document.getElementById("first-name").textContent,
             last_name: document.getElementById("last-name").textContent,
             email: document.getElementById("email").textContent,
-            date_picker: document.getElementById("birth-date").textContent, // Convert to YYYY-MM-DD
-            race: document.getElementById("race").textContent
-        };
+            date_picker: document.getElementById("birth-date").textContent,
+        }; 
+
+        const firstNameElement = document.getElementById("first-name");
+        const lastNameElement = document.getElementById("last-name");
+        const emailElement = document.getElementById("email");
+        const birthDateElement = document.getElementById("birth-date");
+
+        if (!firstNameElement || !lastNameElement || !emailElement || !birthDateElement) {
+            console.error("One or more elements are missing from the DOM.");
+            return;
+        }
 
         fetch("profil.php", { // Send information to server
             method: "POST",
@@ -70,11 +79,4 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
         editBtn.style.display = "inline-block";
 
     });
-
-
-    function formatDateForInput(date) { // Convert dd-mm-yyyy to yyyy-mm-dd
-        const [day, month, year] = date.split("/");
-        return `${year}-${month}-${day}`;
-    }
-
 });

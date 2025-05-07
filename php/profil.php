@@ -13,7 +13,6 @@ $email = $_SESSION['email'];
 $first_name = $_SESSION["first_name"];
 $role = $_SESSION["role"];
 $last_name = $_SESSION["last_name"];
-$race = $_SESSION["race"];
 $date_picker = $_SESSION["date_picker"];
 $profile_pic = $_SESSION["profile_pic"];
 $id = $_SESSION["user_id"];
@@ -74,27 +73,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)) {
     // Handle JSON input
     $input = json_decode(file_get_contents('php://input'), true);
 
-    if ($input) {
-        $users[$email]['last_name'] = $input['last_name'];
-        $users[$email]['first_name'] = $input['first_name'];
-        $users[$email]['race'] = $input['race'];
-        $users[$email]['date_picker'] = $input['date_picker'];
+    if ($input && isset($input['email'])) {
+        $email = $input['email']; // Use email from input to identify the user
 
-        file_put_contents('../json/data/users.json', json_encode($users, JSON_PRETTY_PRINT));
+        if (isset($users[$email])) {
+            $users[$email]['last_name'] = $input['last_name'];
+            $users[$email]['first_name'] = $input['first_name'];
+            $users[$email]['date_picker'] = $input['date_picker'];
 
-        // Respond with success
-        echo json_encode(['success' => true]);
-        exit();
+            file_put_contents('../json/data/users.json', json_encode($users, JSON_PRETTY_PRINT));
+
+            // Respond with success
+            echo json_encode(['success' => true]);
+        } else {
+            // Respond with error if email not found
+            echo json_encode(['success' => false, 'message' => 'User not found']);
+        }
     } else {
         // Respond with error
         echo json_encode(['success' => false, 'message' => 'Invalid JSON input']);
-        exit();
     }
+    exit();
 }
 
 $last_name = $users[$email]['last_name'];
 $first_name = $users[$email]['first_name'];
-$race = $users[$email]['race'];
 $date_picker = $users[$email]['date_picker'];
 
 
@@ -115,7 +118,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
     <link rel="stylesheet" href="../css/profil.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../css/style.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="../js/profile.js"></script>
+    <script src="../js/profile.js?v=<?php echo time(); ?>"></script>
 </head>
 <body>
 
@@ -179,12 +182,11 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
     <div class="info-profile">
         <div class="info">
             <h2>About Me</h2>
-            <ul id="profile-info">
+            <ul id="profile-info"> 
                 <li><strong>First Name:</strong> <span id="first-name"><?php echo htmlspecialchars($first_name); ?></span></li>
                 <li><strong>Last Name:</strong> <span id="last-name"><?php echo htmlspecialchars($last_name); ?></span></li>
                 <li><strong>Email:</strong> <span id="email"><?php echo htmlspecialchars($email); ?></span></li>
-                <li><strong>Birth Date:</strong> <span id="birth-date"><?php echo (new DateTime($date_picker))->format('d/m/Y'); ?></span></li>
-                <li><strong>Race:</strong> <span id="race"><?php echo htmlspecialchars($race); ?></span></li>
+                <li><strong>Birth Date:</strong> <span id="birth-date"><?php echo $date_picker; ?></span></li>
             </ul>
             <button id="edit-btn" class="edit-btn"><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" alt="" class="param"></button>
             <button id="cancel-btn" class="cancel-btn" style="display: none;">Cancel</button>
