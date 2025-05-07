@@ -17,6 +17,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
     <link rel="icon" href="../../images/sparkles.png" type="image/png">
     <link rel="stylesheet" href="../../css/admin.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/admin-actions.js?v=<?php echo time(); ?>"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body id="users">
@@ -132,36 +133,36 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                                             <input type="hidden" name="current_role" value="<?php echo $users['role']; ?>">
                                             
                                             <?php if ($users['role'] !== 'VIP'): ?>
-                                                <button type="submit" name="action" value="make_vip" class="vip-button">
+                                                <button type="submit" name="action" value="make_vip" class="vip-button action-button">
                                                     Make VIP
                                                 </button>
                                             <?php else: ?>
-                                                <button type="submit" name="action" value="remove_vip" class="vip-button">
+                                                <button type="submit" name="action" value="remove_vip" class="vip-button action-button">
                                                     Remove VIP
                                                 </button>
                                             <?php endif; ?>
 
                                             <?php if ($users['role'] !== 'Banned'): ?>
-                                                <button type="submit" name="action" value="ban" class="ban-button">
+                                                <button type="submit" name="action" value="ban" class="ban-button action-button">
                                                     Ban User
                                                 </button>
                                             <?php else: ?>
-                                                <button type="submit" name="action" value="unban" class="ban-button">
+                                                <button type="submit" name="action" value="unban" class="ban-button action-button">
                                                     Unban User
                                                 </button>
                                             <?php endif; ?>
 
                                             <?php if ($users['role'] !== 'Admin'): ?>
-                                                <button type="submit" name="action" value="make_admin" class="admin-button">
+                                                <button type="submit" name="action" value="make_admin" class="admin-button action-button">
                                                     Make Admin
                                                 </button>
                                             <?php else: ?>
-                                                <button type="submit" name="action" value="remove_admin" class="admin-button">
+                                                <button type="submit" name="action" value="remove_admin" class="admin-button action-button">
                                                     Remove Admin
                                                 </button>
                                             <?php endif; ?>
 
-                                            <button type="submit" name="action" value="manage" class="manage-button">
+                                            <button type="submit" name="action" value="manage" class="manage-button action-button">
                                                 Edit User
                                             </button>
                                         </form>

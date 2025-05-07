@@ -39,16 +39,6 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
             date_picker: document.getElementById("birth-date").textContent,
         }; 
 
-        const firstNameElement = document.getElementById("first-name");
-        const lastNameElement = document.getElementById("last-name");
-        const emailElement = document.getElementById("email");
-        const birthDateElement = document.getElementById("birth-date");
-
-        if (!firstNameElement || !lastNameElement || !emailElement || !birthDateElement) {
-            console.error("One or more elements are missing from the DOM.");
-            return;
-        }
-
         fetch("profil.php", { // Send information to server
             method: "POST",
             headers: {
