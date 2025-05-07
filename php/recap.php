@@ -56,7 +56,7 @@ if (isset($_POST["submit"])) {
     $discountedTotal = $total * (1 - $discount);
 
     $bookingData = [
-        'id' => $_SESSION['user_id'],
+        'id' => $_SESSION['id'],
         'planet' => $_GET['planet'],
         'days' => $_POST['days'] ?? [],
         'quality' => $_POST['quality'] ?? '',
