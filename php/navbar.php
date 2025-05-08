@@ -17,6 +17,7 @@
         </li>
 
         <?php
+        $paidBookings = 0;
         if (isset($_SESSION['email'])):
             // Charger les données JSON
             $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), true);
@@ -49,7 +50,7 @@
                 <?php if (!empty($recentlybooked)): ?>
                     <?php
                     
-                        $paidBookings = 0;
+                        
                     
                         $hasUnpaidBookings = false; // Variable de contrôle
                         foreach ($recentlybooked as $reservationId => $value) {
@@ -146,7 +147,7 @@
     // Appliquer le thème selon le cookie + icône
     if (darkMode === 'enabled') {
         document.body.classList.add('dark');
-        button.textContent = '💡'; // soleil pour indiquer qu'on est en sombre
+        button.textContent = '☀️'; // soleil pour indiquer qu'on est en sombre
     } else {
         button.textContent = '🌑'; // lune pour indiquer qu'on est en clair
     }
@@ -156,7 +157,7 @@
         document.body.classList.toggle('dark');
         if (document.body.classList.contains('dark')) {
             setCookie('darkMode', 'enabled', 365);
-            button.textContent = '💡️';
+            button.textContent = '☀️';
         } else {
             setCookie('darkMode', 'disabled', 365);
             button.textContent = '🌑';
