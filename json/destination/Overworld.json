@@ -1,0 +1,71 @@
+{
+  "name": "Overworld",
+  "galaxy": "Game • -33° 00' 33'' • ★★★★★",
+  "info": "🌡️ 288°K  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⬇🌍 9.81 m/s²",
+  "prix": "2.600 ₴",
+  "preimage": "https://i.redd.it/1w64wb4whme11.jpg",
+  "image": "https://i.imgur.com/k0bP226.png",
+  "resume": "&nbsp;&nbsp;&nbsp;Venture into the <strong>vast and blocky Overworld</strong>, a land of forests, mountains, oceans, and mysteries.<br> &nbsp;&nbsp;&nbsp;Survive, build, and explore a terrain shaped by nature and creativity.",
+  "presentation": "Step into the endlessly generating world of the Overworld, where survival meets creativity.<br>From <strong>lush forests</strong> to <strong>deep ravines</strong>, <strong>village trading</strong> to <strong>dungeon crawling</strong>, this world offers limitless adventure.<br><br>Discover hidden <strong>strongholds</strong>, master the art of crafting and redstone, and encounter friendly villagers and hostile mobs.<br><br>Whether you're a builder, an explorer, or a fighter, the Overworld is your gateway to an unforgettable journey.",
+  "schedule": [
+    {
+      "title1": "Depart",
+      "description1": "The flight departs from CYOCR airport on ",
+      "title2": "",
+      "description2": ", with check-in at 9 AM and departure at 12 PM."
+    },
+    {
+      "title1": "Exploration of Biomes",
+      "description1": "&nbsp;&nbsp;&nbsp;Traverse through plains, deserts, jungles, and snowy peaks.<br>&nbsp;&nbsp;&nbsp;Each biome holds unique resources and secrets to discover.",
+      "title2": "Village Life",
+      "description2": "&nbsp;&nbsp;&nbsp;Visit peaceful villages and interact with local villagers.<br>&nbsp;&nbsp;&nbsp;Trade goods, protect the town, and learn the lore of the land."
+    },
+    {
+      "title1": "Cave & Ravine Adventure",
+      "description1": "&nbsp;&nbsp;&nbsp;Descend into massive cave systems to gather rare ores.<br>&nbsp;&nbsp;&nbsp;Beware of creepers and hidden dangers in the dark.",
+      "title2": "Temple Ruins",
+      "description2": "&nbsp;&nbsp;&nbsp;Explore ancient jungle and desert temples.<br>&nbsp;&nbsp;&nbsp;Solve puzzles and disarm traps to claim hidden treasures."
+    },
+    {
+      "title1": "Nether Portal Construction",
+      "description1": "&nbsp;&nbsp;&nbsp;Build your own portal to unlock interdimensional travel.<br>&nbsp;&nbsp;&nbsp;Learn about obsidian, flint & steel, and travel logistics.",
+      "title2": "",
+      "description2": ""
+    },
+    {
+      "title1": "Stronghold Expedition",
+      "description1": "&nbsp;&nbsp;&nbsp;Join a party to locate a hidden stronghold.<br>&nbsp;&nbsp;&nbsp;Discover the End Portal and prepare for a future journey beyond the Overworld.",
+      "title2": "Final Build Challenge",
+      "description2": "&nbsp;&nbsp;&nbsp;Put your skills to the test in a final creative challenge.<br>&nbsp;&nbsp;&nbsp;Construct a base, tower, or redstone machine with the resources gathered."
+    },
+    {
+      "title1": "Final",
+      "description1": "The return flight will depart on",
+      "title2": "",
+      "description2": ", with check-in at 10 AM and departure at 1 PM."
+    }
+  ],
+  "date": [
+    { "depart": "07/05/4025", "arrive": "12/05/4025", "prix": "2600" },
+    { "depart": "25/02/4025", "arrive": "02/03/4025", "prix": "2480" },
+    { "depart": "28/03/4025", "arrive": "02/04/4025", "prix": "2700" },
+    { "depart": "26/09/4025", "arrive": "01/10/4025", "prix": "2555" },
+    { "depart": "15/05/4025", "arrive": "20/05/4025", "prix": "2800" },
+    { "depart": "04/01/4025", "arrive": "09/01/4025", "prix": "2600" },
+    { "depart": "08/10/4025", "arrive": "13/10/4025", "prix": "2480" },
+    { "depart": "02/10/4025", "arrive": "07/10/4025", "prix": "2700" },
+    { "depart": "28/01/4025", "arrive": "02/02/4025", "prix": "2555" },
+    { "depart": "18/01/4025", "arrive": "23/01/4025", "prix": "2800" }
+],
+  "img": [
+    "https://preview.redd.it/a-nice-landscape-shot-i-took-v0-zd5fb2lzdgca1.png?width=1080&crop=smart&auto=webp&s=5ec7a79745997b3da3bea43f2a16386ba7a4e693",
+    "https://i.redd.it/thoughts-on-my-landscape-builds-v0-c6q7b9lsebqd1.jpg?width=4096&format=pjpg&auto=webp&s=97024af116c37f40f729c72186b7f1832fa271de",
+    "https://i.imgur.com/smNksSJ.jpg",
+    "https://staticg.sportskeeda.com/editor/2022/04/2f1a3-16503890672876-1920.jpg?w=640",
+    "https://i.redd.it/twv06ltragk61.png",
+    "https://the-minecraft.fr/upload/default/wknEM2i-Copie.jpg",
+    "https://preview.redd.it/we-made-realistic-landscape-in-minecraft-v0-dh6zkihzdk2d1.png?width=1080&crop=smart&auto=webp&s=cdb14224cb64109f8cf823582c6cdfa761219aad",
+    "https://preview.redd.it/i-recreated-the-famous-herobrine-picture-in-1-20-4-v0-leznppzommsc1.png?width=2560&format=png&auto=webp&s=231527a01f9b5f8138d393eb3c80faabea94762d",
+    "https://i.redd.it/06zwwo5meha31.png"
+  ]
+}
