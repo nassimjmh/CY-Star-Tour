@@ -74,7 +74,7 @@
                             }
                         }
                         if (!$hasUnpaidBookings) {
-                            echo "<p><p>No recently booked trips.</p></p>"; 
+                            echo '<p style="color: var(--black)">No recently booked trips.</p>';
                         }
                     ?>
                 <?php else: ?>
