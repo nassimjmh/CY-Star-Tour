@@ -78,7 +78,20 @@
     color: white;
     text-shadow: 0px 0px 0.125rem rgb(0, 0, 0);
 }
-
+.autre{
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+}
+.autre:hover p{
+    visibility: visible;
+    position: absolute;
+    top: -3.375rem;
+    left: 5.75rem;
+    font-size: 1.875rem;
+    color: white;
+    text-shadow: 0px 0px 0.125rem rgb(0, 0, 0);
+}
 .planet:hover{
     box-shadow: 0px 0px 0.625rem rgb(109, 108, 108);
 }
@@ -169,3 +182,4 @@
     height: 100%;
     width: 100%;
 }
+
