@@ -188,7 +188,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                 <li><strong>Email:</strong> <span id="email"><?php echo htmlspecialchars($email); ?></span></li>
                 <li><strong>Birth Date:</strong> <span id="birth-date"><?php echo $date_picker; ?></span></li>
             </ul>
-            <button id="edit-btn" class="edit-btn"><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" alt="" class="param"></button>
+            <button id="edit-btn" class="edit-btn"><img src="https://cdn-icons-png.flaticon.com/128/6218/6218548.png" alt="" class="param"></button>
             <button id="cancel-btn" class="cancel-btn" style="display: none;">Cancel</button>
             <button id="save-btn" class="save-btn" style="display: none;">Save</button>
         </div>
