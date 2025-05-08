@@ -47,7 +47,7 @@ session_start();
                     <a href="destination.php?planet=Axiom"><img src="../images/planet/axiom.webp" alt="earth"></a>
                     <p>Axiom</p>
                 </div>
-                <div class="planet earth">
+                <div class=" autre earth">
                     <a href="destination.php?planet=Earth"><img src="../images/planet/earth.webp" alt="earth"></a>
                     <p>Earth</p>
                 </div>
