@@ -6,8 +6,8 @@
         "galaxy": "Stargate",
         "description": "Ancient underwater city with nothing",
         "distance": 14650,
-        "revenue": 1707,
-        "trips": 1,
+        "revenue": 1630,
+        "trips": 2,
         "image": "atlantis.webp",
         "key": [
             "Exploration",
@@ -195,8 +195,8 @@
         "galaxy": "Milky Way",
         "description": "Red planet with dusty landscapes",
         "distance": 8500,
-        "revenue": 1116,
-        "trips": 1,
+        "revenue": 0,
+        "trips": 0,
         "image": "mars.webp",
         "key": [
             "Exploration",
@@ -287,6 +287,24 @@
         "key": [
             "Cultural",
             "Relaxation"
+        ],
+        "price": 1500
+    },
+    "Overworld": {
+        "id": 18,
+        "note": 5,
+        "name": "Overworld",
+        "galaxy": "Game",
+        "description": "The Overworld is the primary dimension where every adventure begins.",
+        "distance": 21500,
+        "revenue": 0,
+        "trips": 0,
+        "image": "overworld.webp",
+        "key": [
+            "Cultural",
+            "Relaxation",
+            "Adventure",
+            "Party"
         ],
         "price": 1500
     }
