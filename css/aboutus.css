@@ -11,7 +11,7 @@ html, body {
 }
 
 #aboutus{
-    background-color: var(--blue);
+    background-color: var(--white) ;
 }
 
 .image-earth {
@@ -37,7 +37,8 @@ html, body {
 }
 
 #aboutustext{
-    background-color: var(--blue);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 table{
@@ -60,13 +61,13 @@ table td img{
 }
 
 #aboutustext{
-    color: white;
+    color: var(--black);
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
 }
 
 .aboutusleft{
-    color: white;
+    color: var(--black);
     text-align: left;
     width: 70%;
     margin-left: auto;
@@ -74,7 +75,7 @@ table td img{
 }
 
 .aboutusright{
-    color: white;
+    color: var(--black);
     text-align: right;
     margin-left: 8.125rem;
     margin-right: 8.125rem;
