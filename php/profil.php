@@ -149,7 +149,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
         <a class="underline" href="#">Settings & Preferences &nbsp; <i class='bx bx-cog'></i></a>
         <a class="underline" href="#">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
         <a class="underline" href="#">Booking & Access &nbsp;<i class='bx bxs-calendar'></i></a>
-        <a class="underline" href="#">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
+         <a class="underline" href="https://mail.google.com/mail/?view=cm&fs=1&to=support@startour.cy&su=Problem&body=20%20/%2020%20?" target="_blank"">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
         <div class="status">
 
             <?php
