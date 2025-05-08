@@ -30,6 +30,8 @@ if (!isset($bookings[$id])) {
 }
 
 $booking = $bookings[$id];
+$_SESSION['booking_success'] = $booking;
+$_SESSION['booking_key'] = $id;
 
 $userRole = $_SESSION['role'];
 
