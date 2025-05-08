@@ -15,7 +15,7 @@ $role = $_SESSION["role"];
 $last_name = $_SESSION["last_name"];
 $date_picker = $_SESSION["date_picker"];
 $profile_pic = $_SESSION["profile_pic"];
-$id = $_SESSION["user_id"];
+$id = $_SESSION["id"];
 
 $target_dir = "../uploads/";
 
