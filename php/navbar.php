@@ -19,45 +19,29 @@
         <?php
         $paidBookings = 0;
         if (isset($_SESSION['email'])):
-            // Charger les données JSON
             $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), true);
             $id = $_SESSION["id"];
-            // Vérifier si le fichier JSON a été chargé correctement
             if ($recentlybooked === null) {
                 echo "<p>Error loading booking data.</p>";
             } else {
         ?>
-
-
-
-            <?php
-            include '../php/cart.php';
-            list($cartItems, $cartCount) = getCartItems();
-            ?>
-
-            
 
         <li class="research">
             <a href="book.php"><i class='bx bx-search research'></i></a>
         </li>
 
         <li class="cart-container">
-            
-
             <div class="dropdown-cart">
                 <p class="yo">Recently Booked Trips:</p>
                 <hr>
                 <?php if (!empty($recentlybooked)): ?>
                     <?php
-                    
-                        
-                    
-                        $hasUnpaidBookings = false; // Variable de contrôle
+                        $hasUnpaidBookings = false;
                         foreach ($recentlybooked as $reservationId => $value) {
                             $imgSrc = '../images/planet/' . strtolower($value["planet"]) . ".webp";
                             if ($value["id"] == $id && $value["payed"] == false) {
-                                $hasUnpaidBookings = true; // Mettre à jour la variable de contrôle
-                                $paidBookings ++ ;
+                                $hasUnpaidBookings = true;
+                                $paidBookings++;
                                 ?>
                                 <a href="recap2.php?id=<?php echo urlencode($reservationId); ?>&planet=<?php echo urlencode($value['planet']); ?>" class="book-link">
                                     <div class="book">
@@ -86,7 +70,7 @@
         </li>
 
         <?php
-            } // Fin de la vérification du chargement JSON
+            }
         endif;
         ?>
         <li class="connect">
@@ -95,9 +79,9 @@
             if ($current_page != "profil.php") {
                 if (isset($_SESSION['profile_pic'])) {
                     if (strpos($_SESSION['profile_pic'], 'http') === 0) {
-                        $imgSrc = $_SESSION['profile_pic']; // For external links
+                        $imgSrc = $_SESSION['profile_pic'];
                     } else {
-                        $imgSrc = $_SESSION['profile_pic']; // For local links in <upload> folder
+                        $imgSrc = $_SESSION['profile_pic'];
                     }
             ?>
                     <a href="profil.php"><img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 40px; height: 40px; border-radius: 50%;"></a>
@@ -117,65 +101,4 @@
     </ul>
 </nav>
 
-<script>
-    // Fonction pour définir un cookie
-    function setCookie(name, value, days) {
-        let expires = "";
-        if (days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    // Fonction pour obtenir un cookie img
-    function getCookie(name) {
-        const nameEQ = name + "=";
-        const ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
-        }
-        return null;
-    }
-
-    const button = document.getElementById('theme-toggle');
-    const darkMode = getCookie('darkMode');
-
-    // Appliquer le thème selon le cookie + icône
-    if (darkMode === 'enabled') {
-        document.body.classList.add('dark');
-        button.textContent = '☀️'; // soleil pour indiquer qu'on est en sombre
-    } else {
-        button.textContent = '🌑'; // lune pour indiquer qu'on est en clair
-    }
-
-    // Changement de thème + icône au clic
-    button.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-        if (document.body.classList.contains('dark')) {
-            setCookie('darkMode', 'enabled', 365);
-            button.textContent = '☀️';
-        } else {
-            setCookie('darkMode', 'disabled', 365);
-            button.textContent = '🌑';
-        }
-    });
-
-    // Gestion de l'affichage du panier
-    const cartContainer = document.querySelector('.cart-container');
-    const dropdownCart = document.querySelector('.dropdown-cart');
-
-    cartContainer.addEventListener('click', (event) => {
-        event.stopPropagation(); // Empêche la propagation de l'événement de clic
-        dropdownCart.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!cartContainer.contains(event.target)) {
-            dropdownCart.classList.remove('active');
-        }
-    });
-</script>
+<script src="../js/navbar.js"></script>
