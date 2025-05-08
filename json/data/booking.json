@@ -3,31 +3,29 @@
         "id": 7,
         "planet": "Atlantis",
         "days": [
-            "4"
+            "1"
         ],
-        "quality": "Standard",
-        "breakfast": "Yes",
-        "relax": "Yes",
-        "nbpeople": 1,
-        "insurance": "No",
-        "payment_transaction": 1600,
-        "selectedDate": "4",
-        "payed": false
-    },
-    "2": {
-        "id": 7,
-        "planet": "Atlantis",
-        "days": [
-            "4"
-        ],
-        "quality": "Standard",
+        "quality": "Premium",
         "breakfast": "Yes",
         "relax": "Yes",
         "nbpeople": 1,
         "insurance": "Yes",
-        "payment_transaction": "gXsXyORDMzXfM",
-        "selectedDate": "5",
+        "payment_amount": "1707",
+        "selectedDate": "7",
         "payed": true,
-        "payment_amount": "1630"
+        "payment_transaction": "XkIC8AmJUr39fh9JgJNdg4"
+    },
+    "2": {
+        "id": 7,
+        "planet": "Mars",
+        "days": [],
+        "quality": "Standard",
+        "breakfast": "No",
+        "relax": "No",
+        "nbpeople": 1,
+        "insurance": "No",
+        "payment_amount": 1116,
+        "selectedDate": "8",
+        "payed": false
     }
 }
