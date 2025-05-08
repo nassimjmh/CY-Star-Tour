@@ -4,13 +4,13 @@
         <div class="footer-section about">
             <img src="https://fontmeme.com/permalink/250208/ebb188615e03ca690752fd1065d0303e.png" alt="Logo-footer" >
             <ul class="payment-logos">
-                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/american-express@2x.png?raw=true" alt="amex"></il>
-                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/medium/cb@2x.png?raw=true" alt="cartebleue"></il>
-                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/paypal@2x.png?raw=true" alt="paypal"></il>
-                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/mastercard@2x.png?raw=true" alt="mastercard"></il>
+                <il><img src="../images/amex.png" alt="amex"></il>
+                <il><img src="../images/cb.png" alt="cartebleue"></il>
+                <il><img src="../images/paypal.png" alt="paypal"></il>
+                <il><img src="../images/mastercard.png" alt="mastercard"></il>
                 <il><img src="../images/cybank.webp" alt="cybank"></il>
-                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/small/visa@2x.png?raw=true" alt="visa"></il>
-                <il><img src="https://github.com/slaterjohn/payment-logos/blob/master/Rounded%20Corners/PNG/medium/bitcoin-2@2x.png?raw=true" alt="bitcoin"></il>
+                <il><img src="../images/visa.png" alt="visa"></il>
+                <il><img src="../images/btc.png" alt="bitcoin"></il>
             </ul>
         </div>
         <div class="footer-section links">
