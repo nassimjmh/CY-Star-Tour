@@ -119,12 +119,15 @@ main {
 
 
 .logout {
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Ajoute la transition douce */
 }
 
 .logout:hover {
     color: red;
 }
+
+
+
 
 
 
@@ -230,7 +233,7 @@ main {
 .recent-trips {
     position: absolute;
     left: 74rem;
-    height: 50rem;
+    height: 40rem;
     width: 40rem;
     background-color: var(--white);
     padding: 0.625rem;
