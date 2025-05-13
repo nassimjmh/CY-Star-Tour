@@ -23,51 +23,8 @@ if (!file_exists($target_dir)) {
     mkdir($target_dir, 0777, true);
 }
 
-$error_message = '';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['profile_pic'])) {
-    $imageFileType = strtolower(pathinfo($_FILES["profile_pic"]["name"], PATHINFO_EXTENSION));
-    $random_string = bin2hex(random_bytes(16)); // 32 character random string
-    $target_file = $target_dir . $random_string . '.' . $imageFileType;
 
-    if (isset($_POST["submit"])) {
-        if (isset($_FILES["profile_pic"]) && $_FILES["profile_pic"]["error"] == UPLOAD_ERR_OK) {
-            $check = getimagesize($_FILES["profile_pic"]["tmp_name"]);
-            if ($check === false) {
-                $error_message = "This file is not an image.";
-            }
-        } else {
-            $error_message = "No file was uploaded or an error occurred.";
-        }
-
-        if ($_FILES["profile_pic"]["size"] > 500000) {
-            $error_message = "Sorry, your file is too large.";
-        }
-
-        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-            $error_message = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        }
-
-        if (empty($error_message)) {
-
-            if (file_exists($users[$email]['profile_pic'])) {
-                unlink($users[$email]['profile_pic']);
-            }
-
-            if (move_uploaded_file($_FILES["profile_pic"]["tmp_name"], $target_file)) {
-
-                $users[$email]['profile_pic'] = $target_file;
-
-                file_put_contents('../json/data/users.json', json_encode($users, JSON_PRETTY_PRINT));
-
-                header('location: profil.php');
-                exit;
-            } else {
-                $error_message = "Sorry, there was an error uploading your file.";
-            }
-        }
-    }
-}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($_POST)) {
     // Handle JSON input
@@ -122,6 +79,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 </head>
 <body>
 
+
 <header>
     <?php include("navbar.php")?>
 </header>
@@ -129,27 +87,37 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 <main>
     <div class="sidebar">
         <div class="sidebar-head">
-            <img src="<?php echo $users[$email]['profile_pic']; ?>" alt="Picture" class="profile-pic"></img>
-            <form action="profil.php" method="POST" enctype="multipart/form-data">
-                <input type="file" name="profile_pic" id="file-input" accept="image/*">
-                <label for="file-input" class="file-label">
-                    <i class='bx bx-edit'></i>
-                </label>
+            <img id="profile-pic" src="<?php echo $users[$email]['profile_pic']; ?>" alt="Picture" class="profile-pic">
 
-                <button type="submit" name="submit" class="custom-btn">
-                    <i class='bx bx-upload'></i>Upload
-                </button>
-                <?php if (!empty($error_message)): ?>
-                    <div class="error-message" style="color: red; font-size: 12px; margin-top: 5px;">
-                        <?php echo $error_message; ?>
-                    </div>
-                <?php endif; ?>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" name="profile_pic" id="file-input" accept="image/*" required>
+                <label for="file-input" class="file-label"><i class='bx bx-edit'></i></label>
+
+                <button type="submit" class="custom-btn"><i class='bx bx-upload'></i>Upload</button>
+
+                <div id="error-message" style="color: red; font-size: 12px; margin-top: 5px;"></div>
             </form>
+
+            <!-- Loader -->
+            <div id="profile-loader" class="loader-overlay" style="display: none;">
+                <div class="spinner"></div>
+            </div>
         </div>
+
+
+
+
+        <script src="../js/profilepicture.js?v=<?php echo time(); ?>"></script>
+
+
+
+
+
+
         <a class="underline" href="comingsoon.php">Settings & Preferences &nbsp; <i class='bx bx-cog'></i></a>
         <a class="underline" href="comingsoon.php">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
         <a class="underline" href="#">Booking & Access &nbsp;<i class='bx bxs-calendar'></i></a>
-         <a class="underline" href="https://mail.google.com/mail/?view=cm&fs=1&to=Startour.cy@gmail.com&su=Problem&body=20%20/%2020%20?" target="_blank"">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
+        <a class="underline" href="https://mail.google.com/mail/?view=cm&fs=1&to=Startour.cy@gmail.com&su=Problem&body=20%20/%2020%20?" target="_blank"">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
         <div class="status">
 
             <?php
@@ -182,7 +150,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
     <div class="info-profile">
         <div class="info">
             <h2>About Me</h2>
-            <ul id="profile-info"> 
+            <ul id="profile-info">
                 <li><strong>First Name:</strong> <span id="first-name"><?php echo htmlspecialchars($first_name); ?></span></li>
                 <li><strong>Last Name:</strong> <span id="last-name"><?php echo htmlspecialchars($last_name); ?></span></li>
                 <li><strong>Email:</strong> <span id="email"><?php echo htmlspecialchars($email); ?></span></li>
@@ -220,7 +188,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
 
     </div>
 
- 
+
 </main>
 
 <?php include("footer.php") ?>
