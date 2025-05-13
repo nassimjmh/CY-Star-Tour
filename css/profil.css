@@ -117,6 +117,17 @@ main {
    z-index : 1000;
 }
 
+
+.logout {
+    transition: color 0.3s ease;
+}
+
+.logout:hover {
+    color: red;
+}
+
+
+
 .info {
     background-color: var(--white);
     padding: 1.25rem;
