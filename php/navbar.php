@@ -32,7 +32,7 @@
 
         <li class="cart-container">
             <div class="dropdown-cart">
-                <p class="yo">Recently Booked Trips:</p>
+                <p class="yo">Your Space Bag:</p>
                 <hr>
                 <?php if (!empty($recentlybooked)): ?>
                     <?php
@@ -58,11 +58,11 @@
                             }
                         }
                         if (!$hasUnpaidBookings) {
-                            echo '<p style="color: var(--black)">No recently booked trips.</p>';
+                            echo '<p style="color: var(--black)">Your cosmic bag is empty — time to plan your next stellar adventure!</p>';
                         }
                     ?>
                 <?php else: ?>
-                    <p>No recently booked trips.</p>
+                    <p style="color: var(--black)">Your cosmic bag is empty — time to plan your next stellar adventure!</p>
                 <?php endif; ?>
             </div>
             <i class='bx bx-shopping-bag cart-icon'></i>
@@ -84,6 +84,8 @@
                         $imgSrc = $_SESSION['profile_pic'];
                     }
             ?>
+
+
                     <a href="profil.php"><img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 40px; height: 40px; border-radius: 50%;"></a>
             <?php
                 } else {
