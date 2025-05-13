@@ -119,7 +119,7 @@ main {
 
 
 .logout {
-    transition: color 0.3s ease; /* Ajoute la transition douce */
+    transition: color 0.3s ease; 
 }
 
 .logout:hover {
