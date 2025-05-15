@@ -6,6 +6,7 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['password'])) {
 //Ouvrir le bon fichier
 if (isset($_GET['planet'])) {
     $selectedPlanet = $_GET['planet'];
+    $_SESSION['planet_data'] = $selectedPlanet;
 } else {
     header("Location: map.php");
     exit;
@@ -216,18 +217,8 @@ $filePath = '../json/data/booking.json';
                 <!-- Group 7 -->
                 <div class="group">
                     <label class="titlerese noclick"> <h3>Select the day</h3> </label>
-                    <div class="radio-row">
-                        <?php foreach ($planet['date'] as $index => $date): ?>
-                            <div class="groupdays">
-                                <label>Departure <br></label>
-                                <p> <?php echo htmlspecialchars($date['depart'], ENT_QUOTES, 'UTF-8'); ?> </p>
-                                <label>Arrival <br></label>
-                                <p><?php echo htmlspecialchars($date['arrive'], ENT_QUOTES, 'UTF-8'); ?> </p>
-                                <label>Price <br></label>
-                                <p> <?php echo htmlspecialchars($date['prix'], ENT_QUOTES, 'UTF-8'); ?> ₴ </p>
-                                <input type="radio" name="date" value="<?php echo $index; ?>" required>
-                            </div>
-                        <?php endforeach; ?>
+                    <div class="radio-row" id="datesContainer">
+                        <!-- Les dates seront ajoutées ici dynamiquement -->
                     </div>
                     <div class="radio-row">
                         <button class="navigation-button" type="submit" name="submit">Submit</button>
@@ -251,7 +242,39 @@ $filePath = '../json/data/booking.json';
 </body>
 
 <script src="../js/destination.js"></script>
+<script>
+function loadDates() {
+    fetch('planet.php')
+        .then(response => response.json())
+        .then(planet => {
+            const datesContainer = document.getElementById('datesContainer');
+            datesContainer.innerHTML = '';
 
+            planet.date.forEach((date, index) => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'groupdays';
+
+                groupDiv.innerHTML = `
+                    <label>Departure <br></label>
+                    <p>${date.depart}</p>
+                    <label>Arrival <br></label>
+                    <p>${date.arrive}</p>
+                    <label>Price <br></label>
+                    <p>${date.prix} ₴</p>
+                    <input type="radio" name="date" value="${index}" required>
+                `;
+
+                datesContainer.appendChild(groupDiv);
+            });
+        })
+        .catch(error => console.error('Erreur lors du chargement des données :', error));
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadDates();
+    setInterval(loadDates, 1000);
+});
+</script>
 <!--Il dois rester ici-->
 <script>
     const track = document.getElementById('carouselTrack');
