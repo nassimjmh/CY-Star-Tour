@@ -125,7 +125,7 @@
 .bannertitle{
     text-shadow: 0px 0px 0.1rem var(--white);
     position: absolute;
-    color: var(--w_black);
+    color: var(--black);
     font-size: 2.5rem;
     left: 3rem;
     font-weight: bolder;
