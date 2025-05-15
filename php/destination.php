@@ -244,6 +244,10 @@ $filePath = '../json/data/booking.json';
 <script src="../js/destination.js"></script>
 <script>
 function loadDates() {
+    // Sauvegarder l'index sélectionné s'il y en a un
+    const selectedRadio = document.querySelector('input[name="date"]:checked');
+    const selectedValue = selectedRadio ? selectedRadio.value : null;
+
     fetch('planet.php')
         .then(response => response.json())
         .then(planet => {
@@ -254,6 +258,8 @@ function loadDates() {
                 const groupDiv = document.createElement('div');
                 groupDiv.className = 'groupdays';
 
+                const isChecked = selectedValue == index ? 'checked' : '';
+
                 groupDiv.innerHTML = `
                     <label>Departure <br></label>
                     <p>${date.depart}</p>
@@ -261,7 +267,7 @@ function loadDates() {
                     <p>${date.arrive}</p>
                     <label>Price <br></label>
                     <p>${date.prix} ₴</p>
-                    <input type="radio" name="date" value="${index}" required>
+                    <input type="radio" name="date" value="${index}" ${isChecked} required>
                 `;
 
                 datesContainer.appendChild(groupDiv);
@@ -274,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadDates();
     setInterval(loadDates, 1000);
 });
+
 </script>
 <!--Il dois rester ici-->
 <script>
