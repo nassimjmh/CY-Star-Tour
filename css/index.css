@@ -129,7 +129,7 @@
     font-size: 2.5rem;
     left: 3rem;
     font-weight: bolder;
-    z-index: 1000;
+    z-index: 900;
 }
 
 .banner .slider {
