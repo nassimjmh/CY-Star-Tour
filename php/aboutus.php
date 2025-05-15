@@ -23,8 +23,17 @@ session_start();
 
 
         <div class="image-earth">
-            <div class="textearth"><p>"Earth is the cradle of humanity, but one cannot live in a cradle forever." — Konstantin Tsiolkovsky</p></div>
+            <video autoplay muted loop playsinline class="earth-video">
+                <source src="https://upload.wikimedia.org/wikipedia/commons/1/18/The_Earth_in_4k.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="textearth">
+                <p>"Earth is the cradle of humanity, but one cannot live in a cradle forever." — Konstantin Tsiolkovsky</p>
+            </div>
         </div>
+
+
         <a class="clickarrow" href="#ancrage"><svg class="arrows">
             <path class="a1" d="M0 0 L20 21.33 L40 0"></path>
             <path class="a2" d="M0 13.33 L20 34.66 L40 13.33"></path>
