@@ -6,7 +6,7 @@
 }
 
 #Fond{
-    background-color: var(--white);
+    background-color: var(--blue);
     color: var(--black);
     margin: 0;
     padding: 0;
@@ -118,7 +118,7 @@
 }
 :root {
     --item-width: 42.5rem; /* Largeur d'un item */
-    --gap: 80px; /* Espacement entre les items */
+    --gap: 10rem; /* Espacement entre les items */
     --speed: 22s; /* Durée de l'animation */
 }
 
@@ -165,8 +165,8 @@ to {
     background-image: url('https://i.redd.it/qdfy1uscuwge1.png');
     position: relative;
     top: -5rem;
-    background-color: var(--blue);
-    height: 50rem;
+    background-color: var(--white);
+    height: 45rem;
     width: 100%;
     background-size: cover; 
     background-position: center; 
@@ -215,7 +215,7 @@ to {
 .stat{
     position: relative;
     top: -100px;
-    background-color: var(--white);
+    background-color: var(--blue);
     height: 42.5rem;
 }
 
