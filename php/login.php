@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="wrapper">
     <form action="" method="POST" id="loginForm">
-        <h1>Login <a href="../index.html"><i class='bx bx-undo'></i></a></h1>
+          <h1>Login <a href="../php/index.php"><i class='bx bx-undo'></i></a></h1>
 
         <div class="input-box">
             <input type="email" id="email" name="email" placeholder="Mail address">
