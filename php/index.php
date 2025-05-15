@@ -63,16 +63,18 @@
                 <div class="item" style="--position:4"><img src="../images/spaceships/BIGBOAT.webp" alt="spaceship6"></img></div>
                 <div class="item" style="--position:5"><img src="../images/spaceships/LUXURIOUS.webp" alt="spaceship7"></img></div>
                 <div class="item" style="--position:6"><img src="../images/spaceships/NATURE.webp" alt="spaceship8"></img></div>
-                <div class="item" style="--position:7"><img src="../images/spaceships/CITY.webp" alt="spaceship8"></img></div>
-                
+                <div class="item" style="--position:7"><img src="../images/spaceships/ARIANNE.webp" alt="spaceship9"></img></div>
+                <div class="item" style="--position:8"><img src="../images/spaceships/IRON.webp" alt="spaceship10"></img></div>
+
+
                 <div class="item" style="--position:1"><img src="../images/spaceships/COLDSHIP.webp" alt="spaceship3"></img></div>
                 <div class="item" style="--position:2"><img src="../images/spaceships/TRANSFORMERS.webp" alt="spaceship4"></img></div>
                 <div class="item" style="--position:3"><img src="../images/spaceships/DISNEY.webp" alt="spaceship5"></img></div>
                 <div class="item" style="--position:4"><img src="../images/spaceships/BIGBOAT.webp" alt="spaceship6"></img></div>
                 <div class="item" style="--position:5"><img src="../images/spaceships/LUXURIOUS.webp" alt="spaceship7"></img></div>
                 <div class="item" style="--position:6"><img src="../images/spaceships/NATURE.webp" alt="spaceship8"></img></div>
-                <div class="item" style="--position:7"><img src="../images/spaceships/CITY.webp" alt="spaceship8"></img></div>
-
+                <div class="item" style="--position:7"><img src="../images/spaceships/ARIANNE.webp" alt="spaceship9"></img></div>
+                <div class="item" style="--position:8"><img src="../images/spaceships/IRON.webp" alt="spaceship10"></img></div>
 
 
             </div>
