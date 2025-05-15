@@ -164,9 +164,9 @@ to {
 .image{
     background-image: url('https://i.redd.it/qdfy1uscuwge1.png');
     position: relative;
-    top: -6rem;
+    top: -5rem;
     background-color: var(--blue);
-    height: 40rem;
+    height: 50rem;
     width: 100%;
     background-size: cover; 
     background-position: center; 
