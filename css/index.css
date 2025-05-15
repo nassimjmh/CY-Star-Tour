@@ -119,7 +119,7 @@
 :root {
     --item-width: 42.5rem; /* Largeur d'un item */
     --gap: 80px; /* Espacement entre les items */
-    --speed: 15s; /* Durée de l'animation */
+    --speed: 22s; /* Durée de l'animation */
 }
 
 .bannertitle{
