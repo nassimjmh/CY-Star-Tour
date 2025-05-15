@@ -55,7 +55,7 @@
         </div>
         <div class="banner">
             <p class="bannertitle noclick">Our spacecraft</p>
-            <div class="slider" style="--quantity:5">
+            <div class="slider">
     
                 <div class="item" style="--position:1"><img src="../images/spaceships/COLDSHIP.webp" alt="spaceship3"></img></div>
                 <div class="item" style="--position:2"><img src="../images/spaceships/TRANSFORMERS.webp" alt="spaceship4"></img></div>
