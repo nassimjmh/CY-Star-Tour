@@ -242,46 +242,6 @@ $filePath = '../json/data/booking.json';
 </body>
 
 <script src="../js/destination.js"></script>
-<script>
-function loadDates() {
-    // Sauvegarder l'index sélectionné s'il y en a un
-    const selectedRadio = document.querySelector('input[name="date"]:checked');
-    const selectedValue = selectedRadio ? selectedRadio.value : null;
-
-    fetch('planet.php')
-        .then(response => response.json())
-        .then(planet => {
-            const datesContainer = document.getElementById('datesContainer');
-            datesContainer.innerHTML = '';
-
-            planet.date.forEach((date, index) => {
-                const groupDiv = document.createElement('div');
-                groupDiv.className = 'groupdays';
-
-                const isChecked = selectedValue == index ? 'checked' : '';
-
-                groupDiv.innerHTML = `
-                    <label>Departure <br></label>
-                    <p>${date.depart}</p>
-                    <label>Arrival <br></label>
-                    <p>${date.arrive}</p>
-                    <label>Price <br></label>
-                    <p>${date.prix} ₴</p>
-                    <input type="radio" name="date" value="${index}" ${isChecked} required>
-                `;
-
-                datesContainer.appendChild(groupDiv);
-            });
-        })
-        .catch(error => console.error('Erreur lors du chargement des données :', error));
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    loadDates();
-    setInterval(loadDates, 1000);
-});
-
-</script>
 <!--Il dois rester ici-->
 <script>
     const track = document.getElementById('carouselTrack');
@@ -328,5 +288,95 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCarousel();
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    const priceDisplay = document.getElementById('price-estimate');
 
+    function loadDates() {
+        // Sauvegarder l'index sélectionné s'il y en a un
+        const selectedRadio = document.querySelector('input[name="date"]:checked');
+        const selectedValue = selectedRadio ? selectedRadio.value : null;
+
+        fetch('planet.php')
+            .then(response => response.json())
+            .then(planet => {
+                const datesContainer = document.getElementById('datesContainer');
+                datesContainer.innerHTML = '';
+
+                planet.date.forEach((date, index) => {
+                    const groupDiv = document.createElement('div');
+                    groupDiv.className = 'groupdays';
+
+                    const isChecked = selectedValue == index ? 'checked' : '';
+
+                    groupDiv.innerHTML = `
+                        <label>Departure <br></label>
+                        <p>${date.depart}</p>
+                        <label>Arrival <br></label>
+                        <p>${date.arrive}</p>
+                        <label>Price <br></label>
+                        <p>${date.prix} ₴</p>
+                        <input type="radio" name="date" value="${index}" ${isChecked} required>
+                    `;
+
+                    datesContainer.appendChild(groupDiv);
+                });
+
+                // Recalculer le prix après avoir rechargé les dates
+                calculatePrice();
+            })
+            .catch(error => console.error('Erreur lors du chargement des données :', error));
+    }
+
+    function calculatePrice() {
+        let basePrice = 0;
+
+        // Nombre de voyageurs
+        const nb = parseInt(form.nb.value || 1);
+
+        // Jours sélectionnés
+        const days = Array.from(form.querySelectorAll('input[name="days[]"]:checked')).length;
+        basePrice += nb * (days * 75);
+
+        // Qualité
+        const quality = form.querySelector('input[name="quality"]:checked');
+        if (quality) {
+            if (quality.value === 'Premium') basePrice += nb * 50;
+        }
+
+        // Petit-déjeuner
+        const breakfast = form.querySelector('input[name="Breakfast"]:checked');
+        if (breakfast && breakfast.value === 'Yes') basePrice += nb * 25;
+
+        // Relaxation
+        const relax = form.querySelector('input[name="Relax"]:checked');
+        if (relax && relax.value === 'Yes') basePrice += nb * 40;
+
+        // Assurance
+        const insurance = form.querySelector('input[name="insurance"]:checked');
+        if (insurance && insurance.value === 'Yes') basePrice += nb * 5;
+
+        // Date (ajouter le prix sélectionné)
+        const selectedDate = form.querySelector('input[name="date"]:checked');
+        if (selectedDate) {
+            const dateIndex = parseInt(selectedDate.value);
+            const prixElements = form.querySelectorAll('.groupdays p:nth-child(6)');
+            const prixText = prixElements[dateIndex]?.textContent.trim().replace(' ₴', '') || '0';
+            const prixDate = parseFloat(prixText);
+            basePrice += prixDate;
+        }
+
+        const totalPrice = basePrice;
+        priceDisplay.textContent = totalPrice + ' ₴';
+    }
+
+    // Ajouter les écouteurs
+    form.addEventListener('change', calculatePrice);
+
+    // Charger les dates et mettre à jour le prix toutes les secondes
+    loadDates();
+    setInterval(loadDates, 1000);
+});
+</script>
 </html>
