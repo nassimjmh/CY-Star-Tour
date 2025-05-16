@@ -158,7 +158,7 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
                     <span class="close-btn" onclick="closeModal()">&times;</span>
                 </div>
                 <div class="modal-body">
-                    <p>Here there is all the status you can afford :</p>
+                    <p>Here there is all the status available on our website:</p>
                     <ul>
                         <?php
                         $allRoles = [
