@@ -70,3 +70,28 @@ document.addEventListener("DOMContentLoaded", function () { //script runs only a
 
     });
 });
+
+
+
+
+
+
+//POP UP
+
+
+function showModal(event) {
+    event.preventDefault();
+    document.getElementById('roleModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('roleModal').style.display = 'none';
+}
+
+function outsideClick(event) {
+    const modal = document.getElementById('roleModal');
+    const content = document.querySelector('.modal-content');
+    if (!content.contains(event.target)) {
+        closeModal();
+    }
+}
