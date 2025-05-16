@@ -40,60 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updateDisplay(navItems[0]);
     }
 })
-/////////////////
-/////////////////
-//CALCULER LE PRIX
-/////////////////
-/////////////////
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
-    const priceDisplay = document.getElementById('price-estimate');
 
-    function calculatePrice() {
-        let basePrice = 0;
 
-        // Nombre de voyageurs
-        const nb = parseInt(form.nb.value || 1);
-
-        // Jours sélectionnés
-        const days = Array.from(form.querySelectorAll('input[name="days[]"]:checked')).length;
-        basePrice += nb*(days*75);
-
-        // Qualité
-        const quality = form.querySelector('input[name="quality"]:checked');
-        if (quality) {
-            if (quality.value === 'Premium') basePrice += nb * 50;
-        }
-
-        // Petit-déjeuner
-        const breakfast = form.querySelector('input[name="Breakfast"]:checked');
-        if (breakfast && breakfast.value === 'Yes') basePrice += nb * 25;
-
-        // Relaxation
-        const relax = form.querySelector('input[name="Relax"]:checked');
-        if (relax && relax.value === 'Yes') basePrice += nb * 40;
-
-        // Assurance
-        const insurance = form.querySelector('input[name="insurance"]:checked');
-        if (insurance && insurance.value === 'Yes') basePrice += nb * 5;
-
-        // Date (ajouter le prix sélectionné)
-        const selectedDate = form.querySelector('input[name="date"]:checked');
-        if (selectedDate) {
-            const dateIndex = parseInt(selectedDate.value);
-            const prixElements = form.querySelectorAll('.groupdays p:nth-child(6)');
-            const prixText = prixElements[dateIndex]?.textContent.trim().replace(' ₴', '') || '0';
-            const prixDate = parseFloat(prixText);
-            basePrice += prixDate;
-        }
-
-        const totalPrice = basePrice;
-        priceDisplay.textContent = totalPrice + ' ₴';
-    }
-
-    // Ajouter les écouteurs
-    form.addEventListener('change', calculatePrice);
-});
 ////////////////////
 ////////////////////
 ////NAVIUER DANS LE FORM/////
