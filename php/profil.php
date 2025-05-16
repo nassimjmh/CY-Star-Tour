@@ -118,30 +118,113 @@ $recentlybooked = json_decode(file_get_contents('../json/data/booking.json'), tr
         <a class="underline" href="comingsoon.php">Payment & Billing &nbsp;<i class='bx bxs-credit-card'></i></a>
         <a class="underline" href="https://mail.google.com/mail/?view=cm&fs=1&to=Startour.cy@gmail.com&su=Problem&body=20%20/%2020%20?" target="_blank"">Help & Support &nbsp;<i class='bx bx-phone'></i></a>
         <div class="status">
-
             <?php
             if (isset($_SESSION['role'])) {
                 $role = $_SESSION['role'];
+                $color = '#4CAF50';
+                $icon = '';
 
-                if ($role === 'Standard') {
-                    echo ' <a href="#" style="color :  #4CAF50;">' . 'Status :&nbsp' . $role . '</a>';
+                switch ($role) {
+                    case 'Admin':
+                        $color = '#5e9ae9';
+                        $icon = "<i class='bx bxs-wrench'></i>";
+                        break;
+                    case 'VIP':
+                        $color = 'gold';
+                        $icon = "<i class='bx bxl-sketch'></i>";
+                        break;
+                    case 'Banned':
+                        $color = '#ff4444';
+                        $icon = "<i class='bx bx-dizzy'></i>";
+                        break;
+                    case 'Stellar Elite':
+                        $color = '#7851A9';
+                        $icon = "<i class='bx bx-planet'></i>";
+                        break;
                 }
-                else if ($role === 'Admin') {
-                    echo ' <a href="#" style="color : #5e9ae9;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bxs-wrench'></i>" . '</a>';
-                }
-                else if ($role === 'VIP') {
-                    echo ' <a href="#" style="color : gold;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bxl-sketch'></i>" . '</a>';
-                }
-                else if ($role === 'Banned') {
-                    echo ' <a href="#" style="color :#ff4444 ;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bx-dizzy'></i>" . '</a>';
-                }
-                else if ($role === 'Stellar Elite') {
-                    echo ' <a href="#" style="color :#7851A9 ;">' . 'Status :&nbsp' . $role . "&nbsp;&nbsp" . "<i class='bx bx-planet'></i>" . '</a>';
-                }
+
+                echo "<a href='#' onclick='showModal(event)' style='color: $color; font-weight:bold; text-decoration:none; cursor:pointer;'>Status : $role&nbsp;&nbsp;$icon</a>";
             }
             ?>
-
         </div>
+
+        <!-- Popup -->
+        <div id="roleModal" class="modal-overlay" onclick="outsideClick(event)">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 style="color: <?php echo $color; ?>;">
+                        Your status : <?php echo htmlspecialchars($role); ?>&nbsp;&nbsp;<?php echo $icon; ?>
+                    </h3>
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>Here there is all the status you can afford :</p>
+                    <ul>
+                        <?php
+                        $allRoles = [
+                            "Standard (0₴/months)" => [
+                                "Standard trip without extras.",
+                                "Access to basic activities.",
+                                "Standard customer support."
+                            ],
+                            "VIP (10₴/months)" => [
+                                "Access to luxury cabins.",
+                                "Priority boarding.",
+                                "10% discount on the total price."
+                            ],
+                            "Stellar Elite (20₴/months)" => [
+                                "VIP advantages",
+                                "Zero-gravity cocktail included.",
+                                "Free spaceflight simulator.",
+                                "30% discount on the total price."
+                            ],
+                            "Admin" => [
+                                "Can see everything.",
+                            ],
+
+                            "Banned" => [
+                            "Banned from the website (buying others trips is prohibited)",
+                        ]
+                        ];
+
+                        // Tableau des couleurs (associé aux noms simples des rôles)
+                        $roleColors = [
+                            "Standard" => "#4CAF50",
+                            "VIP" => "gold",
+                            "Stellar Elite" => "#7851A9",
+                            "Admin" => "#5e9ae9",
+                            "Banned" => "#ff4444"
+                        ];
+
+                        // Fonction pour extraire le nom simple du rôle (sans la partie entre parenthèses)
+                        function extractRoleName($roleFullName) {
+                            // Exemple : "VIP (10₴/months)" -> "VIP"
+                            return trim(preg_replace('/\s*\(.*\)$/', '', $roleFullName));
+                        }
+
+                        $currentRole = $_SESSION['role'];
+
+                        foreach ($allRoles as $roleFullName => $descriptions) {
+                            $simpleRoleName = extractRoleName($roleFullName);
+                            if ($simpleRoleName !== $currentRole) {
+                                $color = $roleColors[$simpleRoleName] ?? "#ffffff"; // Couleur par défaut blanche si introuvable
+                                echo "<li style='color: $color; margin-bottom: 10px;'><strong>" . htmlspecialchars($roleFullName) . " :</strong><ul>";
+                                foreach ($descriptions as $line) {
+                                    echo "<li>" . htmlspecialchars($line) . "</li>";
+                                }
+                                echo "</ul></li>";
+                            }
+                        }
+                        ?>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        
 
         <a class="logout" href="logout.php">Logout &nbsp;<i class='bx bx-log-out'></i></a>
     </div>
