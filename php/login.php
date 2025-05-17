@@ -7,28 +7,6 @@ $file = '../json/data/users.json';
 $users = json_decode(file_get_contents($file), true);
 $error = "";
 
-//cookies
-
-if (!isset($_SESSION['email']) && isset($_COOKIE['remember_token'])) {
-    foreach ($users as $email => $userData) {
-        if (isset($userData['remember_token']) && $userData['remember_token'] === $_COOKIE['remember_token']) {
-            $_SESSION['email'] = $email;
-            $_SESSION["first_name"] = $userData["first_name"];
-            $_SESSION["role"] = $userData["role"];
-            $_SESSION["last_name"] = $userData["last_name"];
-            $_SESSION["race"] = $userData["race"];
-            $_SESSION["date_picker"] = $userData["date_picker"];
-            $_SESSION["profile_pic"] = $userData["profile_pic"];
-            $_SESSION["id"] = $userData["id"];
-            header('Location: profil.php');
-            exit();
-        }
-    }
-}
-
-
-
-
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
