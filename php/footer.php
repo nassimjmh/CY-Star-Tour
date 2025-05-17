@@ -21,7 +21,7 @@
                 <li><a href="aboutus.php">About us</a></li>
                 <?php
                 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {
-                    echo '<li><a href="admin/dashboard.php">Admin control panel</a></li>';
+                    echo '<li><a href="admin/dashboard.php">ADMIN CONTROL PANEL</a></li>';
                 }
                 ?>
                 <li><a href="profil.php">Contact (profile page)</a></li>
@@ -37,7 +37,7 @@
             <h3>Follow Us</h3>
             <ul>
                <li><a href="https://bsky.app/profile/startour.bsky.social">Bluesky</a></li>
-                <li><a href="https://x.com/StartourCy">X/twitter</a></li>
+                <li><a href="https://x.com/StartourCy">X / Twitter</a></li>
                 <li><a href="https://www.instagram.com/startour.cy/">Instagram</a></li>
                 <li><a href=https://www.linkedin.com/in/sofyane-abajou-a6a478364/>LinkedIn</a></li>
             </ul>
