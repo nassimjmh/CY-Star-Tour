@@ -74,8 +74,7 @@ function removeBooking(reservationId, event) {
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    // Recharge la page ou supprime l'élément du DOM
-                    location.reload();
+                 window.location.href = "map.php";
                 } else {
                     alert("Error: " + data.message);
                 }
