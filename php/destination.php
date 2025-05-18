@@ -221,7 +221,7 @@ $filePath = '../json/data/booking.json';
                         <!-- Les dates seront ajoutées ici dynamiquement -->
                     </div>
                     <div class="radio-row">
-                        <button class="navigation-button" type="submit" name="submit">Submit</button>
+                        <button class="navigation-button" type="submit" name="submit">Add to space cart</button>
                     </div>
                 </div>
             </div>
