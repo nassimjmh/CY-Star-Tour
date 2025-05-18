@@ -169,6 +169,7 @@ main {
 
 .info input {
     width: 60%;
+    color: var(--black) ;
     padding: 0.625rem;
     border: 0.0625rem solid #ddd;
     border-radius: 0.25rem;
