@@ -398,3 +398,14 @@ nav ul li:hover .submenu {
 .yo{
     color: var(--black);
 }
+
+
+.remove-booking{
+   background: transparent;
+
+}
+
+.remove-booking:hover{
+    cursor : pointer;
+    background-color : pink;
+}
