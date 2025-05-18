@@ -30,6 +30,7 @@
         </div>
 
 
+
         <div class="reco">
             <p class="best noclick">The best destinations of the moment</p>
             <a href="destination.php?planet=Naboo">
