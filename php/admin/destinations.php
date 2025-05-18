@@ -5,6 +5,78 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
     header('location: ../index.php');
     exit();
 }
+
+if (isset($_GET['ajax']) && $_GET['ajax'] === 'true') { // Check if this is an AJAX request
+    $file = file_get_contents("../../json/data/destinations.json");
+    $destinations = json_decode($file, true);
+    
+    ob_start(); // Start output buffer
+    if(count($destinations)!=0){
+        foreach($destinations as $destinations){
+            ?>      
+            <tr>
+                <td><?php echo "#" . str_pad($destinations["id"], 2, '0', STR_PAD_LEFT) ?></td>
+                <td>
+                    <?php 
+                    $imgSrc =  '../../images/planet/' . $destinations["image"];
+                    ?>
+                    <img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
+                </td>                                    
+                <td><?php echo $destinations["name"] ?></td>
+                <td><?php echo $destinations["galaxy"] ?></td>
+                <td><?php echo $destinations["description"] ?></td>
+                <td><?php echo $destinations["distance"] . " kpc" ?></td>
+                <td><?php
+                $reservationsFile = file_get_contents("../../json/data/booking.json");
+                $reservations = json_decode($reservationsFile, true);
+                $totalRevenue = 0;
+                foreach ($reservations as $reservation) {
+                    if ($reservation["planet"] === $destinations["name"]) {
+                        $totalRevenue += $reservation["payment_amount"];
+                    }
+                }
+                echo number_format($totalRevenue, 0, '.', ',') . "₴";
+                // Update the revenue in destinations.json
+                $allDestinations = json_decode(file_get_contents("../../json/data/destinations.json"), true);
+                if (isset($allDestinations[$destinations["name"]])) {
+                    $allDestinations[$destinations["name"]]["revenue"] = $totalRevenue;
+                    file_put_contents("../../json/data/destinations.json", json_encode($allDestinations, JSON_PRETTY_PRINT));
+                }
+
+                ?></td>
+                <td><?php
+                $reservationsFile = file_get_contents("../../json/data/booking.json");
+                $reservations = json_decode($reservationsFile, true);
+                $totalTrips = 0;
+                foreach ($reservations as $reservation) {
+                    if ($reservation["planet"] === $destinations["name"]) {
+                        $totalTrips += 1;
+                    }
+                }
+                echo $totalTrips . " trips";
+                // Update the Trips number in destinations.json
+                $allDestinations = json_decode(file_get_contents("../../json/data/destinations.json"), true);
+                if (isset($allDestinations[$destinations["name"]])) {
+                    $allDestinations[$destinations["name"]]["trips"] = $totalTrips;
+                    file_put_contents("../../json/data/destinations.json", json_encode($allDestinations, JSON_PRETTY_PRINT));
+                }
+                ?></td>
+                <td>
+                <div class="action-buttons">
+                    <button class="manage-button">
+                        <a href="edit_destination.php?name=<?php echo urlencode($destinations['name']); ?>" class="manage-button">
+                            Edit Destination
+                        </a>
+                    </button>
+                </div>
+                </td>
+            </tr>
+            <?php
+        }
+    }
+    echo ob_get_clean(); // Output the buffer
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -56,78 +128,12 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                         </tr>
                     </thead>
                     <tbody>
-                    <?php
-                        $file = file_get_contents("../../json/data/destinations.json");
-                        $destinations = json_decode($file, true);
-                        if(count($destinations)!=0){
-                            foreach($destinations as $destinations){
-                                ?>      
-                                <tr>
-                                    <td><?php echo "#" . str_pad($destinations["id"], 2, '0', STR_PAD_LEFT) ?></td>
-                                    <td>
-                                        <?php 
-                                        $imgSrc =  '../../images/planet/' . $destinations["image"];
-                                        ?>
-                                        <img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
-                                    </td>                                    
-                                    <td><?php echo $destinations["name"] ?></td>
-                                    <td><?php echo $destinations["galaxy"] ?></td>
-                                    <td><?php echo $destinations["description"] ?></td>
-                                    <td><?php echo $destinations["distance"] . " kpc" ?></td>
-                                    <td><?php
-                                    $reservationsFile = file_get_contents("../../json/data/booking.json");
-                                    $reservations = json_decode($reservationsFile, true);
-                                    $totalRevenue = 0;
-                                    foreach ($reservations as $reservation) {
-                                        if ($reservation["planet"] === $destinations["name"]) {
-                                            $totalRevenue += $reservation["payment_amount"];
-                                        }
-                                    }
-                                    echo number_format($totalRevenue, 0, '.', ',') . "₴";
-                                    // Update the revenue in destinations.json
-                                    $allDestinations = json_decode(file_get_contents("../../json/data/destinations.json"), true);
-                                    if (isset($allDestinations[$destinations["name"]])) {
-                                        $allDestinations[$destinations["name"]]["revenue"] = $totalRevenue;
-                                        file_put_contents("../../json/data/destinations.json", json_encode($allDestinations, JSON_PRETTY_PRINT));
-                                    }
-
-                                    ?></td>
-                                    <td><?php
-                                    $reservationsFile = file_get_contents("../../json/data/booking.json");
-                                    $reservations = json_decode($reservationsFile, true);
-                                    $totalTrips = 0;
-                                    foreach ($reservations as $reservation) {
-                                        if ($reservation["planet"] === $destinations["name"]) {
-                                            $totalTrips += 1;
-                                        }
-                                    }
-                                    echo $totalTrips . " trips";
-                                    // Update the Trips number in destinations.json
-                                    $allDestinations = json_decode(file_get_contents("../../json/data/destinations.json"), true);
-                                    if (isset($allDestinations[$destinations["name"]])) {
-                                        $allDestinations[$destinations["name"]]["trips"] = $totalTrips;
-                                        file_put_contents("../../json/data/destinations.json", json_encode($allDestinations, JSON_PRETTY_PRINT));
-                                    }
-                                    ?></td>
-                                    <td>
-                                    <div class="action-buttons">
-                                        <button class="manage-button">
-                                            <a href="edit_destination.php?name=<?php echo urlencode($destinations['name']); ?>" class="manage-button">
-                                                Edit Destination
-                                            </a>
-                                        </button>
-                                    </div>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                    ?>
+                    <!-- Table content will be loaded via AJAX -->
                     </tbody>
                 </table>
             </section>
         </div>
     </div>
-
+        <script src="../../js/trips.js?v=<?php echo time(); ?>"></script>
     </body>
 </html>

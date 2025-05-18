@@ -5,6 +5,79 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
     header('location: ../index.php');
     exit();
 }
+
+if (isset($_GET['ajax']) && $_GET['ajax'] === 'true') { // Check if this is an AJAX request
+    $file = file_get_contents("../../json/data/booking.json");
+    $reservations = json_decode($file, true);
+    
+    ob_start(); // Start output buffer
+    if(count($reservations)!=0){
+        foreach($reservations as $key => $reservation){
+            ?>      
+            <tr>
+                <td><?php echo "R" . str_pad($key, 4, '0', STR_PAD_LEFT) ?></td>
+                <td><?php echo "#" . str_pad($reservation["id"], 4, '0', STR_PAD_LEFT) ?></td>
+                <td><?php 
+                    $users = json_decode(file_get_contents("../../json/data/users.json"), true);
+                    foreach($users as $user) {
+                        if($user['id'] == $reservation['id']) {
+                            if (strpos($user["profile_pic"], 'http') === 0) {
+                                $profilePic = $user["profile_pic"]; // For external links
+                            } else {
+                                $profilePic = '../' . $user["profile_pic"]; // For local links in <upload> folder
+                            }
+                            break;
+                        }
+                    }
+                    ?>
+                    <img src="<?php echo $profilePic; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
+                </td>
+                <td>
+                    <?php 
+                    $imgSrc =  '../../images/planet/' . strtolower($reservation["planet"]) . ".webp";
+                    ?>
+                    <img src="<?php echo $imgSrc; ?>" alt="PPP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
+                </td>                                    
+                <td><?php echo $reservation["planet"] ?></td>
+                <td><?php echo count($reservation["days"]) . " activities" ?></td>
+                <td><?php echo $reservation["quality"] ?></td>
+                <td><?php 
+                if (!strcmp($reservation["breakfast"],"Yes")){
+                    echo "☕";
+                }else{ echo "❌";}
+                if (!strcmp($reservation["relax"],"Yes")){
+                    echo "🧘";
+                }else{ echo "❌";}
+                if (!strcmp($reservation["insurance"],"Yes")){
+                    echo "🛡️";
+                }else{ echo "❌";}
+                ?></td>
+                <td><?php echo $reservation["nbpeople"] . " 👥"?></td>
+                <td><?php
+                    $selectedPlanetFile = file_get_contents("../../json/destination/" . $reservation["planet"] . ".json");
+                    $selectedPlanetData = json_decode($selectedPlanetFile, true);
+                    
+                    $selectedDate = $selectedPlanetData["date"][$reservation["selectedDate"]];
+                    
+                    echo $selectedDate["depart"] . " - " . $selectedDate["arrive"] . "<br>";
+                ?></td>
+                <td><?php $revenue= $reservation["payment_amount"];
+                echo number_format($revenue, 0, '.', ',') . "₴";
+                ?></td>
+                <td><?php
+                if ($reservation["payed"]){
+                    echo "✅";
+                }else{
+                    echo "❌";
+                }
+                ?></td>
+            </tr>
+            <?php
+        }
+    }
+    echo ob_get_clean(); // Output the buffer
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -59,83 +132,12 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                         </tr>
                     </thead>
                     <tbody>
-                    <?php
-                        $file = file_get_contents("../../json/data/booking.json");
-                        $reservations = json_decode($file, true);
-                        if(count($reservations)!=0){
-                            foreach($reservations as $key => $reservation){
-                                ?>      
-                                <tr>
-                                    <td><?php echo "R" . str_pad($key, 4, '0', STR_PAD_LEFT) ?></td>
-                                    <td><?php echo "#" . str_pad($reservation["id"], 4, '0', STR_PAD_LEFT) ?></td>
-                                    <td><?php 
-                                        $users = json_decode(file_get_contents("../../json/data/users.json"), true);
-                                        foreach($users as $user) {
-                                            if($user['id'] == $reservation['id']) {
-                                                if (strpos($user["profile_pic"], 'http') === 0) {
-                                                    $profilePic = $user["profile_pic"]; // For external links
-                                                } else {
-                                                    $profilePic = '../' . $user["profile_pic"]; // For local links in <upload> folder
-                                                }
-                                                break;
-                                            }
-                                        }
-                                        ?>
-                                        <img src="<?php echo $profilePic; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
-                                    </td>
-                                    <td>
-                                        <?php 
-                                        $imgSrc =  '../../images/planet/' . strtolower($reservation["planet"]) . ".webp";
-                                        ?>
-                                        <img src="<?php echo $imgSrc; ?>" alt="PPP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
-                                    </td>                                    
-                                    <td><?php echo $reservation["planet"] ?></td>
-                                    <td><?php echo count($reservation["days"]) . " activities" ?></td>
-                                    <td><?php echo $reservation["quality"] ?></td>
-                                    <td><?php 
-                                    if (!strcmp($reservation["breakfast"],"Yes")){
-                                        echo "☕";
-                                    }else{ echo "❌";}
-                                    if (!strcmp($reservation["relax"],"Yes")){
-                                        echo "🧘";
-                                    }else{ echo "❌";}
-                                    if (!strcmp($reservation["insurance"],"Yes")){
-                                        echo "🛡️";
-                                    }else{ echo "❌";}
-                                    
-                                    
-                                    
-                                    ?></td>
-                                    <td><?php echo $reservation["nbpeople"] . " 👥"?></td>
-                                    <td><?php
-                                        $selectedPlanetFile = file_get_contents("../../json/destination/" . $reservation["planet"] . ".json");
-                                        $selectedPlanetData = json_decode($selectedPlanetFile, true);
-                                        
-                                        $selectedDate = $selectedPlanetData["date"][$reservation["selectedDate"]];
-                                        
-                                        echo $selectedDate["depart"] . " - " . $selectedDate["arrive"] . "<br>";
-                                    ?></td>
-                                    <td><?php $revenue= $reservation["payment_amount"];
-                                    echo number_format($revenue, 0, '.', ',') . "₴";
-                                    ?></td>
-                                    <td><?php
-                                    if ($reservation["payed"]){
-                                        echo "✅";
-                                    }else{
-                                        echo "❌";
-                                    }
-                                    
-                                    ?></td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                    ?>
+                    <!-- Table content will be loaded via AJAX -->
                     </tbody>
                 </table>
             </section>
         </div>
     </div>
-
+        <script src="../../js/reservations.js?v=<?php echo time(); ?>"></script>
     </body>
 </html>
