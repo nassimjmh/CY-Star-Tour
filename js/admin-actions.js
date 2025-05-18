@@ -1,17 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Add event delegation to the tbody element
     document.querySelector('tbody').addEventListener('click', function(event) {
-        // Check if the clicked element is an action button
         if (event.target.classList.contains('action-button')) {
-            // Prevent default form submission that could cause page refresh
-            event.preventDefault();
+            event.preventDefault(); // Empecher de refresh
             
             const button = event.target;
-            const action = button.value;
+            const action = button.value; // make_vip / remove_vip ....
             const parentDiv = button.parentElement;
             const email = parentDiv.querySelector('input[name="email"]').value;
             
-            // Handle different actions
+            // Gerer chaque action
             switch(action) {
                 case 'make_vip':
                     updateUserRole(email, 'VIP');
@@ -39,16 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Simple function to update user role
 function updateUserRole(email, newRole) {
-    // Create JSON data - similar to profile.js
     const updateData = {
         action: 'update_role',
         email: email,
         new_role: newRole
     };
     
-    // Send AJAX request with JSON data 
     fetch('users.php', {
         method: 'POST',
         headers: {
@@ -59,7 +53,7 @@ function updateUserRole(email, newRole) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            // Refresh just the table content, not the whole page
+            // Refresh la page
             fetch('users.php?ajax=true')
                 .then(response => response.text())
                 .then(html => {

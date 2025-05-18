@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         }
         
-        // Check if we delete the last admin
+        // Verif pour pas supprimer le dernier admin
         if ($users[$email]['role'] === 'Admin' && $newRole !== 'Admin') {
             $adminCount = 0;
             foreach ($users as $user) {
@@ -61,13 +61,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-if (isset($_GET['ajax']) && $_GET['ajax'] === 'true') {
+if (isset($_GET['ajax']) && $_GET['ajax'] === 'true') { // Verifier si c'est une requete ajax
     $file = file_get_contents("../../json/data/users.json");
     $users = json_decode($file, true);
 
     if (count($users) != 0) {
         uasort($users, function ($a, $b) {
-            return $a['id'] - $b['id'];
+            return $a['id'] - $b['id']; // Trier par id
         });
 
         ob_start(); // Start tbody
