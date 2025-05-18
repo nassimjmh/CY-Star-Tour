@@ -19,10 +19,14 @@
         </header>
 
         <div class="background noclick">
+            <video autoplay muted loop playsinline class="bg-video">
+                <source src="../images/spaceships/introduction.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
             <div class="title">
                 <p>TRAVELING TO SPACE <br>HAS NEVER BEEN SO EASY</p>
             </div>
-            
         </div>
 
 
