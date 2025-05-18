@@ -58,3 +58,27 @@ document.addEventListener('click', (event) => {
         dropdownCart.classList.remove('active');
     }
 });
+
+
+// delete reservation from cart
+
+
+function removeBooking(reservationId, event) {
+    event.preventDefault(); // empêche le lien parent d'être suivi
+
+    if (confirm("Are you sure you want to remove this booking?")) {
+        fetch(`remove_booking.php?id=${encodeURIComponent(reservationId)}`, {
+            method: "GET",
+            credentials: "same-origin"
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Recharge la page ou supprime l'élément du DOM
+                    location.reload();
+                } else {
+                    alert("Error: " + data.message);
+                }
+            });
+    }
+}
