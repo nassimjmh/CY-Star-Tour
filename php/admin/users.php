@@ -5,6 +5,153 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
         header('location: ../index.php');
         exit();
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get JSON input
+    $input = json_decode(file_get_contents('php://input'), true);
+    
+    if (isset($input['action']) && $input['action'] === 'update_role') {
+        header('Content-Type: application/json');
+        
+        if (!isset($input['email']) || !isset($input['new_role'])) {
+            echo json_encode(['success' => false, 'message' => 'Missing parameters']);
+            exit();
+        }
+        
+        $email = $input['email'];
+        $newRole = $input['new_role'];
+        $validRoles = ['Admin', 'VIP', 'Standard', 'Banned', 'Stellar Elite'];
+        
+        if (!in_array($newRole, $validRoles)) {
+            echo json_encode(['success' => false, 'message' => 'Invalid role']);
+            exit();
+        }
+        
+        $usersFile = "../../json/data/users.json";
+        $users = json_decode(file_get_contents($usersFile), true);
+        
+        if (!isset($users[$email])) {
+            echo json_encode(['success' => false, 'message' => 'User not found']);
+            exit();
+        }
+        
+        // Check if we delete the last admin
+        if ($users[$email]['role'] === 'Admin' && $newRole !== 'Admin') {
+            $adminCount = 0;
+            foreach ($users as $user) {
+                if ($user['role'] === 'Admin') {
+                    $adminCount++;
+                }
+            }
+            
+            if ($adminCount <= 1) {
+                echo json_encode(['success' => false, 'message' => 'Cannot remove the last admin']);
+                exit();
+            }
+        }
+        
+        $users[$email]['role'] = $newRole;
+        
+        if (file_put_contents($usersFile, json_encode($users, JSON_PRETTY_PRINT))) {
+            echo json_encode(['success' => true]);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Failed to update user']);
+        }
+        exit();
+    }
+}
+
+if (isset($_GET['ajax']) && $_GET['ajax'] === 'true') {
+    $file = file_get_contents("../../json/data/users.json");
+    $users = json_decode($file, true);
+
+    if (count($users) != 0) {
+        uasort($users, function ($a, $b) {
+            return $a['id'] - $b['id'];
+        });
+
+        ob_start(); // Start tbody
+        foreach ($users as $user) {
+            ?>
+            <tr>
+                <td><?php echo "#" . str_pad($user["id"], 4, '0', STR_PAD_LEFT); ?></td>
+                <td>
+                    <?php
+                    if (strpos($user["profile_pic"], 'http') === 0) {
+                        $imgSrc = $user["profile_pic"];
+                    } else {
+                        $imgSrc = '../' . $user["profile_pic"];
+                    }
+                    ?>
+                    <img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
+                </td>
+                <td><?php echo $user["first_name"]; ?></td>
+                <td><?php echo $user["last_name"]; ?></td>
+                <td><a href="mailto:<?php echo $user["email"]; ?>"><?php echo $user["email"]; ?></a></td>
+                <td>
+                    <?php
+                    $roleColors = [
+                        'Standard' => '#4CAF50',
+                        'Admin' => '#5e9ae9',
+                        'VIP' => 'gold',
+                        'Banned' => '#ff4444',
+                        'Stellar Elite' => '#7851A9'
+                    ];
+                    echo '<span style="color: ' . $roleColors[$user["role"]] . '; font-weight: bolder;">' . $user["role"] . '</span>';
+                    ?>
+                </td>
+                <td><?php echo $user["race"]; ?></td>
+                <td><?php
+                    $date = new DateTime($user["date_picker"]);
+                    echo $date->format('d/m/Y'); ?></td>
+                <td>
+                    <div class="action-buttons">
+                        <div style="display: inline;">
+                            <input type="hidden" name="email" value="<?php echo $user['email']; ?>">
+                            <input type="hidden" name="current_role" value="<?php echo $user['role']; ?>">
+                            <?php if ($user['role'] !== 'VIP'): ?>
+                                <button type="button" name="action" value="make_vip" class="vip-button action-button">
+                                    Make VIP
+                                </button>
+                            <?php else: ?>
+                                <button type="button" name="action" value="remove_vip" class="vip-button action-button">
+                                    Remove VIP
+                                </button>
+                            <?php endif; ?>
+                            <?php if ($user['role'] !== 'Banned'): ?>
+                                <button type="button" name="action" value="ban" class="ban-button action-button">
+                                    Ban User
+                                </button>
+                            <?php else: ?>
+                                <button type="button" name="action" value="unban" class="ban-button action-button">
+                                    Unban User
+                                </button>
+                            <?php endif; ?>
+                            <?php if ($user['role'] !== 'Admin'): ?>
+                                <button type="button" name="action" value="make_admin" class="admin-button action-button">
+                                    Make Admin
+                                </button>
+                            <?php else: ?>
+                                <button type="button" name="action" value="remove_admin" class="admin-button action-button">
+                                    Remove Admin
+                                </button>
+                            <?php endif; ?>
+                                <button type="button" name="action" value="manage" class="manage-button action-button">
+                                    Edit User
+                                </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <?php
+        }
+        echo ob_get_clean(); // End tbody
+    }
+    exit();
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +162,8 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
     <meta name="description" content="Admin page for managing users on StarTour">
     <title>User list - StarTour Admin</title>
     <link rel="icon" href="../../images/sparkles.png" type="image/png">
-    <link rel="stylesheet" href="../../css/admin.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../css/admin.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <script src="../../js/admin-actions.js?v=<?php echo time(); ?>"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body id="users">
@@ -43,7 +189,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
             <section>
                 <h2>Manage Users</h2>
                 <div class="filters">
-                <form method="GET">
+                <!--<form method="GET">
                     <input type="text" placeholder="Search users...">
                     <select id="status-filter">
                         <option value="X">All Status</option>
@@ -62,7 +208,7 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                         <option value="coruscant">Coruscant</option>
                     </select>
                 <button type="submit">Apply</button>
-                </form>
+                </form> -->
                 </div>
                 <table>
                     <thead>
@@ -79,105 +225,12 @@ if ( !isset($_SESSION["role"]) || $_SESSION["role"] !== "Admin") {
                         </tr>
                     </thead>
                     <tbody>
-                    <?php
-                        $file = file_get_contents("../../json/data/users.json");
-                        $users = json_decode($file, true);
-                        if(count($users)!=0){
-                            // To sort users by ID 
-                            uasort($users, function($a, $b) {
-                                return $a['id'] - $b['id'];
-                            });
-                            foreach($users as $users){
-                                ?>      
-                                <tr>
-                                    <td><?php echo "#" . str_pad($users["id"], 4, '0', STR_PAD_LEFT) ?></td>  <!-- Write ID with 5 digits -->
-                                    <td>
-                                        <?php 
-                                        if (strpos($users["profile_pic"], 'http') === 0) {
-                                            $imgSrc = $users["profile_pic"]; // For external links
-                                        } else {
-                                            $imgSrc = '../' . $users["profile_pic"]; // For local links in <upload> folder
-                                        }
-                                        ?>
-                                        <img src="<?php echo $imgSrc; ?>" alt="PP" class="profile-thumbnail" style="width: 25px; height: 25px; border-radius: 50%;">
-                                    </td>                                    
-                                    <td><?php echo $users["first_name"] ?></td>
-                                    <td><?php echo $users["last_name"] ?></td>
-                                    <td><a href="mailto:<?php echo $users["email"] ?>"><?php echo $users["email"] ?></a></td>
-                                    <td><?php if ($users["role"] === 'Standard') {
-                                        echo '<span style="color: #4CAF50; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    else if($users["role"] === 'Admin') {
-                                        echo '<span style="color: #5e9ae9; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    else if($users["role"] === 'VIP') {
-                                        echo '<span style="color: gold; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    else if($users["role"] === 'Banned') {
-                                        echo '<span style="color: #ff4444; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    else if($users["role"] === 'Stellar Elite') {
-                                        echo '<span style="color: #7851A9; font-weight: bolder;">' . $users["role"] ;
-                                    }
-                                    ?>
-                                    </td>
-                                    <td><?php echo $users["race"] ?></td>
-                                    <td><?php 
-                                        // Convert the date string to a DateTime object
-                                        $date = new DateTime($users["date_picker"]);
-                                        echo $date->format('d/m/Y'); ?></td>
-                                    <td>
-                                    <div class="action-buttons">
-                                        <form method="POST" action="update_user.php" style="display: inline;">
-                                            <input type="hidden" name="email" value="<?php echo $users['email']; ?>">
-                                            <input type="hidden" name="current_role" value="<?php echo $users['role']; ?>">
-                                            
-                                            <?php if ($users['role'] !== 'VIP'): ?>
-                                                <button type="submit" name="action" value="make_vip" class="vip-button action-button">
-                                                    Make VIP
-                                                </button>
-                                            <?php else: ?>
-                                                <button type="submit" name="action" value="remove_vip" class="vip-button action-button">
-                                                    Remove VIP
-                                                </button>
-                                            <?php endif; ?>
-
-                                            <?php if ($users['role'] !== 'Banned'): ?>
-                                                <button type="submit" name="action" value="ban" class="ban-button action-button">
-                                                    Ban User
-                                                </button>
-                                            <?php else: ?>
-                                                <button type="submit" name="action" value="unban" class="ban-button action-button">
-                                                    Unban User
-                                                </button>
-                                            <?php endif; ?>
-
-                                            <?php if ($users['role'] !== 'Admin'): ?>
-                                                <button type="submit" name="action" value="make_admin" class="admin-button action-button">
-                                                    Make Admin
-                                                </button>
-                                            <?php else: ?>
-                                                <button type="submit" name="action" value="remove_admin" class="admin-button action-button">
-                                                    Remove Admin
-                                                </button>
-                                            <?php endif; ?>
-
-                                            <button type="submit" name="action" value="manage" class="manage-button action-button">
-                                                Edit User
-                                            </button>
-                                        </form>
-                                    </div>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                    ?>
                     </tbody>
                 </table>
             </section>
         </div>
     </div>
-
+        <script src="../../js/admin-actions.js?v=<?php echo time(); ?>"></script>
+        <script src="../../js/users.js?v=<?php echo time(); ?>"></script>
     </body>
 </html>

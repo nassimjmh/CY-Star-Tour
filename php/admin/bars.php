@@ -42,9 +42,6 @@
             <li>
                 <a class="underline" href="destinations.php">Destinations</a>
             </li>
-            <li>
-                <a class="underline" href="settings.php">Settings</a>
-            </li>            
     </div>
 
     <script>

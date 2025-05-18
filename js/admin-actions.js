@@ -1,39 +1,75 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const actionButtons = document.querySelectorAll(".action-button");
-
-    actionButtons.forEach(button => {
-        button.addEventListener("click", function (event) {
-            // Disable the button and show a loading indicator
-            button.disabled = true;
-            const oldValue = button.value; // Use the value attribute
-            button.textContent = "Processing...";
-
-            setTimeout(() => {
-                button.disabled = false;
-
-                // Toggle the button value and text based on the current action
-                if (oldValue === "make_vip") {
-                    button.value = "remove_vip";
-                    button.textContent = "Remove VIP";
-                } else if (oldValue === "remove_vip") {
-                    button.value = "make_vip";
-                    button.textContent = "Make VIP";
-                } else if (oldValue === "ban") {
-                    button.value = "unban";
-                    button.textContent = "Unban User";
-                } else if (oldValue === "unban") {
-                    button.value = "ban";
-                    button.textContent = "Ban User";
-                } else if (oldValue === "make_admin") {
-                    button.value = "remove_admin";
-                    button.textContent = "Remove Admin";
-                } else if (oldValue === "remove_admin") {
-                    button.value = "make_admin";
-                    button.textContent = "Make Admin";
-                } else {
-                    button.textContent = "Action Failed"; // Error
-                }
-            }, 3000); // 3 seconds delay
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event delegation to the tbody element
+    document.querySelector('tbody').addEventListener('click', function(event) {
+        // Check if the clicked element is an action button
+        if (event.target.classList.contains('action-button')) {
+            // Prevent default form submission that could cause page refresh
+            event.preventDefault();
+            
+            const button = event.target;
+            const action = button.value;
+            const parentDiv = button.parentElement;
+            const email = parentDiv.querySelector('input[name="email"]').value;
+            
+            // Handle different actions
+            switch(action) {
+                case 'make_vip':
+                    updateUserRole(email, 'VIP');
+                    break;
+                case 'remove_vip':
+                    updateUserRole(email, 'Standard');
+                    break;
+                case 'ban':
+                    updateUserRole(email, 'Banned');
+                    break;
+                case 'unban':
+                    updateUserRole(email, 'Standard');
+                    break;
+                case 'make_admin':
+                    updateUserRole(email, 'Admin');
+                    break;
+                case 'remove_admin':
+                    updateUserRole(email, 'Standard');
+                    break;
+                case 'manage':
+                    window.location.href = `edit_user.php?email=${encodeURIComponent(email)}`;
+                    break;
+            }
+        }
     });
 });
+
+// Simple function to update user role
+function updateUserRole(email, newRole) {
+    // Create JSON data - similar to profile.js
+    const updateData = {
+        action: 'update_role',
+        email: email,
+        new_role: newRole
+    };
+    
+    // Send AJAX request with JSON data 
+    fetch('users.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updateData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Refresh just the table content, not the whole page
+            fetch('users.php?ajax=true')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('tbody').innerHTML = html;
+                });
+        } else {
+            alert(data.message || 'Error updating user role');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}

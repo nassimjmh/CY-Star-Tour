@@ -33,7 +33,7 @@
             "expiry_date": "",
             "cvv": ""
         },
-        "remember_token": "049ad01dd9e45510b8e259436efffcf5"
+        "remember_token": "92fd3b2e97a9348471cf287df7bc906d"
     },
     "hicham@startour.cy": {
         "id": 3,
@@ -75,16 +75,10 @@
         "last_name": "IASERMIN",
         "email": "ia@gmail.com",
         "password": "$2y$10$EhexaXgS\/8GrwxAThY\/\/iOQfEbKWG8NgrY\/hld70Fa05cnuH9qoAm",
+        "role": "Banned",
         "race": "IA",
         "date_picker": "3989-01-29",
-        "role": "Banned",
-        "profile_pic": "..\/uploads\/7ab38c8b741691b2e98b211b0d1b0462.jpg",
-        "card_info": {
-            "card_holder": "",
-            "card_number": "",
-            "expiry_date": "",
-            "cvv": ""
-        }
+        "profile_pic": "..\/uploads\/7ab38c8b741691b2e98b211b0d1b0462.jpg"
     },
     "g-romuald@python.cy": {
         "id": 6,
@@ -128,7 +122,7 @@
         "password": "$2y$10$Ii2I1TcBPaEtlVVaYU7z1uOQi3GO5SZ5cUXyIzXvz4GcEYbYsmKy.",
         "race": "Human",
         "date_picker": "3970-01-29",
-        "role": "Stellar Elite",
+        "role": "Standard",
         "profile_pic": "..\/uploads\/zeta.jpg",
         "card_info": {
             "card_holder": "",
@@ -145,7 +139,7 @@
         "password": "$2y$10$xb2MflGytjGMiinlfoNsBusgXnqtR5ALOQfmZSJEy9V4lVFZdrtGW",
         "race": "Human",
         "date_picker": "3983-04-22",
-        "role": "Standard",
+        "role": "VIP",
         "profile_pic": "https:\/\/api.dicebear.com\/9.x\/pixel-art\/svg?seed=nFabien",
         "card_info": {
             "card_holder": "",

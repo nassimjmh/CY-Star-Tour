@@ -6,8 +6,8 @@
         "galaxy": "Stargate",
         "description": "Ancient underwater city with nothing",
         "distance": 14650,
-        "revenue": 1630,
-        "trips": 2,
+        "revenue": 1707,
+        "trips": 1,
         "image": "atlantis.webp",
         "key": [
             "Exploration",
@@ -195,8 +195,8 @@
         "galaxy": "Milky Way",
         "description": "Red planet with dusty landscapes",
         "distance": 8500,
-        "revenue": 0,
-        "trips": 0,
+        "revenue": 1116,
+        "trips": 1,
         "image": "mars.webp",
         "key": [
             "Exploration",
