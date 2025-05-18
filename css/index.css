@@ -16,21 +16,38 @@
     font-family: 'Inter', sans-serif;
 }
 
+
+
 .background {
     position: relative;
-    justify-content: center;
-    align-items: center;
-    top: -60px;
-    left: 0;
-    background-image: url('https://wallpapers.com/images/hd/space-ship-digital-art-r8tt3e162a3insvn.jpg');
     width: 100%;
-    height: 60rem; 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    height: 100vh;
     overflow: hidden;
     z-index: -1;
 }
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* La vidéo reste derrière le texte */
+}
+
+.title {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
 .title{
     position: absolute;
     white-space: nowrap;
