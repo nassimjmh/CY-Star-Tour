@@ -1,4 +1,3 @@
-
 function loadUsers() {
     const xhr = new XMLHttpRequest(); // ASYNC
     xhr.open("GET", "users.php?ajax=true", true);
@@ -12,6 +11,9 @@ function loadUsers() {
 
 document.addEventListener("DOMContentLoaded", function () {
     loadUsers();
+    
+    // Reload users data every 5 seconds
+    setInterval(loadUsers, 5000);
 });
 
 

@@ -11,4 +11,7 @@ function loadDestinations() {
 
 document.addEventListener("DOMContentLoaded", function () {
     loadDestinations();
+    
+    // Reload destinations data every 5 seconds
+    setInterval(loadDestinations, 5000);
 });

@@ -11,4 +11,7 @@ function loadReservations() {
 
 document.addEventListener("DOMContentLoaded", function () {
     loadReservations();
+    
+    // Reload reservations data every 5 seconds
+    setInterval(loadReservations, 5000);
 });
