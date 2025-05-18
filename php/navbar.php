@@ -75,6 +75,9 @@ if (!isset($_SESSION['email']) && isset($_COOKIE['remember_token'])) {
                                 $hasUnpaidBookings = true;
                                 $paidBookings++;
                                 ?>
+
+                                <button class="remove-booking" onclick="removeBooking('<?php echo $reservationId; ?>', event)">❌</button>
+
                                 <a href="recap2.php?id=<?php echo urlencode($reservationId); ?>&planet=<?php echo urlencode($value['planet']); ?>" class="book-link">
                                     <div class="book">
                                         <p class="namebook"> <?php echo htmlspecialchars($value['planet'], ENT_QUOTES, 'UTF-8'); ?> </p>
