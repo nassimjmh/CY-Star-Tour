@@ -74,7 +74,12 @@ function removeBooking(reservationId, event) {
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                 window.location.href = "map.php";
+                    const currentPage = window.location.pathname.split('/').pop(); // récupère le fichier actuel
+                    if (currentPage === "recap.php") {
+                        window.location.href = "map.php"; // redirige uniquement si on est sur recap.php
+                    } else {
+                      location.reload();
+                    }
                 } else {
                     alert("Error: " + data.message);
                 }
